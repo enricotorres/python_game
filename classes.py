@@ -23,7 +23,7 @@ class Pokemon:
         self.current_hp -= amount
         if self.current_hp < 0:
             self.current_hp = 0
-            return True
+        return self.current_hp > 0
 
 
 class Trainer:
