@@ -47,9 +47,9 @@ class Trainer:
 
 
 class Move:
-    def __init__(self, name, type_move, power, accuracy, max_pp):
+    def __init__(self, name, type, power, accuracy, max_pp):
         self.name = name
-        self.type_move = type_move
+        self.type = type
         self.power = power
         self.accuracy = accuracy
         self.max_pp = max_pp
