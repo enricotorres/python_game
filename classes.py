@@ -1,7 +1,7 @@
 class Pokemon:
     def __init__(self, name, primary_type, xp, pokedex_id, base_hp, moves, secondary_type=None):
         self.pokedex_id = pokedex_id
-        self.primary = primary_type
+        self.primary_type = primary_type
         self.secondary_type = secondary_type
         self.name = name
         self.xp = xp
@@ -14,10 +14,12 @@ class Pokemon:
         if self.secondary_type:
             tipo_str += f"/{self.secondary_type}"
 
-        return {id: self.pokedex_id, name: self.name, hp: self.current_hp/self.base_hp}
+        return {"id": self.pokedex_id, "name": self.name, "hp": self.current_hp/self.base_hp}
 
     def attack(self, move):
-        return move.use()
+        if move.use():
+            return move
+        return False
 
     def take_damage(self, amount):
         self.current_hp -= amount
@@ -56,6 +58,6 @@ class Move:
     def use(self):
         if self.current_pp > 0:
             self.current_pp -= 1
-            return self.power
+            return True
         else:
-            return 0
+            return False
