@@ -1,5 +1,5 @@
 class Pokemon:
-    def __init__(self, name, primary_type, xp, pokedex_id, base_hp, current_hp,secondary_type=None):
+    def __init__(self, name, primary_type, xp, pokedex_id, base_hp, moves, secondary_type=None):
         self.pokedex_id = pokedex_id
         self.primary = primary_type
         self.secondary_type = secondary_type
@@ -7,22 +7,41 @@ class Pokemon:
         self.xp = xp
         self.base_hp = base_hp
         self.current_hp = base_hp
+        self.moves = moves
 
     def show_status(self):
         tipo_str = self.primary_type
         if self.secondary_type:
             tipo_str += f"/{self.secondary_type}"
 
-        print(f"ID: {self.pokedex_id} | {self.name} ({tipo_str}) | HP: {self.current_hp}/{self.base_hp}")
+        return {id: self.pokedex_id, name: self.name, hp: self.current_hp/self.base_hp}
 
-    def attack(self):
-        return self.attack_damage
+    def attack(self, move):
+        return move.use()
+
+    def take_damage(self, amount):
+        self.current_hp -= amount
+        if self.current_hp < 0:
+            self.current_hp = 0
+        return self.current_hp > 0
 
 
 class Trainer:
-    def __init__(self, name, xp):
+    def __init__(self, name, xp, initial_team=None):
         self.name = name
         self.xp = xp
+
+        if initial_team is None:
+            self.team = []
+        else:
+            self.team = initial_team
+
+    def add_pokemon(self, pokemon):
+        if len(self.team) < 6:
+            self.team.append(pokemon)
+            return True
+        else:
+            return False
 
 
 class Move:
