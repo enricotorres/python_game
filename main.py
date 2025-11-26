@@ -1,13 +1,13 @@
 from graphics import *
 from classes import Pokemon, Trainer, Move
 from types import types_damage
-
+import random
 
 def battle(player, trainer):
 
     player_turn = True
-    player_pkmn = player.team[0]
-    trainer_pkmn = trainer.team[0]
+    player_pkmn_idx = 0
+    trainer_pkmn_idx = 0
 
     while True:
 
@@ -17,17 +17,24 @@ def battle(player, trainer):
         if not is_team_alive(trainer):
             break
 
-        attacker = player_pkmn if player_turn else trainer_pkmn
-        defender = trainer_pkmn if player_turn else player_pkmn
+        player_pkmn = player.team[player_pkmn_idx]
+        trainer_pkmn = trainer.team[trainer_pkmn_idx]
 
         if player_turn:
+            if player_pkmn.current_hp <= 0:
+                chose_pokemon() #funcao do cassiano
+
             if action == "attack":
                 chosen_move = chose_attack() #funcao do cassiano
                 move = pokemon.attack(chosen_move)
 
-                if attacker.attack(chosen_move):
-                    damage = calculate_damage(chosen_move, attacker, defender)
-                    alive = defender.take_damage(damage)
+                if player_pkmn.attack(chosen_move):
+                    hit_chance = random.randint(1, 100)
+                    if hit_chance <= chosen_move.accuracy:
+                        damage = calculate_damage(chosen_move, player_pkmn, trainer_pkmn)
+                        alive = trainer_pkmn.take_damage(damage)
+                    else:
+                        #nao acertou
 
                     if not alive:
                         player_pkmn = chose_pokemon() #funcao do cassiano
@@ -41,12 +48,11 @@ def battle(player, trainer):
             if action == "bag":
                 chose_item() #funcao cassiano
 
+            player_turn = False
 
+        else:
+            player_turn = True
 
-    if player_turn:
-        player_turn = False
-    else:
-        player_turn = True
 
 
 def is_team_alive(trainer):
