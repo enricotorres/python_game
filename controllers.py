@@ -95,7 +95,7 @@ class BattleController:
                     damage = self.calculate_damage(self.chosen_move)
                     self.trainer_pkmn.take_damage(damage)
                 else:
-                    pass
+                    return
                     #nao acertou
 
         elif self.state == "pokemon":
@@ -120,7 +120,6 @@ class BattleController:
 
         elif self.state == "victory":
             self.battle_scene_victory()
-
 
         if self.player_turn:
             self.state = "trainer_turn"
@@ -195,7 +194,6 @@ class BattleController:
         enemy.add_pokemon(charmander)
 
         return player, enemy
-
 
 
 class BattleScene:
