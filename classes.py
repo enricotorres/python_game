@@ -1,10 +1,11 @@
 class Pokemon:
-    def __init__(self, name, primary_type, xp, pokedex_id, base_hp, atk, defense, speed, moves, secondary_type=None):
+    def __init__(self, name, primary_type, level, xp, pokedex_id, base_hp, atk, defense, speed, moves, secondary_type=None):
         self.pokedex_id = pokedex_id
         self.primary_type = primary_type
         self.secondary_type = secondary_type
         self.name = name
         self.xp = xp
+        self.level = level
         self.base_hp = base_hp
         self.max_hp = base_hp
         self.current_hp = base_hp
@@ -35,6 +36,11 @@ class Pokemon:
         if self.current_hp < 0:
             self.current_hp = 0
         return self.current_hp > 0
+
+    def is_alive(self):
+        if self.current_hp > 0:
+            return True
+        return False
 
 
 class Trainer:
