@@ -49,6 +49,8 @@ class BattleController:
         if self.player_turn:
             print(self.player_pkmn.show_status())
             print(self.trainer_pkmn.show_status())
+        else:
+            print("!")
 
         if self.state == "player_turn":
             if not self.is_team_alive(self.player):
@@ -82,6 +84,9 @@ class BattleController:
     def handle_state_logic(self):
         if self.state == "attack":
             attack_index = self.battle_scene.chose_attack()
+            if attack_index == 100:
+                self.player_turn = False
+                return
             self.chosen_move = self.player_pkmn.moves[attack_index]
 
             if self.player_pkmn.attack(self.chosen_move):
@@ -94,10 +99,17 @@ class BattleController:
                     #nao acertou
 
         elif self.state == "pokemon":
-            self.player_pkmn_idx = self.battle_scene.chose_pokemon()
+            pokemon_idx = self.battle_scene.chose_pokemon()
+            if pokemon_idx == 100:
+                self.player_turn = False
+                return
+            self.player_pkmn_idx
 
         elif self.state == "bag":
-            self.item_index = self.battle_scene.chose_item()
+            item_idx = self.battle_scene.chose_item()
+            if item_idx == 100:
+                self.player_turn = False
+                return
 
         elif self.state == "run":
             self.battle_scene.run()
