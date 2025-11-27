@@ -5,8 +5,8 @@ import json
 
 class BattleController:
     def __init__(self, BattleScene, trainer=None, player=None):
-        #self.trainer = trainer
-        #self.player = player
+        self.trainer = trainer
+        self.player = player
         self.states = ["player_turn", "trainer_turn", "attack", "bag", "pokemon", "run", "victory", "defeat"]
         self.state = self.states[0]
         self.types_damage = self.load_types_from_json()
@@ -23,9 +23,7 @@ class BattleController:
 
         self.is_active = True
         while self.is_active:
-            if self.check_end_condition():
-                self.is_team_alive = False
-                continue
+
             self.process_battle_state()
             self.handle_state_logic()
 
@@ -35,12 +33,6 @@ class BattleController:
             else:
                 self.state = "player_turn"
                 self.player_turn = True
-
-    def check_end_condition(self):
-        if not self.is_team_alive(self.trainer) or not self.is_team_alive(self.player):
-            return True
-        return False
-
 
     def process_battle_state(self):
         self.player_pkmn = self.player.team[self.player_pkmn_idx]
@@ -55,6 +47,7 @@ class BattleController:
         if self.state == "player_turn":
             if not self.is_team_alive(self.player):
                 self.state = "defeat"
+                self.is_active = False
 
             self.attacking_pkmn = self.player_pkmn
             self.defender_pkmn = self.trainer_pkmn
@@ -74,6 +67,7 @@ class BattleController:
         elif self.state == "trainer_turn":
             if not self.is_team_alive(self.trainer):
                 self.state = "victory"
+                self.is_active = False
 
             self.attacking_pkmn = self.trainer_pkmn
             self.defender_pkmn = self.player_pkmn
@@ -117,9 +111,11 @@ class BattleController:
 
         elif self.state == "defeat":
             self.battle_scene.defeat()
+            self.is_active = False
 
         elif self.state == "victory":
             self.battle_scene_victory()
+            self.is_active = False
 
         if self.player_turn:
             self.state = "trainer_turn"
@@ -171,6 +167,7 @@ class BattleController:
         damage = multiplier_3 * final_multiplier * stab
         return int(damage)
 
+    #funcao teste
     def setup_game(self):
 
         # Time do ash
@@ -195,7 +192,7 @@ class BattleController:
 
         return player, enemy
 
-
+#funcao teste
 class BattleScene:
     def __init__(self, scene):
         self.scene = scene
