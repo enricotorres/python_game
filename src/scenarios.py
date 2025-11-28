@@ -7,7 +7,7 @@ class BattleScene:
         self.width = 1408
         self.height = 768
 
-        self.base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
         self.p1 = gf.Point(826, 612)
         self.p2 = gf.Point(1000, 647)
@@ -51,7 +51,8 @@ class BattleScene:
         battle_hud.draw(self.janela)
 
     def get_path(self, filename):
-        return os.path.join(self.base_dir, filename)
+        path = os.path.join(self.base_dir, "assets", "images", filename)
+        return os.path.normpath(path)
 
     def win(self):
         return gf.GraphWin("PokePy", self.width, self.height)
@@ -91,14 +92,12 @@ class BattleScene:
             texts.append(t)
         return texts
 
-    # MÉTODOS REFEITOS PARA FUNCIONAR COM O CONTROLLER
-
     def chose_action(self):
         while True:
             click = self.janela.getMouse()
 
             if self.verificar_clique(click, self.p1, self.p2):
-                return "attack"
+                return "attack"  # String, como o controller espera
             elif self.verificar_clique(click, self.p3, self.p4):
                 return "pokemon"
             elif self.verificar_clique(click, self.p5, self.p6):
