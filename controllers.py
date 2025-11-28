@@ -227,9 +227,9 @@ class BattleController:
         return all_moves
 
     def calculate_damage(self, attacker, defender, chosen_move):
-        multiplier_1 = ((2 * attacker.level/5) + 2)
+        multiplier_1 = ((2 * attacker.level/ 5) + 2)
         multiplier_2 = multiplier_1 * (chosen_move.power * attacker.atk / defender.defense)
-        multiplier_3 = (multiplier_2 /50) + 2
+        multiplier_3 = (multiplier_2 / 50) + 2
 
         attack_type_rules = self.types_damage.get(chosen_move.type, {})
         multiplier_4 = attack_type_rules.get(defender.primary_type, 1.0)
