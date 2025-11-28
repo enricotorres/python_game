@@ -20,6 +20,7 @@ class BattleController:
         self.switch_target_idx = None
 
         self.state = "START"
+        self.run_battle_loop()
 
     def run_battle_loop(self):
         self.state = "PLAYER_TURN"
@@ -32,6 +33,9 @@ class BattleController:
         while self.state != "EXIT":
             self.player_pkmn = self.player.team[self.player_pkmn_idx]
             self.trainer_pkmn = self.trainer.team[self.trainer_pkmn_idx]
+
+            print(self.player_pkmn.show_status())
+            print(self.trainer_pkmn.show_status())
 
             input_states = ["PLAYER_TURN", "SELECT_MOVE", "POKEMON_MENU", "BAG_MENU", "FORCE_SWITCH"]
 
