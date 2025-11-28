@@ -3,6 +3,7 @@ from classes import Pokemon, Trainer, Move
 from scenarios import BattleScene
 import random
 import json
+import os
 
 class BattleController:
     def __init__(self, battle_scene, trainer, player):
@@ -11,7 +12,6 @@ class BattleController:
         self.battle_scene = battle_scene
         self.types_damage = self.load_types_from_json()
         self.all_moves = self.load_moves_from_json()
-        self.player, self.trainer = self.setup_game()
         self.cancel_action = -1
 
         self.player_action_type = None
@@ -214,12 +214,17 @@ class BattleController:
         return False
 
     def load_types_from_json(self):
-        with open("types.json", "r", encoding="utf-8" ) as file:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        path = os.path.join(base_dir, "data", "types.json")
+        with open(path, "r", encoding="utf-8" ) as file:
             return json.load(file)
 
     def load_moves_from_json(self):
-        with open("moves.json", "r", encoding="utf-8") as file:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        path = os.path.join(base_dir, "data", "moves.json")
+        with open(path, "r", encoding="utf-8") as file:
             moves_data = json.load(file)
+
         all_moves = {}
         for data in moves_data:
             new_move = Move(**data)

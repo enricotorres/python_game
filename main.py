@@ -26,7 +26,7 @@ def main():
     trainer = Trainer(name="gary", xp=0, initial_team=[trainer_pkmn])
 
     battle_scene = BattleScene()
-
+    print("controller")
     controller = BattleController(battle_scene, trainer, player)
 
     controller.run_battle_loop()
