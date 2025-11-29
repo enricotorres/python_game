@@ -72,9 +72,11 @@ class Pokemon:
 
 
 class Trainer:
-    def __init__(self, name, xp, initial_team=None):
+    def __init__(self, name, xp=0, money=0, initial_team=None):
         self.name = name
         self.xp = xp
+        self.money = money
+        self.bag = {}
 
         if initial_team is None:
             self.team = []
@@ -87,6 +89,25 @@ class Trainer:
             return True
         else:
             return False
+
+    def get_active_pokemon(self):
+        if 0 <= self.active_slot < len(self.team):
+            return self.team[self.active_slot]
+        return None
+
+    def add_item(self, item_name, quantity=1):
+        if item_name in self.bag:
+            self.bag[item_name] += quantity
+        else:
+            self.bag[item_name] = quantity
+
+    def use_item(self, item_name):
+        if self.bag.get(item_name, 0) > 0:
+            self.bag[item_name] -= 1
+            if self.bag[item_name] == 0:
+                del self.bag[item_name]
+            return True
+        return False
 
 
 class Move:
