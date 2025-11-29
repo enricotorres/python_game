@@ -97,7 +97,7 @@ class BattleScene:
             click = self.janela.getMouse()
 
             if self.verificar_clique(click, self.p1, self.p2):
-                return "attack"  # String, como o controller espera
+                return "attack"
             elif self.verificar_clique(click, self.p3, self.p4):
                 return "pokemon"
             elif self.verificar_clique(click, self.p5, self.p6):

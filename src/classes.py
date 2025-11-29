@@ -1,3 +1,5 @@
+from src.database import MOVES_DB
+
 class Pokemon:
     def __init__(self, name, primary_type, level, xp, pokedex_id, base_hp, atk, defense, speed, moves, secondary_type=None):
         self.pokedex_id = pokedex_id
@@ -62,13 +64,21 @@ class Trainer:
 
 
 class Move:
-    def __init__(self, name, type, power, accuracy, max_pp):
+    def __init__(self, name):
+        if name not in MOVES_DB:
+            raise ValueError(f"O ataque '{name}' não existe no moves.json!")
+
+        data = MOVES_DB[name]
+
         self.name = name
-        self.type = type
-        self.power = power
-        self.accuracy = accuracy
-        self.max_pp = max_pp
-        self.current_pp = max_pp
+        self.type = data['type']
+        self.category = data['category']
+        self.power = data['power']
+        self.accuracy = data['accuracy']
+        self.max_pp = data['pp']
+        self.current_pp = data['pp']
+
+        self.effect = data.get('effect')
 
     def use(self):
         if self.current_pp > 0:
@@ -76,3 +86,9 @@ class Move:
             return True
         else:
             return False
+
+    def restore_pp(self):
+        self.current_pp = self.max_pp
+
+    def __repr__(self):
+        return f"<{self.name} ({self.type}) Power:{self.power} PP:{self.current_pp}/{self.max_pp}>"
