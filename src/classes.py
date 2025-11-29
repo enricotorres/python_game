@@ -1,4 +1,4 @@
-from src.database import MOVES_DB, POKEDEX_DB
+from src.database import MOVES_DB, POKEDEX_DB, ITEMS_DB
 
 class Pokemon:
     def __init__(self, name, level):
@@ -7,37 +7,38 @@ class Pokemon:
 
         data = POKEDEX_DB[name]
 
+        self.is_caught = False
         self.name = name
-        self.id = data['id']
+        self.id = data["id"]
         self.level = level
         self.xp = 0
-        self.types = data['types']
-        self.sprite = data.get('sprite')
+        self.types = data["types"]
+        self.sprite = data.get("sprite")
 
-        base_stats = data['stats']
+        base_stats = data["stats"]
 
-        self.max_hp = int(((base_stats['hp'] * 2 * level) / 100) + level + 10)
+        self.max_hp = int(((base_stats["hp"] * 2 * level) / 100) + level + 10)
         self.current_hp = self.max_hp
 
-        self.atk = int(((base_stats['attack'] * 2 * level) / 100) + 5)
-        self.defense = int(((base_stats['defense'] * 2 * level) / 100) + 5)
-        self.sp_atk = int(((base_stats['special_attack'] * 2 * level) / 100) + 5)
-        self.sp_def = int(((base_stats['special_defense'] * 2 * level) / 100) + 5)
-        self.speed = int(((base_stats['speed'] * 2 * level) / 100) + 5)
+        self.atk = int(((base_stats["attack"] * 2 * level) / 100) + 5)
+        self.defense = int(((base_stats["defense"] * 2 * level) / 100) + 5)
+        self.sp_atk = int(((base_stats["special_attack"] * 2 * level) / 100) + 5)
+        self.sp_def = int(((base_stats["special_defense"] * 2 * level) / 100) + 5)
+        self.speed = int(((base_stats["speed"] * 2 * level) / 100) + 5)
 
         self.moves = []
-        self.learn_moves_by_level(data['moves'])
+        self.learn_moves_by_level(data["moves"])
 
     def learn_moves_by_level(self, moves_list_from_json):
-        available_moves = [m for m in moves_list_from_json if m['level'] <= self.level]
+        available_moves = [m for m in moves_list_from_json if m["level"] <= self.level]
 
-        available_moves.sort(key=lambda x: x['level'])
+        available_moves.sort(key=lambda x: x["level"])
 
         recent_moves = available_moves[-4:]
 
         for m_data in recent_moves:
             try:
-                new_move = Move(m_data['name'])
+                new_move = Move(m_data["name"])
                 self.moves.append(new_move)
             except Exception as e:
                 print(f"Erro ao ensinar {m_data['name']} para {self.name}: {e}")
@@ -118,14 +119,14 @@ class Move:
         data = MOVES_DB[name]
 
         self.name = name
-        self.type = data['type']
-        self.category = data['category']
-        self.power = data['power']
-        self.accuracy = data['accuracy']
-        self.max_pp = data['pp']
-        self.current_pp = data['pp']
+        self.type = data["type"]
+        self.category = data["category"]
+        self.power = data["power"]
+        self.accuracy = data["accuracy"]
+        self.max_pp = data["pp"]
+        self.current_pp = data["pp"]
 
-        self.effect = data.get('effect')
+        self.effect = data.get("effect")
 
     def use(self):
         if self.current_pp > 0:
@@ -139,3 +140,50 @@ class Move:
 
     def __repr__(self):
         return f"<{self.name} ({self.type}) Power:{self.power} PP:{self.current_pp}/{self.max_pp}>"
+
+
+class Item:
+    def __init__(self, name):
+        if name not in ITEMS_DB:
+            raise ValueError(f"Item '{name}' não encontrado no JSON.")
+
+        data = ITEMS_DB[name]
+
+        self.id = data["id"]
+        self.name = data["name"]
+        self.category = data["category"]
+        self.price = data["price"]
+        self.description = data["description"]
+        self.effect = data["effect"]
+
+    def use(self, target_pokemon):
+        effect_type = self.effect.get("type")
+
+        if effect_type == "heal_hp":
+            if target_pokemon.current_hp >= target_pokemon.max_hp:
+                return False
+
+            amount = self.effect.get("amount", 0)
+            target_pokemon.current_hp += amount
+
+            if target_pokemon.current_hp > target_pokemon.max_hp:
+                target_pokemon.current_hp = target_pokemon.max_hp
+
+            return True
+
+        elif effect_type == "revive":
+            if target_pokemon.is_alive():
+                return False
+
+            percent = self.effect.get("amount_percent", 0.5)
+            target_pokemon.current_hp = int(target_pokemon.max_hp * percent)
+            return True
+
+        elif effect_type == "cure_status":
+            # implementar logica depois
+            pass
+
+        return False
+
+    def __repr__(self):
+        return f"<Item: {self.name}>"
