@@ -21,6 +21,7 @@ class BattleController:
 
         self.state = "START"
 
+
     def run_battle_loop(self):
         self.state = "PLAYER_TURN"
         self.player_pkmn_idx = 0
@@ -44,6 +45,7 @@ class BattleController:
                 self.handle_state_logic()
             else:
                 self.process_battle_state()
+
 
     def handle_state_logic(self):
         if self.state == "PLAYER_TURN":
@@ -115,12 +117,14 @@ class BattleController:
             else:
                 pass
 
+
     def decide_enemy_move(self):
         valid_moves = [m for m in self.trainer_pkmn.moves if m.current_pp > 0]
         if valid_moves:
             self.enemy_chosen_move = random.choice(valid_moves)
         else:
             self.enemy_chosen_move = self.trainer_pkmn.moves[0]
+
 
     def process_battle_state(self):
         if self.state == "RESOLVE_TURN":
@@ -173,6 +177,7 @@ class BattleController:
         elif self.state == "DEFEAT":
             self.state = "EXIT"
 
+
     def perform_attack(self, attacker, defender, move):
         if attacker.attack(move):
             if random.randint(1, 100) <= move.accuracy:
@@ -183,6 +188,7 @@ class BattleController:
                 pass # implementar
         else:
             pass # implementar logica sem pp
+
 
     def check_battle_status(self):
         if not self.is_team_alive(self.player):
@@ -204,6 +210,7 @@ class BattleController:
 
         return True
 
+
     def swap_enemy_pokemon(self):
         for i, pkmn in enumerate(self.trainer.team):
             if pkmn.is_alive():
@@ -212,17 +219,20 @@ class BattleController:
                 return True
         return False
 
+
     def is_team_alive(self, trainer):
         for pokemon in trainer.team:
             if pokemon.current_hp > 0:
                 return True
         return False
 
+
     def load_types_from_json(self):
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         path = os.path.join(base_dir, "data", "types.json")
         with open(path, "r", encoding="utf-8" ) as file:
             return json.load(file)
+
 
     def load_moves_from_json(self):
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -235,6 +245,7 @@ class BattleController:
             new_move = Move(**data)
             all_moves[new_move.name] = new_move
         return all_moves
+
 
     def calculate_damage(self, attacker, defender, chosen_move):
         level_factor = ((2 * attacker.level // 5) + 2)
@@ -259,7 +270,6 @@ class BattleController:
             stab_bonus = 1.5
 
         damage_pre_random = damage_base * final_type_multiplier * stab_bonus
-
         damage_pre_random = math.floor(damage_pre_random)
 
         random_factor = random.randint(85, 100) / 100.0
