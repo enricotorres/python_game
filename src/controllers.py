@@ -1,5 +1,4 @@
 
-from classes import Move
 import random
 import json
 import os
