@@ -98,8 +98,8 @@ def main():
     battle_scene = BattleScene()
     print("Controller inicializado.")
     controller = BattleController(battle_scene, trainer, player)
-
     controller.run_battle_loop()
+
 
 if __name__ == "__main__":
     main()

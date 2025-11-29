@@ -1,6 +1,5 @@
 
-from classes import Pokemon, Trainer, Move
-from scenarios import BattleScene
+from classes import Move
 import random
 import json
 import os
@@ -21,7 +20,6 @@ class BattleController:
         self.switch_target_idx = None
 
         self.state = "START"
-        self.run_battle_loop()
 
     def run_battle_loop(self):
         self.state = "PLAYER_TURN"
