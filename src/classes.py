@@ -1,32 +1,57 @@
-from src.database import MOVES_DB
+from src.database import MOVES_DB, POKEDEX_DB
 
 class Pokemon:
-    def __init__(self, name, primary_type, level, xp, pokedex_id, base_hp, atk, defense, speed, moves, secondary_type=None):
-        self.pokedex_id = pokedex_id
-        self.primary_type = primary_type
-        self.secondary_type = secondary_type
+    def __init__(self, name, level):
+        if name not in POKEDEX_DB:
+            raise ValueError(f"Pokémon '{name}' não encontrado no Pokedex JSON.")
+
+        data = POKEDEX_DB[name]
+
         self.name = name
-        self.xp = xp
+        self.id = data['id']
         self.level = level
-        self.base_hp = base_hp
-        self.max_hp = base_hp
-        self.current_hp = base_hp
-        self.atk = atk
-        self.defense = defense
-        self.speed = speed
-        self.moves = moves
+        self.xp = 0
+        self.types = data['types']
+        self.sprite = data.get('sprite')
+
+        base_stats = data['stats']
+
+        self.max_hp = int(((base_stats['hp'] * 2 * level) / 100) + level + 10)
+        self.current_hp = self.max_hp
+
+        self.atk = int(((base_stats['attack'] * 2 * level) / 100) + 5)
+        self.defense = int(((base_stats['defense'] * 2 * level) / 100) + 5)
+        self.sp_atk = int(((base_stats['special_attack'] * 2 * level) / 100) + 5)
+        self.sp_def = int(((base_stats['special_defense'] * 2 * level) / 100) + 5)
+        self.speed = int(((base_stats['speed'] * 2 * level) / 100) + 5)
+
+        self.moves = []
+        self.learn_moves_by_level(data['moves'])
+
+    def learn_moves_by_level(self, moves_list_from_json):
+        available_moves = [m for m in moves_list_from_json if m['level'] <= self.level]
+
+        available_moves.sort(key=lambda x: x['level'])
+
+        recent_moves = available_moves[-4:]
+
+        for m_data in recent_moves:
+            try:
+                new_move = Move(m_data['name'])
+                self.moves.append(new_move)
+            except Exception as e:
+                print(f"Erro ao ensinar {m_data['name']} para {self.name}: {e}")
 
     def show_status(self):
-        tipo_str = self.primary_type
-        if self.secondary_type:
-            tipo_str += f"/{self.secondary_type}"
+        type_str = "/".join(self.types)
         return {
-            "id": self.pokedex_id,
-            "name": self.name,
-            "hp_percent": self.current_hp/self.max_hp,
-            "current_hp": self.current_hp,
-            "max_hp": self.max_hp
-        }
+                "id": self.id,
+                "name": self.name,
+                "hp_percent": self.current_hp / self.max_hp,
+                "current_hp": self.current_hp,
+                "max_hp": self.max_hp,
+                "types": type_str
+            }
 
     def attack(self, move):
         if move.use():
@@ -34,15 +59,16 @@ class Pokemon:
         return False
 
     def take_damage(self, amount):
-        self.current_hp -= amount
+        self.current_hp -= int(amount)
         if self.current_hp < 0:
             self.current_hp = 0
         return self.current_hp > 0
 
     def is_alive(self):
-        if self.current_hp > 0:
-            return True
-        return False
+            return self.current_hp > 0
+
+    def __repr__(self):
+        return f"<{self.name} Lv.{self.level} | HP:{self.current_hp}>"
 
 
 class Trainer:

@@ -11,7 +11,6 @@ class BattleController:
         self.trainer = trainer
         self.battle_scene = battle_scene
         self.types_damage = self.load_types_from_json()
-        self.all_moves = self.load_moves_from_json()
         self.cancel_action = -1
 
         self.player_action_type = None
@@ -232,19 +231,6 @@ class BattleController:
         path = os.path.join(base_dir, "data", "types.json")
         with open(path, "r", encoding="utf-8" ) as file:
             return json.load(file)
-
-
-    def load_moves_from_json(self):
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        path = os.path.join(base_dir, "data", "moves.json")
-        with open(path, "r", encoding="utf-8") as file:
-            moves_data = json.load(file)
-
-        all_moves = {}
-        for data in moves_data:
-            new_move = Move(**data)
-            all_moves[new_move.name] = new_move
-        return all_moves
 
 
     def calculate_damage(self, attacker, defender, chosen_move):
