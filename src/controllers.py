@@ -4,6 +4,7 @@ from scenarios import BattleScene
 import random
 import json
 import os
+import math
 
 class BattleController:
     def __init__(self, battle_scene, trainer, player):
@@ -33,9 +34,11 @@ class BattleController:
         while self.state != "EXIT":
             self.player_pkmn = self.player.team[self.player_pkmn_idx]
             self.trainer_pkmn = self.trainer.team[self.trainer_pkmn_idx]
-
-            print(self.player_pkmn.show_status())
-            print(self.trainer_pkmn.show_status())
+            for _ in range(4):
+                print()
+            print(f"{self.player_pkmn.name} de {self.player.name} vs {self.trainer_pkmn.name} de {self.trainer.name}")
+            print(f"{self.player_pkmn.name} esta com {self.player_pkmn.current_hp} de vida de {self.player_pkmn.max_hp}")
+            print(f"{self.trainer_pkmn.name} esta com {self.trainer_pkmn.current_hp} de vida de {self.trainer_pkmn.max_hp}")
 
             input_states = ["PLAYER_TURN", "SELECT_MOVE", "POKEMON_MENU", "BAG_MENU", "FORCE_SWITCH"]
 
@@ -236,22 +239,33 @@ class BattleController:
         return all_moves
 
     def calculate_damage(self, attacker, defender, chosen_move):
-        multiplier_1 = ((2 * attacker.level/ 5) + 2)
-        multiplier_2 = multiplier_1 * (chosen_move.power * attacker.atk / defender.defense)
-        multiplier_3 = (multiplier_2 / 50) + 2
+        level_factor = ((2 * attacker.level // 5) + 2)
 
-        attack_type_rules = self.types_damage.get(chosen_move.type, {})
-        multiplier_4 = attack_type_rules.get(defender.primary_type, 1.0)
-        multiplier_5 = 1.0
+        raw_damage_part = level_factor * (chosen_move.power * attacker.atk // defender.defense)
+
+        damage_base = (raw_damage_part // 50) + 2
+
+        type_rules = self.types_damage.get(chosen_move.type, {})
+
+        type_effectiveness_primary = type_rules.get(defender.primary_type, 1.0)
+
+        type_effectiveness_secondary = 1.0
 
         if defender.secondary_type:
-            multiplier_5 = attack_type_rules.get(defender.secondary_type, 1.0)
+            type_effectiveness_secondary = type_rules.get(defender.secondary_type, 1.0)
 
-        final_multiplier = multiplier_4 * multiplier_5
+        final_type_multiplier = type_effectiveness_primary * type_effectiveness_secondary
 
-        stab = 1.0
+        stab_bonus = 1.0
         if attacker.primary_type == chosen_move.type or attacker.secondary_type == chosen_move.type:
-            stab = 1.5
+            stab_bonus = 1.5
 
-        damage = multiplier_3 * final_multiplier * stab
-        return int(damage)
+        damage_pre_random = damage_base * final_type_multiplier * stab_bonus
+
+        damage_pre_random = math.floor(damage_pre_random)
+
+        random_factor = random.randint(85, 100) / 100.0
+
+        final_calculated_damage = damage_pre_random * random_factor
+
+        return max(1, int(final_calculated_damage))
