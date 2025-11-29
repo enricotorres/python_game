@@ -1,0 +1,7430 @@
+[
+  {
+    "id": 1,
+    "nome": "Bulbasaur",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 45,
+      "ataque": 49,
+      "defesa": 49,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Leech seed",
+        "nivel": 7,
+        "url": "https://pokeapi.co/api/v2/move/73/"
+      },
+      {
+        "nome": "Vine whip",
+        "nivel": 13,
+        "url": "https://pokeapi.co/api/v2/move/22/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Razor leaf",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/75/"
+      },
+      {
+        "nome": "Growth",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/74/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Solar beam",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/76/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+  },
+  {
+    "id": 2,
+    "nome": "Ivysaur",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 62,
+      "defesa": 63,
+      "velocidade": 60
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Leech seed",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/73/"
+      },
+      {
+        "nome": "Vine whip",
+        "nivel": 13,
+        "url": "https://pokeapi.co/api/v2/move/22/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Razor leaf",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/75/"
+      },
+      {
+        "nome": "Growth",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/74/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Solar beam",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/76/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+  },
+  {
+    "id": 3,
+    "nome": "Venusaur",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 82,
+      "defesa": 83,
+      "velocidade": 80
+    },
+    "moves": [
+      {
+        "nome": "Vine whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/22/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Leech seed",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/73/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Razor leaf",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/75/"
+      },
+      {
+        "nome": "Growth",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/74/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Solar beam",
+        "nivel": 65,
+        "url": "https://pokeapi.co/api/v2/move/76/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+  },
+  {
+    "id": 4,
+    "nome": "Charmander",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 39,
+      "ataque": 52,
+      "defesa": 43,
+      "velocidade": 65
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 9,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Flamethrower",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/53/"
+      },
+      {
+        "nome": "Fire spin",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/83/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+  },
+  {
+    "id": 5,
+    "nome": "Charmeleon",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 58,
+      "ataque": 64,
+      "defesa": 58,
+      "velocidade": 80
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Flamethrower",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/53/"
+      },
+      {
+        "nome": "Fire spin",
+        "nivel": 56,
+        "url": "https://pokeapi.co/api/v2/move/83/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+  },
+  {
+    "id": 6,
+    "nome": "Charizard",
+    "tipos": [
+      "Fire",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 78,
+      "ataque": 84,
+      "defesa": 78,
+      "velocidade": 100
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Flamethrower",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/53/"
+      },
+      {
+        "nome": "Fire spin",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/83/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+  },
+  {
+    "id": 7,
+    "nome": "Squirtle",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 44,
+      "ataque": 48,
+      "defesa": 65,
+      "velocidade": 43
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Bubble",
+        "nivel": 8,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Withdraw",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/110/"
+      },
+      {
+        "nome": "Skull bash",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/130/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+  },
+  {
+    "id": 8,
+    "nome": "Wartortle",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 59,
+      "ataque": 63,
+      "defesa": 80,
+      "velocidade": 58
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Bubble",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Withdraw",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/110/"
+      },
+      {
+        "nome": "Skull bash",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/130/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+  },
+  {
+    "id": 9,
+    "nome": "Blastoise",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 79,
+      "ataque": 83,
+      "defesa": 100,
+      "velocidade": 78
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Bubble",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Withdraw",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/110/"
+      },
+      {
+        "nome": "Skull bash",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/130/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 52,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+  },
+  {
+    "id": 10,
+    "nome": "Caterpie",
+    "tipos": [
+      "Bug"
+    ],
+    "stats": {
+      "hp": 45,
+      "ataque": 30,
+      "defesa": 35,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "String shot",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/81/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"
+  },
+  {
+    "id": 11,
+    "nome": "Metapod",
+    "tipos": [
+      "Bug"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 20,
+      "defesa": 55,
+      "velocidade": 30
+    },
+    "moves": [
+      {
+        "nome": "Harden",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png"
+  },
+  {
+    "id": 12,
+    "nome": "Butterfree",
+    "tipos": [
+      "Bug",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 45,
+      "defesa": 50,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Confusion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Whirlwind",
+        "nivel": 26,
+        "url": "https://pokeapi.co/api/v2/move/18/"
+      },
+      {
+        "nome": "Psybeam",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/60/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"
+  },
+  {
+    "id": 13,
+    "nome": "Weedle",
+    "tipos": [
+      "Bug",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 35,
+      "defesa": 30,
+      "velocidade": 50
+    },
+    "moves": [
+      {
+        "nome": "Poison sting",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "String shot",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/81/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png"
+  },
+  {
+    "id": 14,
+    "nome": "Kakuna",
+    "tipos": [
+      "Bug",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 45,
+      "ataque": 25,
+      "defesa": 50,
+      "velocidade": 35
+    },
+    "moves": [
+      {
+        "nome": "Harden",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png"
+  },
+  {
+    "id": 15,
+    "nome": "Beedrill",
+    "tipos": [
+      "Bug",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 90,
+      "defesa": 40,
+      "velocidade": 75
+    },
+    "moves": [
+      {
+        "nome": "Fury attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Twineedle",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/41/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Pin missile",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/42/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png"
+  },
+  {
+    "id": 16,
+    "nome": "Pidgey",
+    "tipos": [
+      "Normal",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 45,
+      "defesa": 40,
+      "velocidade": 56
+    },
+    "moves": [
+      {
+        "nome": "Gust",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/16/"
+      },
+      {
+        "nome": "Sand attack",
+        "nivel": 5,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 12,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Whirlwind",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/18/"
+      },
+      {
+        "nome": "Wing attack",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/17/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Mirror move",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/119/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
+  },
+  {
+    "id": 17,
+    "nome": "Pidgeotto",
+    "tipos": [
+      "Normal",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 63,
+      "ataque": 60,
+      "defesa": 55,
+      "velocidade": 71
+    },
+    "moves": [
+      {
+        "nome": "Gust",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/16/"
+      },
+      {
+        "nome": "Sand attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 12,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Whirlwind",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/18/"
+      },
+      {
+        "nome": "Wing attack",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/17/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Mirror move",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/119/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
+  },
+  {
+    "id": 18,
+    "nome": "Pidgeot",
+    "tipos": [
+      "Normal",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 83,
+      "ataque": 80,
+      "defesa": 75,
+      "velocidade": 101
+    },
+    "moves": [
+      {
+        "nome": "Gust",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/16/"
+      },
+      {
+        "nome": "Sand attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Whirlwind",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/18/"
+      },
+      {
+        "nome": "Wing attack",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/17/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Mirror move",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/119/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png"
+  },
+  {
+    "id": 19,
+    "nome": "Rattata",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 30,
+      "ataque": 56,
+      "defesa": 35,
+      "velocidade": 72
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 7,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Hyper fang",
+        "nivel": 14,
+        "url": "https://pokeapi.co/api/v2/move/158/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Super fang",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/162/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png"
+  },
+  {
+    "id": 20,
+    "nome": "Raticate",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 55,
+      "ataque": 81,
+      "defesa": 60,
+      "velocidade": 97
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Hyper fang",
+        "nivel": 14,
+        "url": "https://pokeapi.co/api/v2/move/158/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Super fang",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/162/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png"
+  },
+  {
+    "id": 21,
+    "nome": "Spearow",
+    "tipos": [
+      "Normal",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 60,
+      "defesa": 30,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 9,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Mirror move",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/119/"
+      },
+      {
+        "nome": "Drill peck",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/65/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png"
+  },
+  {
+    "id": 22,
+    "nome": "Fearow",
+    "tipos": [
+      "Normal",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 90,
+      "defesa": 65,
+      "velocidade": 100
+    },
+    "moves": [
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Mirror move",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/119/"
+      },
+      {
+        "nome": "Drill peck",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/65/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png"
+  },
+  {
+    "id": 23,
+    "nome": "Ekans",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 35,
+      "ataque": 60,
+      "defesa": 44,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Wrap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 10,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Glare",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/137/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Acid",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png"
+  },
+  {
+    "id": 24,
+    "nome": "Arbok",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 95,
+      "defesa": 69,
+      "velocidade": 80
+    },
+    "moves": [
+      {
+        "nome": "Wrap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Glare",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/137/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Acid",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png"
+  },
+  {
+    "id": 25,
+    "nome": "Pikachu",
+    "tipos": [
+      "Electric"
+    ],
+    "stats": {
+      "hp": 35,
+      "ataque": 55,
+      "defesa": 40,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Thunder shock",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      {
+        "nome": "Thunder wave",
+        "nivel": 9,
+        "url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 26,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Thunder",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/87/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+  },
+  {
+    "id": 26,
+    "nome": "Raichu",
+    "tipos": [
+      "Electric"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 90,
+      "defesa": 55,
+      "velocidade": 110
+    },
+    "moves": [
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Thunder shock",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      {
+        "nome": "Thunder wave",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/86/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png"
+  },
+  {
+    "id": 27,
+    "nome": "Sandshrew",
+    "tipos": [
+      "Ground"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 75,
+      "defesa": 85,
+      "velocidade": 40
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Sand attack",
+        "nivel": 10,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png"
+  },
+  {
+    "id": 28,
+    "nome": "Sandslash",
+    "tipos": [
+      "Ground"
+    ],
+    "stats": {
+      "hp": 75,
+      "ataque": 100,
+      "defesa": 110,
+      "velocidade": 65
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Sand attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png"
+  },
+  {
+    "id": 29,
+    "nome": "Nidoran-f",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 55,
+      "ataque": 47,
+      "defesa": 52,
+      "velocidade": 41
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Scratch",
+        "nivel": 8,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 14,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      },
+      {
+        "nome": "Double kick",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/24/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png"
+  },
+  {
+    "id": 30,
+    "nome": "Nidorina",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 70,
+      "ataque": 62,
+      "defesa": 67,
+      "velocidade": 56
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 14,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      },
+      {
+        "nome": "Double kick",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/24/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png"
+  },
+  {
+    "id": 31,
+    "nome": "Nidoqueen",
+    "tipos": [
+      "Poison",
+      "Ground"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 92,
+      "defesa": 87,
+      "velocidade": 76
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Body slam",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 14,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png"
+  },
+  {
+    "id": 32,
+    "nome": "Nidoran-m",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 46,
+      "ataque": 57,
+      "defesa": 40,
+      "velocidade": 50
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Horn attack",
+        "nivel": 8,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 14,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Horn drill",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/32/"
+      },
+      {
+        "nome": "Double kick",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/24/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png"
+  },
+  {
+    "id": 33,
+    "nome": "Nidorino",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 61,
+      "ataque": 72,
+      "defesa": 57,
+      "velocidade": 65
+    },
+    "moves": [
+      {
+        "nome": "Horn attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 14,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Horn drill",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/32/"
+      },
+      {
+        "nome": "Double kick",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/24/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png"
+  },
+  {
+    "id": 34,
+    "nome": "Nidoking",
+    "tipos": [
+      "Poison",
+      "Ground"
+    ],
+    "stats": {
+      "hp": 81,
+      "ataque": 102,
+      "defesa": 77,
+      "velocidade": 85
+    },
+    "moves": [
+      {
+        "nome": "Horn attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Thrash",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/37/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png"
+  },
+  {
+    "id": 35,
+    "nome": "Clefairy",
+    "tipos": [
+      "Fairy"
+    ],
+    "stats": {
+      "hp": 70,
+      "ataque": 45,
+      "defesa": 48,
+      "velocidade": 35
+    },
+    "moves": [
+      {
+        "nome": "Pound",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Sing",
+        "nivel": 13,
+        "url": "https://pokeapi.co/api/v2/move/47/"
+      },
+      {
+        "nome": "Double slap",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Minimize",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/107/"
+      },
+      {
+        "nome": "Metronome",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/118/"
+      },
+      {
+        "nome": "Defense curl",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/111/"
+      },
+      {
+        "nome": "Light screen",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/113/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png"
+  },
+  {
+    "id": 36,
+    "nome": "Clefable",
+    "tipos": [
+      "Fairy"
+    ],
+    "stats": {
+      "hp": 95,
+      "ataque": 70,
+      "defesa": 73,
+      "velocidade": 60
+    },
+    "moves": [
+      {
+        "nome": "Double slap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Sing",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/47/"
+      },
+      {
+        "nome": "Minimize",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/107/"
+      },
+      {
+        "nome": "Metronome",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/118/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png"
+  },
+  {
+    "id": 37,
+    "nome": "Vulpix",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 38,
+      "ataque": 41,
+      "defesa": 40,
+      "velocidade": 65
+    },
+    "moves": [
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Roar",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/46/"
+      },
+      {
+        "nome": "Confuse ray",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/109/"
+      },
+      {
+        "nome": "Flamethrower",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/53/"
+      },
+      {
+        "nome": "Fire spin",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/83/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png"
+  },
+  {
+    "id": 38,
+    "nome": "Ninetales",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 73,
+      "ataque": 76,
+      "defesa": 75,
+      "velocidade": 100
+    },
+    "moves": [
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Roar",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/46/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png"
+  },
+  {
+    "id": 39,
+    "nome": "Jigglypuff",
+    "tipos": [
+      "Normal",
+      "Fairy"
+    ],
+    "stats": {
+      "hp": 115,
+      "ataque": 45,
+      "defesa": 20,
+      "velocidade": 20
+    },
+    "moves": [
+      {
+        "nome": "Sing",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/47/"
+      },
+      {
+        "nome": "Pound",
+        "nivel": 9,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 14,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Defense curl",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/111/"
+      },
+      {
+        "nome": "Double slap",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Rest",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/156/"
+      },
+      {
+        "nome": "Body slam",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+        "nome": "Double edge",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/38/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"
+  },
+  {
+    "id": 40,
+    "nome": "Wigglytuff",
+    "tipos": [
+      "Normal",
+      "Fairy"
+    ],
+    "stats": {
+      "hp": 140,
+      "ataque": 70,
+      "defesa": 45,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Double slap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Sing",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/47/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Defense curl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/111/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png"
+  },
+  {
+    "id": 41,
+    "nome": "Zubat",
+    "tipos": [
+      "Poison",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 45,
+      "defesa": 35,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Leech life",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/141/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 10,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Confuse ray",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/109/"
+      },
+      {
+        "nome": "Wing attack",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/17/"
+      },
+      {
+        "nome": "Haze",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/114/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png"
+  },
+  {
+    "id": 42,
+    "nome": "Golbat",
+    "tipos": [
+      "Poison",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 75,
+      "ataque": 80,
+      "defesa": 70,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Bite",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Leech life",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/141/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 10,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Confuse ray",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/109/"
+      },
+      {
+        "nome": "Wing attack",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/17/"
+      },
+      {
+        "nome": "Haze",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/114/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png"
+  },
+  {
+    "id": 43,
+    "nome": "Oddish",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 45,
+      "ataque": 50,
+      "defesa": 55,
+      "velocidade": 30
+    },
+    "moves": [
+      {
+        "nome": "Absorb",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/71/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Acid",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      },
+      {
+        "nome": "Petal dance",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/80/"
+      },
+      {
+        "nome": "Solar beam",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/76/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png"
+  },
+  {
+    "id": 44,
+    "nome": "Gloom",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 65,
+      "defesa": 70,
+      "velocidade": 40
+    },
+    "moves": [
+      {
+        "nome": "Absorb",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/71/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Acid",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      },
+      {
+        "nome": "Petal dance",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/80/"
+      },
+      {
+        "nome": "Solar beam",
+        "nivel": 52,
+        "url": "https://pokeapi.co/api/v2/move/76/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png"
+  },
+  {
+    "id": 45,
+    "nome": "Vileplume",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 75,
+      "ataque": 80,
+      "defesa": 85,
+      "velocidade": 50
+    },
+    "moves": [
+      {
+        "nome": "Acid",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Petal dance",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/80/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png"
+  },
+  {
+    "id": 46,
+    "nome": "Paras",
+    "tipos": [
+      "Bug",
+      "Grass"
+    ],
+    "stats": {
+      "hp": 35,
+      "ataque": 70,
+      "defesa": 55,
+      "velocidade": 25
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 13,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Leech life",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/141/"
+      },
+      {
+        "nome": "Spore",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/147/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Growth",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/74/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png"
+  },
+  {
+    "id": 47,
+    "nome": "Parasect",
+    "tipos": [
+      "Bug",
+      "Grass"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 95,
+      "defesa": 80,
+      "velocidade": 30
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Leech life",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/141/"
+      },
+      {
+        "nome": "Spore",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/147/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Growth",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/74/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png"
+  },
+  {
+    "id": 48,
+    "nome": "Venonat",
+    "tipos": [
+      "Bug",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 55,
+      "defesa": 50,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Leech life",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/141/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Psybeam",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/60/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png"
+  },
+  {
+    "id": 49,
+    "nome": "Venomoth",
+    "tipos": [
+      "Bug",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 70,
+      "ataque": 65,
+      "defesa": 60,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Leech life",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/141/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Psybeam",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/60/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png"
+  },
+  {
+    "id": 50,
+    "nome": "Diglett",
+    "tipos": [
+      "Ground"
+    ],
+    "stats": {
+      "hp": 10,
+      "ataque": 55,
+      "defesa": 25,
+      "velocidade": 95
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Dig",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/91/"
+      },
+      {
+        "nome": "Sand attack",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Earthquake",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/89/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png"
+  },
+  {
+    "id": 51,
+    "nome": "Dugtrio",
+    "tipos": [
+      "Ground"
+    ],
+    "stats": {
+      "hp": 35,
+      "ataque": 100,
+      "defesa": 50,
+      "velocidade": 120
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Dig",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/91/"
+      },
+      {
+        "nome": "Sand attack",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Earthquake",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/89/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png"
+  },
+  {
+    "id": 52,
+    "nome": "Meowth",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 45,
+      "defesa": 35,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 12,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Pay day",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/6/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png"
+  },
+  {
+    "id": 53,
+    "nome": "Persian",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 70,
+      "defesa": 60,
+      "velocidade": 115
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Pay day",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/6/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 51,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png"
+  },
+  {
+    "id": 54,
+    "nome": "Psyduck",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 52,
+      "defesa": 48,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Confusion",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 52,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png"
+  },
+  {
+    "id": 55,
+    "nome": "Golduck",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 82,
+      "defesa": 78,
+      "velocidade": 85
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Confusion",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 59,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png"
+  },
+  {
+    "id": 56,
+    "nome": "Mankey",
+    "tipos": [
+      "Fighting"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 80,
+      "defesa": 35,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Karate chop",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/2/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Seismic toss",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/69/"
+      },
+      {
+        "nome": "Thrash",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/37/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png"
+  },
+  {
+    "id": 57,
+    "nome": "Primeape",
+    "tipos": [
+      "Fighting"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 105,
+      "defesa": 60,
+      "velocidade": 95
+    },
+    "moves": [
+      {
+        "nome": "Karate chop",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/2/"
+      },
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Fury swipes",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/154/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Seismic toss",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/69/"
+      },
+      {
+        "nome": "Thrash",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/37/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png"
+  },
+  {
+    "id": 58,
+    "nome": "Growlithe",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 55,
+      "ataque": 70,
+      "defesa": 45,
+      "velocidade": 60
+    },
+    "moves": [
+      {
+        "nome": "Bite",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Roar",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/46/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Flamethrower",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/53/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png"
+  },
+  {
+    "id": 59,
+    "nome": "Arcanine",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 110,
+      "defesa": 80,
+      "velocidade": 95
+    },
+    "moves": [
+      {
+        "nome": "Take down",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Roar",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/46/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png"
+  },
+  {
+    "id": 60,
+    "nome": "Poliwag",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 50,
+      "defesa": 40,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Bubble",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Hypnosis",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Double slap",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Body slam",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+        "nome": "Amnesia",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/133/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png"
+  },
+  {
+    "id": 61,
+    "nome": "Poliwhirl",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 65,
+      "defesa": 65,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Water gun",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Hypnosis",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Bubble",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Double slap",
+        "nivel": 26,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Body slam",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+        "nome": "Amnesia",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/133/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png"
+  },
+  {
+    "id": 62,
+    "nome": "Poliwrath",
+    "tipos": [
+      "Water",
+      "Fighting"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 95,
+      "defesa": 95,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Double slap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Body slam",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Hypnosis",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png"
+  },
+  {
+    "id": 63,
+    "nome": "Abra",
+    "tipos": [
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 25,
+      "ataque": 20,
+      "defesa": 15,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Teleport",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/100/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png"
+  },
+  {
+    "id": 64,
+    "nome": "Kadabra",
+    "tipos": [
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 35,
+      "defesa": 30,
+      "velocidade": 105
+    },
+    "moves": [
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Confusion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Teleport",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/100/"
+      },
+      {
+        "nome": "Psybeam",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/60/"
+      },
+      {
+        "nome": "Recover",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/105/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      },
+      {
+        "nome": "Reflect",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/115/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png"
+  },
+  {
+    "id": 65,
+    "nome": "Alakazam",
+    "tipos": [
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 55,
+      "ataque": 50,
+      "defesa": 45,
+      "velocidade": 120
+    },
+    "moves": [
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Confusion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Teleport",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/100/"
+      },
+      {
+        "nome": "Psybeam",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/60/"
+      },
+      {
+        "nome": "Recover",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/105/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      },
+      {
+        "nome": "Reflect",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/115/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png"
+  },
+  {
+    "id": 66,
+    "nome": "Machop",
+    "tipos": [
+      "Fighting"
+    ],
+    "stats": {
+      "hp": 70,
+      "ataque": 80,
+      "defesa": 50,
+      "velocidade": 35
+    },
+    "moves": [
+      {
+        "nome": "Karate chop",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/2/"
+      },
+      {
+        "nome": "Low kick",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/67/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Seismic toss",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/69/"
+      },
+      {
+        "nome": "Submission",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/66/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png"
+  },
+  {
+    "id": 67,
+    "nome": "Machoke",
+    "tipos": [
+      "Fighting"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 100,
+      "defesa": 70,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Karate chop",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/2/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Low kick",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/67/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Seismic toss",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/69/"
+      },
+      {
+        "nome": "Submission",
+        "nivel": 52,
+        "url": "https://pokeapi.co/api/v2/move/66/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png"
+  },
+  {
+    "id": 68,
+    "nome": "Machamp",
+    "tipos": [
+      "Fighting"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 130,
+      "defesa": 80,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Karate chop",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/2/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Low kick",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/67/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Seismic toss",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/69/"
+      },
+      {
+        "nome": "Submission",
+        "nivel": 52,
+        "url": "https://pokeapi.co/api/v2/move/66/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png"
+  },
+  {
+    "id": 69,
+    "nome": "Bellsprout",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 75,
+      "defesa": 35,
+      "velocidade": 40
+    },
+    "moves": [
+      {
+        "nome": "Vine whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/22/"
+      },
+      {
+        "nome": "Growth",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/74/"
+      },
+      {
+        "nome": "Wrap",
+        "nivel": 13,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Acid",
+        "nivel": 26,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      },
+      {
+        "nome": "Razor leaf",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/75/"
+      },
+      {
+        "nome": "Slam",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/21/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png"
+  },
+  {
+    "id": 70,
+    "nome": "Weepinbell",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 90,
+      "defesa": 50,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Vine whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/22/"
+      },
+      {
+        "nome": "Wrap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Growth",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/74/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Acid",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      },
+      {
+        "nome": "Razor leaf",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/75/"
+      },
+      {
+        "nome": "Slam",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/21/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png"
+  },
+  {
+    "id": 71,
+    "nome": "Victreebel",
+    "tipos": [
+      "Grass",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 105,
+      "defesa": 65,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Acid",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      },
+      {
+        "nome": "Razor leaf",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/75/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Wrap",
+        "nivel": 13,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png"
+  },
+  {
+    "id": 72,
+    "nome": "Tentacool",
+    "tipos": [
+      "Water",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 40,
+      "defesa": 35,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Acid",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 7,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Wrap",
+        "nivel": 13,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Constrict",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/132/"
+      },
+      {
+        "nome": "Barrier",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/112/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png"
+  },
+  {
+    "id": 73,
+    "nome": "Tentacruel",
+    "tipos": [
+      "Water",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 70,
+      "defesa": 65,
+      "velocidade": 100
+    },
+    "moves": [
+      {
+        "nome": "Wrap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Acid",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/51/"
+      },
+      {
+        "nome": "Poison sting",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/40/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Constrict",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/132/"
+      },
+      {
+        "nome": "Barrier",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/112/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png"
+  },
+  {
+    "id": 74,
+    "nome": "Geodude",
+    "tipos": [
+      "Rock",
+      "Ground"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 80,
+      "defesa": 100,
+      "velocidade": 20
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Defense curl",
+        "nivel": 11,
+        "url": "https://pokeapi.co/api/v2/move/111/"
+      },
+      {
+        "nome": "Rock throw",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/88/"
+      },
+      {
+        "nome": "Self destruct",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/120/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 26,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Earthquake",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/89/"
+      },
+      {
+        "nome": "Explosion",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/153/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png"
+  },
+  {
+    "id": 75,
+    "nome": "Graveler",
+    "tipos": [
+      "Rock",
+      "Ground"
+    ],
+    "stats": {
+      "hp": 55,
+      "ataque": 95,
+      "defesa": 115,
+      "velocidade": 35
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Defense curl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/111/"
+      },
+      {
+        "nome": "Rock throw",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/88/"
+      },
+      {
+        "nome": "Self destruct",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/120/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Earthquake",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/89/"
+      },
+      {
+        "nome": "Explosion",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/153/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png"
+  },
+  {
+    "id": 76,
+    "nome": "Golem",
+    "tipos": [
+      "Rock",
+      "Ground"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 120,
+      "defesa": 130,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Defense curl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/111/"
+      },
+      {
+        "nome": "Rock throw",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/88/"
+      },
+      {
+        "nome": "Self destruct",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/120/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Earthquake",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/89/"
+      },
+      {
+        "nome": "Explosion",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/153/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png"
+  },
+  {
+    "id": 77,
+    "nome": "Ponyta",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 85,
+      "defesa": 55,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Stomp",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Fire spin",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/83/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png"
+  },
+  {
+    "id": 78,
+    "nome": "Rapidash",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 100,
+      "defesa": 70,
+      "velocidade": 105
+    },
+    "moves": [
+      {
+        "nome": "Stomp",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Fire spin",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/83/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png"
+  },
+  {
+    "id": 79,
+    "nome": "Slowpoke",
+    "tipos": [
+      "Water",
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 65,
+      "defesa": 65,
+      "velocidade": 15
+    },
+    "moves": [
+      {
+        "nome": "Confusion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Headbutt",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/29/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Amnesia",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/133/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png"
+  },
+  {
+    "id": 80,
+    "nome": "Slowbro",
+    "tipos": [
+      "Water",
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 95,
+      "ataque": 75,
+      "defesa": 110,
+      "velocidade": 30
+    },
+    "moves": [
+      {
+        "nome": "Headbutt",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/29/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Confusion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Withdraw",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/110/"
+      },
+      {
+        "nome": "Amnesia",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/133/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png"
+  },
+  {
+    "id": 81,
+    "nome": "Magnemite",
+    "tipos": [
+      "Electric",
+      "Steel"
+    ],
+    "stats": {
+      "hp": 25,
+      "ataque": 35,
+      "defesa": 70,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Sonic boom",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/49/"
+      },
+      {
+        "nome": "Thunder shock",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Thunder wave",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png"
+  },
+  {
+    "id": 82,
+    "nome": "Magneton",
+    "tipos": [
+      "Electric",
+      "Steel"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 60,
+      "defesa": 95,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Sonic boom",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/49/"
+      },
+      {
+        "nome": "Thunder shock",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Thunder wave",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png"
+  },
+  {
+    "id": 83,
+    "nome": "Farfetchd",
+    "tipos": [
+      "Normal",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 52,
+      "ataque": 90,
+      "defesa": 55,
+      "velocidade": 60
+    },
+    "moves": [
+      {
+        "nome": "Sand attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 7,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Swords dance",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/14/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png"
+  },
+  {
+    "id": 84,
+    "nome": "Doduo",
+    "tipos": [
+      "Normal",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 35,
+      "ataque": 85,
+      "defesa": 45,
+      "velocidade": 75
+    },
+    "moves": [
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Drill peck",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/65/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Tri attack",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/161/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png"
+  },
+  {
+    "id": 85,
+    "nome": "Dodrio",
+    "tipos": [
+      "Normal",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 110,
+      "defesa": 70,
+      "velocidade": 110
+    },
+    "moves": [
+      {
+        "nome": "Fury attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Drill peck",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/65/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Tri attack",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/161/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 51,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png"
+  },
+  {
+    "id": 86,
+    "nome": "Seel",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 45,
+      "defesa": 55,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Headbutt",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/29/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Aurora beam",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/62/"
+      },
+      {
+        "nome": "Rest",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/156/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      },
+      {
+        "nome": "Ice beam",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/58/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png"
+  },
+  {
+    "id": 87,
+    "nome": "Dewgong",
+    "tipos": [
+      "Water",
+      "Ice"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 70,
+      "defesa": 80,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Headbutt",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/29/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Aurora beam",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/62/"
+      },
+      {
+        "nome": "Rest",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/156/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      },
+      {
+        "nome": "Ice beam",
+        "nivel": 56,
+        "url": "https://pokeapi.co/api/v2/move/58/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png"
+  },
+  {
+    "id": 88,
+    "nome": "Grimer",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 80,
+      "defesa": 50,
+      "velocidade": 25
+    },
+    "moves": [
+      {
+        "nome": "Pound",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Poison gas",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/139/"
+      },
+      {
+        "nome": "Minimize",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/107/"
+      },
+      {
+        "nome": "Sludge",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/124/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Acid armor",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/151/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png"
+  },
+  {
+    "id": 89,
+    "nome": "Muk",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 105,
+      "ataque": 105,
+      "defesa": 75,
+      "velocidade": 50
+    },
+    "moves": [
+      {
+        "nome": "Pound",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Poison gas",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/139/"
+      },
+      {
+        "nome": "Minimize",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/107/"
+      },
+      {
+        "nome": "Sludge",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/124/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 53,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Acid armor",
+        "nivel": 60,
+        "url": "https://pokeapi.co/api/v2/move/151/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png"
+  },
+  {
+    "id": 90,
+    "nome": "Shellder",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 30,
+      "ataque": 65,
+      "defesa": 100,
+      "velocidade": 40
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Withdraw",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/110/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Clamp",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/128/"
+      },
+      {
+        "nome": "Aurora beam",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/62/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Ice beam",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/58/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png"
+  },
+  {
+    "id": 91,
+    "nome": "Cloyster",
+    "tipos": [
+      "Water",
+      "Ice"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 95,
+      "defesa": 180,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Supersonic",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Aurora beam",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/62/"
+      },
+      {
+        "nome": "Withdraw",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/110/"
+      },
+      {
+        "nome": "Clamp",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/128/"
+      },
+      {
+        "nome": "Spike cannon",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/131/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png"
+  },
+  {
+    "id": 92,
+    "nome": "Gastly",
+    "tipos": [
+      "Ghost",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 30,
+      "ataque": 35,
+      "defesa": 30,
+      "velocidade": 80
+    },
+    "moves": [
+      {
+        "nome": "Night shade",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/101/"
+      },
+      {
+        "nome": "Confuse ray",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/109/"
+      },
+      {
+        "nome": "Lick",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/122/"
+      },
+      {
+        "nome": "Hypnosis",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Dream eater",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/138/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png"
+  },
+  {
+    "id": 93,
+    "nome": "Haunter",
+    "tipos": [
+      "Ghost",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 45,
+      "ataque": 50,
+      "defesa": 45,
+      "velocidade": 95
+    },
+    "moves": [
+      {
+        "nome": "Night shade",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/101/"
+      },
+      {
+        "nome": "Confuse ray",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/109/"
+      },
+      {
+        "nome": "Lick",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/122/"
+      },
+      {
+        "nome": "Hypnosis",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Dream eater",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/138/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png"
+  },
+  {
+    "id": 94,
+    "nome": "Gengar",
+    "tipos": [
+      "Ghost",
+      "Poison"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 65,
+      "defesa": 60,
+      "velocidade": 110
+    },
+    "moves": [
+      {
+        "nome": "Night shade",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/101/"
+      },
+      {
+        "nome": "Confuse ray",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/109/"
+      },
+      {
+        "nome": "Lick",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/122/"
+      },
+      {
+        "nome": "Hypnosis",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Dream eater",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/138/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"
+  },
+  {
+    "id": 95,
+    "nome": "Onix",
+    "tipos": [
+      "Rock",
+      "Ground"
+    ],
+    "stats": {
+      "hp": 35,
+      "ataque": 45,
+      "defesa": 160,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Bind",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/20/"
+      },
+      {
+        "nome": "Rock throw",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/88/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Slam",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/21/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png"
+  },
+  {
+    "id": 96,
+    "nome": "Drowzee",
+    "tipos": [
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 48,
+      "defesa": 45,
+      "velocidade": 42
+    },
+    "moves": [
+      {
+        "nome": "Pound",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Hypnosis",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 12,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Confusion",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Headbutt",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/29/"
+      },
+      {
+        "nome": "Poison gas",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/139/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      },
+      {
+        "nome": "Meditate",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/96/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png"
+  },
+  {
+    "id": 97,
+    "nome": "Hypno",
+    "tipos": [
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 85,
+      "ataque": 73,
+      "defesa": 70,
+      "velocidade": 67
+    },
+    "moves": [
+      {
+        "nome": "Pound",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Confusion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Hypnosis",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Headbutt",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/29/"
+      },
+      {
+        "nome": "Poison gas",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/139/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      },
+      {
+        "nome": "Meditate",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/96/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png"
+  },
+  {
+    "id": 98,
+    "nome": "Krabby",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 30,
+      "ataque": 105,
+      "defesa": 90,
+      "velocidade": 50
+    },
+    "moves": [
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Bubble",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Vice grip",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/11/"
+      },
+      {
+        "nome": "Guillotine",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/12/"
+      },
+      {
+        "nome": "Stomp",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      },
+      {
+        "nome": "Crabhammer",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/152/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png"
+  },
+  {
+    "id": 99,
+    "nome": "Kingler",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 55,
+      "ataque": 130,
+      "defesa": 115,
+      "velocidade": 75
+    },
+    "moves": [
+      {
+        "nome": "Vice grip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/11/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Bubble",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Guillotine",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/12/"
+      },
+      {
+        "nome": "Stomp",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      },
+      {
+        "nome": "Crabhammer",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/152/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png"
+  },
+  {
+    "id": 100,
+    "nome": "Voltorb",
+    "tipos": [
+      "Electric"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 30,
+      "defesa": 50,
+      "velocidade": 100
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Sonic boom",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/49/"
+      },
+      {
+        "nome": "Self destruct",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/120/"
+      },
+      {
+        "nome": "Light screen",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/113/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Explosion",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/153/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png"
+  },
+  {
+    "id": 101,
+    "nome": "Electrode",
+    "tipos": [
+      "Electric"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 50,
+      "defesa": 70,
+      "velocidade": 150
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Sonic boom",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/49/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Self destruct",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/120/"
+      },
+      {
+        "nome": "Light screen",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/113/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Explosion",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/153/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png"
+  },
+  {
+    "id": 102,
+    "nome": "Exeggcute",
+    "tipos": [
+      "Grass",
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 40,
+      "defesa": 80,
+      "velocidade": 40
+    },
+    "moves": [
+      {
+        "nome": "Hypnosis",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Barrage",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/140/"
+      },
+      {
+        "nome": "Reflect",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/115/"
+      },
+      {
+        "nome": "Leech seed",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/73/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Solar beam",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/76/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png"
+  },
+  {
+    "id": 103,
+    "nome": "Exeggutor",
+    "tipos": [
+      "Grass",
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 95,
+      "ataque": 95,
+      "defesa": 85,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Hypnosis",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/95/"
+      },
+      {
+        "nome": "Barrage",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/140/"
+      },
+      {
+        "nome": "Stomp",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png"
+  },
+  {
+    "id": 104,
+    "nome": "Cubone",
+    "tipos": [
+      "Ground"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 50,
+      "defesa": 95,
+      "velocidade": 35
+    },
+    "moves": [
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Bone club",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/125/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Thrash",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/37/"
+      },
+      {
+        "nome": "Bonemerang",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/155/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png"
+  },
+  {
+    "id": 105,
+    "nome": "Marowak",
+    "tipos": [
+      "Ground"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 80,
+      "defesa": 110,
+      "velocidade": 45
+    },
+    "moves": [
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Bone club",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/125/"
+      },
+      {
+        "nome": "Thrash",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/37/"
+      },
+      {
+        "nome": "Bonemerang",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/155/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png"
+  },
+  {
+    "id": 106,
+    "nome": "Hitmonlee",
+    "tipos": [
+      "Fighting"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 120,
+      "defesa": 53,
+      "velocidade": 87
+    },
+    "moves": [
+      {
+        "nome": "Double kick",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/24/"
+      },
+      {
+        "nome": "Meditate",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/96/"
+      },
+      {
+        "nome": "Rolling kick",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/27/"
+      },
+      {
+        "nome": "Jump kick",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/26/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "High jump kick",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/136/"
+      },
+      {
+        "nome": "Mega kick",
+        "nivel": 53,
+        "url": "https://pokeapi.co/api/v2/move/25/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png"
+  },
+  {
+    "id": 107,
+    "nome": "Hitmonchan",
+    "tipos": [
+      "Fighting"
+    ],
+    "stats": {
+      "hp": 50,
+      "ataque": 105,
+      "defesa": 79,
+      "velocidade": 76
+    },
+    "moves": [
+      {
+        "nome": "Comet punch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/4/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Fire punch",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/7/"
+      },
+      {
+        "nome": "Ice punch",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/8/"
+      },
+      {
+        "nome": "Thunder punch",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/9/"
+      },
+      {
+        "nome": "Mega punch",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/5/"
+      },
+      {
+        "nome": "Counter",
+        "nivel": 53,
+        "url": "https://pokeapi.co/api/v2/move/68/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png"
+  },
+  {
+    "id": 108,
+    "nome": "Lickitung",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 55,
+      "defesa": 75,
+      "velocidade": 30
+    },
+    "moves": [
+      {
+        "nome": "Wrap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Stomp",
+        "nivel": 7,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      },
+      {
+        "nome": "Disable",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Defense curl",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/111/"
+      },
+      {
+        "nome": "Slam",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/21/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png"
+  },
+  {
+    "id": 109,
+    "nome": "Koffing",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 65,
+      "defesa": 95,
+      "velocidade": 35
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Smog",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/123/"
+      },
+      {
+        "nome": "Sludge",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/124/"
+      },
+      {
+        "nome": "Smokescreen",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/108/"
+      },
+      {
+        "nome": "Self destruct",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/120/"
+      },
+      {
+        "nome": "Haze",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/114/"
+      },
+      {
+        "nome": "Explosion",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/153/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png"
+  },
+  {
+    "id": 110,
+    "nome": "Weezing",
+    "tipos": [
+      "Poison"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 90,
+      "defesa": 120,
+      "velocidade": 60
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Smog",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/123/"
+      },
+      {
+        "nome": "Sludge",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/124/"
+      },
+      {
+        "nome": "Smokescreen",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/108/"
+      },
+      {
+        "nome": "Self destruct",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/120/"
+      },
+      {
+        "nome": "Haze",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/114/"
+      },
+      {
+        "nome": "Explosion",
+        "nivel": 53,
+        "url": "https://pokeapi.co/api/v2/move/153/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png"
+  },
+  {
+    "id": 111,
+    "nome": "Rhyhorn",
+    "tipos": [
+      "Ground",
+      "Rock"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 85,
+      "defesa": 95,
+      "velocidade": 25
+    },
+    "moves": [
+      {
+        "nome": "Horn attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Stomp",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Horn drill",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/32/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png"
+  },
+  {
+    "id": 112,
+    "nome": "Rhydon",
+    "tipos": [
+      "Ground",
+      "Rock"
+    ],
+    "stats": {
+      "hp": 105,
+      "ataque": 130,
+      "defesa": 120,
+      "velocidade": 40
+    },
+    "moves": [
+      {
+        "nome": "Stomp",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      },
+      {
+        "nome": "Horn attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Horn drill",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/32/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 64,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png"
+  },
+  {
+    "id": 113,
+    "nome": "Chansey",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 250,
+      "ataque": 5,
+      "defesa": 5,
+      "velocidade": 50
+    },
+    "moves": [
+      {
+        "nome": "Pound",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Double slap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Sing",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/47/"
+      },
+      {
+        "nome": "Growl",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Minimize",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/107/"
+      },
+      {
+        "nome": "Defense curl",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/111/"
+      },
+      {
+        "nome": "Light screen",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/113/"
+      },
+      {
+        "nome": "Double edge",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/38/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png"
+  },
+  {
+    "id": 114,
+    "nome": "Tangela",
+    "tipos": [
+      "Grass"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 55,
+      "defesa": 115,
+      "velocidade": 60
+    },
+    "moves": [
+      {
+        "nome": "Bind",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/20/"
+      },
+      {
+        "nome": "Constrict",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/132/"
+      },
+      {
+        "nome": "Absorb",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/71/"
+      },
+      {
+        "nome": "Poison powder",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/77/"
+      },
+      {
+        "nome": "Stun spore",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+        "nome": "Sleep powder",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/79/"
+      },
+      {
+        "nome": "Slam",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/21/"
+      },
+      {
+        "nome": "Growth",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/74/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png"
+  },
+  {
+    "id": 115,
+    "nome": "Kangaskhan",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 105,
+      "ataque": 95,
+      "defesa": 80,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Comet punch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/4/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 26,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Mega punch",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/5/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Dizzy punch",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/146/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png"
+  },
+  {
+    "id": 116,
+    "nome": "Horsea",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 30,
+      "ataque": 40,
+      "defesa": 70,
+      "velocidade": 60
+    },
+    "moves": [
+      {
+        "nome": "Bubble",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Smokescreen",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/108/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png"
+  },
+  {
+    "id": 117,
+    "nome": "Seadra",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 55,
+      "ataque": 65,
+      "defesa": 95,
+      "velocidade": 85
+    },
+    "moves": [
+      {
+        "nome": "Smokescreen",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/108/"
+      },
+      {
+        "nome": "Bubble",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/145/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 52,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png"
+  },
+  {
+    "id": 118,
+    "nome": "Goldeen",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 45,
+      "ataque": 67,
+      "defesa": 60,
+      "velocidade": 63
+    },
+    "moves": [
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 19,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Horn attack",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Waterfall",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/127/"
+      },
+      {
+        "nome": "Horn drill",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/32/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png"
+  },
+  {
+    "id": 119,
+    "nome": "Seaking",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 92,
+      "defesa": 65,
+      "velocidade": 68
+    },
+    "moves": [
+      {
+        "nome": "Tail whip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Horn attack",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Fury attack",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/31/"
+      },
+      {
+        "nome": "Waterfall",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/127/"
+      },
+      {
+        "nome": "Horn drill",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/32/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png"
+  },
+  {
+    "id": 120,
+    "nome": "Staryu",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 30,
+      "ataque": 45,
+      "defesa": 55,
+      "velocidade": 85
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 22,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Recover",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/105/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 32,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Minimize",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/107/"
+      },
+      {
+        "nome": "Light screen",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/113/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png"
+  },
+  {
+    "id": 121,
+    "nome": "Starmie",
+    "tipos": [
+      "Water",
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 75,
+      "defesa": 85,
+      "velocidade": 115
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png"
+  },
+  {
+    "id": 122,
+    "nome": "Mr-mime",
+    "tipos": [
+      "Psychic",
+      "Fairy"
+    ],
+    "stats": {
+      "hp": 40,
+      "ataque": 45,
+      "defesa": 65,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Confusion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Barrier",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/112/"
+      },
+      {
+        "nome": "Light screen",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/113/"
+      },
+      {
+        "nome": "Double slap",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Meditate",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/96/"
+      },
+      {
+        "nome": "Substitute",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/164/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"
+  },
+  {
+    "id": 123,
+    "nome": "Scyther",
+    "tipos": [
+      "Bug",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 70,
+      "ataque": 110,
+      "defesa": 80,
+      "velocidade": 105
+    },
+    "moves": [
+      {
+        "nome": "Quick attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 17,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Double team",
+        "nivel": 24,
+        "url": "https://pokeapi.co/api/v2/move/104/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 29,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Swords dance",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/14/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png"
+  },
+  {
+    "id": 124,
+    "nome": "Jynx",
+    "tipos": [
+      "Ice",
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 50,
+      "defesa": 35,
+      "velocidade": 95
+    },
+    "moves": [
+      {
+        "nome": "Pound",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Lovely kiss",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/142/"
+      },
+      {
+        "nome": "Lick",
+        "nivel": 18,
+        "url": "https://pokeapi.co/api/v2/move/122/"
+      },
+      {
+        "nome": "Double slap",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/3/"
+      },
+      {
+        "nome": "Ice punch",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/8/"
+      },
+      {
+        "nome": "Body slam",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+        "nome": "Thrash",
+        "nivel": 47,
+        "url": "https://pokeapi.co/api/v2/move/37/"
+      },
+      {
+        "nome": "Blizzard",
+        "nivel": 58,
+        "url": "https://pokeapi.co/api/v2/move/59/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png"
+  },
+  {
+    "id": 125,
+    "nome": "Electabuzz",
+    "tipos": [
+      "Electric"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 83,
+      "defesa": 57,
+      "velocidade": 105
+    },
+    "moves": [
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Thunder shock",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      {
+        "nome": "Screech",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/103/"
+      },
+      {
+        "nome": "Thunder punch",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/9/"
+      },
+      {
+        "nome": "Light screen",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/113/"
+      },
+      {
+        "nome": "Thunder",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/87/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png"
+  },
+  {
+    "id": 126,
+    "nome": "Magmar",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 95,
+      "defesa": 57,
+      "velocidade": 93
+    },
+    "moves": [
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Confuse ray",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/109/"
+      },
+      {
+        "nome": "Fire punch",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/7/"
+      },
+      {
+        "nome": "Smokescreen",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/108/"
+      },
+      {
+        "nome": "Smog",
+        "nivel": 52,
+        "url": "https://pokeapi.co/api/v2/move/123/"
+      },
+      {
+        "nome": "Flamethrower",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/53/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png"
+  },
+  {
+    "id": 127,
+    "nome": "Pinsir",
+    "tipos": [
+      "Bug"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 125,
+      "defesa": 100,
+      "velocidade": 85
+    },
+    "moves": [
+      {
+        "nome": "Vice grip",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/11/"
+      },
+      {
+        "nome": "Seismic toss",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/69/"
+      },
+      {
+        "nome": "Guillotine",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/12/"
+      },
+      {
+        "nome": "Focus energy",
+        "nivel": 36,
+        "url": "https://pokeapi.co/api/v2/move/116/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 43,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Swords dance",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/14/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png"
+  },
+  {
+    "id": 128,
+    "nome": "Tauros",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 75,
+      "ataque": 100,
+      "defesa": 95,
+      "velocidade": 110
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Stomp",
+        "nivel": 21,
+        "url": "https://pokeapi.co/api/v2/move/23/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 51,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png"
+  },
+  {
+    "id": 129,
+    "nome": "Magikarp",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 20,
+      "ataque": 10,
+      "defesa": 55,
+      "velocidade": 80
+    },
+    "moves": [
+      {
+        "nome": "Splash",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/150/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 15,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png"
+  },
+  {
+    "id": 130,
+    "nome": "Gyarados",
+    "tipos": [
+      "Water",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 95,
+      "ataque": 125,
+      "defesa": 79,
+      "velocidade": 81
+    },
+    "moves": [
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      },
+      {
+        "nome": "Dragon rage",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/82/"
+      },
+      {
+        "nome": "Hyper beam",
+        "nivel": 52,
+        "url": "https://pokeapi.co/api/v2/move/63/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png"
+  },
+  {
+    "id": 131,
+    "nome": "Lapras",
+    "tipos": [
+      "Water",
+      "Ice"
+    ],
+    "stats": {
+      "hp": 130,
+      "ataque": 85,
+      "defesa": 80,
+      "velocidade": 60
+    },
+    "moves": [
+      {
+        "nome": "Growl",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Sing",
+        "nivel": 16,
+        "url": "https://pokeapi.co/api/v2/move/47/"
+      },
+      {
+        "nome": "Mist",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/54/"
+      },
+      {
+        "nome": "Body slam",
+        "nivel": 25,
+        "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+        "nome": "Confuse ray",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/109/"
+      },
+      {
+        "nome": "Ice beam",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/58/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png"
+  },
+  {
+    "id": 132,
+    "nome": "Ditto",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 48,
+      "ataque": 48,
+      "defesa": 48,
+      "velocidade": 48
+    },
+    "moves": [
+      {
+        "nome": "Transform",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/144/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+  },
+  {
+    "id": 133,
+    "nome": "Eevee",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 55,
+      "ataque": 55,
+      "defesa": 50,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Sand attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 27,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 31,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png"
+  },
+  {
+    "id": 134,
+    "nome": "Vaporeon",
+    "tipos": [
+      "Water"
+    ],
+    "stats": {
+      "hp": 130,
+      "ataque": 65,
+      "defesa": 60,
+      "velocidade": 65
+    },
+    "moves": [
+      {
+        "nome": "Sand attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Acid armor",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/151/"
+      },
+      {
+        "nome": "Haze",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/114/"
+      },
+      {
+        "nome": "Mist",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/54/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png"
+  },
+  {
+    "id": 135,
+    "nome": "Jolteon",
+    "tipos": [
+      "Electric"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 65,
+      "defesa": 60,
+      "velocidade": 130
+    },
+    "moves": [
+      {
+        "nome": "Sand attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Thunder shock",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Thunder wave",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      {
+        "nome": "Double kick",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/24/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Pin missile",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/42/"
+      },
+      {
+        "nome": "Thunder",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/87/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png"
+  },
+  {
+    "id": 136,
+    "nome": "Flareon",
+    "tipos": [
+      "Fire"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 130,
+      "defesa": 60,
+      "velocidade": 65
+    },
+    "moves": [
+      {
+        "nome": "Sand attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/28/"
+      },
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Ember",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/52/"
+      },
+      {
+        "nome": "Quick attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      {
+        "nome": "Tail whip",
+        "nivel": 37,
+        "url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Fire spin",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/83/"
+      },
+      {
+        "nome": "Rage",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      {
+        "nome": "Flamethrower",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/53/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png"
+  },
+  {
+    "id": 137,
+    "nome": "Porygon",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 65,
+      "ataque": 60,
+      "defesa": 70,
+      "velocidade": 40
+    },
+    "moves": [
+      {
+        "nome": "Tackle",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/33/"
+      },
+      {
+        "nome": "Sharpen",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/159/"
+      },
+      {
+        "nome": "Conversion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/160/"
+      },
+      {
+        "nome": "Psybeam",
+        "nivel": 23,
+        "url": "https://pokeapi.co/api/v2/move/60/"
+      },
+      {
+        "nome": "Recover",
+        "nivel": 28,
+        "url": "https://pokeapi.co/api/v2/move/105/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Tri attack",
+        "nivel": 42,
+        "url": "https://pokeapi.co/api/v2/move/161/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png"
+  },
+  {
+    "id": 138,
+    "nome": "Omanyte",
+    "tipos": [
+      "Rock",
+      "Water"
+    ],
+    "stats": {
+      "hp": 35,
+      "ataque": 40,
+      "defesa": 100,
+      "velocidade": 35
+    },
+    "moves": [
+      {
+        "nome": "Water gun",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Withdraw",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/110/"
+      },
+      {
+        "nome": "Horn attack",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Spike cannon",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/131/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 53,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png"
+  },
+  {
+    "id": 139,
+    "nome": "Omastar",
+    "tipos": [
+      "Rock",
+      "Water"
+    ],
+    "stats": {
+      "hp": 70,
+      "ataque": 60,
+      "defesa": 125,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Horn attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/30/"
+      },
+      {
+        "nome": "Water gun",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/55/"
+      },
+      {
+        "nome": "Withdraw",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/110/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Spike cannon",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/131/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png"
+  },
+  {
+    "id": 140,
+    "nome": "Kabuto",
+    "tipos": [
+      "Rock",
+      "Water"
+    ],
+    "stats": {
+      "hp": 30,
+      "ataque": 80,
+      "defesa": 90,
+      "velocidade": 55
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Absorb",
+        "nivel": 34,
+        "url": "https://pokeapi.co/api/v2/move/71/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 44,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 49,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png"
+  },
+  {
+    "id": 141,
+    "nome": "Kabutops",
+    "tipos": [
+      "Rock",
+      "Water"
+    ],
+    "stats": {
+      "hp": 60,
+      "ataque": 115,
+      "defesa": 105,
+      "velocidade": 80
+    },
+    "moves": [
+      {
+        "nome": "Scratch",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/10/"
+      },
+      {
+        "nome": "Absorb",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/71/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Slash",
+        "nivel": 39,
+        "url": "https://pokeapi.co/api/v2/move/163/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 46,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Hydro pump",
+        "nivel": 53,
+        "url": "https://pokeapi.co/api/v2/move/56/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png"
+  },
+  {
+    "id": 142,
+    "nome": "Aerodactyl",
+    "tipos": [
+      "Rock",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 80,
+      "ataque": 105,
+      "defesa": 65,
+      "velocidade": 130
+    },
+    "moves": [
+      {
+        "nome": "Wing attack",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/17/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Supersonic",
+        "nivel": 33,
+        "url": "https://pokeapi.co/api/v2/move/48/"
+      },
+      {
+        "nome": "Bite",
+        "nivel": 38,
+        "url": "https://pokeapi.co/api/v2/move/44/"
+      },
+      {
+        "nome": "Take down",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/36/"
+      },
+      {
+        "nome": "Hyper beam",
+        "nivel": 54,
+        "url": "https://pokeapi.co/api/v2/move/63/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png"
+  },
+  {
+    "id": 143,
+    "nome": "Snorlax",
+    "tipos": [
+      "Normal"
+    ],
+    "stats": {
+      "hp": 160,
+      "ataque": 110,
+      "defesa": 65,
+      "velocidade": 30
+    },
+    "moves": [
+      {
+        "nome": "Headbutt",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/29/"
+      },
+      {
+        "nome": "Amnesia",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/133/"
+      },
+      {
+        "nome": "Rest",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/156/"
+      },
+      {
+        "nome": "Body slam",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+        "nome": "Harden",
+        "nivel": 41,
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      {
+        "nome": "Double edge",
+        "nivel": 48,
+        "url": "https://pokeapi.co/api/v2/move/38/"
+      },
+      {
+        "nome": "Hyper beam",
+        "nivel": 56,
+        "url": "https://pokeapi.co/api/v2/move/63/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"
+  },
+  {
+    "id": 144,
+    "nome": "Articuno",
+    "tipos": [
+      "Ice",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 85,
+      "defesa": 100,
+      "velocidade": 85
+    },
+    "moves": [
+      {
+        "nome": "Ice beam",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/58/"
+      },
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Blizzard",
+        "nivel": 51,
+        "url": "https://pokeapi.co/api/v2/move/59/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Mist",
+        "nivel": 60,
+        "url": "https://pokeapi.co/api/v2/move/54/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png"
+  },
+  {
+    "id": 145,
+    "nome": "Zapdos",
+    "tipos": [
+      "Electric",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 90,
+      "defesa": 85,
+      "velocidade": 100
+    },
+    "moves": [
+      {
+        "nome": "Drill peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/65/"
+      },
+      {
+        "nome": "Thunder shock",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      {
+        "nome": "Thunder",
+        "nivel": 51,
+        "url": "https://pokeapi.co/api/v2/move/87/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Light screen",
+        "nivel": 60,
+        "url": "https://pokeapi.co/api/v2/move/113/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png"
+  },
+  {
+    "id": 146,
+    "nome": "Moltres",
+    "tipos": [
+      "Fire",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 90,
+      "ataque": 100,
+      "defesa": 90,
+      "velocidade": 90
+    },
+    "moves": [
+      {
+        "nome": "Peck",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/64/"
+      },
+      {
+        "nome": "Fire spin",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/83/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 51,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Sky attack",
+        "nivel": 60,
+        "url": "https://pokeapi.co/api/v2/move/143/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png"
+  },
+  {
+    "id": 147,
+    "nome": "Dratini",
+    "tipos": [
+      "Dragon"
+    ],
+    "stats": {
+      "hp": 41,
+      "ataque": 64,
+      "defesa": 45,
+      "velocidade": 50
+    },
+    "moves": [
+      {
+        "nome": "Wrap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Thunder wave",
+        "nivel": 10,
+        "url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Slam",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/21/"
+      },
+      {
+        "nome": "Dragon rage",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/82/"
+      },
+      {
+        "nome": "Hyper beam",
+        "nivel": 50,
+        "url": "https://pokeapi.co/api/v2/move/63/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png"
+  },
+  {
+    "id": 148,
+    "nome": "Dragonair",
+    "tipos": [
+      "Dragon"
+    ],
+    "stats": {
+      "hp": 61,
+      "ataque": 84,
+      "defesa": 65,
+      "velocidade": 70
+    },
+    "moves": [
+      {
+        "nome": "Wrap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Thunder wave",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Slam",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/21/"
+      },
+      {
+        "nome": "Dragon rage",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/82/"
+      },
+      {
+        "nome": "Hyper beam",
+        "nivel": 55,
+        "url": "https://pokeapi.co/api/v2/move/63/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png"
+  },
+  {
+    "id": 149,
+    "nome": "Dragonite",
+    "tipos": [
+      "Dragon",
+      "Flying"
+    ],
+    "stats": {
+      "hp": 91,
+      "ataque": 134,
+      "defesa": 95,
+      "velocidade": 80
+    },
+    "moves": [
+      {
+        "nome": "Wrap",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/35/"
+      },
+      {
+        "nome": "Leer",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/43/"
+      },
+      {
+        "nome": "Thunder wave",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      {
+        "nome": "Agility",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      {
+        "nome": "Slam",
+        "nivel": 35,
+        "url": "https://pokeapi.co/api/v2/move/21/"
+      },
+      {
+        "nome": "Dragon rage",
+        "nivel": 45,
+        "url": "https://pokeapi.co/api/v2/move/82/"
+      },
+      {
+        "nome": "Hyper beam",
+        "nivel": 60,
+        "url": "https://pokeapi.co/api/v2/move/63/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"
+  },
+  {
+    "id": 150,
+    "nome": "Mewtwo",
+    "tipos": [
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 106,
+      "ataque": 110,
+      "defesa": 90,
+      "velocidade": 130
+    },
+    "moves": [
+      {
+        "nome": "Disable",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/50/"
+      },
+      {
+        "nome": "Confusion",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/93/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      },
+      {
+        "nome": "Swift",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      {
+        "nome": "Barrier",
+        "nivel": 63,
+        "url": "https://pokeapi.co/api/v2/move/112/"
+      },
+      {
+        "nome": "Recover",
+        "nivel": 70,
+        "url": "https://pokeapi.co/api/v2/move/105/"
+      },
+      {
+        "nome": "Mist",
+        "nivel": 75,
+        "url": "https://pokeapi.co/api/v2/move/54/"
+      },
+      {
+        "nome": "Amnesia",
+        "nivel": 81,
+        "url": "https://pokeapi.co/api/v2/move/133/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"
+  },
+  {
+    "id": 151,
+    "nome": "Mew",
+    "tipos": [
+      "Psychic"
+    ],
+    "stats": {
+      "hp": 100,
+      "ataque": 100,
+      "defesa": 100,
+      "velocidade": 100
+    },
+    "moves": [
+      {
+        "nome": "Pound",
+        "nivel": 1,
+        "url": "https://pokeapi.co/api/v2/move/1/"
+      },
+      {
+        "nome": "Transform",
+        "nivel": 10,
+        "url": "https://pokeapi.co/api/v2/move/144/"
+      },
+      {
+        "nome": "Mega punch",
+        "nivel": 20,
+        "url": "https://pokeapi.co/api/v2/move/5/"
+      },
+      {
+        "nome": "Metronome",
+        "nivel": 30,
+        "url": "https://pokeapi.co/api/v2/move/118/"
+      },
+      {
+        "nome": "Psychic",
+        "nivel": 40,
+        "url": "https://pokeapi.co/api/v2/move/94/"
+      }
+    ],
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png"
+  }
+]
