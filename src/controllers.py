@@ -234,32 +234,41 @@ class BattleController:
 
 
     def calculate_damage(self, attacker, defender, chosen_move):
+        if chosen_move.category == "Status" or chosen_move.power == 0:
+            return 0
+
+        if chosen_move.category == "Special":
+            attack_stat = attacker.sp_atk
+            defense_stat = defender.sp_def
+        else:
+            attack_stat = attacker.atk
+            defense_stat = defender.defense
+
         level_factor = ((2 * attacker.level // 5) + 2)
-
-        raw_damage_part = level_factor * (chosen_move.power * attacker.atk // defender.defense)
-
+        raw_damage_part = level_factor * (chosen_move.power * attack_stat // defense_stat)
         damage_base = (raw_damage_part // 50) + 2
-
         type_rules = self.types_damage.get(chosen_move.type, {})
-
-        type_effectiveness_primary = type_rules.get(defender.primary_type, 1.0)
+        prim_type_name = defender.types[0]
+        type_effectiveness_primary = type_rules.get(prim_type_name, 1.0)
 
         type_effectiveness_secondary = 1.0
-
-        if defender.secondary_type:
-            type_effectiveness_secondary = type_rules.get(defender.secondary_type, 1.0)
+        if len(defender.types) > 1:
+            sec_type_name = defender.types[1]
+            type_effectiveness_secondary = type_rules.get(sec_type_name, 1.0)
 
         final_type_multiplier = type_effectiveness_primary * type_effectiveness_secondary
 
         stab_bonus = 1.0
-        if attacker.primary_type == chosen_move.type or attacker.secondary_type == chosen_move.type:
+        if chosen_move.type in attacker.types:
             stab_bonus = 1.5
 
         damage_pre_random = damage_base * final_type_multiplier * stab_bonus
         damage_pre_random = math.floor(damage_pre_random)
 
         random_factor = random.randint(85, 100) / 100.0
-
         final_calculated_damage = damage_pre_random * random_factor
+
+        if final_type_multiplier == 0:
+            return 0
 
         return max(1, int(final_calculated_damage))

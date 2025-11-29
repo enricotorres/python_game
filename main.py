@@ -12,8 +12,8 @@ def main():
 
 
     ash_team = [
-            Pokemon("Bulbasaur", level=5),
-            Pokemon("Pikachu", level=5),
+            Pokemon("Bulbasaur", level=100),
+            Pokemon("Pikachu", level=100),
             Pokemon("Pidgey", level=5),
             Pokemon("Geodude", level=5),
             Pokemon("Gastly", level=5),
@@ -21,8 +21,8 @@ def main():
         ]
 
     gary_team = [
-            Pokemon("Charmander", level=5),
-            Pokemon("Rattata", level=5),
+            Pokemon("Charmander", level=100),
+            Pokemon("Rattata", level=100),
             Pokemon("Spearow", level=5),
             Pokemon("Onix", level=5),
             Pokemon("Zubat", level=5),
