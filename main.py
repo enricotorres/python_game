@@ -6,10 +6,10 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 from src.classes import Trainer, Pokemon
 from src.scenarios import BattleScene
 from src.controllers import BattleController
+from src.world_manager import WorldManager
 
 def main():
     print("--- Inicializando Pokémon Python ---")
-
 
     ash_team = [
             Pokemon("Bulbasaur", level=100),
@@ -34,9 +34,11 @@ def main():
     player = Trainer(name="Ash", xp=0, initial_team=ash_team)
     rival = Trainer(name="Gary", xp=0, initial_team=gary_team)
 
-    battle_scene = BattleScene()
+    game_manager = WorldManager()
 
-    print("Controller inicializado. Iniciando loop de batalha!")
+    battle_scene = BattleScene(game_manager.window)
+    print("Gerenciador e Cena inicializados.")
+
     controller = BattleController(battle_scene, rival, player)
     controller.run_battle_loop()
 

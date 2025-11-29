@@ -3,7 +3,7 @@ import graphics as gf
 import os
 
 class BattleScene:
-    def __init__(self):
+    def __init__(self, window):
         self.width = 1408
         self.height = 768
 
@@ -44,7 +44,8 @@ class BattleScene:
         self.atk_back_pos1 = gf.Point(1132, 653)
         self.atk_back_pos2 = gf.Point(1400, 753)
 
-        self.janela = self.win()
+        self.janela = window
+
         back = self.bg()
         battle_hud = self.hud()
         back.draw(self.janela)
@@ -53,9 +54,6 @@ class BattleScene:
     def get_path(self, filename):
         path = os.path.join(self.base_dir, "assets", "images", filename)
         return os.path.normpath(path)
-
-    def win(self):
-        return gf.GraphWin("PokePy", self.width, self.height)
 
     def bg(self):
         return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("battlefield_final.png"))

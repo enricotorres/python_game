@@ -1,14 +1,16 @@
-from src.lib.graphics import *
-from scenarios import BattleScene
-
-
-battle_scene = BattleScene
+import graphics as gf
 
 class WorldManager:
-    def __init__(self, battle_scene):
-        self.battle_scene = battle_scene
+    def __init__(self):
+        self.width = 1408
+        self.height = 768
+        self.window = gf.GraphWin("PokePy", self.width, self.height)
+        self.current_scene = None
 
 
+    def change_scene(self, new_scene_class):
+        if self.current_scene is not None:
+            # criar logica para limpar a janela atual
+            pass
 
-    def change_scene(self, scene):
-        pass
+        self.current_scene = new_scene_class(self.window)
