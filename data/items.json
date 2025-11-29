@@ -1,0 +1,189 @@
+{
+  "Potion": {
+    "id": 1,
+    "name": "Potion",
+    "category": "Healing",
+    "price": 300,
+    "effect": {
+      "type": "heal_hp",
+      "amount": 20
+    },
+    "description": "Restores 20 HP."
+  },
+  "Super Potion": {
+    "id": 2,
+    "name": "Super Potion",
+    "category": "Healing",
+    "price": 700,
+    "effect": {
+      "type": "heal_hp",
+      "amount": 50
+    },
+    "description": "Restores 50 HP."
+  },
+  "Hyper Potion": {
+    "id": 3,
+    "name": "Hyper Potion",
+    "category": "Healing",
+    "price": 1200,
+    "effect": {
+      "type": "heal_hp",
+      "amount": 200
+    },
+    "description": "Restores 200 HP."
+  },
+  "Max Potion": {
+    "id": 4,
+    "name": "Max Potion",
+    "category": "Healing",
+    "price": 2500,
+    "effect": {
+      "type": "heal_hp",
+      "amount": 9999
+    },
+    "description": "Fully restores HP."
+  },
+  "Full Restore": {
+    "id": 5,
+    "name": "Full Restore",
+    "category": "Healing",
+    "price": 3000,
+    "effect": {
+      "type": "heal_hp_status",
+      "amount": 9999
+    },
+    "description": "Fully restores HP and cures all status conditions."
+  },
+  "Poke Ball": {
+    "id": 6,
+    "name": "Poke Ball",
+    "category": "Capture",
+    "price": 200,
+    "effect": {
+      "type": "capture",
+      "rate": 1.0
+    },
+    "description": "A device for catching wild Pokemon."
+  },
+  "Great Ball": {
+    "id": 7,
+    "name": "Great Ball",
+    "category": "Capture",
+    "price": 600,
+    "effect": {
+      "type": "capture",
+      "rate": 1.5
+    },
+    "description": "A good Ball with a higher catch rate than a Poke Ball."
+  },
+  "Ultra Ball": {
+    "id": 8,
+    "name": "Ultra Ball",
+    "category": "Capture",
+    "price": 1200,
+    "effect": {
+      "type": "capture",
+      "rate": 2.0
+    },
+    "description": "A better Ball with a higher catch rate than a Great Ball."
+  },
+  "Master Ball": {
+    "id": 9,
+    "name": "Master Ball",
+    "category": "Capture",
+    "price": 0,
+    "effect": {
+      "type": "capture",
+      "rate": 255.0
+    },
+    "description": "The best Ball that catches a Pokemon without fail."
+  },
+  "Antidote": {
+    "id": 10,
+    "name": "Antidote",
+    "category": "Status",
+    "price": 100,
+    "effect": {
+      "type": "cure_status",
+      "condition": "poison"
+    },
+    "description": "Cures a poisoned Pokemon."
+  },
+  "Paralyze Heal": {
+    "id": 11,
+    "name": "Paralyze Heal",
+    "category": "Status",
+    "price": 200,
+    "effect": {
+      "type": "cure_status",
+      "condition": "paralysis"
+    },
+    "description": "Cures a paralyzed Pokemon."
+  },
+  "Awakening": {
+    "id": 12,
+    "name": "Awakening",
+    "category": "Status",
+    "price": 250,
+    "effect": {
+      "type": "cure_status",
+      "condition": "sleep"
+    },
+    "description": "Wakes up a sleeping Pokemon."
+  },
+  "Burn Heal": {
+    "id": 13,
+    "name": "Burn Heal",
+    "category": "Status",
+    "price": 250,
+    "effect": {
+      "type": "cure_status",
+      "condition": "burn"
+    },
+    "description": "Cures a burned Pokemon."
+  },
+  "Ice Heal": {
+    "id": 14,
+    "name": "Ice Heal",
+    "category": "Status",
+    "price": 250,
+    "effect": {
+      "type": "cure_status",
+      "condition": "freeze"
+    },
+    "description": "Thaws a frozen Pokemon."
+  },
+  "Full Heal": {
+    "id": 15,
+    "name": "Full Heal",
+    "category": "Status",
+    "price": 600,
+    "effect": {
+      "type": "cure_status",
+      "condition": "all"
+    },
+    "description": "Cures all status conditions."
+  },
+  "Revive": {
+    "id": 16,
+    "name": "Revive",
+    "category": "Revive",
+    "price": 1500,
+    "effect": {
+      "type": "revive",
+      "amount_percent": 0.5
+    },
+    "description": "Revives a fainted Pokemon with half HP."
+  },
+  "Max Revive": {
+    "id": 17,
+    "name": "Max Revive",
+    "category": "Revive",
+    "price": 4000,
+    "effect": {
+      "type": "revive",
+      "amount_percent": 1.0
+    },
+    "description": "Revives a fainted Pokemon with full HP."
+  }
+}
