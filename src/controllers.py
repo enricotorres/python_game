@@ -146,13 +146,27 @@ class BattleController:
                 p_speed = self.player_pkmn.speed
                 e_speed = self.trainer_pkmn.speed
 
+                p_prio = self.player_chosen_move.priority
+                e_prio = self.enemy_chosen_move.priority
+
                 first = None
                 second = None
-                speed_tie = False
-                if p_speed == e_speed:
-                    speed_tie = random.choice([True, False])
+                player_goes_first = False
 
-                if p_speed > e_speed or (p_speed == e_speed and speed_tie):
+                if p_prio > e_prio:
+                    player_goes_first = True
+                elif e_prio > p_prio:
+                    player_goes_first = False
+
+                else:
+                    if p_speed > e_speed:
+                        player_goes_first = True
+                    elif e_speed > p_speed:
+                        player_goes_first = False
+                    else:
+                        player_goes_first = random.choice([True, False])
+
+                if player_goes_first:
                     first = (self.player_pkmn, self.trainer_pkmn, self.player_chosen_move)
                     second = (self.trainer_pkmn, self.player_pkmn, self.enemy_chosen_move)
                 else:
@@ -166,7 +180,13 @@ class BattleController:
                         self.perform_attack(second[0], second[1], second[2])
                         self.check_battle_status()
 
-            if self.state not in ["VICTORY", "DEFEAT", "EXIT", "FORCE_SWITCH"]:
+
+            critical_states = ["VICTORY", "DEFEAT", "EXIT", "FORCE_SWITCH"]
+
+            if self.state not in critical_states:
+                self.end_of_turn_resolution()
+
+            if self.state not in critical_states:
                 self.state = "PLAYER_TURN"
 
         elif self.state == "VICTORY":
@@ -177,15 +197,85 @@ class BattleController:
 
 
     def perform_attack(self, attacker, defender, move):
-        if attacker.attack(move):
-            if random.randint(1, 100) <= move.accuracy:
-                damage = self.calculate_damage(attacker, defender, move)
-                defender.take_damage(damage)
-                # self.battle_scene.animate_damage()
+        if attacker.status == "sleep":
+            if random.randint(1, 100) >=50:
+                attacker.status = None
             else:
-                pass # implementar
+                return False
+
+        elif attacker.status == "freeze":
+            if random.randint(1, 100) <= 25:
+                attacker.status = None
+            else:
+                return False
+
+        elif attacker.status == "paralysis":
+            if random.randint(1, 100) <= 30:
+                return False
+
+
+        if not attacker.attack(move):
+            return
+
+        hit_chance = random.randint(1, 100)
+
+        acc_stage = attacker.stat_mods.get("accuracy", 0)
+        eva_stage = defender.stat_mods.get("evasion", 0)
+        combined = acc_stage - eva_stage
+        multipliers = { -6: 0.33, -5: 0.37, -4: 0.43, -3: 0.50, -2: 0.60, -1: 0.75, 0: 1.0, 1: 1.33, 2: 1.66, 3: 2.0, 4: 2.33, 5: 2.66, 6: 3.0 }
+
+        if combined < -6: combined = -6
+        if combined > 6: combined = 6
+
+        accuracy_multiplier = multipliers.get(combined, 1.0)
+        final_accuracy = move.accuracy * accuracy_multiplier
+
+        if hit_chance > final_accuracy:
+            return
+
+        damage = self.calculate_damage(attacker, defender, move)
+        if damage > 0:
+            defender.take_damage(damage)
+                # animacao de dano
+
+        if move.effect:
+            self.process_move_effect(move, attacker, defender)
+
+
+    def process_move_effect(self, move, attacker, defender):
+        effect_data = move.effect
+
+        chance = effect_data.get("chance", 100)
+        if random.randint(1, 100) > chance:
+            return
+
+        target_str = effect_data.get("target")
+        target_pkmn = None
+
+        if target_str == "enemy":
+            target_pkmn = defender
+        elif target_str == "self":
+            target_pkmn = attacker
         else:
-            pass # implementar logica sem pp
+            return
+
+        effect_type = effect_data.get("type")
+
+        if effect_type == "stat_change":
+            stat_name = effect_data.get("stat")
+            amount = effect_data.get("amount")
+
+            if target_pkmn.apply_stat_change(stat_name, amount):
+                print(f"{target_pkmn.name} teve seu {stat_name} alterado em {amount}!")
+
+        elif effect_type == "status_condition":
+            condition = effect_data.get("condition")
+
+            if target_pkmn.status is None:
+                target_pkmn.status = condition
+                print(f"{target_pkmn.name} agora está {condition}!")
+            else:
+                print(f"{target_pkmn.name} já tem um problema de status!")
 
 
     def check_battle_status(self):
@@ -233,15 +323,13 @@ class BattleController:
 
 
     def calculate_damage(self, attacker, defender, chosen_move):
-        if chosen_move.category == "Status" or chosen_move.power == 0:
-            return 0
 
         if chosen_move.category == "Special":
-            attack_stat = attacker.sp_atk
-            defense_stat = defender.sp_def
+            attack_stat = attacker.get_current_stat("special-attack")
+            defense_stat = defender.get_current_stat("special-defense")
         else:
-            attack_stat = attacker.atk
-            defense_stat = defender.defense
+            attack_stat = attacker.get_current_stat("attack")
+            defense_stat = defender.get_current_stat("defense")
 
         level_factor = ((2 * attacker.level // 5) + 2)
         raw_damage_part = level_factor * (chosen_move.power * attack_stat // defense_stat)
@@ -265,9 +353,36 @@ class BattleController:
         damage_pre_random = math.floor(damage_pre_random)
 
         random_factor = random.randint(85, 100) / 100.0
-        final_calculated_damage = damage_pre_random * random_factor
+
+        crit_chance = 6
+        high_crit_moves = ["Slash", "Razor Leaf", "Karate Chop", "Crabhammer"]
+        if chosen_move.name in high_crit_moves:
+            crit_chance = 12
+
+        crit_multiplier = 1.0
+        if random.randint(1, 100) <= crit_chance:
+            crit_multiplier = 1.5
+
+        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier
 
         if final_type_multiplier == 0:
             return 0
 
         return max(1, int(final_calculated_damage))
+
+
+    def end_of_turn_resolution(self):
+        for pkmn in [self.player_pkmn, self.trainer_pkmn]:
+            if not pkmn.is_alive():
+                continue
+
+
+            if pkmn.status == "burn":
+                damage = pkmn.max_hp // 16
+                pkmn.take_damage(damage)
+
+            elif pkmn.status == "poison":
+                damage = pkmn.max_hp // 8
+                pkmn.take_damage(damage)
+
+        self.check_battle_status()

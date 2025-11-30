@@ -7,6 +7,7 @@ class Pokemon:
 
         data = POKEDEX_DB[name]
 
+        self.status = None
         self.is_caught = False
         self.name = name
         self.id = data["id"]
@@ -25,6 +26,15 @@ class Pokemon:
         self.sp_atk = int(((base_stats["special_attack"] * 2 * level) / 100) + 5)
         self.sp_def = int(((base_stats["special_defense"] * 2 * level) / 100) + 5)
         self.speed = int(((base_stats["speed"] * 2 * level) / 100) + 5)
+        self.stat_mods = {
+                "attack": 0,
+                "defense": 0,
+                "special-attack": 0,
+                "special-defense": 0,
+                "speed": 0,
+                "accuracy": 0,
+                "evasion": 0
+                }
 
         self.moves = []
         self.learn_moves_by_level(data["moves"])
@@ -68,6 +78,35 @@ class Pokemon:
     def is_alive(self):
             return self.current_hp > 0
 
+
+    def get_current_stat(self, stat_name):
+        base_value = 0
+        if stat_name == "attack": base_value = self.atk
+        elif stat_name == "defense": base_value = self.defense
+        elif stat_name == "special-attack": base_value = self.sp_atk
+        elif stat_name == "special-defense": base_value = self.sp_def
+        elif stat_name == "speed": base_value = self.speed
+
+        stage = self.stat_mods.get(stat_name, 0)
+        multiplier = 1.0
+
+        if stage >= 0:
+            multiplier = (2 + stage) / 2
+        else:
+            multiplier = 2 / (2 + abs(stage))
+
+        return int(base_value * multiplier)
+
+    def apply_stat_change(self, stat_name, amount):
+        if stat_name not in self.stat_mods:
+            return False
+
+        self.stat_mods[stat_name] += amount
+
+        if self.stat_mods[stat_name] > 6: self.stat_mods[stat_name] = 6
+        if self.stat_mods[stat_name] < -6: self.stat_mods[stat_name] = -6
+        return True
+
     def __repr__(self):
         return f"<{self.name} Lv.{self.level} | HP:{self.current_hp}>"
 
@@ -78,6 +117,7 @@ class Trainer:
         self.xp = xp
         self.money = money
         self.bag = {}
+        self.active_slot = 0
 
         if initial_team is None:
             self.team = []
@@ -125,8 +165,8 @@ class Move:
         self.accuracy = data["accuracy"]
         self.max_pp = data["pp"]
         self.current_pp = data["pp"]
-
         self.effect = data.get("effect")
+        self.priority = data.get("priority", 0)
 
     def use(self):
         if self.current_pp > 0:
@@ -180,8 +220,17 @@ class Item:
             return True
 
         elif effect_type == "cure_status":
-            # implementar logica depois
-            pass
+            condition_to_cure = self.effect.get("condition")
+
+            if condition_to_cure == "all":
+                target_pokemon.status = None
+                return True
+
+            if target_pokemon.status == condition_to_cure:
+                target_pokemon.status = None
+                return True
+
+            return False
 
         return False
 
