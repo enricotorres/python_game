@@ -1,5 +1,15 @@
 import os
 import sys
+import logging
+
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
+    datefmt='%H:%M:%S'
+)
+
+logger = logging.getLogger("Main")
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 
@@ -8,8 +18,9 @@ from src.scenarios import BattleScene
 from src.controllers import BattleController
 from src.world_manager import WorldManager
 
+
 def main():
-    print("--- Inicializando Pokémon Python ---")
+    logger.info("--- Inicializando Pokémon Python ---")
 
     ash_team = [
             Pokemon("Bulbasaur", level=100),
@@ -29,18 +40,25 @@ def main():
             Pokemon("Mankey", level=5)
         ]
 
-    print("Times criados com sucesso!")
+    logger.info(f"Times criados com sucesso. Player: {len(ash_team)} | Rival: {len(gary_team)}")
 
     player = Trainer(name="Ash", xp=0, initial_team=ash_team)
     rival = Trainer(name="Gary", xp=0, initial_team=gary_team)
 
-    game_manager = WorldManager()
-
-    battle_scene = BattleScene(game_manager.window)
-    print("Gerenciador e Cena inicializados.")
+    try:
+        game_manager = WorldManager()
+        battle_scene = BattleScene(game_manager.window)
+        logger.info("Gerenciador Gráfico e Cena de Batalha inicializados.")
+    except Exception as e:
+        logger.critical(f"Falha ao iniciar sistema gráfico: {e}")
+        raise e
 
     controller = BattleController(battle_scene, rival, player)
+
+    logger.info("Entrando no loop de batalha")
     controller.run_battle_loop()
+
+    logger.info("Jogo finalizado normalmente.")
 
 
 if __name__ == "__main__":
