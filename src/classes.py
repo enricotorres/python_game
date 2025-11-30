@@ -242,6 +242,12 @@ class Item:
 
             return False
 
+        elif effect_type == "heal_hp_status":
+            target_pokemon.status = None
+            target_pokemon.current_hp = target_pokemon.max_hp
+            return True
+
+
         return False
 
     def __repr__(self):
