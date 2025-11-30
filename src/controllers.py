@@ -118,10 +118,20 @@ class BattleController:
 
     def decide_enemy_move(self):
         valid_moves = [m for m in self.trainer_pkmn.moves if m.current_pp > 0]
-        if valid_moves:
-            self.enemy_chosen_move = random.choice(valid_moves)
-        else:
+        if not valid_moves:
             self.enemy_chosen_move = self.trainer_pkmn.moves[0]
+            return
+
+        best_move = None
+        best_damage = -1
+
+        for move in valid_moves:
+            damage = self.calculate_damage(self.trainer_pkmn, self.player_pkmn, move)
+            if damage > best_damage:
+                best_damage = damage
+                best_move = move
+
+        self.enemy_chosen_move = best_move
 
 
     def process_battle_state(self):
