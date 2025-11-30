@@ -1,13 +1,14 @@
 import time
 import graphics as gf
-import os
+from pathlib import Path
 
 class BattleScene:
     def __init__(self, window):
         self.width = 1408
         self.height = 768
 
-        self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.root_dir = Path(__file__).resolve().parent.parent
+        self.assets_dir = self.root_dir / "assets" / "images"
 
         self.p1 = gf.Point(826, 612)
         self.p2 = gf.Point(1000, 647)
@@ -52,8 +53,8 @@ class BattleScene:
         battle_hud.draw(self.janela)
 
     def get_path(self, filename):
-        path = os.path.join(self.base_dir, "assets", "images", filename)
-        return os.path.normpath(path)
+        full_path = self.assets_dir / filename
+        return str(full_path)
 
     def bg(self):
         return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("battlefield_final.png"))
