@@ -1,7 +1,7 @@
 from src.database import MOVES_DB, POKEDEX_DB, ITEMS_DB
 
 class Pokemon:
-    def __init__(self, name, level):
+    def __init__(self, name, level, moves=None):
         if name not in POKEDEX_DB:
             raise ValueError(f"Pokémon '{name}' não encontrado no Pokedex JSON.")
 
@@ -37,7 +37,17 @@ class Pokemon:
                 }
 
         self.moves = []
-        self.learn_moves_by_level(data["moves"])
+        if moves is not None and len(moves) > 0:
+            self.learn_moves_manually(moves)
+        else:
+            self.learn_moves_by_level(data["moves"])
+
+    def learn_moves_manually(self, moves_list_names):
+            chosen_moves = moves_list_names[:4]
+
+            for move_name in chosen_moves:
+                new_move = Move(move_name)
+                self.moves.append(new_move)
 
     def learn_moves_by_level(self, moves_list_from_json):
         available_moves = [m for m in moves_list_from_json if m["level"] <= self.level]
