@@ -12,10 +12,9 @@ class BattleController:
         self.player = player
         self.trainer = trainer
         self.battle_scene = battle_scene
-        self.types_damage = self.load_types_from_json()
+        self.types_damage = TYPES_DB
         self.cancel_action = -1
 
-        self.types_damage = TYPES_DB
         self.player_action_type = None
         self.player_chosen_move = None
         self.enemy_chosen_move = None
