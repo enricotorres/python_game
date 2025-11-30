@@ -23,7 +23,7 @@ def main():
     logger.info("--- Inicializando Pokémon Python ---")
 
     ash_team = [
-            Pokemon("Bulbasaur", level=100),
+            Pokemon("Mewtwo", level=100, moves=["Psychic"]),
             Pokemon("Pikachu", level=100),
             Pokemon("Pidgey", level=5),
             Pokemon("Geodude", level=5),
