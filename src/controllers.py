@@ -354,6 +354,13 @@ class BattleController:
 
     def calculate_damage(self, attacker, defender, chosen_move):
 
+        hits = 1
+        if hasattr(chosen_move, "mechanics"):
+            if "multi_hit" in chosen_move.mechanics:
+                min_hits = chosen_move.mechanics["multi_hit"]["min"]
+                max_hits = chosen_move.mechanics["multi_hit"]["max"]
+                hits = random.randint(min_hits, max_hits)
+
         if chosen_move.category == "Special":
             attack_stat = attacker.get_current_stat("special-attack")
             defense_stat = defender.get_current_stat("special-defense")
@@ -385,15 +392,15 @@ class BattleController:
         random_factor = random.randint(85, 100) / 100.0
 
         crit_chance = 6
-        high_crit_moves = ["Slash", "Razor Leaf", "Karate Chop", "Crabhammer"]
-        if chosen_move.name in high_crit_moves:
-            crit_chance = 12
+        if hasattr(chosen_move, "mechanics"):
+            if "crit_rate_bonus" in chosen_move.mechanics:
+                crit_chance = 12
 
         crit_multiplier = 1.0
         if random.randint(1, 100) <= crit_chance:
             crit_multiplier = 1.5
 
-        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier
+        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier * hits
 
         if final_type_multiplier == 0:
             return 0
