@@ -1,10 +1,9 @@
 import random
-import json
-import os
 import math
 import logging
 
 from src.classes import Item, Move
+from src.database import TYPES_DB
 
 logger = logging.getLogger(__name__)
 
@@ -16,6 +15,7 @@ class BattleController:
         self.types_damage = self.load_types_from_json()
         self.cancel_action = -1
 
+        self.types_damage = TYPES_DB
         self.player_action_type = None
         self.player_chosen_move = None
         self.enemy_chosen_move = None
@@ -417,17 +417,6 @@ class BattleController:
             if pokemon.current_hp > 0:
                 return True
         return False
-
-
-    def load_types_from_json(self):
-        try:
-            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            path = os.path.join(base_dir, "data", "types.json")
-            with open(path, "r", encoding="utf-8" ) as file:
-                return json.load(file)
-        except Exception as e:
-            logger.error(f"Erro ao carregar types.json: {e}")
-            return {}
 
 
     def calculate_damage(self, attacker, defender, chosen_move):

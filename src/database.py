@@ -10,6 +10,7 @@ DATA_DIR = ROOT_DIR / "data"
 MOVES_FILE = DATA_DIR / "moves.json"
 POKEDEX_FILE = DATA_DIR / "pokedex.json"
 ITEMS_FILE = DATA_DIR / "items.json"
+TYPES_FILE = DATA_DIR / "types.json"
 
 def load_data():
     moves_data = {}
@@ -24,16 +25,17 @@ def load_data():
         moves_data = json.loads(MOVES_FILE.read_text(encoding="utf-8"))
         pokedex_data = json.loads(POKEDEX_FILE.read_text(encoding="utf-8"))
         items_data = json.loads(ITEMS_FILE.read_text(encoding="utf-8"))
+        types_data = json.loads(TYPES_FILE.read_text(encoding="utf-8"))
 
         logger.info("Banco de dados carregado com sucesso")
-        return moves_data, pokedex_data, items_data
+        return moves_data, pokedex_data, items_data, types_data
 
     except json.JSONDecodeError as e:
         logger.error(f"Erro de sintaxe nos arquivos JSON: {e}")
-        return {}, {}, {}
+        return {}, {}, {}, {}
 
     except Exception as e:
         logger.error(f"Erro fatal ao carregar dados: {e}")
-        return {}, {}, {}
+        return {}, {}, {}, {}
 
-MOVES_DB, POKEDEX_DB, ITEMS_DB = load_data()
+MOVES_DB, POKEDEX_DB, ITEMS_DB, TYPES_DB = load_data()

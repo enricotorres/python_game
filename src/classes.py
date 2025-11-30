@@ -1,8 +1,12 @@
+import logging
 from src.database import MOVES_DB, POKEDEX_DB, ITEMS_DB
+
+logger = logging.getLogger(__name__)
 
 class Pokemon:
     def __init__(self, name, level, moves=None):
         if name not in POKEDEX_DB:
+            logger.error(f"Erro Crítico: Pokémon '{name}' não encontrado no DB.")
             raise ValueError(f"Pokémon '{name}' não encontrado no Pokedex JSON.")
 
         data = POKEDEX_DB[name]
@@ -26,6 +30,7 @@ class Pokemon:
         self.sp_atk = int(((base_stats["special_attack"] * 2 * level) / 100) + 5)
         self.sp_def = int(((base_stats["special_defense"] * 2 * level) / 100) + 5)
         self.speed = int(((base_stats["speed"] * 2 * level) / 100) + 5)
+
         self.stat_mods = {
                 "attack": 0,
                 "defense": 0,
@@ -42,18 +47,21 @@ class Pokemon:
         else:
             self.learn_moves_by_level(data["moves"])
 
+        logger.debug(f"Pokémon criado: {self.name} (Lv.{self.level}) HP:{self.max_hp}")
+
     def learn_moves_manually(self, moves_list_names):
             chosen_moves = moves_list_names[:4]
 
             for move_name in chosen_moves:
-                new_move = Move(move_name)
-                self.moves.append(new_move)
+                try:
+                    new_move = Move(move_name)
+                    self.moves.append(new_move)
+                except Exception as e:
+                    logger.error(f"Erro ao ensinar movimento manual '{move_name}': {e}")
 
     def learn_moves_by_level(self, moves_list_from_json):
         available_moves = [m for m in moves_list_from_json if m["level"] <= self.level]
-
         available_moves.sort(key=lambda x: x["level"])
-
         recent_moves = available_moves[-4:]
 
         for m_data in recent_moves:
@@ -61,7 +69,7 @@ class Pokemon:
                 new_move = Move(m_data["name"])
                 self.moves.append(new_move)
             except Exception as e:
-                print(f"Erro ao ensinar {m_data['name']} para {self.name}: {e}")
+                logger.error(f"Erro ao ensinar {m_data['name']} para {self.name}: {e}")
 
     def show_status(self):
         type_str = "/".join(self.types)
@@ -77,12 +85,16 @@ class Pokemon:
     def attack(self, move):
         if move.use():
             return True
+        logger.debug(f"{self.name} tentou usar {move.name} mas falhou (sem PP).")
         return False
 
     def take_damage(self, amount):
+        old_hp = self.current_hp
         self.current_hp -= int(amount)
         if self.current_hp < 0:
             self.current_hp = 0
+
+        logger.debug(f"{self.name} tomou {amount} dano. HP: {old_hp} -> {self.current_hp}")
         return self.current_hp > 0
 
     def is_alive(self):
@@ -111,11 +123,18 @@ class Pokemon:
         if stat_name not in self.stat_mods:
             return False
 
+        old_stage = self.stat_mods[stat_name]
         self.stat_mods[stat_name] += amount
 
         if self.stat_mods[stat_name] > 6: self.stat_mods[stat_name] = 6
         if self.stat_mods[stat_name] < -6: self.stat_mods[stat_name] = -6
-        return True
+
+        if old_stage != self.stat_mods[stat_name]:
+            logger.debug(f"{self.name} stat {stat_name}: {old_stage} -> {self.stat_mods[stat_name]}")
+            return True
+        else:
+            logger.debug(f"{self.name} stat {stat_name} já atingiu o limite ({self.stat_mods[stat_name]}).")
+            return False
 
     def __repr__(self):
         return f"<{self.name} Lv.{self.level} | HP:{self.current_hp}>"
@@ -137,8 +156,10 @@ class Trainer:
     def add_pokemon(self, pokemon):
         if len(self.team) < 6:
             self.team.append(pokemon)
+            logger.info(f"{pokemon.name} adicionado ao time de {self.name}.")
             return True
         else:
+            logger.warning(f"Time de {self.name} está cheio! Não foi possível adicionar {pokemon.name}.")
             return False
 
     def get_active_pokemon(self):
@@ -151,6 +172,7 @@ class Trainer:
             self.bag[item_name] += quantity
         else:
             self.bag[item_name] = quantity
+        logger.debug(f"Item adicionado: {item_name} (x{quantity})")
 
     def use_item(self, item_name):
         if self.bag.get(item_name, 0) > 0:
@@ -164,6 +186,7 @@ class Trainer:
 class Move:
     def __init__(self, name):
         if name not in MOVES_DB:
+            logger.error(f"Erro: O ataque '{name}' não existe no moves.json!")
             raise ValueError(f"O ataque '{name}' não existe no moves.json!")
 
         data = MOVES_DB[name]
@@ -195,6 +218,7 @@ class Move:
 class Item:
     def __init__(self, name):
         if name not in ITEMS_DB:
+            logger.error(f"Erro: Item '{name}' não encontrado no DB.")
             raise ValueError(f"Item '{name}' não encontrado no JSON.")
 
         data = ITEMS_DB[name]
@@ -208,9 +232,11 @@ class Item:
 
     def use(self, target_pokemon):
         effect_type = self.effect.get("type")
+        logger.debug(f"Item {self.name} sendo usado em {target_pokemon.name}...")
 
         if effect_type == "heal_hp":
             if target_pokemon.current_hp >= target_pokemon.max_hp:
+                logger.debug(f"Falha: {target_pokemon.name} já está com HP cheio.")
                 return False
 
             amount = self.effect.get("amount", 0)
@@ -219,35 +245,50 @@ class Item:
             if target_pokemon.current_hp > target_pokemon.max_hp:
                 target_pokemon.current_hp = target_pokemon.max_hp
 
+            logger.debug(f"Sucesso: Curou HP para {target_pokemon.current_hp}.")
             return True
 
         elif effect_type == "revive":
             if target_pokemon.is_alive():
+                logger.debug(f"Falha: {target_pokemon.name} não está desmaiado.")
                 return False
 
             percent = self.effect.get("amount_percent", 0.5)
             target_pokemon.current_hp = int(target_pokemon.max_hp * percent)
+            logger.debug(f"Sucesso: Reviveu com {target_pokemon.current_hp} HP.")
             return True
 
         elif effect_type == "cure_status":
             condition_to_cure = self.effect.get("condition")
 
+            if target_pokemon.status is None:
+                logger.debug(f"Falha: {target_pokemon.name} não tem problemas de status.")
+                return False
+
             if condition_to_cure == "all":
+                logger.debug(f"Sucesso: Curou status '{target_pokemon.status}'.")
                 target_pokemon.status = None
                 return True
 
             if target_pokemon.status == condition_to_cure:
+                logger.debug(f"Sucesso: Curou status '{target_pokemon.status}'.")
                 target_pokemon.status = None
                 return True
 
+            logger.debug(f"Falha: Item cura '{condition_to_cure}', mas alvo tem '{target_pokemon.status}'.")
             return False
 
         elif effect_type == "heal_hp_status":
+            if target_pokemon.current_hp >= target_pokemon.max_hp and target_pokemon.status is None:
+                logger.debug(f"Falha: {target_pokemon.name} já está com saúde perfeita.")
+                return False
+
             target_pokemon.status = None
             target_pokemon.current_hp = target_pokemon.max_hp
+            logger.debug(f"Sucesso: {self.name} restaurou HP e Status.")
             return True
 
-
+        logger.warning(f"Tipo de efeito desconhecido no item: {effect_type}")
         return False
 
     def __repr__(self):
