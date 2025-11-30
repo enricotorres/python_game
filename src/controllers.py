@@ -4,6 +4,8 @@ import json
 import os
 import math
 
+from src.classes import Item, Move
+
 class BattleController:
     def __init__(self, battle_scene, trainer, player):
         self.player = player
@@ -117,9 +119,22 @@ class BattleController:
 
 
     def decide_enemy_move(self):
+        hp_percent = self.trainer_pkmn.current_hp / self.trainer_pkmn.max_hp
+
+        if hp_percent < 0.30:
+            healing_items = ["Full Restore", "Hyper Potion", "Super Potion", "Potion"]
+
+            for item_name in healing_items:
+                if self.trainer.bag.get(item_name, 0) > 0:
+                    self.enemy_action_type = "bag"
+                    self.enemy_chosen_item = Item(item_name)
+                    return
+
+        self.enemy_action_type = "attack"
+
         valid_moves = [m for m in self.trainer_pkmn.moves if m.current_pp > 0]
         if not valid_moves:
-            self.enemy_chosen_move = self.trainer_pkmn.moves[0]
+            self.enemy_chosen_move = Move("Struggle")
             return
 
         best_move = None
@@ -147,6 +162,11 @@ class BattleController:
 
                 if self.check_battle_status():
                      self.perform_attack(self.trainer_pkmn, self.player_pkmn, self.enemy_chosen_move)
+
+            if getattr(self, "enemy_action_type", "attack") == "bag":
+                item = self.enemy_chosen_item
+                if item.use(self.trainer_pkmn):
+                    self.trainer.use_item(item.name)
 
             elif self.player_action_type == "bag":
                 if self.check_battle_status():
