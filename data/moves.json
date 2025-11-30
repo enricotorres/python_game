@@ -7,7 +7,8 @@
     "accuracy": 100,
     "pp": 35,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Pounds with forelegs or tail."
   },
   "Karate Chop": {
     "id": 2,
@@ -17,7 +18,11 @@
     "accuracy": 100,
     "pp": 25,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Has a high critical hit ratio.",
+    "mechanics": {
+      "crit_rate_bonus": 1
+    }
   },
   "Double Slap": {
     "id": 3,
@@ -27,7 +32,14 @@
     "accuracy": 85,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Repeatedly slaps 2-5 times.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 5
+      }
+    }
   },
   "Comet Punch": {
     "id": 4,
@@ -37,7 +49,14 @@
     "accuracy": 85,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Repeatedly punches 2-5 times.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 5
+      }
+    }
   },
   "Mega Punch": {
     "id": 5,
@@ -47,7 +66,8 @@
     "accuracy": 85,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A powerful punch thrown very hard."
   },
   "Pay Day": {
     "id": 6,
@@ -57,7 +77,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Throws coins. Gets them back later."
   },
   "Fire Punch": {
     "id": 7,
@@ -72,7 +93,8 @@
       "target": "enemy",
       "condition": "burn",
       "chance": 10
-    }
+    },
+    "description": "A fiery punch. May cause a burn."
   },
   "Ice Punch": {
     "id": 8,
@@ -87,7 +109,8 @@
       "target": "enemy",
       "condition": "freeze",
       "chance": 10
-    }
+    },
+    "description": "An icy punch. May cause freezing."
   },
   "Thunder Punch": {
     "id": 9,
@@ -102,7 +125,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 10
-    }
+    },
+    "description": "An electric punch. It may paralyze."
   },
   "Scratch": {
     "id": 10,
@@ -112,7 +136,8 @@
     "accuracy": 100,
     "pp": 35,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Scratches with sharp claws."
   },
   "Vice Grip": {
     "id": 11,
@@ -122,7 +147,8 @@
     "accuracy": 100,
     "pp": 30,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Grips with power ful pincers."
   },
   "Guillotine": {
     "id": 12,
@@ -132,7 +158,8 @@
     "accuracy": 30,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A one-hit KO, pincer attack."
   },
   "Razor Wind": {
     "id": 13,
@@ -142,7 +169,11 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "1st turn: Prepare 2nd turn: Attack",
+    "mechanics": {
+      "crit_rate_bonus": 1
+    }
   },
   "Swords Dance": {
     "id": 14,
@@ -158,7 +189,8 @@
       "stat": "attack",
       "amount": 2,
       "chance": 100
-    }
+    },
+    "description": "A dance that in creases ATTACK."
   },
   "Cut": {
     "id": 15,
@@ -168,7 +200,8 @@
     "accuracy": 95,
     "pp": 30,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Cuts using claws, scythes, etc."
   },
   "Gust": {
     "id": 16,
@@ -178,7 +211,8 @@
     "accuracy": 100,
     "pp": 35,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Whips up a strong gust of wind."
   },
   "Wing Attack": {
     "id": 17,
@@ -188,7 +222,8 @@
     "accuracy": 100,
     "pp": 35,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Strikes the target with wings."
   },
   "Whirlwind": {
     "id": 18,
@@ -198,7 +233,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": -6,
-    "effect": null
+    "effect": null,
+    "description": "Blows away the foe & ends battle."
   },
   "Fly": {
     "id": 19,
@@ -208,7 +244,8 @@
     "accuracy": 95,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "1st turn: Fly 2nd turn: Attack"
   },
   "Bind": {
     "id": 20,
@@ -223,7 +260,8 @@
       "target": "enemy",
       "condition": "trap",
       "chance": 100
-    }
+    },
+    "description": "Binds the target for 2-5 turns."
   },
   "Slam": {
     "id": 21,
@@ -233,7 +271,8 @@
     "accuracy": 75,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Slams the foe with a tail, vine, etc."
   },
   "Vine Whip": {
     "id": 22,
@@ -243,7 +282,8 @@
     "accuracy": 100,
     "pp": 25,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Whips the foe with slender vines."
   },
   "Stomp": {
     "id": 23,
@@ -253,7 +293,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that may cause flinching."
   },
   "Double Kick": {
     "id": 24,
@@ -263,7 +304,14 @@
     "accuracy": 100,
     "pp": 30,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A double kicking attack.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 2
+      }
+    }
   },
   "Mega Kick": {
     "id": 25,
@@ -273,7 +321,8 @@
     "accuracy": 75,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "The target is attacked by a kick launched with muscle-packed power."
   },
   "Jump Kick": {
     "id": 26,
@@ -283,7 +332,8 @@
     "accuracy": 95,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "May miss, damaging the user."
   },
   "Rolling Kick": {
     "id": 27,
@@ -293,7 +343,8 @@
     "accuracy": 85,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A fast, spinning kick."
   },
   "Sand Attack": {
     "id": 28,
@@ -309,7 +360,8 @@
       "stat": "accuracy",
       "amount": -1,
       "chance": 100
-    }
+    },
+    "description": "Reduces accuracy by throwing sand."
   },
   "Headbutt": {
     "id": 29,
@@ -319,7 +371,8 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that may make foe flinch."
   },
   "Horn Attack": {
     "id": 30,
@@ -329,7 +382,8 @@
     "accuracy": 100,
     "pp": 25,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack using a horn to jab."
   },
   "Fury Attack": {
     "id": 31,
@@ -339,7 +393,14 @@
     "accuracy": 85,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Jabs the target 2-5 times.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 5
+      }
+    }
   },
   "Horn Drill": {
     "id": 32,
@@ -349,7 +410,8 @@
     "accuracy": 30,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A one-hit KO, drill attack."
   },
   "Tackle": {
     "id": 33,
@@ -359,7 +421,8 @@
     "accuracy": 100,
     "pp": 35,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A full-body charge attack."
   },
   "Body Slam": {
     "id": 34,
@@ -374,7 +437,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 30
-    }
+    },
+    "description": "An attack that may cause paralysis."
   },
   "Wrap": {
     "id": 35,
@@ -389,7 +453,8 @@
       "target": "enemy",
       "condition": "trap",
       "chance": 100
-    }
+    },
+    "description": "Squeezes the foe for 2-5 turns."
   },
   "Take Down": {
     "id": 36,
@@ -399,7 +464,11 @@
     "accuracy": 85,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A tackle that also hurts the user.",
+    "mechanics": {
+      "drain_percent": -25
+    }
   },
   "Thrash": {
     "id": 37,
@@ -409,7 +478,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Works 2-3 turns and confuses user."
   },
   "Double Edge": {
     "id": 38,
@@ -419,7 +489,11 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A tackle that also hurts the user.",
+    "mechanics": {
+      "drain_percent": -33
+    }
   },
   "Tail Whip": {
     "id": 39,
@@ -435,7 +509,8 @@
       "stat": "defense",
       "amount": -1,
       "chance": 100
-    }
+    },
+    "description": "Lowers the foe's DEFENSE."
   },
   "Poison Sting": {
     "id": 40,
@@ -450,7 +525,8 @@
       "target": "enemy",
       "condition": "poison",
       "chance": 30
-    }
+    },
+    "description": "An attack that may poison the target."
   },
   "Twineedle": {
     "id": 41,
@@ -465,6 +541,13 @@
       "target": "enemy",
       "condition": "poison",
       "chance": 20
+    },
+    "description": "Jabs the foe twice using stingers.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 2
+      }
     }
   },
   "Pin Missile": {
@@ -475,7 +558,14 @@
     "accuracy": 95,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Fires pins that strike 2-5 times.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 5
+      }
+    }
   },
   "Leer": {
     "id": 43,
@@ -491,6 +581,10 @@
       "stat": "defense",
       "amount": -1,
       "chance": 100
+    },
+    "description": "Reduces the foe's DEFENSE.",
+    "mechanics": {
+      "effect_chance": 100
     }
   },
   "Bite": {
@@ -501,7 +595,8 @@
     "accuracy": 100,
     "pp": 25,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that may cause flinching."
   },
   "Growl": {
     "id": 45,
@@ -517,7 +612,8 @@
       "stat": "attack",
       "amount": -1,
       "chance": 100
-    }
+    },
+    "description": "Reduces the foe's ATTACK."
   },
   "Roar": {
     "id": 46,
@@ -527,7 +623,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": -6,
-    "effect": null
+    "effect": null,
+    "description": "Scares wild foes to end battle."
   },
   "Sing": {
     "id": 47,
@@ -542,7 +639,8 @@
       "target": "enemy",
       "condition": "sleep",
       "chance": 100
-    }
+    },
+    "description": "May cause the foe to fall asleep."
   },
   "Supersonic": {
     "id": 48,
@@ -557,7 +655,8 @@
       "target": "enemy",
       "condition": "confusion",
       "chance": 100
-    }
+    },
+    "description": "Sound waves that cause confusion."
   },
   "Sonic Boom": {
     "id": 49,
@@ -567,7 +666,8 @@
     "accuracy": 90,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Always inflicts 20HP damage."
   },
   "Disable": {
     "id": 50,
@@ -582,7 +682,8 @@
       "target": "enemy",
       "condition": "disable",
       "chance": 100
-    }
+    },
+    "description": "Disables the foe's most recent move."
   },
   "Acid": {
     "id": 51,
@@ -598,6 +699,10 @@
       "stat": "special-defense",
       "amount": -1,
       "chance": 10
+    },
+    "description": "An attack that may lower DEFENSE.",
+    "mechanics": {
+      "effect_chance": 10
     }
   },
   "Ember": {
@@ -613,7 +718,8 @@
       "target": "enemy",
       "condition": "burn",
       "chance": 10
-    }
+    },
+    "description": "The foe is attacked with small flames. The foe may suffer a burn."
   },
   "Flamethrower": {
     "id": 53,
@@ -628,7 +734,8 @@
       "target": "enemy",
       "condition": "burn",
       "chance": 10
-    }
+    },
+    "description": "An attack that may inflict a burn."
   },
   "Mist": {
     "id": 54,
@@ -638,7 +745,8 @@
     "accuracy": 100,
     "pp": 30,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Prevents stat reduction."
   },
   "Water Gun": {
     "id": 55,
@@ -648,7 +756,8 @@
     "accuracy": 100,
     "pp": 25,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Squirts water to attack."
   },
   "Hydro Pump": {
     "id": 56,
@@ -658,7 +767,8 @@
     "accuracy": 80,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A powerful water- type attack."
   },
   "Surf": {
     "id": 57,
@@ -668,7 +778,8 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A strong water- type attack."
   },
   "Ice Beam": {
     "id": 58,
@@ -683,7 +794,8 @@
       "target": "enemy",
       "condition": "freeze",
       "chance": 10
-    }
+    },
+    "description": "An attack that may freeze the foe."
   },
   "Blizzard": {
     "id": 59,
@@ -698,7 +810,8 @@
       "target": "enemy",
       "condition": "freeze",
       "chance": 10
-    }
+    },
+    "description": "An attack that may freeze the foe."
   },
   "Psybeam": {
     "id": 60,
@@ -713,7 +826,8 @@
       "target": "enemy",
       "condition": "confusion",
       "chance": 10
-    }
+    },
+    "description": "An attack that may confuse the foe."
   },
   "Bubble Beam": {
     "id": 61,
@@ -729,6 +843,10 @@
       "stat": "speed",
       "amount": -1,
       "chance": 10
+    },
+    "description": "An attack that may lower SPEED.",
+    "mechanics": {
+      "effect_chance": 10
     }
   },
   "Aurora Beam": {
@@ -745,6 +863,10 @@
       "stat": "attack",
       "amount": -1,
       "chance": 10
+    },
+    "description": "An attack that may lower ATTACK.",
+    "mechanics": {
+      "effect_chance": 10
     }
   },
   "Hyper Beam": {
@@ -755,7 +877,8 @@
     "accuracy": 90,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "1st turn: Attack 2nd turn: Rest"
   },
   "Peck": {
     "id": 64,
@@ -765,7 +888,8 @@
     "accuracy": 100,
     "pp": 35,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Jabs the foe with a beak, etc."
   },
   "Drill Peck": {
     "id": 65,
@@ -775,7 +899,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A strong, spin­ ning-peck attack."
   },
   "Submission": {
     "id": 66,
@@ -785,7 +910,11 @@
     "accuracy": 80,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that al­ so hurts the user.",
+    "mechanics": {
+      "drain_percent": -25
+    }
   },
   "Low Kick": {
     "id": 67,
@@ -795,7 +924,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that may cause flinching."
   },
   "Counter": {
     "id": 68,
@@ -805,7 +935,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": -5,
-    "effect": null
+    "effect": null,
+    "description": "Returns a physical blow double."
   },
   "Seismic Toss": {
     "id": 69,
@@ -815,7 +946,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "The user's level equals damage HP."
   },
   "Strength": {
     "id": 70,
@@ -825,7 +957,8 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A powerful physi­ cal attack."
   },
   "Absorb": {
     "id": 71,
@@ -835,7 +968,11 @@
     "accuracy": 100,
     "pp": 25,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Steals 1/2 of the damage inflicted.",
+    "mechanics": {
+      "drain_percent": 50
+    }
   },
   "Mega Drain": {
     "id": 72,
@@ -845,7 +982,11 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Steals 1/2 of the damage inflicted.",
+    "mechanics": {
+      "drain_percent": 50
+    }
   },
   "Leech Seed": {
     "id": 73,
@@ -860,7 +1001,8 @@
       "target": "enemy",
       "condition": "leech-seed",
       "chance": 100
-    }
+    },
+    "description": "Steals HP from the foe on every turn."
   },
   "Growth": {
     "id": 74,
@@ -876,7 +1018,8 @@
       "stat": "attack",
       "amount": 1,
       "chance": 100
-    }
+    },
+    "description": "Raises the SPCL. ATK rating."
   },
   "Razor Leaf": {
     "id": 75,
@@ -886,7 +1029,11 @@
     "accuracy": 95,
     "pp": 25,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A sharp-edged leaf is launched to slash at the foe. It has a high critical-hit ratio.",
+    "mechanics": {
+      "crit_rate_bonus": 1
+    }
   },
   "Solar Beam": {
     "id": 76,
@@ -896,7 +1043,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "1st turn: Prepare 2nd turn: Attack"
   },
   "Poison Powder": {
     "id": 77,
@@ -911,7 +1059,8 @@
       "target": "enemy",
       "condition": "poison",
       "chance": 100
-    }
+    },
+    "description": "A move that may poison the foe."
   },
   "Stun Spore": {
     "id": 78,
@@ -926,7 +1075,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 100
-    }
+    },
+    "description": "A move that may paralyze the foe."
   },
   "Sleep Powder": {
     "id": 79,
@@ -941,7 +1091,8 @@
       "target": "enemy",
       "condition": "sleep",
       "chance": 100
-    }
+    },
+    "description": "May cause the foe to fall asleep."
   },
   "Petal Dance": {
     "id": 80,
@@ -951,7 +1102,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Works 2-3 turns and confuses user."
   },
   "String Shot": {
     "id": 81,
@@ -967,7 +1119,8 @@
       "stat": "speed",
       "amount": -2,
       "chance": 100
-    }
+    },
+    "description": "A move that lowers the foe's SPEED."
   },
   "Dragon Rage": {
     "id": 82,
@@ -977,7 +1130,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Always inflicts 40HP damage."
   },
   "Fire Spin": {
     "id": 83,
@@ -992,7 +1146,8 @@
       "target": "enemy",
       "condition": "trap",
       "chance": 100
-    }
+    },
+    "description": "Traps foe in fire for 2-5 turns."
   },
   "Thunder Shock": {
     "id": 84,
@@ -1007,7 +1162,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 10
-    }
+    },
+    "description": "An electrical attack that may paralyze the foe."
   },
   "Thunderbolt": {
     "id": 85,
@@ -1022,7 +1178,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 10
-    }
+    },
+    "description": "An attack that may cause paralysis."
   },
   "Thunder Wave": {
     "id": 86,
@@ -1037,7 +1194,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 100
-    }
+    },
+    "description": "A move that may cause paralysis."
   },
   "Thunder": {
     "id": 87,
@@ -1052,7 +1210,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 30
-    }
+    },
+    "description": "An attack that may cause paralysis."
   },
   "Rock Throw": {
     "id": 88,
@@ -1062,7 +1221,8 @@
     "accuracy": 90,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Drops rocks on the enemy."
   },
   "Earthquake": {
     "id": 89,
@@ -1072,7 +1232,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Tough but useless vs. flying foes."
   },
   "Fissure": {
     "id": 90,
@@ -1082,7 +1243,8 @@
     "accuracy": 30,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "A ground-type, one-hit KO attack."
   },
   "Dig": {
     "id": 91,
@@ -1092,7 +1254,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "1st turn: Burrow 2nd turn: Attack"
   },
   "Toxic": {
     "id": 92,
@@ -1107,7 +1270,8 @@
       "target": "enemy",
       "condition": "poison",
       "chance": 100
-    }
+    },
+    "description": "A poison move with increasing damage."
   },
   "Confusion": {
     "id": 93,
@@ -1122,7 +1286,8 @@
       "target": "enemy",
       "condition": "confusion",
       "chance": 10
-    }
+    },
+    "description": "The foe is hit by a weak telekinetic force. It may also leave the foe confused."
   },
   "Psychic": {
     "id": 94,
@@ -1138,6 +1303,10 @@
       "stat": "special-defense",
       "amount": -1,
       "chance": 10
+    },
+    "description": "An attack that may lower SPCL.DEF.",
+    "mechanics": {
+      "effect_chance": 10
     }
   },
   "Hypnosis": {
@@ -1153,7 +1322,8 @@
       "target": "enemy",
       "condition": "sleep",
       "chance": 100
-    }
+    },
+    "description": "May put the foe to sleep."
   },
   "Meditate": {
     "id": 96,
@@ -1169,7 +1339,8 @@
       "stat": "attack",
       "amount": 1,
       "chance": 100
-    }
+    },
+    "description": "Raises the user's ATTACK."
   },
   "Agility": {
     "id": 97,
@@ -1185,7 +1356,8 @@
       "stat": "speed",
       "amount": 2,
       "chance": 100
-    }
+    },
+    "description": "Sharply increases the user's SPEED."
   },
   "Quick Attack": {
     "id": 98,
@@ -1195,7 +1367,8 @@
     "accuracy": 100,
     "pp": 30,
     "priority": 1,
-    "effect": null
+    "effect": null,
+    "description": "Lets the user get in the first hit."
   },
   "Rage": {
     "id": 99,
@@ -1205,7 +1378,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Raises ATTACK if the user is hit."
   },
   "Teleport": {
     "id": 100,
@@ -1215,7 +1389,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": -6,
-    "effect": null
+    "effect": null,
+    "description": "A move for fleeing from battle."
   },
   "Night Shade": {
     "id": 101,
@@ -1225,7 +1400,8 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "The user's level equals damage HP."
   },
   "Mimic": {
     "id": 102,
@@ -1235,7 +1411,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Copies a move used by the foe."
   },
   "Screech": {
     "id": 103,
@@ -1251,7 +1428,8 @@
       "stat": "defense",
       "amount": -2,
       "chance": 100
-    }
+    },
+    "description": "Sharply reduces the foe's DEFENSE."
   },
   "Double Team": {
     "id": 104,
@@ -1267,7 +1445,8 @@
       "stat": "evasion",
       "amount": 1,
       "chance": 100
-    }
+    },
+    "description": "Heightens evasive­ ness."
   },
   "Recover": {
     "id": 105,
@@ -1277,7 +1456,11 @@
     "accuracy": 100,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Recovers up to half the user’s maximum HP.",
+    "mechanics": {
+      "healing_percent": 50
+    }
   },
   "Harden": {
     "id": 106,
@@ -1293,7 +1476,8 @@
       "stat": "defense",
       "amount": 1,
       "chance": 100
-    }
+    },
+    "description": "Stiffens the body’s  muscles to raise DEFENSE."
   },
   "Minimize": {
     "id": 107,
@@ -1309,7 +1493,8 @@
       "stat": "evasion",
       "amount": 2,
       "chance": 100
-    }
+    },
+    "description": "Heightens evasive ness."
   },
   "Smokescreen": {
     "id": 108,
@@ -1325,7 +1510,8 @@
       "stat": "accuracy",
       "amount": -1,
       "chance": 100
-    }
+    },
+    "description": "Lowers the foe's accuracy."
   },
   "Confuse Ray": {
     "id": 109,
@@ -1340,7 +1526,8 @@
       "target": "enemy",
       "condition": "confusion",
       "chance": 100
-    }
+    },
+    "description": "A move that causes confusion."
   },
   "Withdraw": {
     "id": 110,
@@ -1356,7 +1543,8 @@
       "stat": "defense",
       "amount": 1,
       "chance": 100
-    }
+    },
+    "description": "Heightens the user's DEFENSE."
   },
   "Defense Curl": {
     "id": 111,
@@ -1372,7 +1560,8 @@
       "stat": "defense",
       "amount": 1,
       "chance": 100
-    }
+    },
+    "description": "Heightens the user's DEFENSE."
   },
   "Barrier": {
     "id": 112,
@@ -1388,7 +1577,8 @@
       "stat": "defense",
       "amount": 2,
       "chance": 100
-    }
+    },
+    "description": "Sharply increases user's DEFENSE."
   },
   "Light Screen": {
     "id": 113,
@@ -1398,7 +1588,8 @@
     "accuracy": 100,
     "pp": 30,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Ups SPCL.DEF with a wall of light."
   },
   "Haze": {
     "id": 114,
@@ -1408,7 +1599,8 @@
     "accuracy": 100,
     "pp": 30,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Eliminates all stat changes."
   },
   "Reflect": {
     "id": 115,
@@ -1418,7 +1610,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Raises DEFENSE with a barrier."
   },
   "Focus Energy": {
     "id": 116,
@@ -1428,7 +1621,8 @@
     "accuracy": 100,
     "pp": 30,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Raises the critical hit ratio."
   },
   "Bide": {
     "id": 117,
@@ -1438,7 +1632,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 1,
-    "effect": null
+    "effect": null,
+    "description": "Waits 2-3 turns & hits back double."
   },
   "Metronome": {
     "id": 118,
@@ -1448,7 +1643,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Randomly uses any POKéMON move."
   },
   "Mirror Move": {
     "id": 119,
@@ -1458,7 +1654,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Counters with the same move."
   },
   "Self Destruct": {
     "id": 120,
@@ -1468,7 +1665,8 @@
     "accuracy": 100,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Powerful but makes the user faint."
   },
   "Egg Bomb": {
     "id": 121,
@@ -1478,7 +1676,8 @@
     "accuracy": 75,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Eggs are hurled at the foe."
   },
   "Lick": {
     "id": 122,
@@ -1493,7 +1692,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 30
-    }
+    },
+    "description": "An attack that may cause paralysis."
   },
   "Smog": {
     "id": 123,
@@ -1508,7 +1708,8 @@
       "target": "enemy",
       "condition": "poison",
       "chance": 40
-    }
+    },
+    "description": "An attack that may poison the foe."
   },
   "Sludge": {
     "id": 124,
@@ -1523,7 +1724,8 @@
       "target": "enemy",
       "condition": "poison",
       "chance": 30
-    }
+    },
+    "description": "An attack that may poison the foe."
   },
   "Bone Club": {
     "id": 125,
@@ -1533,7 +1735,8 @@
     "accuracy": 85,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that may cause flinching."
   },
   "Fire Blast": {
     "id": 126,
@@ -1548,7 +1751,8 @@
       "target": "enemy",
       "condition": "burn",
       "chance": 10
-    }
+    },
+    "description": "An attack that may cause a burn."
   },
   "Waterfall": {
     "id": 127,
@@ -1558,7 +1762,8 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An aquatic charge attack."
   },
   "Clamp": {
     "id": 128,
@@ -1573,7 +1778,8 @@
       "target": "enemy",
       "condition": "trap",
       "chance": 100
-    }
+    },
+    "description": "Traps the foe for 2-5 turns."
   },
   "Swift": {
     "id": 129,
@@ -1583,7 +1789,8 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Sprays star-shaped rays that never miss."
   },
   "Skull Bash": {
     "id": 130,
@@ -1593,7 +1800,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "1st turn: Prepare 2nd turn: Attack"
   },
   "Spike Cannon": {
     "id": 131,
@@ -1603,7 +1811,14 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Fires spikes to hit 2-5 times.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 5
+      }
+    }
   },
   "Constrict": {
     "id": 132,
@@ -1619,6 +1834,10 @@
       "stat": "speed",
       "amount": -1,
       "chance": 10
+    },
+    "description": "An attack that may lower SPEED.",
+    "mechanics": {
+      "effect_chance": 10
     }
   },
   "Amnesia": {
@@ -1635,7 +1854,8 @@
       "stat": "special-defense",
       "amount": 2,
       "chance": 100
-    }
+    },
+    "description": "Sharply raises the user's SPCL.DEF."
   },
   "Kinesis": {
     "id": 134,
@@ -1651,7 +1871,8 @@
       "stat": "accuracy",
       "amount": -1,
       "chance": 100
-    }
+    },
+    "description": "Reduces the foe's accuracy."
   },
   "Soft Boiled": {
     "id": 135,
@@ -1661,7 +1882,11 @@
     "accuracy": 100,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Restores HP by 1/2 the user's max HP.",
+    "mechanics": {
+      "healing_percent": 50
+    }
   },
   "High Jump Kick": {
     "id": 136,
@@ -1671,7 +1896,8 @@
     "accuracy": 90,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "May miss and hurt the user."
   },
   "Glare": {
     "id": 137,
@@ -1686,7 +1912,8 @@
       "target": "enemy",
       "condition": "paralysis",
       "chance": 100
-    }
+    },
+    "description": "A move that may cause paralysis."
   },
   "Dream Eater": {
     "id": 138,
@@ -1696,7 +1923,11 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Steals HP from a sleeping victim.",
+    "mechanics": {
+      "drain_percent": 50
+    }
   },
   "Poison Gas": {
     "id": 139,
@@ -1711,7 +1942,8 @@
       "target": "enemy",
       "condition": "poison",
       "chance": 100
-    }
+    },
+    "description": "A move that may poison the foe."
   },
   "Barrage": {
     "id": 140,
@@ -1721,7 +1953,14 @@
     "accuracy": 85,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Throws orbs to hit 2-5 times.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 5
+      }
+    }
   },
   "Leech Life": {
     "id": 141,
@@ -1731,7 +1970,11 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Steals 1/2 of the damage inflicted.",
+    "mechanics": {
+      "drain_percent": 50
+    }
   },
   "Lovely Kiss": {
     "id": 142,
@@ -1746,7 +1989,8 @@
       "target": "enemy",
       "condition": "sleep",
       "chance": 100
-    }
+    },
+    "description": "May cause the foe to fall asleep."
   },
   "Sky Attack": {
     "id": 143,
@@ -1756,7 +2000,11 @@
     "accuracy": 90,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "1st turn: Prepare 2nd turn: Attack",
+    "mechanics": {
+      "crit_rate_bonus": 1
+    }
   },
   "Transform": {
     "id": 144,
@@ -1766,7 +2014,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "The user assumes the foe's guise."
   },
   "Bubble": {
     "id": 145,
@@ -1782,6 +2031,10 @@
       "stat": "speed",
       "amount": -1,
       "chance": 10
+    },
+    "description": "An attack that may reduce SPEED.",
+    "mechanics": {
+      "effect_chance": 10
     }
   },
   "Dizzy Punch": {
@@ -1797,7 +2050,8 @@
       "target": "enemy",
       "condition": "confusion",
       "chance": 20
-    }
+    },
+    "description": "An attack that may cause confusion."
   },
   "Spore": {
     "id": 147,
@@ -1812,7 +2066,8 @@
       "target": "enemy",
       "condition": "sleep",
       "chance": 100
-    }
+    },
+    "description": "A move that induces sleep."
   },
   "Flash": {
     "id": 148,
@@ -1828,7 +2083,8 @@
       "stat": "accuracy",
       "amount": -1,
       "chance": 100
-    }
+    },
+    "description": "Blinds the foe to reduce accuracy."
   },
   "Psywave": {
     "id": 149,
@@ -1838,7 +2094,8 @@
     "accuracy": 100,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack with variable power."
   },
   "Splash": {
     "id": 150,
@@ -1848,7 +2105,8 @@
     "accuracy": 100,
     "pp": 40,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Has no effect whatsoever."
   },
   "Acid Armor": {
     "id": 151,
@@ -1864,7 +2122,8 @@
       "stat": "defense",
       "amount": 2,
       "chance": 100
-    }
+    },
+    "description": "Sharply raises the user's DEFENSE."
   },
   "Crabhammer": {
     "id": 152,
@@ -1874,7 +2133,11 @@
     "accuracy": 90,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Has a high criti­ cal hit ratio.",
+    "mechanics": {
+      "crit_rate_bonus": 1
+    }
   },
   "Explosion": {
     "id": 153,
@@ -1884,7 +2147,8 @@
     "accuracy": 100,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Very powerful but makes user faint."
   },
   "Fury Swipes": {
     "id": 154,
@@ -1894,7 +2158,14 @@
     "accuracy": 80,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Quickly scratches 2-5 times.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 5
+      }
+    }
   },
   "Bonemerang": {
     "id": 155,
@@ -1904,7 +2175,14 @@
     "accuracy": 90,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that strikes twice.",
+    "mechanics": {
+      "multi_hit": {
+        "min": 2,
+        "max": 2
+      }
+    }
   },
   "Rest": {
     "id": 156,
@@ -1914,7 +2192,8 @@
     "accuracy": 100,
     "pp": 5,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Sleep for 2 turns to fully recover."
   },
   "Rock Slide": {
     "id": 157,
@@ -1924,7 +2203,8 @@
     "accuracy": 90,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that may cause flinching."
   },
   "Hyper Fang": {
     "id": 158,
@@ -1934,7 +2214,8 @@
     "accuracy": 90,
     "pp": 15,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "An attack that may cause flinching."
   },
   "Sharpen": {
     "id": 159,
@@ -1950,7 +2231,8 @@
       "stat": "attack",
       "amount": 1,
       "chance": 100
-    }
+    },
+    "description": "A move that raises the user's ATTACK."
   },
   "Conversion": {
     "id": 160,
@@ -1960,7 +2242,8 @@
     "accuracy": 100,
     "pp": 30,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Change user's type to a move's type."
   },
   "Tri Attack": {
     "id": 161,
@@ -1975,7 +2258,8 @@
       "target": "enemy",
       "condition": "unknown",
       "chance": 20
-    }
+    },
+    "description": "Fires three kinds of beams at once."
   },
   "Super Fang": {
     "id": 162,
@@ -1985,7 +2269,8 @@
     "accuracy": 90,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Cuts the foe's HP by 1/2."
   },
   "Slash": {
     "id": 163,
@@ -1995,7 +2280,11 @@
     "accuracy": 100,
     "pp": 20,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Has a high criti­ cal hit ratio.",
+    "mechanics": {
+      "crit_rate_bonus": 1
+    }
   },
   "Substitute": {
     "id": 164,
@@ -2005,7 +2294,8 @@
     "accuracy": 100,
     "pp": 10,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Makes a decoy with 1/4 user's max HP."
   },
   "Struggle": {
     "id": 165,
@@ -2015,6 +2305,7 @@
     "accuracy": 100,
     "pp": 1,
     "priority": 0,
-    "effect": null
+    "effect": null,
+    "description": "Used only if all PP are exhausted."
   }
 }

@@ -51,7 +51,13 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    "base_experience": 64,
+    "evolution": {
+      "target": "Ivysaur",
+      "trigger": "level-up",
+      "at_level": 16
+    }
   },
   "Ivysaur": {
     "id": 2,
@@ -105,7 +111,13 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+    "base_experience": 142,
+    "evolution": {
+      "target": "Venusaur",
+      "trigger": "level-up",
+      "at_level": 32
+    }
   },
   "Venusaur": {
     "id": 3,
@@ -159,7 +171,9 @@
         "level": 65
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+    "base_experience": 236,
+    "evolution": null
   },
   "Charmander": {
     "id": 4,
@@ -208,7 +222,13 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+    "base_experience": 62,
+    "evolution": {
+      "target": "Charmeleon",
+      "trigger": "level-up",
+      "at_level": 16
+    }
   },
   "Charmeleon": {
     "id": 5,
@@ -257,7 +277,13 @@
         "level": 56
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+    "base_experience": 142,
+    "evolution": {
+      "target": "Charizard",
+      "trigger": "level-up",
+      "at_level": 36
+    }
   },
   "Charizard": {
     "id": 6,
@@ -307,7 +333,9 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+    "base_experience": 240,
+    "evolution": null
   },
   "Squirtle": {
     "id": 7,
@@ -356,7 +384,13 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+    "base_experience": 63,
+    "evolution": {
+      "target": "Wartortle",
+      "trigger": "level-up",
+      "at_level": 16
+    }
   },
   "Wartortle": {
     "id": 8,
@@ -405,7 +439,13 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+    "base_experience": 142,
+    "evolution": {
+      "target": "Blastoise",
+      "trigger": "level-up",
+      "at_level": 36
+    }
   },
   "Blastoise": {
     "id": 9,
@@ -454,7 +494,9 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+    "base_experience": 239,
+    "evolution": null
   },
   "Caterpie": {
     "id": 10,
@@ -479,7 +521,13 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+    "base_experience": 39,
+    "evolution": {
+      "target": "Metapod",
+      "trigger": "level-up",
+      "at_level": 7
+    }
   },
   "Metapod": {
     "id": 11,
@@ -500,7 +548,13 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+    "base_experience": 72,
+    "evolution": {
+      "target": "Butterfree",
+      "trigger": "level-up",
+      "at_level": 10
+    }
   },
   "Butterfree": {
     "id": 12,
@@ -546,7 +600,9 @@
         "level": 32
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+    "base_experience": 178,
+    "evolution": null
   },
   "Weedle": {
     "id": 13,
@@ -572,7 +628,13 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+    "base_experience": 39,
+    "evolution": {
+      "target": "Kakuna",
+      "trigger": "level-up",
+      "at_level": 7
+    }
   },
   "Kakuna": {
     "id": 14,
@@ -594,7 +656,13 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+    "base_experience": 72,
+    "evolution": {
+      "target": "Beedrill",
+      "trigger": "level-up",
+      "at_level": 10
+    }
   },
   "Beedrill": {
     "id": 15,
@@ -636,7 +704,9 @@
         "level": 35
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
+    "base_experience": 178,
+    "evolution": null
   },
   "Pidgey": {
     "id": 16,
@@ -682,7 +752,13 @@
         "level": 44
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+    "base_experience": 50,
+    "evolution": {
+      "target": "Pidgeotto",
+      "trigger": "level-up",
+      "at_level": 18
+    }
   },
   "Pidgeotto": {
     "id": 17,
@@ -728,7 +804,13 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+    "base_experience": 122,
+    "evolution": {
+      "target": "Pidgeot",
+      "trigger": "level-up",
+      "at_level": 36
+    }
   },
   "Pidgeot": {
     "id": 18,
@@ -774,7 +856,9 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+    "base_experience": 216,
+    "evolution": null
   },
   "Rattata": {
     "id": 19,
@@ -815,7 +899,13 @@
         "level": 34
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+    "base_experience": 51,
+    "evolution": {
+      "target": "Raticate",
+      "trigger": "level-up",
+      "at_level": 20
+    }
   },
   "Raticate": {
     "id": 20,
@@ -856,7 +946,9 @@
         "level": 41
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+    "base_experience": 145,
+    "evolution": null
   },
   "Spearow": {
     "id": 21,
@@ -902,7 +994,13 @@
         "level": 36
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
+    "base_experience": 52,
+    "evolution": {
+      "target": "Fearow",
+      "trigger": "level-up",
+      "at_level": 20
+    }
   },
   "Fearow": {
     "id": 22,
@@ -948,7 +1046,9 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
+    "base_experience": 155,
+    "evolution": null
   },
   "Ekans": {
     "id": 23,
@@ -993,7 +1093,13 @@
         "level": 38
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+    "base_experience": 58,
+    "evolution": {
+      "target": "Arbok",
+      "trigger": "level-up",
+      "at_level": 22
+    }
   },
   "Arbok": {
     "id": 24,
@@ -1038,7 +1144,9 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+    "base_experience": 157,
+    "evolution": null
   },
   "Pikachu": {
     "id": 25,
@@ -1083,7 +1191,13 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    "base_experience": 112,
+    "evolution": {
+      "target": "Raichu",
+      "trigger": "item",
+      "item_name": "Thunder Stone"
+    }
   },
   "Raichu": {
     "id": 26,
@@ -1112,7 +1226,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+    "base_experience": 218,
+    "evolution": null
   },
   "Sandshrew": {
     "id": 27,
@@ -1153,7 +1269,13 @@
         "level": 38
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
+    "base_experience": 60,
+    "evolution": {
+      "target": "Sandslash",
+      "trigger": "level-up",
+      "at_level": 22
+    }
   },
   "Sandslash": {
     "id": 28,
@@ -1194,7 +1316,9 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
+    "base_experience": 158,
+    "evolution": null
   },
   "Nidoran F": {
     "id": 29,
@@ -1243,7 +1367,13 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
+    "base_experience": 55,
+    "evolution": {
+      "target": "Nidorina",
+      "trigger": "level-up",
+      "at_level": 16
+    }
   },
   "Nidorina": {
     "id": 30,
@@ -1292,7 +1422,13 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
+    "base_experience": 128,
+    "evolution": {
+      "target": "Nidoqueen",
+      "trigger": "item",
+      "item_name": "Moon Stone"
+    }
   },
   "Nidoqueen": {
     "id": 31,
@@ -1330,7 +1466,9 @@
         "level": 14
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+    "base_experience": 227,
+    "evolution": null
   },
   "Nidoran M": {
     "id": 32,
@@ -1379,7 +1517,13 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png",
+    "base_experience": 55,
+    "evolution": {
+      "target": "Nidorino",
+      "trigger": "level-up",
+      "at_level": 16
+    }
   },
   "Nidorino": {
     "id": 33,
@@ -1428,7 +1572,13 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png",
+    "base_experience": 128,
+    "evolution": {
+      "target": "Nidoking",
+      "trigger": "item",
+      "item_name": "Moon Stone"
+    }
   },
   "Nidoking": {
     "id": 34,
@@ -1462,7 +1612,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+    "base_experience": 227,
+    "evolution": null
   },
   "Clefairy": {
     "id": 35,
@@ -1511,7 +1663,13 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+    "base_experience": 113,
+    "evolution": {
+      "target": "Clefable",
+      "trigger": "item",
+      "item_name": "Moon Stone"
+    }
   },
   "Clefable": {
     "id": 36,
@@ -1544,7 +1702,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
+    "base_experience": 217,
+    "evolution": null
   },
   "Vulpix": {
     "id": 37,
@@ -1589,7 +1749,13 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
+    "base_experience": 60,
+    "evolution": {
+      "target": "Ninetales",
+      "trigger": "item",
+      "item_name": "Fire Stone"
+    }
   },
   "Ninetales": {
     "id": 38,
@@ -1622,7 +1788,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
+    "base_experience": 177,
+    "evolution": null
   },
   "Jigglypuff": {
     "id": 39,
@@ -1672,7 +1840,13 @@
         "level": 39
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
+    "base_experience": 95,
+    "evolution": {
+      "target": "Wigglytuff",
+      "trigger": "item",
+      "item_name": "Moon Stone"
+    }
   },
   "Wigglytuff": {
     "id": 40,
@@ -1706,7 +1880,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
+    "base_experience": 196,
+    "evolution": null
   },
   "Zubat": {
     "id": 41,
@@ -1748,7 +1924,13 @@
         "level": 36
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
+    "base_experience": 49,
+    "evolution": {
+      "target": "Golbat",
+      "trigger": "level-up",
+      "at_level": 22
+    }
   },
   "Golbat": {
     "id": 42,
@@ -1794,7 +1976,13 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
+    "base_experience": 159,
+    "evolution": {
+      "target": "Crobat",
+      "trigger": "level-up",
+      "at_level": null
+    }
   },
   "Oddish": {
     "id": 43,
@@ -1840,7 +2028,13 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+    "base_experience": 64,
+    "evolution": {
+      "target": "Gloom",
+      "trigger": "level-up",
+      "at_level": 21
+    }
   },
   "Gloom": {
     "id": 44,
@@ -1886,7 +2080,13 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
+    "base_experience": 138,
+    "evolution": {
+      "target": "Vileplume",
+      "trigger": "item",
+      "item_name": "Leaf Stone"
+    }
   },
   "Vileplume": {
     "id": 45,
@@ -1924,7 +2124,9 @@
         "level": 15
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+    "base_experience": 221,
+    "evolution": null
   },
   "Paras": {
     "id": 46,
@@ -1966,7 +2168,13 @@
         "level": 41
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
+    "base_experience": 57,
+    "evolution": {
+      "target": "Parasect",
+      "trigger": "level-up",
+      "at_level": 24
+    }
   },
   "Parasect": {
     "id": 47,
@@ -2008,7 +2216,9 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
+    "base_experience": 142,
+    "evolution": null
   },
   "Venonat": {
     "id": 48,
@@ -2058,7 +2268,13 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
+    "base_experience": 61,
+    "evolution": {
+      "target": "Venomoth",
+      "trigger": "level-up",
+      "at_level": 31
+    }
   },
   "Venomoth": {
     "id": 49,
@@ -2108,7 +2324,9 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
+    "base_experience": 158,
+    "evolution": null
   },
   "Diglett": {
     "id": 50,
@@ -2149,7 +2367,13 @@
         "level": 40
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+    "base_experience": 53,
+    "evolution": {
+      "target": "Dugtrio",
+      "trigger": "level-up",
+      "at_level": 26
+    }
   },
   "Dugtrio": {
     "id": 51,
@@ -2190,7 +2414,9 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+    "base_experience": 149,
+    "evolution": null
   },
   "Meowth": {
     "id": 52,
@@ -2235,7 +2461,13 @@
         "level": 44
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+    "base_experience": 58,
+    "evolution": {
+      "target": "Persian",
+      "trigger": "level-up",
+      "at_level": 28
+    }
   },
   "Persian": {
     "id": 53,
@@ -2280,7 +2512,9 @@
         "level": 51
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+    "base_experience": 154,
+    "evolution": null
   },
   "Psyduck": {
     "id": 54,
@@ -2321,7 +2555,13 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+    "base_experience": 64,
+    "evolution": {
+      "target": "Golduck",
+      "trigger": "level-up",
+      "at_level": 33
+    }
   },
   "Golduck": {
     "id": 55,
@@ -2362,7 +2602,9 @@
         "level": 59
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
+    "base_experience": 175,
+    "evolution": null
   },
   "Mankey": {
     "id": 56,
@@ -2407,7 +2649,13 @@
         "level": 39
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
+    "base_experience": 61,
+    "evolution": {
+      "target": "Primeape",
+      "trigger": "level-up",
+      "at_level": 28
+    }
   },
   "Primeape": {
     "id": 57,
@@ -2452,7 +2700,12 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
+    "base_experience": 159,
+    "evolution": {
+      "target": "Annihilape",
+      "trigger": "other"
+    }
   },
   "Growlithe": {
     "id": 58,
@@ -2497,7 +2750,13 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
+    "base_experience": 70,
+    "evolution": {
+      "target": "Arcanine",
+      "trigger": "item",
+      "item_name": "Fire Stone"
+    }
   },
   "Arcanine": {
     "id": 59,
@@ -2530,7 +2789,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+    "base_experience": 194,
+    "evolution": null
   },
   "Poliwag": {
     "id": 60,
@@ -2575,7 +2836,13 @@
         "level": 45
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
+    "base_experience": 60,
+    "evolution": {
+      "target": "Poliwhirl",
+      "trigger": "level-up",
+      "at_level": 25
+    }
   },
   "Poliwhirl": {
     "id": 61,
@@ -2620,7 +2887,13 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
+    "base_experience": 135,
+    "evolution": {
+      "target": "Poliwrath",
+      "trigger": "item",
+      "item_name": "Water Stone"
+    }
   },
   "Poliwrath": {
     "id": 62,
@@ -2654,7 +2927,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
+    "base_experience": 230,
+    "evolution": null
   },
   "Abra": {
     "id": 63,
@@ -2675,7 +2950,13 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
+    "base_experience": 62,
+    "evolution": {
+      "target": "Kadabra",
+      "trigger": "level-up",
+      "at_level": 16
+    }
   },
   "Kadabra": {
     "id": 64,
@@ -2720,7 +3001,12 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
+    "base_experience": 140,
+    "evolution": {
+      "target": "Alakazam",
+      "trigger": "trade"
+    }
   },
   "Alakazam": {
     "id": 65,
@@ -2765,7 +3051,9 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
+    "base_experience": 225,
+    "evolution": null
   },
   "Machop": {
     "id": 66,
@@ -2806,7 +3094,13 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
+    "base_experience": 61,
+    "evolution": {
+      "target": "Machoke",
+      "trigger": "level-up",
+      "at_level": 28
+    }
   },
   "Machoke": {
     "id": 67,
@@ -2847,7 +3141,12 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png",
+    "base_experience": 142,
+    "evolution": {
+      "target": "Machamp",
+      "trigger": "trade"
+    }
   },
   "Machamp": {
     "id": 68,
@@ -2888,7 +3187,9 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+    "base_experience": 227,
+    "evolution": null
   },
   "Bellsprout": {
     "id": 69,
@@ -2942,7 +3243,13 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
+    "base_experience": 60,
+    "evolution": {
+      "target": "Weepinbell",
+      "trigger": "level-up",
+      "at_level": 21
+    }
   },
   "Weepinbell": {
     "id": 70,
@@ -2996,7 +3303,13 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
+    "base_experience": 137,
+    "evolution": {
+      "target": "Victreebel",
+      "trigger": "item",
+      "item_name": "Leaf Stone"
+    }
   },
   "Victreebel": {
     "id": 71,
@@ -3038,7 +3351,9 @@
         "level": 15
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
+    "base_experience": 221,
+    "evolution": null
   },
   "Tentacool": {
     "id": 72,
@@ -3092,7 +3407,13 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png",
+    "base_experience": 67,
+    "evolution": {
+      "target": "Tentacruel",
+      "trigger": "level-up",
+      "at_level": 30
+    }
   },
   "Tentacruel": {
     "id": 73,
@@ -3146,7 +3467,9 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
+    "base_experience": 180,
+    "evolution": null
   },
   "Geodude": {
     "id": 74,
@@ -3192,7 +3515,13 @@
         "level": 36
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
+    "base_experience": 60,
+    "evolution": {
+      "target": "Graveler",
+      "trigger": "level-up",
+      "at_level": 25
+    }
   },
   "Graveler": {
     "id": 75,
@@ -3238,7 +3567,12 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png",
+    "base_experience": 137,
+    "evolution": {
+      "target": "Golem",
+      "trigger": "trade"
+    }
   },
   "Golem": {
     "id": 76,
@@ -3284,7 +3618,9 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
+    "base_experience": 223,
+    "evolution": null
   },
   "Ponyta": {
     "id": 77,
@@ -3329,7 +3665,13 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+    "base_experience": 82,
+    "evolution": {
+      "target": "Rapidash",
+      "trigger": "level-up",
+      "at_level": 40
+    }
   },
   "Rapidash": {
     "id": 78,
@@ -3374,7 +3716,9 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
+    "base_experience": 175,
+    "evolution": null
   },
   "Slowpoke": {
     "id": 79,
@@ -3420,7 +3764,13 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png",
+    "base_experience": 63,
+    "evolution": {
+      "target": "Slowbro",
+      "trigger": "level-up",
+      "at_level": 37
+    }
   },
   "Slowbro": {
     "id": 80,
@@ -3470,7 +3820,9 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
+    "base_experience": 172,
+    "evolution": null
   },
   "Magnemite": {
     "id": 81,
@@ -3516,7 +3868,13 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
+    "base_experience": 65,
+    "evolution": {
+      "target": "Magneton",
+      "trigger": "level-up",
+      "at_level": 30
+    }
   },
   "Magneton": {
     "id": 82,
@@ -3562,7 +3920,13 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
+    "base_experience": 163,
+    "evolution": {
+      "target": "Magnezone",
+      "trigger": "level-up",
+      "at_level": null
+    }
   },
   "Farfetchd": {
     "id": 83,
@@ -3608,7 +3972,12 @@
         "level": 39
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png",
+    "base_experience": 132,
+    "evolution": {
+      "target": "Sirfetchd",
+      "trigger": "three-critical-hits"
+    }
   },
   "Doduo": {
     "id": 84,
@@ -3654,7 +4023,13 @@
         "level": 44
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png",
+    "base_experience": 62,
+    "evolution": {
+      "target": "Dodrio",
+      "trigger": "level-up",
+      "at_level": 31
+    }
   },
   "Dodrio": {
     "id": 85,
@@ -3700,7 +4075,9 @@
         "level": 51
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
+    "base_experience": 165,
+    "evolution": null
   },
   "Seel": {
     "id": 86,
@@ -3741,7 +4118,13 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
+    "base_experience": 65,
+    "evolution": {
+      "target": "Dewgong",
+      "trigger": "level-up",
+      "at_level": 34
+    }
   },
   "Dewgong": {
     "id": 87,
@@ -3783,7 +4166,9 @@
         "level": 56
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
+    "base_experience": 166,
+    "evolution": null
   },
   "Grimer": {
     "id": 88,
@@ -3832,7 +4217,13 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
+    "base_experience": 65,
+    "evolution": {
+      "target": "Muk",
+      "trigger": "level-up",
+      "at_level": 38
+    }
   },
   "Muk": {
     "id": 89,
@@ -3881,7 +4272,9 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
+    "base_experience": 175,
+    "evolution": null
   },
   "Shellder": {
     "id": 90,
@@ -3926,7 +4319,13 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
+    "base_experience": 61,
+    "evolution": {
+      "target": "Cloyster",
+      "trigger": "item",
+      "item_name": "Water Stone"
+    }
   },
   "Cloyster": {
     "id": 91,
@@ -3964,7 +4363,9 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png",
+    "base_experience": 184,
+    "evolution": null
   },
   "Gastly": {
     "id": 92,
@@ -4002,7 +4403,13 @@
         "level": 35
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
+    "base_experience": 62,
+    "evolution": {
+      "target": "Haunter",
+      "trigger": "level-up",
+      "at_level": 25
+    }
   },
   "Haunter": {
     "id": 93,
@@ -4040,7 +4447,12 @@
         "level": 38
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+    "base_experience": 142,
+    "evolution": {
+      "target": "Gengar",
+      "trigger": "trade"
+    }
   },
   "Gengar": {
     "id": 94,
@@ -4078,7 +4490,9 @@
         "level": 38
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+    "base_experience": 225,
+    "evolution": null
   },
   "Onix": {
     "id": 95,
@@ -4124,7 +4538,12 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
+    "base_experience": 77,
+    "evolution": {
+      "target": "Steelix",
+      "trigger": "trade"
+    }
   },
   "Drowzee": {
     "id": 96,
@@ -4173,7 +4592,13 @@
         "level": 37
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
+    "base_experience": 66,
+    "evolution": {
+      "target": "Hypno",
+      "trigger": "level-up",
+      "at_level": 26
+    }
   },
   "Hypno": {
     "id": 97,
@@ -4222,7 +4647,9 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
+    "base_experience": 169,
+    "evolution": null
   },
   "Krabby": {
     "id": 98,
@@ -4267,7 +4694,13 @@
         "level": 40
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png",
+    "base_experience": 65,
+    "evolution": {
+      "target": "Kingler",
+      "trigger": "level-up",
+      "at_level": 28
+    }
   },
   "Kingler": {
     "id": 99,
@@ -4312,7 +4745,9 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
+    "base_experience": 166,
+    "evolution": null
   },
   "Voltorb": {
     "id": 100,
@@ -4357,7 +4792,13 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
+    "base_experience": 66,
+    "evolution": {
+      "target": "Electrode",
+      "trigger": "level-up",
+      "at_level": 30
+    }
   },
   "Electrode": {
     "id": 101,
@@ -4402,7 +4843,9 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
+    "base_experience": 172,
+    "evolution": null
   },
   "Exeggcute": {
     "id": 102,
@@ -4452,7 +4895,13 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png",
+    "base_experience": 65,
+    "evolution": {
+      "target": "Exeggutor",
+      "trigger": "item",
+      "item_name": "Leaf Stone"
+    }
   },
   "Exeggutor": {
     "id": 103,
@@ -4482,7 +4931,9 @@
         "level": 28
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
+    "base_experience": 186,
+    "evolution": null
   },
   "Cubone": {
     "id": 104,
@@ -4527,7 +4978,13 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
+    "base_experience": 64,
+    "evolution": {
+      "target": "Marowak",
+      "trigger": "level-up",
+      "at_level": 28
+    }
   },
   "Marowak": {
     "id": 105,
@@ -4572,7 +5029,9 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
+    "base_experience": 149,
+    "evolution": null
   },
   "Hitmonlee": {
     "id": 106,
@@ -4617,7 +5076,9 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
+    "base_experience": 159,
+    "evolution": null
   },
   "Hitmonchan": {
     "id": 107,
@@ -4662,7 +5123,9 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
+    "base_experience": 159,
+    "evolution": null
   },
   "Lickitung": {
     "id": 108,
@@ -4707,7 +5170,13 @@
         "level": 39
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
+    "base_experience": 77,
+    "evolution": {
+      "target": "Lickilicky",
+      "trigger": "level-up",
+      "at_level": null
+    }
   },
   "Koffing": {
     "id": 109,
@@ -4752,7 +5221,13 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+    "base_experience": 68,
+    "evolution": {
+      "target": "Weezing",
+      "trigger": "level-up",
+      "at_level": 35
+    }
   },
   "Weezing": {
     "id": 110,
@@ -4797,7 +5272,9 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
+    "base_experience": 172,
+    "evolution": null
   },
   "Rhyhorn": {
     "id": 111,
@@ -4843,7 +5320,13 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
+    "base_experience": 69,
+    "evolution": {
+      "target": "Rhydon",
+      "trigger": "level-up",
+      "at_level": 42
+    }
   },
   "Rhydon": {
     "id": 112,
@@ -4889,7 +5372,12 @@
         "level": 64
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+    "base_experience": 170,
+    "evolution": {
+      "target": "Rhyperior",
+      "trigger": "trade"
+    }
   },
   "Chansey": {
     "id": 113,
@@ -4938,7 +5426,13 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
+    "base_experience": 395,
+    "evolution": {
+      "target": "Blissey",
+      "trigger": "level-up",
+      "at_level": null
+    }
   },
   "Tangela": {
     "id": 114,
@@ -4987,7 +5481,13 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
+    "base_experience": 87,
+    "evolution": {
+      "target": "Tangrowth",
+      "trigger": "level-up",
+      "at_level": null
+    }
   },
   "Kangaskhan": {
     "id": 115,
@@ -5032,7 +5532,9 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
+    "base_experience": 172,
+    "evolution": null
   },
   "Horsea": {
     "id": 116,
@@ -5073,7 +5575,13 @@
         "level": 45
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png",
+    "base_experience": 59,
+    "evolution": {
+      "target": "Seadra",
+      "trigger": "level-up",
+      "at_level": 32
+    }
   },
   "Seadra": {
     "id": 117,
@@ -5114,7 +5622,12 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png",
+    "base_experience": 154,
+    "evolution": {
+      "target": "Kingdra",
+      "trigger": "trade"
+    }
   },
   "Goldeen": {
     "id": 118,
@@ -5163,7 +5676,13 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
+    "base_experience": 64,
+    "evolution": {
+      "target": "Seaking",
+      "trigger": "level-up",
+      "at_level": 33
+    }
   },
   "Seaking": {
     "id": 119,
@@ -5212,7 +5731,9 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
+    "base_experience": 158,
+    "evolution": null
   },
   "Staryu": {
     "id": 120,
@@ -5261,7 +5782,13 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
+    "base_experience": 68,
+    "evolution": {
+      "target": "Starmie",
+      "trigger": "item",
+      "item_name": "Water Stone"
+    }
   },
   "Starmie": {
     "id": 121,
@@ -5291,7 +5818,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+    "base_experience": 182,
+    "evolution": null
   },
   "Mr Mime": {
     "id": 122,
@@ -5333,7 +5862,13 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
+    "base_experience": 161,
+    "evolution": {
+      "target": "Mr-Rime",
+      "trigger": "level-up",
+      "at_level": 42
+    }
   },
   "Scyther": {
     "id": 123,
@@ -5379,7 +5914,12 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
+    "base_experience": 100,
+    "evolution": {
+      "target": "Scizor",
+      "trigger": "trade"
+    }
   },
   "Jynx": {
     "id": 124,
@@ -5429,7 +5969,9 @@
         "level": 58
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
+    "base_experience": 159,
+    "evolution": null
   },
   "Electabuzz": {
     "id": 125,
@@ -5474,7 +6016,12 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png",
+    "base_experience": 172,
+    "evolution": {
+      "target": "Electivire",
+      "trigger": "trade"
+    }
   },
   "Magmar": {
     "id": 126,
@@ -5519,7 +6066,12 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
+    "base_experience": 173,
+    "evolution": {
+      "target": "Magmortar",
+      "trigger": "trade"
+    }
   },
   "Pinsir": {
     "id": 127,
@@ -5564,7 +6116,9 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
+    "base_experience": 175,
+    "evolution": null
   },
   "Tauros": {
     "id": 128,
@@ -5605,7 +6159,9 @@
         "level": 51
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+    "base_experience": 172,
+    "evolution": null
   },
   "Magikarp": {
     "id": 129,
@@ -5630,7 +6186,13 @@
         "level": 15
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+    "base_experience": 40,
+    "evolution": {
+      "target": "Gyarados",
+      "trigger": "level-up",
+      "at_level": 20
+    }
   },
   "Gyarados": {
     "id": 130,
@@ -5668,7 +6230,9 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
+    "base_experience": 189,
+    "evolution": null
   },
   "Lapras": {
     "id": 131,
@@ -5718,7 +6282,9 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+    "base_experience": 187,
+    "evolution": null
   },
   "Ditto": {
     "id": 132,
@@ -5739,7 +6305,9 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+    "base_experience": 101,
+    "evolution": null
   },
   "Eevee": {
     "id": 133,
@@ -5780,7 +6348,13 @@
         "level": 45
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
+    "base_experience": 65,
+    "evolution": {
+      "target": "Vaporeon",
+      "trigger": "item",
+      "item_name": "Water Stone"
+    }
   },
   "Vaporeon": {
     "id": 134,
@@ -5837,7 +6411,9 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+    "base_experience": 184,
+    "evolution": null
   },
   "Jolteon": {
     "id": 135,
@@ -5894,7 +6470,9 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+    "base_experience": 184,
+    "evolution": null
   },
   "Flareon": {
     "id": 136,
@@ -5951,7 +6529,9 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
+    "base_experience": 184,
+    "evolution": null
   },
   "Porygon": {
     "id": 137,
@@ -5996,7 +6576,12 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
+    "base_experience": 79,
+    "evolution": {
+      "target": "Porygon2",
+      "trigger": "trade"
+    }
   },
   "Omanyte": {
     "id": 138,
@@ -6038,7 +6623,13 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
+    "base_experience": 71,
+    "evolution": {
+      "target": "Omastar",
+      "trigger": "level-up",
+      "at_level": 40
+    }
   },
   "Omastar": {
     "id": 139,
@@ -6080,7 +6671,9 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png",
+    "base_experience": 173,
+    "evolution": null
   },
   "Kabuto": {
     "id": 140,
@@ -6122,7 +6715,13 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
+    "base_experience": 71,
+    "evolution": {
+      "target": "Kabutops",
+      "trigger": "level-up",
+      "at_level": 40
+    }
   },
   "Kabutops": {
     "id": 141,
@@ -6164,7 +6763,9 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
+    "base_experience": 173,
+    "evolution": null
   },
   "Aerodactyl": {
     "id": 142,
@@ -6206,7 +6807,9 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
+    "base_experience": 180,
+    "evolution": null
   },
   "Snorlax": {
     "id": 143,
@@ -6251,7 +6854,9 @@
         "level": 56
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+    "base_experience": 189,
+    "evolution": null
   },
   "Articuno": {
     "id": 144,
@@ -6289,7 +6894,9 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+    "base_experience": 261,
+    "evolution": null
   },
   "Zapdos": {
     "id": 145,
@@ -6327,7 +6934,9 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+    "base_experience": 261,
+    "evolution": null
   },
   "Moltres": {
     "id": 146,
@@ -6365,7 +6974,9 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+    "base_experience": 261,
+    "evolution": null
   },
   "Dratini": {
     "id": 147,
@@ -6410,7 +7021,13 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
+    "base_experience": 60,
+    "evolution": {
+      "target": "Dragonair",
+      "trigger": "level-up",
+      "at_level": 30
+    }
   },
   "Dragonair": {
     "id": 148,
@@ -6455,7 +7072,13 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+    "base_experience": 147,
+    "evolution": {
+      "target": "Dragonite",
+      "trigger": "level-up",
+      "at_level": 55
+    }
   },
   "Dragonite": {
     "id": 149,
@@ -6501,7 +7124,9 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+    "base_experience": 270,
+    "evolution": null
   },
   "Mewtwo": {
     "id": 150,
@@ -6550,7 +7175,9 @@
         "level": 81
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+    "base_experience": 306,
+    "evolution": null
   },
   "Mew": {
     "id": 151,
@@ -6587,6 +7214,8 @@
         "level": 40
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png"
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
+    "base_experience": 270,
+    "evolution": null
   }
 }
