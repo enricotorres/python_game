@@ -113,7 +113,7 @@ class BattleController:
 
         elif self.state == "BAG_MENU":
             if self.player.bag.get("Potion", 0) > 0 and self.player_pkmn.current_hp < self.player_pkmn.max_hp:
-                logger.info("Jogador decidiu usar uma Poção (simulação).")
+                logger.info("Jogador decidiu usar uma Poção.")
                 self.player_chosen_item = Item("Potion")
 
                 if self.player_chosen_item.use(self.player_pkmn):
@@ -124,7 +124,7 @@ class BattleController:
                     self.decide_enemy_move()
                     self.state = "RESOLVE_TURN"
                 else:
-                    logger.warning("Falha ao usar a Poção (simulação).")
+                    logger.warning("Falha ao usar a Poção.")
                     self.state = "PLAYER_TURN"
             else:
                 logger.info("Jogador não tem 'Potion' ou o Pokémon está com HP cheio. Retornando.")
@@ -241,7 +241,7 @@ class BattleController:
                         player_goes_first = False
                     else:
                         player_goes_first = random.choice([True, False])
-                        logger.debug(f"Speed Tie! Sorteio aleatório: Player First? {player_goes_first}")
+                        logger.debug(f"Speed Tie! Sorteio aleatório: {player_goes_first}")
 
                 if player_goes_first:
                     first = (self.player_pkmn, self.trainer_pkmn, self.player_chosen_move)
@@ -445,11 +445,9 @@ class BattleController:
         if chosen_move.category == "Special":
             attack_stat = attacker.get_current_stat("special-attack")
             defense_stat = defender.get_current_stat("special-defense")
-            cat_tag = "SPA/SPD"
         else:
             attack_stat = attacker.get_current_stat("attack")
             defense_stat = defender.get_current_stat("defense")
-            cat_tag = "ATK/DEF"
 
         # Fórmula Básica
         level_factor = ((2 * attacker.level // 5) + 2)
