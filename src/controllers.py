@@ -24,6 +24,9 @@ class BattleController:
         self.enemy_action_type = "attack"
         self.enemy_chosen_item = None
 
+        self.weather_condition = None
+        self.weather_turns = 0
+
         self.state = "START"
         logger.info(f"Controlador de Batalha iniciado: {self.player.name} vs {self.enemy.name}")
 
@@ -339,6 +342,20 @@ class BattleController:
             if hits_count > 1:
                 logger.info(f"Atingiu {hits_count} vezes!")
 
+        if hasattr(move, "mechanics") and move.mechanics:
+            if "drain_percent" in move.mechanics:
+                percent = move.mechanics["drain_percent"] / 100.0
+                change_amount = int(damage * percent)
+
+                if change_amount > 0:
+                    attacker.restore_hp(change_amount)
+                    logger.info(f"{attacker.name} recuperou {change_amount} de HP!")
+
+                elif change_amount < 0:
+                    recoil_damage = abs(change_amount)
+                    attacker.take_damage(recoil_damage)
+                    logger.info(f"{attacker.name} sofreu {recoil_damage} de recuo!")
+
         if move.effect:
             self.process_move_effect(move, attacker, defender)
 
@@ -488,7 +505,15 @@ class BattleController:
             crit_multiplier = 1.5
             is_crit = True
 
-        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier * hits_count
+        weather_mod = 1.0
+        if self.weather_condition == "rain":
+            if chosen_move.type == "Water": weather_mod = 1.5
+            elif chosen_move.type == "Fire": weather_mod = 0.5
+        elif self.weather_condition == "sun":
+            if chosen_move.type == "Fire": weather_mod = 1.5
+            elif chosen_move.type == "Water": weather_mod = 0.5
+
+        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier * hits_count * weather_mod
         final_int_damage = max(1, int(final_calculated_damage))
 
         if final_type_multiplier == 0:
