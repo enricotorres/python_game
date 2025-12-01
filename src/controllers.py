@@ -488,7 +488,15 @@ class BattleController:
             crit_multiplier = 1.5
             is_crit = True
 
-        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier * hits_count
+        weather_mod = 1.0
+        if self.weather_condition == "rain":
+            if chosen_move.type == "Water": weather_mod = 1.5
+            elif chosen_move.type == "Fire": weather_mod = 0.5
+        elif self.weather_condition == "sun":
+            if chosen_move.type == "Fire": weather_mod = 1.5
+            elif chosen_move.type == "Water": weather_mod = 0.5
+
+        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier * hits_count * weather_mod
         final_int_damage = max(1, int(final_calculated_damage))
 
         if final_type_multiplier == 0:
