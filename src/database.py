@@ -20,7 +20,7 @@ def load_data():
     try:
         if not MOVES_FILE.exists() or not POKEDEX_FILE.exists() or not ITEMS_FILE.exists():
             logger.critical(f"Arquivos de dados não encontrados em: {DATA_DIR}")
-            return {}, {}, {}
+            return {}, {}, {}, {}
 
         moves_data = json.loads(MOVES_FILE.read_text(encoding="utf-8"))
         pokedex_data = json.loads(POKEDEX_FILE.read_text(encoding="utf-8"))
