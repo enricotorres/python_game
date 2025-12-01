@@ -17,6 +17,7 @@ class BattleController:
 
         self.player_action_type = None
         self.player_chosen_move = None
+        self.player_chosen_item = None
         self.enemy_chosen_move = None
         self.switch_target_idx = None
 
@@ -69,9 +70,7 @@ class BattleController:
                 case "attack":
                     self.state = "SELECT_MOVE"
                 case "bag":
-                    self.player_action_type = "bag"
-                    self.decide_enemy_move()
-                    self.state = "RESOLVE_TURN"
+                    self.state = "BAG_MENU"
                 case "pokemon":
                     self.state = "POKEMON_MENU"
                 case "run":
@@ -113,8 +112,23 @@ class BattleController:
                 self.state = "PLAYER_TURN"
 
         elif self.state == "BAG_MENU":
-            logger.debug("Menu da mochila aberto (placeholder). Retornando ao turno.")
-            self.state = "PLAYER_TURN"
+            if self.player.bag.get("Potion", 0) > 0 and self.player_pkmn.current_hp < self.player_pkmn.max_hp:
+                logger.info("Jogador decidiu usar uma Poção (simulação).")
+                self.player_chosen_item = Item("Potion")
+
+                if self.player_chosen_item.use(self.player_pkmn):
+                    self.player.use_item("Potion")
+                    logger.info(f"Jogador usou Potion em {self.player_pkmn.name}!")
+
+                    self.player_action_type = "bag"
+                    self.decide_enemy_move()
+                    self.state = "RESOLVE_TURN"
+                else:
+                    logger.warning("Falha ao usar a Poção (simulação).")
+                    self.state = "PLAYER_TURN"
+            else:
+                logger.info("Jogador não tem 'Potion' ou o Pokémon está com HP cheio. Retornando.")
+                self.state = "PLAYER_TURN"
 
         elif self.state == "FORCE_SWITCH":
             logger.info("Jogador precisa escolher um novo Pokémon (Force Switch).")
