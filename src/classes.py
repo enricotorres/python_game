@@ -95,7 +95,16 @@ class Pokemon:
             self.current_hp = 0
 
         logger.debug(f"{self.name} tomou {amount} dano. HP: {old_hp} -> {self.current_hp}")
-        return self.current_hp > 0
+        return self.current_hp
+
+    def restore_hp(self, amount):
+        old_hp = self.current_hp
+        self.current_hp += int(amount)
+        if self.current_hp > self.max_hp:
+            self.current_hp = self.max_hp
+
+        logger.debug(f"{self.name} curou {amount} ponto de vida. HP: {old_hp} -> {self.current_hp}")
+        return self.current_hp
 
     def is_alive(self):
             return self.current_hp > 0
@@ -117,7 +126,14 @@ class Pokemon:
         else:
             multiplier = 2 / (2 + abs(stage))
 
-        return int(base_value * multiplier)
+        final_value = int(base_value * multiplier)
+
+        if stat_name == "speed" and self.status == "paralysis":
+            final_value = int(final_value * 0.5)
+        if stat_name == "attack" and self.status == "burn":
+            final_value = int(final_value * 0.5)
+
+        return final_value
 
     def apply_stat_change(self, stat_name, amount):
         if stat_name not in self.stat_mods:
@@ -200,6 +216,7 @@ class Move:
         self.current_pp = data["pp"]
         self.effect = data.get("effect")
         self.priority = data.get("priority", 0)
+        self.mechanics = data.get("mechanics")
 
     def use(self):
         if self.current_pp > 0:
@@ -240,10 +257,7 @@ class Item:
                 return False
 
             amount = self.effect.get("amount", 0)
-            target_pokemon.current_hp += amount
-
-            if target_pokemon.current_hp > target_pokemon.max_hp:
-                target_pokemon.current_hp = target_pokemon.max_hp
+            target_pokemon.restore_hp(amount)
 
             logger.debug(f"Sucesso: Curou HP para {target_pokemon.current_hp}.")
             return True
