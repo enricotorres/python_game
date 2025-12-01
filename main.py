@@ -1,0 +1,65 @@
+import os
+import sys
+import logging
+
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
+    datefmt='%H:%M:%S'
+)
+
+logger = logging.getLogger("Main")
+
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+
+from src.classes import Trainer, Pokemon
+from src.scenarios import BattleScene
+from src.controllers import BattleController
+from src.world_manager import WorldManager
+
+
+def main():
+    logger.info("--- Inicializando Pokémon Python ---")
+
+    ash_team = [
+            Pokemon("Mewtwo", level=100, moves=["Psychic"]),
+            Pokemon("Pikachu", level=100),
+            Pokemon("Pidgey", level=5),
+            Pokemon("Geodude", level=5),
+            Pokemon("Gastly", level=5),
+            Pokemon("Squirtle", level=5)
+        ]
+
+    gary_team = [
+            Pokemon("Charmander", level=100),
+            Pokemon("Rattata", level=100),
+            Pokemon("Spearow", level=5),
+            Pokemon("Onix", level=5),
+            Pokemon("Zubat", level=5),
+            Pokemon("Mankey", level=5)
+        ]
+
+    logger.info(f"Times criados com sucesso. Player: {len(ash_team)} | Rival: {len(gary_team)}")
+
+    player = Trainer(name="Ash", xp=0, initial_team=ash_team)
+    rival = Trainer(name="Gary", xp=0, initial_team=gary_team)
+
+    try:
+        game_manager = WorldManager()
+        battle_scene = BattleScene(game_manager.window)
+        logger.info("Gerenciador Gráfico e Cena de Batalha inicializados.")
+    except Exception as e:
+        logger.critical(f"Falha ao iniciar sistema gráfico: {e}")
+        raise e
+
+    controller = BattleController(battle_scene, rival, player)
+
+    logger.info("Entrando no loop de batalha")
+    controller.run_battle_loop()
+
+    logger.info("Jogo finalizado normalmente.")
+
+
+if __name__ == "__main__":
+    main()
