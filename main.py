@@ -43,7 +43,11 @@ def main():
     logger.info(f"Times criados com sucesso. Player: {len(ash_team)} | Rival: {len(gary_team)}")
 
     player = Trainer(name="Ash", xp=0, initial_team=ash_team)
+    player.add_item("Potion", quantity=3)
+    player.add_item("Revive", quantity=1)
+
     rival = Trainer(name="Gary", xp=0, initial_team=gary_team)
+    rival.add_item("Super Potion", quantity=2)
 
     try:
         game_manager = WorldManager()
