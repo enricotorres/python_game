@@ -8,9 +8,9 @@ from src.database import TYPES_DB
 logger = logging.getLogger(__name__)
 
 class BattleController:
-    def __init__(self, battle_scene, trainer, player):
+    def __init__(self, battle_scene, enemy, player):
         self.player = player
-        self.trainer = trainer
+        self.enemy = enemy
         self.battle_scene = battle_scene
         self.types_damage = TYPES_DB
         self.cancel_action = -1
@@ -19,31 +19,31 @@ class BattleController:
         self.player_chosen_move = None
         self.player_chosen_item = None
         self.enemy_chosen_move = None
-        self.switch_target_idx = None
+        self.switch_target_index = None
 
         self.enemy_action_type = "attack"
         self.enemy_chosen_item = None
 
         self.state = "START"
-        logger.info(f"Controlador de Batalha iniciado: {self.player.name} vs {self.trainer.name}")
+        logger.info(f"Controlador de Batalha iniciado: {self.player.name} vs {self.enemy.name}")
 
 
     def run_battle_loop(self):
         self.state = "PLAYER_TURN"
-        self.player_pkmn_idx = 0
-        self.trainer_pkmn_idx = 0
+        self.player_pokemon_index = 0
+        self.enemy_pokemon_index = 0
 
-        self.player_pkmn = self.player.team[self.player_pkmn_idx]
-        self.trainer_pkmn = self.trainer.team[self.trainer_pkmn_idx]
+        self.player_pokemon = self.player.team[self.player_pokemon_index]
+        self.enemy_pokemon = self.enemy.team[self.enemy_pokemon_index]
 
         logger.info("Iniciando loop de batalha...")
 
         while self.state != "EXIT":
-            self.player_pkmn = self.player.team[self.player_pkmn_idx]
-            self.trainer_pkmn = self.trainer.team[self.trainer_pkmn_idx]
+            self.player_pokemon = self.player.team[self.player_pokemon_index]
+            self.enemy_pokemon = self.enemy.team[self.enemy_pokemon_index]
 
             logger.info("-" * 30)
-            logger.info(f"BATTLE STATUS: {self.player_pkmn.name} (HP: {self.player_pkmn.current_hp}/{self.player_pkmn.max_hp}) vs {self.trainer_pkmn.name} (HP: {self.trainer_pkmn.current_hp}/{self.trainer_pkmn.max_hp})")
+            logger.info(f"BATTLE STATUS: {self.player_pokemon.name} (HP: {self.player_pokemon.current_hp}/{self.player_pokemon.max_hp}) vs {self.enemy_pokemon.name} (HP: {self.enemy_pokemon.current_hp}/{self.enemy_pokemon.max_hp})")
 
             input_states = ["PLAYER_TURN", "SELECT_MOVE", "POKEMON_MENU", "BAG_MENU", "FORCE_SWITCH"]
 
@@ -86,7 +86,7 @@ class BattleController:
                 self.state = "PLAYER_TURN"
                 return
 
-            self.player_chosen_move = self.player_pkmn.moves[attack_index]
+            self.player_chosen_move = self.player_pokemon.moves[attack_index]
             self.player_action_type = "attack"
             logger.info(f"Jogador selecionou o ataque: {self.player_chosen_move.name}")
 
@@ -94,16 +94,16 @@ class BattleController:
             self.state = "RESOLVE_TURN"
 
         elif self.state == "POKEMON_MENU":
-            idx = self.battle_scene.chose_pokemon()
+            selected_index = self.battle_scene.chose_pokemon()
 
-            if idx == self.cancel_action:
+            if selected_index == self.cancel_action:
                 self.state = "PLAYER_TURN"
                 return
 
-            if 0 <= idx < len(self.player.team) and self.player.team[idx].is_alive() and idx != self.player_pkmn_idx:
-                self.switch_target_idx = idx
+            if 0 <= selected_index < len(self.player.team) and self.player.team[selected_index].is_alive() and selected_index != self.player_pokemon_index:
+                self.switch_target_index = selected_index
                 self.player_action_type = "switch"
-                logger.info(f"Jogador escolheu trocar para: {self.player.team[idx].name}")
+                logger.info(f"Jogador escolheu trocar para: {self.player.team[selected_index].name}")
 
                 self.decide_enemy_move()
                 self.state = "RESOLVE_TURN"
@@ -112,13 +112,13 @@ class BattleController:
                 self.state = "PLAYER_TURN"
 
         elif self.state == "BAG_MENU":
-            if self.player.bag.get("Potion", 0) > 0 and self.player_pkmn.current_hp < self.player_pkmn.max_hp:
+            if self.player.bag.get("Potion", 0) > 0 and self.player_pokemon.current_hp < self.player_pokemon.max_hp:
                 logger.info("Jogador decidiu usar uma Poção.")
                 self.player_chosen_item = Item("Potion")
 
-                if self.player_chosen_item.use(self.player_pkmn):
+                if self.player_chosen_item.use(self.player_pokemon):
                     self.player.use_item("Potion")
-                    logger.info(f"Jogador usou Potion em {self.player_pkmn.name}!")
+                    logger.info(f"Jogador usou Potion em {self.player_pokemon.name}!")
 
                     self.player_action_type = "bag"
                     self.decide_enemy_move()
@@ -132,16 +132,16 @@ class BattleController:
 
         elif self.state == "FORCE_SWITCH":
             logger.info("Jogador precisa escolher um novo Pokémon (Force Switch).")
-            idx = self.battle_scene.chose_pokemon()
+            selected_index = self.battle_scene.chose_pokemon()
 
-            if idx == self.cancel_action:
+            if selected_index == self.cancel_action:
                 return
 
-            if 0 <= idx < len(self.player.team):
-                if self.player.team[idx].is_alive():
-                    self.player_pkmn_idx = idx
-                    self.player_pkmn = self.player.team[self.player_pkmn_idx]
-                    logger.info(f"Novo Pokémon ativo: {self.player_pkmn.name}")
+            if 0 <= selected_index < len(self.player.team):
+                if self.player.team[selected_index].is_alive():
+                    self.player_pokemon_index = selected_index
+                    self.player_pokemon = self.player.team[self.player_pokemon_index]
+                    logger.info(f"Novo Pokémon ativo: {self.player_pokemon.name}")
                     self.state = "PLAYER_TURN"
                 else:
                     logger.warning("Não pode trocar para um Pokémon desmaiado.")
@@ -150,14 +150,14 @@ class BattleController:
 
 
     def decide_enemy_move(self):
-        hp_percent = self.trainer_pkmn.current_hp / self.trainer_pkmn.max_hp
+        hp_percent = self.enemy_pokemon.current_hp / self.enemy_pokemon.max_hp
         logger.debug(f"[IA] HP Inimigo: {hp_percent:.2%}")
 
         if hp_percent < 0.30:
             healing_items = ["Full Restore", "Hyper Potion", "Super Potion", "Potion"]
 
             for item_name in healing_items:
-                if self.trainer.bag.get(item_name, 0) > 0:
+                if self.enemy.bag.get(item_name, 0) > 0:
                     self.enemy_action_type = "bag"
                     self.enemy_chosen_item = Item(item_name)
                     logger.info(f"[IA] Decisão: Usar item {item_name}")
@@ -165,7 +165,7 @@ class BattleController:
 
         self.enemy_action_type = "attack"
 
-        valid_moves = [m for m in self.trainer_pkmn.moves if m.current_pp > 0]
+        valid_moves = [m for m in self.enemy_pokemon.moves if m.current_pp > 0]
         if not valid_moves:
             self.enemy_chosen_move = Move("Struggle")
             logger.info("[IA] Sem PP. Usando Struggle.")
@@ -177,7 +177,7 @@ class BattleController:
         logger.debug(f"[IA] Calculando melhor movimento entre: {[m.name for m in valid_moves]}")
 
         for move in valid_moves:
-            damage, hits_amount = self.calculate_damage(self.trainer_pkmn, self.player_pkmn, move)
+            damage, hits_count = self.calculate_damage(self.enemy_pokemon, self.player_pokemon, move)
             logger.debug(f"[IA] Simulação: {move.name} causaria aprox. {damage} de dano.")
 
             if damage > best_damage:
@@ -199,56 +199,56 @@ class BattleController:
                 return
 
             elif self.player_action_type == "switch":
-                self.player_pkmn_idx = self.switch_target_idx
-                self.player_pkmn = self.player.team[self.player_pkmn_idx]
-                logger.info(f"Troca realizada. Vai! {self.player_pkmn.name}!")
+                self.player_pokemon_index = self.switch_target_index
+                self.player_pokemon = self.player.team[self.player_pokemon_index]
+                logger.info(f"Troca realizada. Vai! {self.player_pokemon.name}!")
 
                 if self.check_battle_status():
-                     self.perform_attack(self.trainer_pkmn, self.player_pkmn, self.enemy_chosen_move)
+                     self.perform_attack(self.enemy_pokemon, self.player_pokemon, self.enemy_chosen_move)
 
             if getattr(self, "enemy_action_type", "attack") == "bag":
                 item = self.enemy_chosen_item
                 logger.info(f"O Inimigo usou {item.name}!")
-                if item.use(self.trainer_pkmn):
-                    self.trainer.use_item(item.name)
+                if item.use(self.enemy_pokemon):
+                    self.enemy.use_item(item.name)
 
             elif self.player_action_type == "bag":
                 if self.check_battle_status():
-                     self.perform_attack(self.trainer_pkmn, self.player_pkmn, self.enemy_chosen_move)
+                     self.perform_attack(self.enemy_pokemon, self.player_pokemon, self.enemy_chosen_move)
 
             elif self.player_action_type == "attack":
-                p_speed = self.player_pkmn.get_current_stat("speed")
-                e_speed = self.trainer_pkmn.get_current_stat("speed")
+                player_speed = self.player_pokemon.get_current_stat("speed")
+                enemy_speed = self.enemy_pokemon.get_current_stat("speed")
 
-                p_prio = self.player_chosen_move.priority
-                e_prio = self.enemy_chosen_move.priority
+                player_priority = self.player_chosen_move.priority
+                enemy_priority = self.enemy_chosen_move.priority
 
-                logger.debug(f"Speed Check -> Player: {p_speed} | Enemy: {e_speed}")
-                logger.debug(f"Priority Check -> Player: {p_prio} | Enemy: {e_prio}")
+                logger.debug(f"Speed Check -> Player: {player_speed} | Enemy: {enemy_speed}")
+                logger.debug(f"Priority Check -> Player: {player_priority} | Enemy: {enemy_priority}")
 
                 first = None
                 second = None
                 player_goes_first = False
 
-                if p_prio > e_prio:
+                if player_priority > enemy_priority:
                     player_goes_first = True
-                elif e_prio > p_prio:
+                elif enemy_priority > player_priority:
                     player_goes_first = False
                 else:
-                    if p_speed > e_speed:
+                    if player_speed > enemy_speed:
                         player_goes_first = True
-                    elif e_speed > p_speed:
+                    elif enemy_speed > player_speed:
                         player_goes_first = False
                     else:
                         player_goes_first = random.choice([True, False])
                         logger.debug(f"Speed Tie! Sorteio aleatório: {player_goes_first}")
 
                 if player_goes_first:
-                    first = (self.player_pkmn, self.trainer_pkmn, self.player_chosen_move)
-                    second = (self.trainer_pkmn, self.player_pkmn, self.enemy_chosen_move)
+                    first = (self.player_pokemon, self.enemy_pokemon, self.player_chosen_move)
+                    second = (self.enemy_pokemon, self.player_pokemon, self.enemy_chosen_move)
                 else:
-                    first = (self.trainer_pkmn, self.player_pkmn, self.enemy_chosen_move)
-                    second = (self.player_pkmn, self.trainer_pkmn, self.player_chosen_move)
+                    first = (self.enemy_pokemon, self.player_pokemon, self.enemy_chosen_move)
+                    second = (self.player_pokemon, self.enemy_pokemon, self.player_chosen_move)
 
                 self.perform_attack(first[0], first[1], first[2])
 
@@ -311,17 +311,17 @@ class BattleController:
         if not always_hit:
             hit_chance = random.randint(1, 100)
 
-            acc_stage = attacker.stat_mods.get("accuracy", 0)
-            eva_stage = defender.stat_mods.get("evasion", 0)
-            combined = acc_stage - eva_stage
+            accuracy_stage = attacker.stat_mods.get("accuracy", 0)
+            evasion_stage = defender.stat_mods.get("evasion", 0)
+            accuracy_modifier = accuracy_stage - evasion_stage
 
             multipliers = { -6: 0.33, -5: 0.37, -4: 0.43, -3: 0.50, -2: 0.60, -1: 0.75,
                              0: 1.0, 1: 1.33, 2: 1.66, 3: 2.0, 4: 2.33, 5: 2.66, 6: 3.0 }
 
-            if combined < -6: combined = -6
-            if combined > 6: combined = 6
+            if accuracy_modifier < -6: accuracy_modifier = -6
+            if accuracy_modifier > 6: accuracy_modifier = 6
 
-            accuracy_multiplier = multipliers.get(combined, 1.0)
+            accuracy_multiplier = multipliers.get(accuracy_modifier, 1.0)
             final_accuracy = move.accuracy * accuracy_multiplier
 
             logger.debug(f"Accuracy Check: Chance={hit_chance}, MoveAcc={move.accuracy}, Mod={accuracy_multiplier}, Final={final_accuracy}")
@@ -354,12 +354,12 @@ class BattleController:
             return
 
         target_str = effect_data.get("target")
-        target_pkmn = None
+        target_pokemon = None
 
         if target_str == "enemy":
-            target_pkmn = defender
+            target_pokemon = defender
         elif target_str == "self":
-            target_pkmn = attacker
+            target_pokemon = attacker
         else:
             return
 
@@ -369,19 +369,19 @@ class BattleController:
             stat_name = effect_data.get("stat")
             amount = effect_data.get("amount")
 
-            if target_pkmn.apply_stat_change(stat_name, amount):
-                logger.info(f"{target_pkmn.name} teve seu {stat_name} alterado em {amount}!")
+            if target_pokemon.apply_stat_change(stat_name, amount):
+                logger.info(f"{target_pokemon.name} teve seu {stat_name} alterado em {amount}!")
             else:
-                logger.info(f"O status de {target_pkmn.name} não pode ir mais longe!")
+                logger.info(f"O status de {target_pokemon.name} não pode ir mais longe!")
 
         elif effect_type == "status_condition":
             condition = effect_data.get("condition")
 
-            if target_pkmn.status is None:
-                target_pkmn.status = condition
-                logger.info(f"{target_pkmn.name} agora está {condition}!")
+            if target_pokemon.status is None:
+                target_pokemon.status = condition
+                logger.info(f"{target_pokemon.name} agora está {condition}!")
             else:
-                logger.info(f"{target_pkmn.name} já tem um problema de status!")
+                logger.info(f"{target_pokemon.name} já tem um problema de status!")
 
         elif effect_type == "weather":
             condition = effect_data.get("condition")
@@ -397,30 +397,30 @@ class BattleController:
             self.state = "DEFEAT"
             return False
 
-        if not self.is_team_alive(self.trainer):
+        if not self.is_team_alive(self.enemy):
             logger.info("Time do inimigo completamente derrotado.")
             self.state = "VICTORY"
             return False
 
-        if not self.player_pkmn.is_alive():
-            logger.info(f"{self.player_pkmn.name} desmaiou!")
+        if not self.player_pokemon.is_alive():
+            logger.info(f"{self.player_pokemon.name} desmaiou!")
             self.state = "FORCE_SWITCH"
             return False
 
-        if not self.trainer_pkmn.is_alive():
-            logger.info(f"{self.trainer_pkmn.name} inimigo desmaiou!")
+        if not self.enemy_pokemon.is_alive():
+            logger.info(f"{self.enemy_pokemon.name} inimigo desmaiou!")
             if self.swap_enemy_pokemon():
-                logger.info(f"Inimigo enviou {self.trainer_pkmn.name}!")
+                logger.info(f"Inimigo enviou {self.enemy_pokemon.name}!")
             return False
 
         return True
 
 
     def swap_enemy_pokemon(self):
-        for i, pkmn in enumerate(self.trainer.team):
-            if pkmn.is_alive():
-                self.trainer_pkmn_idx = i
-                self.trainer_pkmn = pkmn
+        for i, pokemon in enumerate(self.enemy.team):
+            if pokemon.is_alive():
+                self.enemy_pokemon_index = i
+                self.enemy_pokemon = pokemon
                 return True
         return False
 
@@ -434,12 +434,12 @@ class BattleController:
 
     def calculate_damage(self, attacker, defender, chosen_move):
 
-        hits = 1
+        hits_count = 1
         if hasattr(chosen_move, "mechanics"):
             if "multi_hit" in chosen_move.mechanics:
                 min_hits = chosen_move.mechanics["multi_hit"]["min"]
                 max_hits = chosen_move.mechanics["multi_hit"]["max"]
-                hits = random.randint(min_hits, max_hits)
+                hits_count = random.randint(min_hits, max_hits)
 
         # Determina Stats de Ataque e Defesa
         if chosen_move.category == "Special":
@@ -456,13 +456,13 @@ class BattleController:
 
         # Multiplicadores de Tipo
         type_rules = self.types_damage.get(chosen_move.type, {})
-        prim_type_name = defender.types[0]
-        type_effectiveness_primary = type_rules.get(prim_type_name, 1.0)
+        primary_type = defender.types[0]
+        type_effectiveness_primary = type_rules.get(primary_type, 1.0)
 
         type_effectiveness_secondary = 1.0
         if len(defender.types) > 1:
-            sec_type_name = defender.types[1]
-            type_effectiveness_secondary = type_rules.get(sec_type_name, 1.0)
+            secondary_type = defender.types[1]
+            type_effectiveness_secondary = type_rules.get(secondary_type, 1.0)
 
         final_type_multiplier = type_effectiveness_primary * type_effectiveness_secondary
 
@@ -488,7 +488,7 @@ class BattleController:
             crit_multiplier = 1.5
             is_crit = True
 
-        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier * hits
+        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier * hits_count
         final_int_damage = max(1, int(final_calculated_damage))
 
         if final_type_multiplier == 0:
@@ -504,23 +504,23 @@ class BattleController:
         if is_crit:
             logger.info("Um acerto crítico!")
 
-        return final_int_damage, hits
+        return final_int_damage, hits_count
 
 
     def end_of_turn_resolution(self):
         logger.debug("Resolvendo efeitos de fim de turno...")
-        for pkmn in [self.player_pkmn, self.trainer_pkmn]:
-            if not pkmn.is_alive():
+        for pokemon in [self.player_pokemon, self.enemy_pokemon]:
+            if not pokemon.is_alive():
                 continue
 
-            if pkmn.status == "burn":
-                damage = pkmn.max_hp // 16
-                pkmn.take_damage(damage)
-                logger.info(f"{pkmn.name} sofreu dano pela queimadura.")
+            if pokemon.status == "burn":
+                damage = pokemon.max_hp // 16
+                pokemon.take_damage(damage)
+                logger.info(f"{pokemon.name} sofreu dano pela queimadura.")
 
-            elif pkmn.status == "poison":
-                damage = pkmn.max_hp // 8
-                pkmn.take_damage(damage)
-                logger.info(f"{pkmn.name} sofreu dano pelo veneno.")
+            elif pokemon.status == "poison":
+                damage = pokemon.max_hp // 8
+                pokemon.take_damage(damage)
+                logger.info(f"{pokemon.name} sofreu dano pelo veneno.")
 
         self.check_battle_status()
