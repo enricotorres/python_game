@@ -19,17 +19,13 @@ class Pokemon:
         self.xp = 0
         self.types = data["types"]
         self.sprite = data.get("sprite")
+        self.base_experience = data["base_experience"]
+        self.evolution = data.get("evolution")
 
-        base_stats = data["stats"]
 
-        self.max_hp = int(((base_stats["hp"] * 2 * level) / 100) + level + 10)
+        self.recalculate_stats()
         self.current_hp = self.max_hp
 
-        self.atk = int(((base_stats["attack"] * 2 * level) / 100) + 5)
-        self.defense = int(((base_stats["defense"] * 2 * level) / 100) + 5)
-        self.sp_atk = int(((base_stats["special_attack"] * 2 * level) / 100) + 5)
-        self.sp_def = int(((base_stats["special_defense"] * 2 * level) / 100) + 5)
-        self.speed = int(((base_stats["speed"] * 2 * level) / 100) + 5)
 
         self.stat_mods = {
                 "attack": 0,
@@ -151,6 +147,121 @@ class Pokemon:
         else:
             logger.debug(f"{self.name} stat {stat_name} já atingiu o limite ({self.stat_mods[stat_name]}).")
             return False
+
+    def calculate_required_xp(self):
+        next_level = self.level + 1
+        if next_level <= 1:
+            return 0
+        return next_level ** 3
+
+    def gain_xp(self, xp_amount):
+        if self.level == 100:
+            return
+
+        self.xp += xp_amount
+        logger.info(f"{self.name} ganhou {xp_amount} XP!")
+
+        while self.level < 100:
+            xp_for_next_level = self.calculate_required_xp()
+
+            if self.xp >= xp_for_next_level:
+                self.level += 1
+                logger.info(f"Parabéns! {self.name} subiu para o Nível {self.level}!")
+
+                old_max_hp = self.max_hp
+                self.recalculate_stats()
+
+                growth = self.max_hp - old_max_hp
+                if self.current_hp > 0:
+                    self.current_hp += growth
+
+                new_move = self.check_new_moves()
+                if new_move:
+                    logger.info(f"{self.name} está tentando aprender: {new_move}")
+                    if len(self.moves) + len(new_move) <= 4:
+                        self.learn_moves_manually(new_move)
+                        logger.info(f"Golpes aprendidos automaticamente: {new_move}")
+                if self.can_evolve_at_level():
+                    self.evolve()
+                    post_evo_moves = self.check_new_moves()
+                    if post_evo_moves:
+                        logger.info(f"Ao evoluir, {self.name} aprendeu: {post_evo_moves}")
+                        if len(self.moves) + len(post_evo_moves) <= 4:
+                            self.learn_moves_manually(post_evo_moves)
+
+            else:
+                break
+
+    def can_evolve_at_level(self):
+        if not self.evolution:
+            return False
+        trigger = self.evolution.get("trigger")
+        at_level = self.evolution.get("at_level")
+
+        if trigger == "level-up":
+            if self.level >= at_level:
+                return True
+            return False
+        return False
+
+    def evolve(self):
+        next_form_name = self.evolution.get("target")
+
+        if not next_form_name:
+            return
+
+        try:
+            new_pokemon_data = POKEDEX_DB[next_form_name]
+        except KeyError:
+            logger.error(f"Erro: Dados de '{next_form_name}' não encontrados em POKEDEX_DB.")
+            return
+
+        old_name = self.name
+
+        self.name = next_form_name
+
+        self.base_stats = new_pokemon_data.get("base_stats")
+        self.types = new_pokemon_data.get("types")
+        self.evolution = new_pokemon_data.get("evolution_data")
+        self.recalculate_stats()
+
+        logger.info("--- EVOLUÇÃO! ---")
+        logger.info(f"O seu {old_name} evoluiu para {self.name}!")
+        logger.info(f"Novo nível: {self.level} | Novos Stats Base: {self.base_stats}")
+        logger.info("------------------")
+
+    def recalculate_stats(self):
+        data = POKEDEX_DB[self.name]
+        base_stats = data["stats"]
+        level = self.level
+
+        self.max_hp = int(((base_stats["hp"] * 2 * level) / 100) + level + 10)
+        if hasattr(self, 'current_hp') and self.current_hp > self.max_hp:
+            self.current_hp = self.max_hp
+
+        self.atk = int(((base_stats["attack"] * 2 * level) / 100) + 5)
+        self.defense = int(((base_stats["defense"] * 2 * level) / 100) + 5)
+        self.sp_atk = int(((base_stats["special_attack"] * 2 * level) / 100) + 5)
+        self.sp_def = int(((base_stats["special_defense"] * 2 * level) / 100) + 5)
+        self.speed = int(((base_stats["speed"] * 2 * level) / 100) + 5)
+
+        logger.debug(f"{self.name} Stats recalculados para Lv.{self.level}. Novo HP Máx: {self.max_hp}")
+
+    def check_new_moves(self):
+
+            if self.name not in POKEDEX_DB:
+                logger.warning(f"Check moves: {self.name} não encontrado no DB.")
+                return []
+
+            all_moves = POKEDEX_DB[self.name].get("moves", [])
+            moves_to_learn = []
+
+            for move_data in all_moves:
+                if move_data["level"] == self.level:
+                    moves_to_learn.append(move_data["name"])
+
+            return moves_to_learn
+
 
     def __repr__(self):
         return f"<{self.name} Lv.{self.level} | HP:{self.current_hp}>"

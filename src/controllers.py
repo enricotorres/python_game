@@ -426,6 +426,8 @@ class BattleController:
 
         if not self.enemy_pokemon.is_alive():
             logger.info(f"{self.enemy_pokemon.name} inimigo desmaiou!")
+            xp_gained = self.calculate_battle_xp()
+            logger.info(f"Ganhou {xp_gained} de experiência!")
             if self.swap_enemy_pokemon():
                 logger.info(f"Inimigo enviou {self.enemy_pokemon.name}!")
             return False
@@ -452,7 +454,7 @@ class BattleController:
     def calculate_damage(self, attacker, defender, chosen_move):
 
         hits_count = 1
-        if hasattr(chosen_move, "mechanics"):
+        if hasattr(chosen_move, "mechanics") and chosen_move.mechanics:
             if "multi_hit" in chosen_move.mechanics:
                 min_hits = chosen_move.mechanics["multi_hit"]["min"]
                 max_hits = chosen_move.mechanics["multi_hit"]["max"]
@@ -495,7 +497,7 @@ class BattleController:
         random_factor = random.randint(85, 100) / 100.0
 
         crit_chance = 6
-        if hasattr(chosen_move, "mechanics"):
+        if hasattr(chosen_move, "mechanics") and chosen_move.mechanics:
             if "crit_rate_bonus" in chosen_move.mechanics:
                 crit_chance = 12
 
@@ -549,3 +551,11 @@ class BattleController:
                 logger.info(f"{pokemon.name} sofreu dano pelo veneno.")
 
         self.check_battle_status()
+
+    def calculate_battle_xp(self):
+        base_xp = self.enemy_pokemon.base_experience
+        enemy_level = self.enemy_pokemon.level
+        raw_xp = (base_xp * enemy_level) / 7
+        xp_amount = int(raw_xp)
+        self.player_pokemon.gain_xp(xp_amount)
+        return xp_amount
