@@ -22,6 +22,7 @@ class Pokemon:
         self.base_experience = data["base_experience"]
         self.evolution = data.get("evolution")
 
+
         self.recalculate_stats()
         self.current_hp = self.max_hp
 
@@ -235,7 +236,7 @@ class Pokemon:
         level = self.level
 
         self.max_hp = int(((base_stats["hp"] * 2 * level) / 100) + level + 10)
-        if self.current_hp > self.max_hp:
+        if hasattr(self, 'current_hp') and self.current_hp > self.max_hp:
             self.current_hp = self.max_hp
 
         self.atk = int(((base_stats["attack"] * 2 * level) / 100) + 5)

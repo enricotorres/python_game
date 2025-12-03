@@ -454,7 +454,7 @@ class BattleController:
     def calculate_damage(self, attacker, defender, chosen_move):
 
         hits_count = 1
-        if hasattr(chosen_move, "mechanics"):
+        if hasattr(chosen_move, "mechanics") and chosen_move.mechanics:
             if "multi_hit" in chosen_move.mechanics:
                 min_hits = chosen_move.mechanics["multi_hit"]["min"]
                 max_hits = chosen_move.mechanics["multi_hit"]["max"]
@@ -497,7 +497,7 @@ class BattleController:
         random_factor = random.randint(85, 100) / 100.0
 
         crit_chance = 6
-        if hasattr(chosen_move, "mechanics"):
+        if hasattr(chosen_move, "mechanics") and chosen_move.mechanics:
             if "crit_rate_bonus" in chosen_move.mechanics:
                 crit_chance = 12
 
