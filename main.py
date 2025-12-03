@@ -23,7 +23,7 @@ def main():
     logger.info("--- Inicializando Pokémon Python ---")
 
     ash_team = [
-            Pokemon("Mewtwo", level=100, moves=["Psychic"]),
+            Pokemon("Charmander", level=1, moves=["Fire Blast"]),
             Pokemon("Pikachu", level=100),
             Pokemon("Pidgey", level=5),
             Pokemon("Geodude", level=5),
@@ -32,9 +32,9 @@ def main():
         ]
 
     gary_team = [
-            Pokemon("Charmander", level=100),
-            Pokemon("Rattata", level=100),
-            Pokemon("Spearow", level=5),
+            Pokemon("Bulbasaur", level=1),
+            Pokemon("Bulbasaur", level=1),
+            Pokemon("Bulbasaur", level=1),
             Pokemon("Onix", level=5),
             Pokemon("Zubat", level=5),
             Pokemon("Mankey", level=5)
@@ -42,11 +42,11 @@ def main():
 
     logger.info(f"Times criados com sucesso. Player: {len(ash_team)} | Rival: {len(gary_team)}")
 
-    player = Trainer(name="Ash", xp=0, initial_team=ash_team)
+    player = Trainer(name="Ash", initial_team=ash_team)
     player.add_item("Potion", quantity=3)
     player.add_item("Revive", quantity=1)
 
-    rival = Trainer(name="Gary", xp=0, initial_team=gary_team)
+    rival = Trainer(name="Gary", initial_team=gary_team)
     rival.add_item("Super Potion", quantity=2)
 
     try:
