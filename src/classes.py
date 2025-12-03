@@ -19,6 +19,7 @@ class Pokemon:
         self.xp = 0
         self.types = data["types"]
         self.sprite = data.get("sprite")
+        self.base_experience = data["base_experience"]
 
         base_stats = data["stats"]
 
@@ -151,6 +152,32 @@ class Pokemon:
         else:
             logger.debug(f"{self.name} stat {stat_name} já atingiu o limite ({self.stat_mods[stat_name]}).")
             return False
+
+    def calculate_required_xp(self):
+        next_level = self.level + 1
+        if next_level <= 1:
+            return 0
+        return next_level ** 3
+
+    def gain_xp(self, xp_amount):
+        if self.level == 100:
+            return
+
+        self.current_xp += xp_amount
+        logger.info(f"{self.name} ganhou {xp_amount} XP!")
+
+        while self.level < 100:
+            xp_for_next_level = self.calculate_required_xp()
+
+            if self.xp <= xp_for_next_level:
+                self.level += 1
+                logger.info(f"Parabéns! {self.name} subiu para o Nível {self.level}!")
+                self.recalculate_stats()
+                if self.can_evolve_at_level(self.level):
+                    self.evolve()
+            else:
+                break
+
 
     def __repr__(self):
         return f"<{self.name} Lv.{self.level} | HP:{self.current_hp}>"

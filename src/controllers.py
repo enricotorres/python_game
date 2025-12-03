@@ -549,3 +549,11 @@ class BattleController:
                 logger.info(f"{pokemon.name} sofreu dano pelo veneno.")
 
         self.check_battle_status()
+
+    def calculate_battle_xp(self):
+        base_xp = self.enemy_pokemon.base_experience
+        enemy_level = self.enemy_pokemon.level
+        raw_xp = (base_xp * enemy_level) / 7
+        xp_amount = int(raw_xp)
+        self.player_pokemon.gain_xp(xp_amount)
+        return xp_amount
