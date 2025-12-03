@@ -1,4 +1,3 @@
-import time
 import graphics as gf
 from pathlib import Path
 
