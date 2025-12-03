@@ -426,6 +426,8 @@ class BattleController:
 
         if not self.enemy_pokemon.is_alive():
             logger.info(f"{self.enemy_pokemon.name} inimigo desmaiou!")
+            xp_gained = self.calculate_battle_xp()
+            logger.info(f"Ganhou {xp_gained} de experiência!")
             if self.swap_enemy_pokemon():
                 logger.info(f"Inimigo enviou {self.enemy_pokemon.name}!")
             return False
