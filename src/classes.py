@@ -235,6 +235,44 @@ class Pokemon:
             "status": self.status
         }
 
+    def can_move(self) -> tuple[bool, str]:
+        if self.status == "sleep":
+            if random.randint(1, 100) >= 50:
+                self.status = None
+                return True, f"{self.name} acordou!"
+            return False, f"{self.name} está dormindo."
+
+        elif self.status == "freeze":
+            if random.randint(1, 100) <= 25:
+                self.status = None
+                return True, f"{self.name} descongelou!"
+            return False, f"{self.name} está congelado e não atacou."
+
+        elif self.status == "paralysis":
+            if random.randint(1, 100) <= 25:
+                return False, f"{self.name} está paralisado e não consegue se mover!"
+
+        return True, ""
+
+    def apply_status_damage(self) -> str:
+        if not self.is_alive():
+            return None
+
+        damage = 0
+        message = None
+
+        if self.status == "burn":
+            damage = max(1, self.max_hp // 16)
+            self.take_damage(damage)
+            message = f"{self.name} sofreu {damage} de dano pela queimadura."
+
+        elif self.status == "poison":
+            damage = max(1, self.max_hp // 8)
+            self.take_damage(damage)
+            message = f"{self.name} sofreu {damage} de dano pelo veneno."
+
+        return message
+
     def __repr__(self):
         return f"<{self.name} Lv.{self.level} | HP:{self.current_hp}/{self.max_hp}>"
 
@@ -301,6 +339,22 @@ class Trainer:
             if self.bag[item_name] == 0:
                 del self.bag[item_name]
             return True
+        return False
+
+    def get_active_slot(self) -> int:
+        return self.active_slot
+
+    def set_active_pokemon_index(self, new_index: int) -> bool:
+        if 0 <= new_index < len(self.team) and self.team[new_index].is_alive():
+            self.active_slot = new_index
+            return True
+        return False
+
+    def switch_to_next_available(self) -> bool:
+        for i, pkm in enumerate(self.team):
+            if pkm.is_alive():
+                self.active_slot = i
+                return True
         return False
 
     def __repr__(self) -> str:
