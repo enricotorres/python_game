@@ -48,7 +48,10 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    "sprite": {
+      "front" : charmander.png,
+      "back" : charmander-2.png
+    },
     "base_experience": 64,
     "evolution": {
       "target": "Ivysaur",

@@ -51,7 +51,7 @@ def main():
 
     try:
         game_manager = WorldManager()
-        battle_scene = BattleScene(game_manager.window)
+        battle_scene = BattleScene(game_manager.window, player, rival)
         logger.info("Gerenciador Gráfico e Cena de Batalha inicializados.")
     except Exception as e:
         logger.critical(f"Falha ao iniciar sistema gráfico: {e}")
