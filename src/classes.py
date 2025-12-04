@@ -303,6 +303,22 @@ class Trainer:
             return True
         return False
 
+    def get_active_slot(self) -> int:
+        return self.active_slot
+
+    def set_active_pokemon_index(self, new_index: int) -> bool:
+        if 0 <= new_index < len(self.team) and self.team[new_index].is_alive():
+            self.active_slot = new_index
+            return True
+        return False
+
+    def switch_to_next_available(self) -> bool:
+        for i, pkm in enumerate(self.team):
+            if pkm.is_alive():
+                self.active_slot = i
+                return True
+        return False
+
     def __repr__(self) -> str:
         return f"<Trainer {self.name} | Money: ${self.money} | Team: {len(self.team)}>"
 

@@ -33,17 +33,12 @@ class BattleController:
 
     def run_battle_loop(self):
         self.state = "PLAYER_TURN"
-        self.player_pokemon_index = 0
-        self.enemy_pokemon_index = 0
-
-        self.player_pokemon = self.player.team[self.player_pokemon_index]
-        self.enemy_pokemon = self.enemy.team[self.enemy_pokemon_index]
 
         logger.info("Iniciando loop de batalha...")
 
         while self.state != "EXIT":
-            self.player_pokemon = self.player.team[self.player_pokemon_index]
-            self.enemy_pokemon = self.enemy.team[self.enemy_pokemon_index]
+            self.player_pokemon = self.player.get_active_pokemon()
+            self.enemy_pokemon = self.enemy.get_active_pokemon()
 
             logger.info("-" * 30)
             logger.info(f"BATTLE STATUS: {self.player_pokemon.name} (HP: {self.player_pokemon.current_hp}/{self.player_pokemon.max_hp}) vs {self.enemy_pokemon.name} (HP: {self.enemy_pokemon.current_hp}/{self.enemy_pokemon.max_hp})")
@@ -60,7 +55,7 @@ class BattleController:
 
     def handle_state_logic(self):
         if self.state == "PLAYER_TURN":
-            if not self.is_team_alive(self.player):
+            if not self.player.has_alive_pokemon():
                 logger.warning("O time do jogador foi derrotado. Mudando estado para DEFEAT.")
                 self.state = "DEFEAT"
                 return
@@ -103,10 +98,11 @@ class BattleController:
                 self.state = "PLAYER_TURN"
                 return
 
-            if 0 <= selected_index < len(self.player.team) and self.player.team[selected_index].is_alive() and selected_index != self.player_pokemon_index:
+            if selected_index != self.player.active_slot and self.player.set_active_pokemon_index(selected_index):
                 self.switch_target_index = selected_index
                 self.player_action_type = "switch"
-                logger.info(f"Jogador escolheu trocar para: {self.player.team[selected_index].name}")
+                temp_pokemon = self.player.get_active_pokemon()
+                logger.info(f"Jogador escolheu trocar para: {temp_pokemon.name}")
 
                 self.decide_enemy_move()
                 self.state = "RESOLVE_TURN"
@@ -140,16 +136,12 @@ class BattleController:
             if selected_index == self.cancel_action:
                 return
 
-            if 0 <= selected_index < len(self.player.team):
-                if self.player.team[selected_index].is_alive():
-                    self.player_pokemon_index = selected_index
-                    self.player_pokemon = self.player.team[self.player_pokemon_index]
-                    logger.info(f"Novo Pokémon ativo: {self.player_pokemon.name}")
-                    self.state = "PLAYER_TURN"
-                else:
-                    logger.warning("Não pode trocar para um Pokémon desmaiado.")
+            if self.player.set_active_pokemon_index(selected_index):
+                self.player_pokemon = self.player.get_active_pokemon()
+                logger.info(f"Novo Pokémon ativo: {self.player_pokemon.name}")
+                self.state = "PLAYER_TURN"
             else:
-                pass
+                logger.warning("Não pode trocar para um Pokémon desmaiado.")
 
 
     def decide_enemy_move(self):
@@ -202,8 +194,7 @@ class BattleController:
                 return
 
             elif self.player_action_type == "switch":
-                self.player_pokemon_index = self.switch_target_index
-                self.player_pokemon = self.player.team[self.player_pokemon_index]
+                self.player_pokemon = self.player.get_active_pokemon()
                 logger.info(f"Troca realizada. Vai! {self.player_pokemon.name}!")
 
                 if self.check_battle_status():
@@ -409,12 +400,12 @@ class BattleController:
 
 
     def check_battle_status(self):
-        if not self.is_team_alive(self.player):
+        if not self.player.has_alive_pokemon():
             logger.info("Time do jogador completamente derrotado.")
             self.state = "DEFEAT"
             return False
 
-        if not self.is_team_alive(self.enemy):
+        if not self.enemy.has_alive_pokemon():
             logger.info("Time do inimigo completamente derrotado.")
             self.state = "VICTORY"
             return False
@@ -436,20 +427,10 @@ class BattleController:
 
 
     def swap_enemy_pokemon(self):
-        for i, pokemon in enumerate(self.enemy.team):
-            if pokemon.is_alive():
-                self.enemy_pokemon_index = i
-                self.enemy_pokemon = pokemon
-                return True
+        if self.enemy.switch_to_next_available():
+            self.enemy_pokemon = self.enemy.get_active_pokemon()
+            return True
         return False
-
-
-    def is_team_alive(self, trainer):
-        for pokemon in trainer.team:
-            if pokemon.current_hp > 0:
-                return True
-        return False
-
 
     def calculate_damage(self, attacker, defender, chosen_move):
 
