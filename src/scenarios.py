@@ -1,8 +1,9 @@
 import graphics as gf
+import time
 from pathlib import Path
 
 class BattleScene:
-    def __init__(self, window):
+    def __init__(self, window, player, enemy):
         self.width = 1408
         self.height = 768
 
@@ -46,10 +47,21 @@ class BattleScene:
 
         self.janela = window
 
+        self.player = player
+        self.enemy = enemy
+
         back = self.bg()
-        battle_hud = self.hud()
         back.draw(self.janela)
-        battle_hud.draw(self.janela)
+
+        self.sprite()
+
+        p_life, e_life = self.health_bar()
+        p_life.draw(self.janela)
+        e_life.draw(self.janela)
+
+
+        self.battle_hud = self.hud()
+        self.battle_hud.draw(self.janela)
 
     def get_path(self, filename):
         full_path = self.assets_dir / filename
@@ -57,9 +69,36 @@ class BattleScene:
 
     def bg(self):
         return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("battlefield_final.png"))
-
+    
     def hud(self):
         return gf.Image(gf.Point(704, 675), self.get_path("battle_hud_final.png"))
+    
+    def sprite(self):
+        self.player_pokemon = self.player.team[0]
+        pos_player = gf.Point(500, 530)
+        sprite = self.player_pokemon.sprite
+        if isinstance(sprite, dict):
+            filename = sprite["back"] 
+        else:
+            filename = sprite
+        path = self.get_path(filename)
+        sprite_player = gf.Image(pos_player, path)
+        sprite_player.draw(self.janela)
+
+        #------------------INIMIGO---------------------
+
+        self.enemy_pokemon = self.enemy.team[0]
+        pos_enemy = gf.Point(800, 380)
+        sprite_enemy = self.enemy_pokemon.sprite
+        if isinstance(sprite, dict):
+            filename = sprite_enemy["front"] 
+        else:
+            filename = sprite_enemy
+        path = self.get_path(filename)
+        sprite_enemy = gf.Image(pos_enemy, path)
+        sprite_enemy.draw(self.janela)
+
+        #passar para classes.py
 
     def verificar_clique(self, click, p1, p2):
         x, y = click.getX(), click.getY()
@@ -68,9 +107,10 @@ class BattleScene:
         return (x_min <= x <= x_max) and (y_min <= y <= y_max)
 
     def fight_btn(self):
-        img = gf.Image(gf.Point(704, 675), self.get_path("white_hud.png"))
+        img = gf.Image(gf.Point(704, 675), self.get_path("atk_hud.png"))
         txt = gf.Text(gf.Point(286.1, 675), "ATAQUE 1")
         txt.setSize(18)
+
         return img
 
     def bag_btn(self):
@@ -78,12 +118,36 @@ class BattleScene:
 
     def pokemon_btn(self):
         return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("pokemon_hud.png"))
+    
+    def import_controller(self, BattleController):
+        self.battle_controller = BattleController
+        return self.battle_controller
+    
+    def health_bar(self):
+        p_health = 342 * (self.player_pokemon.current_hp / self.player_pokemon.max_hp)
+        e_health = 1468 * (self.enemy_pokemon.current_hp / self.player_pokemon.max_hp)
+        size_player_p1 = gf.Point(25, 65)
+        size_player_p2 = gf.Point(p_health, 80)
+        size_enemy_p1 = gf.Point(1063, 65)
+        size_enemy_p2 = gf.Point(e_health, 80)
+        hbar_player_rect = gf.Rectangle(size_player_p1, size_player_p2)
+        hbar_player_rect.setFill("green")
+        hbar_enemy_rect = gf.Rectangle(size_enemy_p1, size_enemy_p2)
+        hbar_enemy_rect.setFill("green")
+        return hbar_player_rect, hbar_enemy_rect
+    #RESOLVER UNDRAW E CHAMAR NA HORA CERTA
+    #passar para classes.py
+    
 
     def fight_txt(self):
         texts = []
-        labels = ["ATAQUE 1", "ATAQUE 2", "ATAQUE 3", "ATAQUE 4"]
-        for i, label in enumerate(labels):
+        moves = self.player_pokemon.moves
+        for i in range(4):
             p = gf.Point(286.1 + (i * 286.1), 640)
+            if i < len(moves):
+                label = moves[i].name
+            else:
+                label = ""
             t = gf.Text(p, label)
             t.setSize(24)
             t.setTextColor("black")
@@ -130,10 +194,9 @@ class BattleScene:
                 choice = -1
                 break
 
-        f_win.undraw()
         for item in f_txt:
             item.undraw()
-
+        f_win.undraw()
         return choice
 
     def chose_pokemon(self):
@@ -170,4 +233,8 @@ class BattleScene:
         return choice
 
     def run(self):
+        self.battle_hud.undraw()
+        msg = gf.Image(gf.Point(self.width/2, self.height/2), self.get_path("run_msg.png"))
+        msg.draw(self.janela)
+        time.sleep(1)
         self.janela.close()
