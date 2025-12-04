@@ -278,7 +278,7 @@ class Pokemon:
 
 
 class Trainer:
-    def __init__(self, name: str, is_ai: bool = False, money: int = 1000, initial_team: list = None):
+    def __init__(self, name: str, is_ai: bool = False, money: int = 1000, initial_team: list = None, x: int = 0, y: int = 0):
         self.name: str = name
         self.money: int = money
         self.bag: dict = {}
@@ -294,6 +294,9 @@ class Trainer:
                 self.add_pokemon(pkm)
 
         self.active_slot: int = 0
+
+        self.x: int = x
+        self.y:int = y
 
 
     def add_pokemon(self, pokemon: "Pokemon") -> bool:
