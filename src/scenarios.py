@@ -49,6 +49,7 @@ class BattleScene:
 
         self.player = player
         self.enemy = enemy
+        self.allow_cancel = True
 
         back = self.bg()
         back.draw(self.janela)
@@ -207,7 +208,7 @@ class BattleScene:
         while True:
             click = self.janela.getMouse()
 
-            if self.verificar_clique(click, self.pk_back_pos1, self.pk_back_pos2):
+            if self.verificar_clique(click, self.pk_back_pos1, self.pk_back_pos2) and self.allow_cancel == True:
                 choice = -1
                 break
             elif self.verificar_clique(click, self.pk_option1_pos1, self.pk_option1_pos2):
