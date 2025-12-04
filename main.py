@@ -23,7 +23,7 @@ def main():
     logger.info("--- Inicializando Pokémon Python ---")
 
     ash_team = [
-            Pokemon("Charmander", level=1, moves=["Fire Blast"]),
+            Pokemon("Bulbasaur", level=1),
             Pokemon("Pikachu", level=100),
             Pokemon("Pidgey", level=5),
             Pokemon("Geodude", level=5),
@@ -32,7 +32,7 @@ def main():
         ]
 
     gary_team = [
-            Pokemon("Bulbasaur", level=1),
+            Pokemon("Charmander", level=1, moves=["Fire Blast"]),
             Pokemon("Bulbasaur", level=1),
             Pokemon("Bulbasaur", level=1),
             Pokemon("Onix", level=5),

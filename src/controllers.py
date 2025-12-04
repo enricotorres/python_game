@@ -45,11 +45,13 @@ class BattleController:
             self.enemy_pokemon: Pokemon = self.enemy.get_active_pokemon()
 
             logger.info("-" * 30)
-            logger.info(f"BATTLE STATUS: {self.player_pokemon.name} (HP: {self.player_pokemon.current_hp}/{self.player_pokemon.max_hp}) vs {self.enemy_pokemon.name} (HP: {self.enemy_pokemon.current_hp}/{self.enemy_pokemon.max_hp})")
+            p_name = self.player_pokemon.name if self.player_pokemon else "Desmaiado"
+            p_hp = f"{self.player_pokemon.current_hp}/{self.player_pokemon.max_hp}" if self.player_pokemon else "0/0"
+            e_name = self.enemy_pokemon.name if self.enemy_pokemon else "Desmaiado"
+            e_hp = f"{self.enemy_pokemon.current_hp}/{self.enemy_pokemon.max_hp}" if self.enemy_pokemon else "0/0"
+            logger.info(f"BATTLE STATUS: {p_name} (HP: {p_hp}) vs {e_name} (HP: {e_hp})")
 
             input_states: list[str] = ["PLAYER_TURN", "SELECT_MOVE", "POKEMON_MENU", "BAG_MENU", "FORCE_SWITCH"]
-
-            logger.debug(f"Estado Atual: {self.state}")
 
             if self.state in input_states:
                 self._handle_state_logic()
@@ -85,6 +87,10 @@ class BattleController:
             attack_index: int = self.battle_scene.chose_attack()
             if attack_index == self.cancel_action:
                 self.state = "PLAYER_TURN"
+                return
+
+            if attack_index >= len(self.player_pokemon.moves):
+                logger.warning("Jogador selecionou um slot de ataque vazio.")
                 return
 
             self.player_chosen_move = self.player_pokemon.moves[attack_index]

@@ -11,6 +11,9 @@ class DamageCalculator:
         self.type_chart: dict = type_chart
 
     def calculate(self, attacker: Pokemon, defender: Pokemon, chosen_move: Move, weather_condition: str | None = None) -> tuple[int, int]:
+        if chosen_move.category == "Status":
+            return 0, 0
+
         # Obter dados iniciais
         hits_count: int = self._calculate_hits(chosen_move)
         atk_stat, def_stat = self._get_attack_defense_stats(attacker, defender, chosen_move)
