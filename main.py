@@ -1,7 +1,7 @@
 import os
 import sys
 import logging
-
+from graphics import update
 
 logging.basicConfig(
     level=logging.INFO,
@@ -14,7 +14,7 @@ logger = logging.getLogger("Main")
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 
 from src.classes import Trainer, Pokemon
-from src.scenarios import BattleScene
+from src.scenarios import BattleScene, WorldScene
 from src.controllers import BattleController
 from src.world_manager import WorldManager
 
@@ -51,16 +51,26 @@ def main():
 
     try:
         game_manager = WorldManager()
-        battle_scene = BattleScene(game_manager.window)
+        game_manager.window.autoflush = False
+        world_scene = WorldScene(game_manager.window, player)
+        while True:
+
+            world_scene.update()
+
+            if game_manager.window.isClosed():
+                break
+
+            update(60)
+
         logger.info("Gerenciador Gráfico e Cena de Batalha inicializados.")
     except Exception as e:
         logger.critical(f"Falha ao iniciar sistema gráfico: {e}")
         raise e
 
-    controller = BattleController(battle_scene, rival, player)
+    #controller = BattleController(battle_scene, rival, player)
 
-    logger.info("Entrando no loop de batalha")
-    controller.run_battle_loop()
+    #logger.info("Entrando no loop de batalha")
+    #controller.run_battle_loop()
 
     logger.info("Jogo finalizado normalmente.")
 

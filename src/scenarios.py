@@ -1,5 +1,7 @@
 import graphics as gf
 from pathlib import Path
+from src.classes import Pokemon
+import time
 
 class BattleScene:
     def __init__(self, window):
@@ -171,3 +173,52 @@ class BattleScene:
 
     def run(self):
         self.janela.close()
+
+
+class WorldScene:
+    def __init__(self, window, player: "Pokemon"):
+        self.window = window
+        self.player = player
+        self.width = 2752
+        self.height = 1536
+
+        self.root_dir = Path(__file__).resolve().parent.parent
+        self.assets_dir = self.root_dir / "assets" / "images"
+
+        self.background = self._get_background()
+        self.background.draw(self.window)
+
+        self.velocity = 15
+
+        self.current_x = self.window.getWidth() / 2
+        self.current_y = self.window.getHeight() / 2
+
+
+    def _get_background(self):
+        center_x = self.window.getWidth() / 2
+        center_y = self.window.getHeight() / 2
+        return gf.Image(gf.Point(center_x, center_y), self._get_path("worldscene.png"))
+
+    def _get_path(self, filename):
+        full_path = self.assets_dir / filename
+        return str(full_path)
+
+    def update(self):
+        key = self.window.checkKey()
+        dx = 0
+        dy = 0
+        print(key)
+
+        if key == "w":
+            dy =+ self.velocity
+        elif key == "s":
+            dy =- self.velocity
+        elif key == "a":
+            dx =+ self.velocity
+        elif key == "d":
+            dx =- self.velocity
+
+        if dx != 0 or dy != 0:
+            self.background.move(dx, dy)
+            self.current_x += dx
+            self.current_y += dy

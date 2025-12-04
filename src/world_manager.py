@@ -2,8 +2,8 @@ import graphics as gf
 
 class WorldManager:
     def __init__(self):
-        self.width = 1408
-        self.height = 768
+        self.width = 1600
+        self.height = 900
         self.window = gf.GraphWin("PokePy", self.width, self.height)
         self.current_scene = None
 
