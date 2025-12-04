@@ -1,9 +1,9 @@
 import random
-import math
 import logging
 
 from src.classes import Item, Move
 from src.database import TYPES_DB
+from src.mechanics import DamageCalculator
 
 logger = logging.getLogger(__name__)
 
@@ -14,6 +14,7 @@ class BattleController:
         self.battle_scene = battle_scene
         self.types_damage = TYPES_DB
         self.cancel_action = -1
+        self.damage_calculator = DamageCalculator(TYPES_DB)
 
         self.player_action_type = None
         self.player_chosen_move = None
@@ -172,7 +173,7 @@ class BattleController:
         logger.debug(f"[IA] Calculando melhor movimento entre: {[m.name for m in valid_moves]}")
 
         for move in valid_moves:
-            damage, hits_count = self.calculate_damage(self.enemy_pokemon, self.player_pokemon, move)
+            damage, hits_count = self.damage_calculator.calculate(self.enemy_pokemon, self.player_pokemon, move)
             logger.debug(f"[IA] Simulação: {move.name} causaria aprox. {damage} de dano.")
 
             if damage > best_damage:
@@ -289,7 +290,7 @@ class BattleController:
                 return False
 
         elif attacker.status == "paralysis":
-            if random.randint(1, 100) <= 30:
+            if random.randint(1, 100) <= 25:
                 logger.info(f"{attacker.name} está paralisado e não consegue se mover!")
                 return False
 
@@ -301,7 +302,6 @@ class BattleController:
         if move.effect and move.effect.get("type") == "always_hit":
             always_hit = True
 
-        hit_chance = 0
         if not always_hit:
             hit_chance = random.randint(1, 100)
 
@@ -318,13 +318,17 @@ class BattleController:
             accuracy_multiplier = multipliers.get(accuracy_modifier, 1.0)
             final_accuracy = move.accuracy * accuracy_multiplier
 
-            logger.debug(f"Accuracy Check: Chance={hit_chance}, MoveAcc={move.accuracy}, Mod={accuracy_multiplier}, Final={final_accuracy}")
-
             if hit_chance > final_accuracy:
                 logger.info(f"O ataque de {attacker.name} errou!")
                 return
 
-        damage, hits_count = self.calculate_damage(attacker, defender, move)
+        damage, hits_count = self.damage_calculator.calculate(
+            attacker=attacker,
+            defender=defender,
+            chosen_move=move,
+            weather_condition=self.weather_condition
+        )
+        # -----------------------------------------------------------
 
         if damage > 0:
             defender.take_damage(damage)
@@ -341,7 +345,6 @@ class BattleController:
                 if change_amount > 0:
                     attacker.restore_hp(change_amount)
                     logger.info(f"{attacker.name} recuperou {change_amount} de HP!")
-
                 elif change_amount < 0:
                     recoil_damage = abs(change_amount)
                     attacker.take_damage(recoil_damage)
@@ -349,7 +352,6 @@ class BattleController:
 
         if move.effect:
             self.process_move_effect(move, attacker, defender)
-
 
     def process_move_effect(self, move, attacker, defender):
         effect_data = move.effect
@@ -431,88 +433,6 @@ class BattleController:
             self.enemy_pokemon = self.enemy.get_active_pokemon()
             return True
         return False
-
-    def calculate_damage(self, attacker, defender, chosen_move):
-
-        hits_count = 1
-        if hasattr(chosen_move, "mechanics") and chosen_move.mechanics:
-            if "multi_hit" in chosen_move.mechanics:
-                min_hits = chosen_move.mechanics["multi_hit"]["min"]
-                max_hits = chosen_move.mechanics["multi_hit"]["max"]
-                hits_count = random.randint(min_hits, max_hits)
-
-        # Determina Stats de Ataque e Defesa
-        if chosen_move.category == "Special":
-            attack_stat = attacker.get_current_stat("special-attack")
-            defense_stat = defender.get_current_stat("special-defense")
-        else:
-            attack_stat = attacker.get_current_stat("attack")
-            defense_stat = defender.get_current_stat("defense")
-
-        # Fórmula Básica
-        level_factor = ((2 * attacker.level // 5) + 2)
-        raw_damage_part = level_factor * (chosen_move.power * attack_stat // defense_stat)
-        damage_base = (raw_damage_part // 50) + 2
-
-        # Multiplicadores de Tipo
-        type_rules = self.types_damage.get(chosen_move.type, {})
-        primary_type = defender.types[0]
-        type_effectiveness_primary = type_rules.get(primary_type, 1.0)
-
-        type_effectiveness_secondary = 1.0
-        if len(defender.types) > 1:
-            secondary_type = defender.types[1]
-            type_effectiveness_secondary = type_rules.get(secondary_type, 1.0)
-
-        final_type_multiplier = type_effectiveness_primary * type_effectiveness_secondary
-
-        # STAB
-        stab_bonus = 1.0
-        if chosen_move.type in attacker.types:
-            stab_bonus = 1.5
-
-        damage_pre_random = damage_base * final_type_multiplier * stab_bonus
-        damage_pre_random = math.floor(damage_pre_random)
-
-        # Aleatoriedade e Crítico
-        random_factor = random.randint(85, 100) / 100.0
-
-        crit_chance = 6
-        if hasattr(chosen_move, "mechanics") and chosen_move.mechanics:
-            if "crit_rate_bonus" in chosen_move.mechanics:
-                crit_chance = 12
-
-        crit_multiplier = 1.0
-        is_crit = False
-        if random.randint(1, 100) <= crit_chance:
-            crit_multiplier = 1.5
-            is_crit = True
-
-        weather_mod = 1.0
-        if self.weather_condition == "rain":
-            if chosen_move.type == "Water": weather_mod = 1.5
-            elif chosen_move.type == "Fire": weather_mod = 0.5
-        elif self.weather_condition == "sun":
-            if chosen_move.type == "Fire": weather_mod = 1.5
-            elif chosen_move.type == "Water": weather_mod = 0.5
-
-        final_calculated_damage = damage_pre_random * random_factor * crit_multiplier * hits_count * weather_mod
-        final_int_damage = max(1, int(final_calculated_damage))
-
-        if final_type_multiplier == 0:
-            final_int_damage = 0
-
-        if final_type_multiplier > 1.0:
-            logger.info("É super efetivo!")
-        elif final_type_multiplier < 1.0 and final_type_multiplier > 0:
-            logger.info("Não é muito efetivo...")
-        elif final_type_multiplier == 0:
-            logger.info("Não afetou o alvo...")
-
-        if is_crit:
-            logger.info("Um acerto crítico!")
-
-        return final_int_damage, hits_count
 
 
     def end_of_turn_resolution(self):
