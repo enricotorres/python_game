@@ -1,6 +1,6 @@
 import graphics as gf
 from pathlib import Path
-from src.classes import Pokemon
+from src.classes import Trainer
 import time
 
 class BattleScene:
@@ -176,11 +176,11 @@ class BattleScene:
 
 
 class WorldScene:
-    def __init__(self, window, player: "Pokemon"):
+    def __init__(self, window, player: Trainer):
         self.window = window
         self.player = player
-        self.width = 2752
-        self.height = 1536
+        self.map_width = 2752
+        self.map_height = 1536
 
         self.root_dir = Path(__file__).resolve().parent.parent
         self.assets_dir = self.root_dir / "assets" / "images"
@@ -188,11 +188,36 @@ class WorldScene:
         self.background = self._get_background()
         self.background.draw(self.window)
 
-        self.velocity = 15
+        self.velocity = 1
 
         self.current_x = self.window.getWidth() / 2
         self.current_y = self.window.getHeight() / 2
 
+        half_map_w = self.map_width / 2
+        half_map_h = self.map_height / 2
+        win_w = self.window.getWidth()
+        win_h = self.window.getHeight()
+
+        self.max_x = half_map_w
+        self.min_x = win_w - half_map_w
+        self.max_y = half_map_h
+        self.min_y = win_h - half_map_h
+
+        self.keys = {"w": False, "s": False, "a": False, "d": False}
+
+        self.window.master.bind("<KeyPress>", self._on_key_press)
+        self.window.master.bind("<KeyRelease>", self._on_key_release)
+        self.window.master.focus_set()
+
+    def _on_key_press(self, event):
+        key = event.keysym.lower()
+        if key in self.keys:
+            self.keys[key] = True
+
+    def _on_key_release(self, event):
+        key = event.keysym.lower()
+        if key in self.keys:
+            self.keys[key] = False
 
     def _get_background(self):
         center_x = self.window.getWidth() / 2
@@ -204,19 +229,27 @@ class WorldScene:
         return str(full_path)
 
     def update(self):
-        key = self.window.checkKey()
+
         dx = 0
         dy = 0
-        print(key)
 
-        if key == "w":
-            dy =+ self.velocity
-        elif key == "s":
-            dy =- self.velocity
-        elif key == "a":
-            dx =+ self.velocity
-        elif key == "d":
-            dx =- self.velocity
+        if self.keys["w"]:
+            dy += self.velocity
+        elif self.keys["s"]:
+            dy -= self.velocity
+
+        if self.keys["a"]:
+            dx += self.velocity
+        elif self.keys["d"]:
+            dx -= self.velocity
+
+        future_x = self.current_x + dx
+        future_y = self.current_y + dy
+
+        if future_x > self.max_x or future_x < self.min_x:
+            dx = 0
+        if future_y > self.max_y or future_y < self.min_y:
+            dy = 0
 
         if dx != 0 or dy != 0:
             self.background.move(dx, dy)

@@ -3,6 +3,7 @@ import sys
 import logging
 from graphics import update
 
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
@@ -51,16 +52,15 @@ def main():
 
     try:
         game_manager = WorldManager()
-        game_manager.window.autoflush = False
         world_scene = WorldScene(game_manager.window, player)
         while True:
-
             world_scene.update()
 
             if game_manager.window.isClosed():
                 break
 
             update(60)
+
 
         logger.info("Gerenciador Gráfico e Cena de Batalha inicializados.")
     except Exception as e:

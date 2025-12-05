@@ -4,7 +4,7 @@ class WorldManager:
     def __init__(self):
         self.width = 1600
         self.height = 900
-        self.window = gf.GraphWin("PokePy", self.width, self.height)
+        self.window = gf.GraphWin("PokePy", self.width, self.height, autoflush=False)
         self.current_scene = None
 
 
