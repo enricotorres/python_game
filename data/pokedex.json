@@ -49,8 +49,8 @@
       }
     ],
     "sprite": {
-      "front" : charmander.png,
-      "back" : charmander-2.png
+      "front" : "bulbasaur.png",
+      "back" : "bulbasaur-2.png"
     },
     "base_experience": 64,
     "evolution": {
@@ -332,7 +332,10 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+    "sprite" : {
+      "front" : "charmander.png",
+      "back" : "charmander-2.png"
+    },
     "base_experience": 62,
     "evolution": {
       "target": "Charmeleon",

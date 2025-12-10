@@ -56,10 +56,9 @@ class BattleScene:
 
         self.sprite()
 
-        p_life, e_life = self.health_bar()
-        p_life.draw(self.janela)
-        e_life.draw(self.janela)
-
+        self.p_life_rect, self.e_life_rect = self.health_bar()
+        self.p_life_rect.draw(self.janela)
+        self.e_life_rect.draw(self.janela)
 
         self.battle_hud = self.hud()
         self.battle_hud.draw(self.janela)
@@ -125,22 +124,40 @@ class BattleScene:
         return self.battle_controller
     
     def health_bar(self):
-        p_health = 342 * (self.player_pokemon.current_hp / self.player_pokemon.max_hp)
-        e_health = 1468 * (self.enemy_pokemon.current_hp / self.player_pokemon.max_hp)
+        p_poke = self.player.get_active_pokemon()
+        if p_poke is None:
+            p_poke = self.player_pokemon
+        else:
+            self.player_pokemon = p_poke
+
+        pct_player = p_poke.current_hp / p_poke.max_hp
+        width_player = 317 * pct_player
         size_player_p1 = gf.Point(25, 65)
-        size_player_p2 = gf.Point(p_health, 80)
-        size_enemy_p1 = gf.Point(1063, 65)
-        size_enemy_p2 = gf.Point(e_health, 80)
+        size_player_p2 = gf.Point(25 + width_player, 80)
         hbar_player_rect = gf.Rectangle(size_player_p1, size_player_p2)
         hbar_player_rect.setFill("green")
+        if pct_player < 0.2:
+            hbar_player_rect.setFill("red")
+
+        e_poke = self.enemy.get_active_pokemon()
+        if e_poke is None:
+            e_poke = self.enemy_pokemon
+        else:
+            self.enemy_pokemon = e_poke
+
+        pct_enemy = e_poke.current_hp / e_poke.max_hp
+        width_enemy = 317 * pct_enemy
+        size_enemy_p1 = gf.Point(1063, 65)
+        size_enemy_p2 = gf.Point(1063 + width_enemy, 80)
         hbar_enemy_rect = gf.Rectangle(size_enemy_p1, size_enemy_p2)
         hbar_enemy_rect.setFill("green")
+
         return hbar_player_rect, hbar_enemy_rect
-    #RESOLVER UNDRAW E CHAMAR NA HORA CERTA
-    #passar para classes.py
     
 
     def fight_txt(self):
+        self.player_pokemon = self.player.get_active_pokemon()
+
         texts = []
         moves = self.player_pokemon.moves
         for i in range(4):
