@@ -202,8 +202,33 @@ class WorldScene:
             (959, 514, 1275, 690), # Casa do Ash
             (1543, 518, 1862, 690), # Casa marrom
             (895, 648, 944, 690), # Caixa correio Ash
-            (1483, 648, 1526, 690) # caixa correio marrom
+            (1483, 648, 1526, 690), # caixa correio marrom
+            (941, 949, 1270, 1102), # Pokemarket
+            (954, 1122, 1009, 1139), # placa pokemarket
+            (1224, 1108, 1279, 1153), # placa pokemarket
+            (1273, 1005, 1335, 1101), # barril pokemarket
+            (857, 977, 935, 1030), # caixa grande pokemarket
+            (877, 1030, 943, 1091), # caixa pequena pokemarket
+            (1481, 900, 1925, 1072), # Lab. carvalho
+            (711, 328, 1300, 328), # limite superior
+            (1439, 328, 2085, 328), # limite superior
+            (710, 328, 710, 1324), # Limite esquerda
+            (2087, 328, 2087, 1412), # Limite direita
+            (1343, 1410, 2080, 1410), # Limite inferir direita
+            (710, 1306, 1311, 1306), # Limite inferior esquerda
+            (1330, 1317, 1330, 1416), # limite inferior agua
+            (1300, 0, 1300, 328), # saida superior
+            (1439, 0, 1439, 328), # saida superior
+            (1473, 1256, 1876, 1276), # cerca
+            (820, 1179, 867, 1233), # npc mulher
+            (1523, 1309, 1573, 1348) # npc homem
 
+        ]
+        self.occluders = [
+            (959, 420, 1275, 690),   # Casa do Ash (Topo e Telhado)
+            (1543, 420, 1862, 690),  # Casa Marrom (Topo e Telhado)
+            (941, 820, 1270, 949),  # Pokemarket (Topo e Telhado)
+            (1481, 820, 1925, 900)   # Lab. carvalho (Topo e Telhado)
         ]
 
         self.background = self._get_background()
@@ -211,6 +236,8 @@ class WorldScene:
 
         self.player_sprite = self._get_player_sprite()
         self.player_sprite.draw(self.window)
+        self.is_visible = True
+        self.current_sprite_name = "up"
 
         self.keys = {"w": False, "s": False, "a": False, "d": False}
         self.window.master.bind("<KeyPress>", self._on_key_press)
@@ -231,7 +258,7 @@ class WorldScene:
         return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("worldscene.png"))
 
     def _get_player_sprite(self):
-        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("player_sprite.png"))
+        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("player_sprite_up.png"))
 
     def _get_path(self, filename):
         full_path = self.assets_dir / filename
@@ -248,21 +275,71 @@ class WorldScene:
                 return False
         return True
 
+    def _is_occluded(self, x, y):
+        for occ in self.occluders:
+            if (occ[0] <= x <= occ[2] and occ[1] <= y <= occ[3]):
+                return True
+        return False
+
+    def _set_player_sprite(self, direction_name):
+        sprite_map = {
+            "up": "player_sprite_up.png",
+            "down": "player_sprite_down.png",
+            "left": "player_sprite_left.png",
+            "right": "player_sprite_right.png"
+        }
+
+        if direction_name != self.current_sprite_name:
+            new_file = sprite_map.get(direction_name)
+
+            if self.is_visible:
+                self.player_sprite.undraw()
+
+            new_sprite = gf.Image(
+                gf.Point(self.screen_width / 2, self.screen_height / 2),
+                self._get_path(new_file)
+            )
+
+            self.player_sprite = new_sprite
+            self.current_sprite_name = direction_name
+
+            if self.is_visible:
+                self.player_sprite.draw(self.window)
+
 
     def update(self):
+        is_moving = False
         old_world_x = self.player_world_x
         old_world_y = self.player_world_y
         old_cam_x = self.cam_x
         old_cam_y = self.cam_y
 
         dx, dy = 0, 0
-        if self.keys["w"]: dy -= self.velocity
-        if self.keys["s"]: dy += self.velocity
-        if self.keys["a"]: dx -= self.velocity
-        if self.keys["d"]: dx += self.velocity
+        if self.keys["w"]:
+            dy -= self.velocity
+            is_moving = True
+        elif self.keys["s"]:
+            dy += self.velocity
+            is_moving = True
+        elif self.keys["a"]:
+            dx -= self.velocity
+            is_moving = True
+        elif self.keys["d"]:
+            dx += self.velocity
+            is_moving = True
 
         future_x = self.player_world_x + dx
         future_y = self.player_world_y + dy
+
+        if is_moving:
+            if dy < 0:
+                self._set_player_sprite("up")
+            elif dy > 0:
+                self._set_player_sprite("down")
+            elif dx < 0:
+                self._set_player_sprite("left")
+            elif dx > 0:
+                self._set_player_sprite("right")
 
         if dx != 0 and self._is_free(future_x, self.player_world_y):
             self.player_world_x = future_x
@@ -294,3 +371,11 @@ class WorldScene:
 
         if screen_move_x != 0 or screen_move_y != 0:
             self.player_sprite.move(screen_move_x, screen_move_y)
+
+        occluded = self._is_occluded(self.player_world_x, self.player_world_y)
+        if occluded and self.is_visible:
+            self.player_sprite.undraw()
+            self.is_visible = False
+        elif not occluded and not self.is_visible:
+            self.player_sprite.draw(self.window)
+            self.is_visible = True
