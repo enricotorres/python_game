@@ -181,30 +181,38 @@ class WorldScene:
         self.player = player
         self.map_width = 2752
         self.map_height = 1536
+        self.screen_width = self.window.getWidth()
+        self.screen_height = self.window.getHeight()
 
         self.root_dir = Path(__file__).resolve().parent.parent
         self.assets_dir = self.root_dir / "assets" / "images"
 
+        self.player_world_x = self.map_width / 2
+        self.player_world_y = self.map_height / 2
+
+        self.cam_x = self.player_world_x - (self.screen_width / 2)
+        self.cam_y = self.player_world_y - (self.screen_height / 2)
+
+        self.velocity = 10
+        self.obstacles = [
+            (0, 0, 2752, 20),      # Borda Superior
+            (0, 0, 20, 1536),      # Borda Esquerda
+            (2732, 0, 2752, 1536), # Borda Direita
+            (0, 1516, 2752, 1536), # Borda Inferior
+            (959, 514, 1275, 690), # Casa do Ash
+            (1543, 518, 1862, 690), # Casa marrom
+            (895, 648, 944, 690), # Caixa correio Ash
+            (1483, 648, 1526, 690) # caixa correio marrom
+
+        ]
+
         self.background = self._get_background()
         self.background.draw(self.window)
 
-        self.velocity = 1
-
-        self.current_x = self.window.getWidth() / 2
-        self.current_y = self.window.getHeight() / 2
-
-        half_map_w = self.map_width / 2
-        half_map_h = self.map_height / 2
-        win_w = self.window.getWidth()
-        win_h = self.window.getHeight()
-
-        self.max_x = half_map_w
-        self.min_x = win_w - half_map_w
-        self.max_y = half_map_h
-        self.min_y = win_h - half_map_h
+        self.player_sprite = self._get_player_sprite()
+        self.player_sprite.draw(self.window)
 
         self.keys = {"w": False, "s": False, "a": False, "d": False}
-
         self.window.master.bind("<KeyPress>", self._on_key_press)
         self.window.master.bind("<KeyRelease>", self._on_key_release)
         self.window.master.focus_set()
@@ -220,38 +228,69 @@ class WorldScene:
             self.keys[key] = False
 
     def _get_background(self):
-        center_x = self.window.getWidth() / 2
-        center_y = self.window.getHeight() / 2
-        return gf.Image(gf.Point(center_x, center_y), self._get_path("worldscene.png"))
+        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("worldscene.png"))
+
+    def _get_player_sprite(self):
+        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("player_sprite.png"))
 
     def _get_path(self, filename):
         full_path = self.assets_dir / filename
         return str(full_path)
 
+    def _is_free(self, x, y):
+        hitbox_w = 40
+        hitbox_h = 20
+
+        p_rect = (x - hitbox_w/2, y - hitbox_h/2, x + hitbox_w/2, y + hitbox_h/2)
+        for obs in self.obstacles:
+            if (p_rect[0] < obs[2] and p_rect[2] > obs[0] and
+                p_rect[1] < obs[3] and p_rect[3] > obs[1]):
+                return False
+        return True
+
+
     def update(self):
+        old_world_x = self.player_world_x
+        old_world_y = self.player_world_y
+        old_cam_x = self.cam_x
+        old_cam_y = self.cam_y
 
-        dx = 0
-        dy = 0
+        dx, dy = 0, 0
+        if self.keys["w"]: dy -= self.velocity
+        if self.keys["s"]: dy += self.velocity
+        if self.keys["a"]: dx -= self.velocity
+        if self.keys["d"]: dx += self.velocity
 
-        if self.keys["w"]:
-            dy += self.velocity
-        elif self.keys["s"]:
-            dy -= self.velocity
+        future_x = self.player_world_x + dx
+        future_y = self.player_world_y + dy
 
-        if self.keys["a"]:
-            dx += self.velocity
-        elif self.keys["d"]:
-            dx -= self.velocity
+        if dx != 0 and self._is_free(future_x, self.player_world_y):
+            self.player_world_x = future_x
 
-        future_x = self.current_x + dx
-        future_y = self.current_y + dy
+        if dy != 0 and self._is_free(self.player_world_x, future_y):
+            self.player_world_y = future_y
 
-        if future_x > self.max_x or future_x < self.min_x:
-            dx = 0
-        if future_y > self.max_y or future_y < self.min_y:
-            dy = 0
+        margin = 20
+        self.player_world_x = max(margin, min(self.player_world_x, self.map_width - margin))
+        self.player_world_y = max(margin, min(self.player_world_y, self.map_height - margin))
 
-        if dx != 0 or dy != 0:
-            self.background.move(dx, dy)
-            self.current_x += dx
-            self.current_y += dy
+        target_cam_x = self.player_world_x - (self.screen_width / 2)
+        target_cam_y = self.player_world_y - (self.screen_height / 2)
+
+        self.cam_x = max(0, min(target_cam_x, self.map_width - self.screen_width))
+        self.cam_y = max(0, min(target_cam_y, self.map_height - self.screen_height))
+
+        diff_cam_x = self.cam_x - old_cam_x
+        diff_cam_y = self.cam_y - old_cam_y
+
+        if diff_cam_x != 0 or diff_cam_y != 0:
+            self.background.move(-diff_cam_x, -diff_cam_y)
+
+        diff_world_x = self.player_world_x - old_world_x
+        diff_world_y = self.player_world_y - old_world_y
+
+        screen_move_x = diff_world_x - diff_cam_x
+        screen_move_y = diff_world_y - diff_cam_y
+
+        if screen_move_x != 0 or screen_move_y != 0:
+            self.player_sprite.move(screen_move_x, screen_move_y)
