@@ -185,7 +185,7 @@ class WorldScene:
         self.screen_height = self.window.getHeight()
 
         self.root_dir = Path(__file__).resolve().parent.parent
-        self.assets_dir = self.root_dir / "assets" / "images"
+        self.assets_dir = self.root_dir / "assets" / "images" / "characters" / "player"
 
         self.player_world_x = self.map_width / 2
         self.player_world_y = self.map_height / 2
@@ -255,7 +255,8 @@ class WorldScene:
             self.keys[key] = False
 
     def _get_background(self):
-        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("worldscene.png"))
+        map_path = self.root_dir / "assets" / "images" / "environment" / "maps" / "worldscene.png"
+        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), str(map_path))
 
     def _get_player_sprite(self):
         return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("player_sprite_up.png"))
@@ -346,10 +347,6 @@ class WorldScene:
 
         if dy != 0 and self._is_free(self.player_world_x, future_y):
             self.player_world_y = future_y
-
-        margin = 20
-        self.player_world_x = max(margin, min(self.player_world_x, self.map_width - margin))
-        self.player_world_y = max(margin, min(self.player_world_y, self.map_height - margin))
 
         target_cam_x = self.player_world_x - (self.screen_width / 2)
         target_cam_y = self.player_world_y - (self.screen_height / 2)
