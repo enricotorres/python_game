@@ -122,13 +122,22 @@ class BattleScene:
         name = self.player_pokemon.name
         player_p_name = gf.Text(p_pos, name)
         player_p_name.setSize(18)
+        p_lvl_pos = gf.Point(272, 35)
+        p_level = self.player_pokemon.level
+        player_p_lvl = gf.Text(p_lvl_pos, f"LVL {p_level}")
+        player_p_lvl.setSize(18)
 
         e_pos = gf.Point(1107, 35)
         name = self.enemy_pokemon.name
         enemy_p_name = gf.Text(e_pos, name)
         enemy_p_name.setSize(18)
+        e_lvl_pos = gf.Point(1310, 35)
+        e_level = self.enemy_pokemon.level
+        enemy_p_lvl = gf.Text(e_lvl_pos, f"LVL {e_level}")
+        enemy_p_lvl.setSize(18)
         
-        return player_p_name, enemy_p_name
+        
+        return player_p_name, enemy_p_name, player_p_lvl, enemy_p_lvl
 
     def verificar_clique(self, click, p1, p2):
         x, y = click.getX(), click.getY()
