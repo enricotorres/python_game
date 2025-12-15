@@ -34,6 +34,11 @@ class BattleController:
         self.weather_turns: int = 0
 
         self.state: str = "START"
+
+        self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name = self.battle_scene.pokemon_names()
+        self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
+        self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
+
         logger.info(f"Controlador de Batalha iniciado: {self.player.name} vs {self.enemy.name}")
 
     def run_battle_loop(self) -> None:
@@ -150,7 +155,12 @@ class BattleController:
                 logger.info(f"Novo Pokémon ativo: {self.player_pokemon.name}")
                 self.battle_scene.p_life_rect.undraw()
                 self.battle_scene.e_life_rect.undraw()
+                self.battle_scene.pokemon_player_name.undraw()
+                self.battle_scene.pokemon_enemy_name.undraw()
                 self.battle_scene.p_life_rect, self.battle_scene.e_life_rect = self.battle_scene.health_bar()
+                self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name = self.battle_scene.pokemon_names()
+                self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
+                self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
                 self.battle_scene.p_life_rect.draw(self.battle_scene.janela)
                 self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
 
@@ -189,7 +199,12 @@ class BattleController:
             logger.info(f"Troca realizada. Vai! {self.player_pokemon.name}!")
             self.battle_scene.p_life_rect.undraw()
             self.battle_scene.e_life_rect.undraw()
+            self.battle_scene.pokemon_player_name.undraw()
+            self.battle_scene.pokemon_enemy_name.undraw()
             self.battle_scene.p_life_rect, self.battle_scene.e_life_rect = self.battle_scene.health_bar()
+            self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name = self.battle_scene.pokemon_names()
+            self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
+            self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
             self.battle_scene.p_life_rect.draw(self.battle_scene.janela)
             self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
             self.battle_scene.update_sprites()
@@ -331,7 +346,12 @@ class BattleController:
                 logger.info(f"Inimigo enviou {self.enemy_pokemon.name}!")
                 self.battle_scene.p_life_rect.undraw()
                 self.battle_scene.e_life_rect.undraw()
+                self.battle_scene.pokemon_player_name.undraw()
+                self.battle_scene.pokemon_enemy_name.undraw()
                 self.battle_scene.p_life_rect, self.battle_scene.e_life_rect = self.battle_scene.health_bar()
+                self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name = self.battle_scene.pokemon_names()
+                self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
+                self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
                 self.battle_scene.p_life_rect.draw(self.battle_scene.janela)
                 self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
                 self.battle_scene.update_sprites()

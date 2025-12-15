@@ -117,6 +117,19 @@ class BattleScene:
             
         self.sprite()
 
+    def pokemon_names(self):
+        p_pos = gf.Point(60, 35)
+        name = self.player_pokemon.name
+        player_p_name = gf.Text(p_pos, name)
+        player_p_name.setSize(18)
+
+        e_pos = gf.Point(1107, 35)
+        name = self.enemy_pokemon.name
+        enemy_p_name = gf.Text(e_pos, name)
+        enemy_p_name.setSize(18)
+        
+        return player_p_name, enemy_p_name
+
     def verificar_clique(self, click, p1, p2):
         x, y = click.getX(), click.getY()
         x_min, x_max = min(p1.getX(), p2.getX()), max(p1.getX(), p2.getX())
