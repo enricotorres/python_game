@@ -1,6 +1,7 @@
 import graphics as gf
 from pathlib import Path
 from src.classes import Trainer
+from src.world_logic import WorldLogic
 
 class BattleScene:
     def __init__(self, window):
@@ -178,213 +179,57 @@ class WorldScene:
     def __init__(self, window, player: Trainer):
         self.window = window
         self.player = player
-        self.map_width = 2752
-        self.map_height = 1536
         self.screen_width = self.window.getWidth()
         self.screen_height = self.window.getHeight()
 
         self.root_dir = Path(__file__).resolve().parent.parent
-        self.assets_dir = self.root_dir / "assets" / "images" / "characters" / "player"
 
-        self.player_world_x = self.map_width / 2
-        self.player_world_y = self.map_height / 2
-
-        self.cam_x = self.player_world_x - (self.screen_width / 2)
-        self.cam_y = self.player_world_y - (self.screen_height / 2)
-
-        self.velocity = 10
-        self.obstacles = [
-            (0, 0, 2752, 20),      # Borda Superior
-            (0, 0, 20, 1536),      # Borda Esquerda
-            (2732, 0, 2752, 1536), # Borda Direita
-            (0, 1516, 2752, 1536), # Borda Inferior
-            (959, 514, 1275, 690), # Casa do Ash
-            (1543, 518, 1862, 690), # Casa marrom
-            (895, 648, 944, 690), # Caixa correio Ash
-            (1483, 648, 1526, 690), # caixa correio marrom
-            (941, 949, 1270, 1102), # Pokemarket
-            (954, 1122, 1009, 1139), # placa pokemarket
-            (1224, 1108, 1279, 1153), # placa pokemarket
-            (1273, 1005, 1335, 1101), # barril pokemarket
-            (857, 977, 935, 1030), # caixa grande pokemarket
-            (877, 1030, 943, 1091), # caixa pequena pokemarket
-            (1481, 900, 1925, 1072), # Lab. carvalho
-            (711, 328, 1300, 328), # limite superior
-            (1439, 328, 2085, 328), # limite superior
-            (710, 328, 710, 1324), # Limite esquerda
-            (2087, 328, 2087, 1412), # Limite direita
-            (1343, 1410, 2080, 1410), # Limite inferir direita
-            (710, 1306, 1311, 1306), # Limite inferior esquerda
-            (1330, 1317, 1330, 1416), # limite inferior agua
-            (1300, 0, 1300, 328), # saida superior
-            (1439, 0, 1439, 328), # saida superior
-            (1473, 1256, 1876, 1276), # cerca
-            (820, 1179, 867, 1233), # npc mulher
-            (1523, 1309, 1573, 1348) # npc homem
-
-        ]
-        self.occluders = [
-            (959, 420, 1275, 690),   # Casa do Ash (Topo e Telhado)
-            (1543, 420, 1862, 690),  # Casa Marrom (Topo e Telhado)
-            (941, 820, 1270, 949),  # Pokemarket (Topo e Telhado)
-            (1481, 820, 1925, 900)   # Lab. carvalho (Topo e Telhado)
-        ]
+        self.logic = WorldLogic(self.screen_width, self.screen_height)
 
         self.background = self._get_background()
         self.background.draw(self.window)
 
-        self.player_sprite = self._get_player_sprite()
+        self.player_sprite = gf.Image(
+            gf.Point(self.screen_width / 2, self.screen_height / 2),
+            self.logic.get_sprite_path()
+        )
         self.player_sprite.draw(self.window)
         self.is_visible = True
-        self.current_sprite_name = "up"
-        self.walk_index = 0
-        self.anim_timer = 0
-        self.anim_speed = 2
 
-        self.keys = {"w": False, "s": False, "a": False, "d": False}
+
         self.window.master.bind("<KeyPress>", self._on_key_press)
         self.window.master.bind("<KeyRelease>", self._on_key_release)
         self.window.master.focus_set()
 
     def _on_key_press(self, event):
         key = event.keysym.lower()
-        if key in self.keys:
-            self.keys[key] = True
+        self.logic.set_key(key, True)
 
     def _on_key_release(self, event):
         key = event.keysym.lower()
-        if key in self.keys:
-            self.keys[key] = False
+        self.logic.set_key(key, False)
 
     def _get_background(self):
         map_path = self.root_dir / "assets" / "images" / "environment" / "maps" / "worldscene.png"
         return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), str(map_path))
 
-    def _get_player_sprite(self):
-        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("player_sprite_up_0.png"))
-
-    def _get_path(self, filename):
-        full_path = self.assets_dir / filename
-        return str(full_path)
-
-    def _is_free(self, x, y):
-        hitbox_w = 40
-        hitbox_h = 20
-
-        p_rect = (x - hitbox_w/2, y - hitbox_h/2, x + hitbox_w/2, y + hitbox_h/2)
-        for obs in self.obstacles:
-            if (p_rect[0] < obs[2] and p_rect[2] > obs[0] and
-                p_rect[1] < obs[3] and p_rect[3] > obs[1]):
-                return False
-        return True
-
-    def _is_occluded(self, x, y):
-        for occ in self.occluders:
-            if (occ[0] <= x <= occ[2] and occ[1] <= y <= occ[3]):
-                return True
-        return False
-
-    def _update_sprite_image(self, direction):
-
-        filename = f"player_sprite_{direction}_{self.walk_index}.png"
-        current_pos = self.player_sprite.getAnchor()
-
-        if self.is_visible:
-            self.player_sprite.undraw()
-
-        self.player_sprite = gf.Image(current_pos, self._get_path(filename))
-        self.current_sprite_name = direction # Atualiza a direção atual
-
-        if self.is_visible:
-            self.player_sprite.draw(self.window)
-
 
     def update(self):
-        is_moving = False
-        old_world_x = self.player_world_x
-        old_world_y = self.player_world_y
-        old_cam_x = self.cam_x
-        old_cam_y = self.cam_y
-
-        new_direction = self.current_sprite_name
-
-        dx, dy = 0, 0
-
-        if self.keys["w"]:
-            dy -= self.velocity
-            is_moving = True
-            new_direction = "up"
-        elif self.keys["s"]:
-            dy += self.velocity
-            is_moving = True
-            new_direction = "down"
-        elif self.keys["a"]:
-            dx -= self.velocity
-            is_moving = True
-            new_direction = "left"
-        elif self.keys["d"]:
-            dx += self.velocity
-            is_moving = True
-            new_direction = "right"
-
-        img_changed = False
-        if is_moving:
-            self.anim_timer += 1
-            if self.anim_timer > self.anim_speed:
-                if self.walk_index == 1:
-                    self.walk_index = 2
-                else:
-                    self.walk_index = 1
-                self.anim_timer = 0
-                img_changed = True
-
-            if new_direction != self.current_sprite_name:
-                self.walk_index = 1
-                self.anim_timer = 0
-                img_changed = True
-        else:
-            if self.walk_index != 0:
-                self.walk_index = 0
-                img_changed = True
-            self.anim_timer = 0
-
-        if img_changed:
-            self._update_sprite_image(new_direction)
-
-        future_x = self.player_world_x + dx
-        future_y = self.player_world_y + dy
-
-        if dx != 0 and self._is_free(future_x, self.player_world_y):
-            self.player_world_x = future_x
-
-        if dy != 0 and self._is_free(self.player_world_x, future_y):
-            self.player_world_y = future_y
-
-        target_cam_x = self.player_world_x - (self.screen_width / 2)
-        target_cam_y = self.player_world_y - (self.screen_height / 2)
-
-        self.cam_x = max(0, min(target_cam_x, self.map_width - self.screen_width))
-        self.cam_y = max(0, min(target_cam_y, self.map_height - self.screen_height))
-
-        diff_cam_x = self.cam_x - old_cam_x
-        diff_cam_y = self.cam_y - old_cam_y
-
-        if diff_cam_x != 0 or diff_cam_y != 0:
-            self.background.move(-diff_cam_x, -diff_cam_y)
-
-        diff_world_x = self.player_world_x - old_world_x
-        diff_world_y = self.player_world_y - old_world_y
-
-        screen_move_x = diff_world_x - diff_cam_x
-        screen_move_y = diff_world_y - diff_cam_y
-
-        if screen_move_x != 0 or screen_move_y != 0:
-            self.player_sprite.move(screen_move_x, screen_move_y)
-
-        occluded = self._is_occluded(self.player_world_x, self.player_world_y)
-        if occluded and self.is_visible:
-            self.player_sprite.undraw()
-            self.is_visible = False
-        elif not occluded and not self.is_visible:
-            self.player_sprite.draw(self.window)
-            self.is_visible = True
+        result = self.logic.update()
+        if result["background_dx"] != 0 or result["background_dy"] != 0:
+            self.background.move(result["background_dx"], result["background_dy"])
+        if result["sprite_changed"]:
+            current_pos = self.player_sprite.getAnchor()
+            if self.is_visible:
+                self.player_sprite.undraw()
+            self.player_sprite = gf.Image(current_pos, result["sprite_path"])
+            if self.is_visible:
+                self.player_sprite.draw(self.window)
+        if result["player_dx"] != 0 or result["player_dy"] != 0:
+            self.player_sprite.move(result["player_dx"], result["player_dy"])
+        if result["visibility_changed"]:
+            if result["sprite_visible"] and not self.is_visible:
+                self.player_sprite.draw(self.window)
+            elif not result["sprite_visible"] and self.is_visible:
+                self.player_sprite.undraw()
+            self.is_visible = result["sprite_visible"]
