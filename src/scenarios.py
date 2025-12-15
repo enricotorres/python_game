@@ -287,7 +287,6 @@ class WorldScene:
     def _update_sprite_image(self, direction):
 
         filename = f"player_sprite_{direction}_{self.walk_index}.png"
-
         current_pos = self.player_sprite.getAnchor()
 
         if self.is_visible:
