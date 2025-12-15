@@ -659,7 +659,11 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+    "sprite": {
+      "front" : "squirtle.png",
+      "back" : "squirtle-2.png",
+      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"},
+    
     "base_experience": 63,
     "evolution": {
       "target": "Wartortle",
@@ -1245,7 +1249,10 @@
         "level": 44
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+    "sprite": {
+      "front" : "pidgey.png",
+      "back" : "pidgey-2.png",
+      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"},
     "base_experience": 50,
     "evolution": {
       "target": "Pidgeotto",
@@ -1988,7 +1995,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    "sprite": {
+      "front" : "pikachu.png",
+      "back" : "pikachu-2.png",
+      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"},
     "base_experience": 112,
     "evolution": {
       "target": "Raichu",
@@ -3546,7 +3556,10 @@
         "level": 36
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
+    "sprite": {
+      "front" : "zubat.png",
+      "back" : "zubat-2.png",
+      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png"},
     "base_experience": 49,
     "evolution": {
       "target": "Golbat",
@@ -6512,7 +6525,10 @@
         "level": 36
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
+    "sprite": {
+      "front" : "geodude.png",
+      "back" : "geodude-2.png",
+      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png"},
     "base_experience": 60,
     "evolution": {
       "target": "Graveler",
@@ -8078,7 +8094,10 @@
         "level": 35
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
+    "sprite": {
+      "front" : "gastly.png",
+      "back" : "gastly-2.png",
+      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png"},
     "base_experience": 62,
     "evolution": {
       "target": "Haunter",

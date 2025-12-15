@@ -54,7 +54,11 @@ class BattleScene:
         back = self.bg()
         back.draw(self.janela)
 
+        self.player_index = 0
+        self.enemy_index = 0
+
         self.sprite()
+        
 
         self.p_life_rect, self.e_life_rect = self.health_bar()
         self.p_life_rect.draw(self.janela)
@@ -74,31 +78,44 @@ class BattleScene:
         return gf.Image(gf.Point(704, 675), self.get_path("battle_hud_final.png"))
     
     def sprite(self):
-        self.player_pokemon = self.player.team[0]
-        pos_player = gf.Point(500, 530)
+        # ------------------ PLAYER ---------------------
+        index_atual = self.player.active_slot 
+        self.player_pokemon = self.player.team[index_atual]
+        
+        pos_player = gf.Point(500, 500)
         sprite = self.player_pokemon.sprite
         if isinstance(sprite, dict):
             filename = sprite["back"] 
         else:
             filename = sprite
         path = self.get_path(filename)
-        sprite_player = gf.Image(pos_player, path)
-        sprite_player.draw(self.janela)
 
-        #------------------INIMIGO---------------------
+        self.img_player = gf.Image(pos_player, path)
+        self.img_player.draw(self.janela)
 
+        # ------------------ INIMIGO ---------------------
+        #index_enemy = self.enemy.active_slot
         self.enemy_pokemon = self.enemy.team[0]
+
         pos_enemy = gf.Point(800, 380)
         sprite_enemy = self.enemy_pokemon.sprite
-        if isinstance(sprite, dict):
+        if isinstance(sprite_enemy, dict):
             filename = sprite_enemy["front"] 
         else:
             filename = sprite_enemy
         path = self.get_path(filename)
-        sprite_enemy = gf.Image(pos_enemy, path)
-        sprite_enemy.draw(self.janela)
+        
+        self.img_enemy = gf.Image(pos_enemy, path)
+        self.img_enemy.draw(self.janela)
 
-        #passar para classes.py
+    def update_sprites(self):
+        if hasattr(self, 'img_player'):
+            self.img_player.undraw()
+        
+        #if hasattr(self, 'img_enemy'):
+            #self.img_enemy.undraw()
+            
+        self.sprite()
 
     def verificar_clique(self, click, p1, p2):
         x, y = click.getX(), click.getY()
