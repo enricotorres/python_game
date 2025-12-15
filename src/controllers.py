@@ -35,7 +35,7 @@ class BattleController:
 
         self.state: str = "START"
 
-        self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name, self.battle_scene.pokemon_player_level, self.battle_scene.pokemon_enemy_level = self.battle_scene.pokemon_names()
+        self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name, self.battle_scene.pokemon_player_level, self.battle_scene.pokemon_enemy_level = self.battle_scene.pokemon_infos()
         self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
         self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
         self.battle_scene.pokemon_player_level.draw(self.battle_scene.janela)
@@ -155,20 +155,9 @@ class BattleController:
             if self.player.set_active_pokemon_index(selected_index):
                 self.player_pokemon = self.player.get_active_pokemon()
                 logger.info(f"Novo Pokémon ativo: {self.player_pokemon.name}")
-                self.battle_scene.p_life_rect.undraw()
-                self.battle_scene.e_life_rect.undraw()
-                self.battle_scene.pokemon_player_name.undraw()
-                self.battle_scene.pokemon_enemy_name.undraw()
-                self.battle_scene.pokemon_player_level.undraw()
-                self.battle_scene.pokemon_enemy_level.undraw()
-                self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name, self.battle_scene.pokemon_player_level, self.battle_scene.pokemon_enemy_level = self.battle_scene.pokemon_names()
-                self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
-                self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
-                self.battle_scene.pokemon_player_level.draw(self.battle_scene.janela)
-                self.battle_scene.pokemon_enemy_level.draw(self.battle_scene.janela)
-                self.battle_scene.p_life_rect.draw(self.battle_scene.janela)
-                self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
-
+                
+                self.battle_scene.update_health_bar()
+                self.battle_scene.update_info()
                 self.battle_scene.update_sprites()
 
                 self.state = "PLAYER_TURN"
@@ -202,20 +191,8 @@ class BattleController:
         if self.player_action_type == "switch":
             self.player_pokemon = self.player.get_active_pokemon()
             logger.info(f"Troca realizada. Vai! {self.player_pokemon.name}!")
-            self.battle_scene.p_life_rect.undraw()
-            self.battle_scene.e_life_rect.undraw()
-            self.battle_scene.pokemon_player_name.undraw()
-            self.battle_scene.pokemon_enemy_name.undraw()
-            self.battle_scene.pokemon_player_level.undraw()
-            self.battle_scene.pokemon_enemy_level.undraw()
-            self.battle_scene.p_life_rect, self.battle_scene.e_life_rect = self.battle_scene.health_bar()
-            self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name, self.battle_scene.pokemon_player_level, self.battle_scene.pokemon_enemy_level = self.battle_scene.pokemon_names()
-            self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
-            self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
-            self.battle_scene.pokemon_player_level.draw(self.battle_scene.janela)
-            self.battle_scene.pokemon_enemy_level.draw(self.battle_scene.janela)
-            self.battle_scene.p_life_rect.draw(self.battle_scene.janela)
-            self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
+            self.battle_scene.update_health_bar()
+            self.battle_scene.update_info()
             self.battle_scene.update_sprites()
             if self._check_battle_status():
                  self._perform_attack(self.enemy_pokemon, self.player_pokemon, self.enemy_chosen_move)
@@ -309,11 +286,8 @@ class BattleController:
             if hits_count > 1:
                 logger.info(f"Atingiu {hits_count} vezes!")
             
-            self.battle_scene.p_life_rect.undraw()
-            self.battle_scene.e_life_rect.undraw()
-            self.battle_scene.p_life_rect, self.battle_scene.e_life_rect = self.battle_scene.health_bar()
-            self.battle_scene.p_life_rect.draw(self.battle_scene.janela)
-            self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
+            self.battle_scene.update_health_bar()
+            
 
         if hasattr(move, "mechanics") and move.mechanics:
             if "drain_percent" in move.mechanics:
@@ -353,20 +327,8 @@ class BattleController:
             logger.info(f"Ganhou {xp_gained} de experiência!")
             if self._swap_enemy_pokemon():
                 logger.info(f"Inimigo enviou {self.enemy_pokemon.name}!")
-                self.battle_scene.p_life_rect.undraw()
-                self.battle_scene.e_life_rect.undraw()
-                self.battle_scene.pokemon_player_name.undraw()
-                self.battle_scene.pokemon_enemy_name.undraw()
-                self.battle_scene.pokemon_player_level.undraw()
-                self.battle_scene.pokemon_enemy_level.undraw()
-                self.battle_scene.p_life_rect, self.battle_scene.e_life_rect = self.battle_scene.health_bar()
-                self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name, self.battle_scene.pokemon_player_level, self.battle_scene.pokemon_enemy_level = self.battle_scene.pokemon_names()
-                self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
-                self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
-                self.battle_scene.pokemon_player_level.draw(self.battle_scene.janela)
-                self.battle_scene.pokemon_enemy_level.draw(self.battle_scene.janela)
-                self.battle_scene.p_life_rect.draw(self.battle_scene.janela)
-                self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
+                self.battle_scene.update_health_bar()
+                self.battle_scene.update_info()
                 self.battle_scene.update_sprites()
             return False
 

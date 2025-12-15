@@ -45,6 +45,13 @@ class BattleScene:
         self.atk_back_pos1 = gf.Point(1132, 653)
         self.atk_back_pos2 = gf.Point(1400, 753)
 
+        self.p_life_rect = None
+        self.e_life_rect = None
+        self.pokemon_player_name = None
+        self.pokemon_enemy_name = None
+        self.pokemon_player_level = None
+        self.pokemon_enemy_level = None
+
         self.janela = window
 
         self.player = player
@@ -117,7 +124,10 @@ class BattleScene:
             
         self.sprite()
 
-    def pokemon_names(self):
+    def pokemon_infos(self):
+        self.player_pokemon = self.player.get_active_pokemon()
+        self.enemy_pokemon = self.enemy.get_active_pokemon()
+
         p_pos = gf.Point(60, 35)
         name = self.player_pokemon.name
         player_p_name = gf.Text(p_pos, name)
@@ -138,30 +148,25 @@ class BattleScene:
         
         
         return player_p_name, enemy_p_name, player_p_lvl, enemy_p_lvl
-
-    def verificar_clique(self, click, p1, p2):
-        x, y = click.getX(), click.getY()
-        x_min, x_max = min(p1.getX(), p2.getX()), max(p1.getX(), p2.getX())
-        y_min, y_max = min(p1.getY(), p2.getY()), max(p1.getY(), p2.getY())
-        return (x_min <= x <= x_max) and (y_min <= y <= y_max)
-
-    def fight_btn(self):
-        img = gf.Image(gf.Point(704, 675), self.get_path("atk_hud.png"))
-        txt = gf.Text(gf.Point(286.1, 675), "ATAQUE 1")
-        txt.setSize(18)
-
-        return img
-
-    def bag_btn(self):
-        return gf.Image(gf.Point(704, 675), self.get_path("white_hud.png"))
-
-    def pokemon_btn(self):
-        return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("pokemon_hud.png"))
     
-    def import_controller(self, BattleController):
-        self.battle_controller = BattleController
-        return self.battle_controller
-    
+    def update_info(self):
+        if hasattr(self, 'pokemon_player_name') and self.pokemon_player_name: 
+            self.pokemon_player_name.undraw()
+        if hasattr(self, 'pokemon_player_level') and self.pokemon_player_level: 
+            self.pokemon_player_level.undraw()
+        if hasattr(self, 'pokemon_enemy_name') and self.pokemon_enemy_name: 
+            self.pokemon_enemy_name.undraw()
+        if hasattr(self, 'pokemon_enemy_level') and self.pokemon_enemy_level: 
+            self.pokemon_enemy_level.undraw()
+
+        (self.pokemon_player_name, self.pokemon_enemy_name, 
+         self.pokemon_player_level, self.pokemon_enemy_level) = self.pokemon_infos()
+
+        self.pokemon_player_name.draw(self.janela)
+        self.pokemon_enemy_name.draw(self.janela)
+        self.pokemon_player_level.draw(self.janela)
+        self.pokemon_enemy_level.draw(self.janela)
+
     def health_bar(self):
         p_poke = self.player.get_active_pokemon()
         if p_poke is None:
@@ -193,6 +198,39 @@ class BattleScene:
 
         return hbar_player_rect, hbar_enemy_rect
     
+    def update_health_bar(self):
+        if hasattr(self, 'p_life_rect') and self.p_life_rect:
+            self.p_life_rect.undraw()
+        if hasattr(self, 'e_life_rect') and self.e_life_rect:
+            self.e_life_rect.undraw()
+
+        self.p_life_rect, self.e_life_rect = self.health_bar()
+
+        self.p_life_rect.draw(self.janela)
+        self.e_life_rect.draw(self.janela)
+
+    def verificar_clique(self, click, p1, p2):
+        x, y = click.getX(), click.getY()
+        x_min, x_max = min(p1.getX(), p2.getX()), max(p1.getX(), p2.getX())
+        y_min, y_max = min(p1.getY(), p2.getY()), max(p1.getY(), p2.getY())
+        return (x_min <= x <= x_max) and (y_min <= y <= y_max)
+
+    def fight_btn(self):
+        img = gf.Image(gf.Point(704, 675), self.get_path("atk_hud.png"))
+        txt = gf.Text(gf.Point(286.1, 675), "ATAQUE 1")
+        txt.setSize(18)
+
+        return img
+
+    def bag_btn(self):
+        return gf.Image(gf.Point(704, 675), self.get_path("white_hud.png"))
+
+    def pokemon_btn(self):
+        return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("pokemon_hud.png"))
+    
+    def import_controller(self, BattleController):
+        self.battle_controller = BattleController
+        return self.battle_controller
 
     def fight_txt(self):
         self.player_pokemon = self.player.get_active_pokemon()
