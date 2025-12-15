@@ -237,7 +237,7 @@ class WorldScene:
         self.player_sprite.draw(self.window)
         self.is_visible = True
         self.current_sprite_name = "up"
-        self.walk_index = 1
+        self.walk_index = 0
         self.anim_timer = 0
         self.anim_speed = 2
 
@@ -343,8 +343,8 @@ class WorldScene:
                 self.anim_timer = 0
                 img_changed = True
         else:
-            if self.walk_index != 1:
-                self.walk_index = 1
+            if self.walk_index != 0:
+                self.walk_index = 0
                 img_changed = True
             self.anim_timer = 0
 
