@@ -1,7 +1,6 @@
 import graphics as gf
 from pathlib import Path
 from src.classes import Trainer
-import time
 
 class BattleScene:
     def __init__(self, window):
@@ -238,6 +237,9 @@ class WorldScene:
         self.player_sprite.draw(self.window)
         self.is_visible = True
         self.current_sprite_name = "up"
+        self.walk_index = 1
+        self.anim_timer = 0
+        self.anim_speed = 2
 
         self.keys = {"w": False, "s": False, "a": False, "d": False}
         self.window.master.bind("<KeyPress>", self._on_key_press)
@@ -259,7 +261,7 @@ class WorldScene:
         return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), str(map_path))
 
     def _get_player_sprite(self):
-        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("player_sprite_up.png"))
+        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), self._get_path("player_sprite_up_0.png"))
 
     def _get_path(self, filename):
         full_path = self.assets_dir / filename
@@ -282,30 +284,20 @@ class WorldScene:
                 return True
         return False
 
-    def _set_player_sprite(self, direction_name):
-        sprite_map = {
-            "up": "player_sprite_up.png",
-            "down": "player_sprite_down.png",
-            "left": "player_sprite_left.png",
-            "right": "player_sprite_right.png"
-        }
+    def _update_sprite_image(self, direction):
 
-        if direction_name != self.current_sprite_name:
-            new_file = sprite_map.get(direction_name)
+        filename = f"player_sprite_{direction}_{self.walk_index}.png"
 
-            if self.is_visible:
-                self.player_sprite.undraw()
+        current_pos = self.player_sprite.getAnchor()
 
-            new_sprite = gf.Image(
-                gf.Point(self.screen_width / 2, self.screen_height / 2),
-                self._get_path(new_file)
-            )
+        if self.is_visible:
+            self.player_sprite.undraw()
 
-            self.player_sprite = new_sprite
-            self.current_sprite_name = direction_name
+        self.player_sprite = gf.Image(current_pos, self._get_path(filename))
+        self.current_sprite_name = direction # Atualiza a direção atual
 
-            if self.is_visible:
-                self.player_sprite.draw(self.window)
+        if self.is_visible:
+            self.player_sprite.draw(self.window)
 
 
     def update(self):
@@ -315,32 +307,53 @@ class WorldScene:
         old_cam_x = self.cam_x
         old_cam_y = self.cam_y
 
+        new_direction = self.current_sprite_name
+
         dx, dy = 0, 0
+
         if self.keys["w"]:
             dy -= self.velocity
             is_moving = True
+            new_direction = "up"
         elif self.keys["s"]:
             dy += self.velocity
             is_moving = True
+            new_direction = "down"
         elif self.keys["a"]:
             dx -= self.velocity
             is_moving = True
+            new_direction = "left"
         elif self.keys["d"]:
             dx += self.velocity
             is_moving = True
+            new_direction = "right"
+
+        img_changed = False
+        if is_moving:
+            self.anim_timer += 1
+            if self.anim_timer > self.anim_speed:
+                if self.walk_index == 1:
+                    self.walk_index = 2
+                else:
+                    self.walk_index = 1
+                self.anim_timer = 0
+                img_changed = True
+
+            if new_direction != self.current_sprite_name:
+                self.walk_index = 1
+                self.anim_timer = 0
+                img_changed = True
+        else:
+            if self.walk_index != 1:
+                self.walk_index = 1
+                img_changed = True
+            self.anim_timer = 0
+
+        if img_changed:
+            self._update_sprite_image(new_direction)
 
         future_x = self.player_world_x + dx
         future_y = self.player_world_y + dy
-
-        if is_moving:
-            if dy < 0:
-                self._set_player_sprite("up")
-            elif dy > 0:
-                self._set_player_sprite("down")
-            elif dx < 0:
-                self._set_player_sprite("left")
-            elif dx > 0:
-                self._set_player_sprite("right")
 
         if dx != 0 and self._is_free(future_x, self.player_world_y):
             self.player_world_x = future_x
