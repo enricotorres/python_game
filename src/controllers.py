@@ -155,7 +155,7 @@ class BattleController:
                 self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
 
                 self.battle_scene.update_sprites()
-                
+
                 self.state = "PLAYER_TURN"
             else:
                 logger.warning("Não pode trocar para um Pokémon desmaiado.")
@@ -334,6 +334,7 @@ class BattleController:
                 self.battle_scene.p_life_rect, self.battle_scene.e_life_rect = self.battle_scene.health_bar()
                 self.battle_scene.p_life_rect.draw(self.battle_scene.janela)
                 self.battle_scene.e_life_rect.draw(self.battle_scene.janela)
+                self.battle_scene.update_sprites()
             return False
 
         return True

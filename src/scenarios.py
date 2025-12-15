@@ -94,8 +94,8 @@ class BattleScene:
         self.img_player.draw(self.janela)
 
         # ------------------ INIMIGO ---------------------
-        #index_enemy = self.enemy.active_slot
-        self.enemy_pokemon = self.enemy.team[0]
+        index_enemy = self.enemy.active_slot
+        self.enemy_pokemon = self.enemy.team[index_enemy]
 
         pos_enemy = gf.Point(800, 380)
         sprite_enemy = self.enemy_pokemon.sprite
@@ -112,8 +112,8 @@ class BattleScene:
         if hasattr(self, 'img_player'):
             self.img_player.undraw()
         
-        #if hasattr(self, 'img_enemy'):
-            #self.img_enemy.undraw()
+        if hasattr(self, 'img_enemy'):
+            self.img_enemy.undraw()
             
         self.sprite()
 

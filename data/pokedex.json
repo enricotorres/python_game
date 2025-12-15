@@ -4845,7 +4845,10 @@
         "level": 39
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
+    "sprite" : {
+      "front" : "mankey.png",
+      "back" : "mankey-2.png",
+      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png"},
     "base_experience": 61,
     "evolution": {
       "target": "Primeape",
@@ -8355,7 +8358,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
+    "sprite" : {
+      "front" : "onix.png",
+      "back" : "onix-2.png",
+      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png"},
     "base_experience": 77,
     "evolution": {
       "target": "Steelix",
