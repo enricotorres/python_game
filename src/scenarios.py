@@ -135,20 +135,29 @@ class BattleScene:
 
         self.sprite()
 
-    def pokemon_infos(self):
-        self.player_pokemon = self.player.get_active_pokemon()
+    def pokemon_infos(self, custom_pos=None, specific_pokemon=None):
+        if specific_pokemon:
+            target_poke = specific_pokemon
+        else:
+            target_poke = self.player.get_active_pokemon()
+
         self.enemy_pokemon = self.enemy.get_active_pokemon()
 
-        p_pkname_pos = gf.Point(60, 35)
-        p_lvl_pos = gf.Point(280, 35)
+        if custom_pos:
+            p_pkname_pos = custom_pos
+            p_lvl_pos = gf.Point(custom_pos.getX(), custom_pos.getY() + 30)
+        else:
+            p_pkname_pos = gf.Point(60, 35)
+            p_lvl_pos = gf.Point(280, 35)
 
-        e_pkname_pos = gf.Point(60, 35)
-        e_lvl_pos = gf.Point(280, 35)
+        e_pkname_pos = gf.Point(1107, 35)
+        e_lvl_pos = gf.Point(1318, 35)
 
-        name = self.player_pokemon.name
+        name = target_poke.name
         player_p_name = gf.Text(p_pkname_pos, name)
         player_p_name.setSize(18)
-        p_level = self.player_pokemon.level
+        
+        p_level = target_poke.level
         player_p_lvl = gf.Text(p_lvl_pos, f"LVL {p_level}")
         player_p_lvl.setSize(18)
 
@@ -315,11 +324,44 @@ class BattleScene:
 
         icon1, icon2, icon3, icon4, icon5, icon6 = self.select_pk_sprites()
         icon1.draw(self.janela)
+
         icon2.draw(self.janela)
         icon3.draw(self.janela)
         icon4.draw(self.janela)
         icon5.draw(self.janela)
         icon6.draw(self.janela)
+
+        poke_slot_0 = self.player.team[0]
+        pos_texto_0 = gf.Point(self.pk_option1_pos1.getX() + 265, self.pk_option1_pos1.getY() + 65)
+        p_name1, _, p_lvl1, _ = self.pokemon_infos(custom_pos=pos_texto_0, specific_pokemon=poke_slot_0)
+        poke_slot_1 = self.player.team[1]
+        pos_texto_1 = gf.Point(self.pk_option2_pos1.getX() + 265, self.pk_option2_pos1.getY() + 65)
+        p_name2, _, p_lvl2, _ = self.pokemon_infos(custom_pos=pos_texto_1, specific_pokemon=poke_slot_1)
+        poke_slot_2 = self.player.team[2]
+        pos_texto_2 = gf.Point(self.pk_option3_pos1.getX() + 265, self.pk_option3_pos1.getY() + 65)
+        p_name3, _, p_lvl3, _ = self.pokemon_infos(custom_pos=pos_texto_2, specific_pokemon=poke_slot_2)
+        poke_slot_3 = self.player.team[3]
+        pos_texto_3 = gf.Point(self.pk_option4_pos1.getX() + 265, self.pk_option4_pos1.getY() + 65)
+        p_name4, _, p_lvl4, _ = self.pokemon_infos(custom_pos=pos_texto_3, specific_pokemon=poke_slot_3)
+        poke_slot_4 = self.player.team[4]
+        pos_texto_4 = gf.Point(self.pk_option5_pos1.getX() + 265, self.pk_option5_pos1.getY() + 65)
+        p_name5, _, p_lvl5, _ = self.pokemon_infos(custom_pos=pos_texto_4, specific_pokemon=poke_slot_4)
+        poke_slot_5 = self.player.team[5]
+        pos_texto_5 = gf.Point(self.pk_option6_pos1.getX() + 265, self.pk_option6_pos1.getY() + 65)
+        p_name6, _, p_lvl6, _ = self.pokemon_infos(custom_pos=pos_texto_5, specific_pokemon=poke_slot_5)
+        
+        p_name1.draw(self.janela)
+        p_lvl1.draw(self.janela)
+        p_name2.draw(self.janela)
+        p_lvl2.draw(self.janela)
+        p_name3.draw(self.janela)
+        p_lvl3.draw(self.janela)
+        p_name4.draw(self.janela)
+        p_lvl4.draw(self.janela)
+        p_name5.draw(self.janela)
+        p_lvl5.draw(self.janela)
+        p_name6.draw(self.janela)
+        p_lvl6.draw(self.janela)
 
         choice = -1
         while True:
@@ -327,68 +369,45 @@ class BattleScene:
 
             if self.verificar_clique(click, self.pk_back_pos1, self.pk_back_pos2) and self.allow_cancel == True:
                 choice = -1
-                icon1.undraw()
-                icon2.undraw()
-                icon3.undraw()
-                icon4.undraw()
-                icon5.undraw()
-                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option1_pos1, self.pk_option1_pos2):
                 choice = 0
-                icon1.undraw()
-                icon2.undraw()
-                icon3.undraw()
-                icon4.undraw()
-                icon5.undraw()
-                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option2_pos1, self.pk_option2_pos2):
                 choice = 1
-                icon1.undraw()
-                icon2.undraw()
-                icon3.undraw()
-                icon4.undraw()
-                icon5.undraw()
-                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option3_pos1, self.pk_option3_pos2):
                 choice = 2
-                icon1.undraw()
-                icon2.undraw()
-                icon3.undraw()
-                icon4.undraw()
-                icon5.undraw()
-                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option4_pos1, self.pk_option4_pos2):
                 choice = 3
-                icon1.undraw()
-                icon2.undraw()
-                icon3.undraw()
-                icon4.undraw()
-                icon5.undraw()
-                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option5_pos1, self.pk_option5_pos2):
                 choice = 4
-                icon1.undraw()
-                icon2.undraw()
-                icon3.undraw()
-                icon4.undraw()
-                icon5.undraw()
-                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option6_pos1, self.pk_option6_pos2):
                 choice = 5
-                icon1.undraw()
-                icon2.undraw()
-                icon3.undraw()
-                icon4.undraw()
-                icon5.undraw()
-                icon6.undraw()
                 break
-
+        
+        p_name1.undraw()
+        p_lvl1.undraw()
+        p_name2.undraw()
+        p_lvl2.undraw()
+        p_name3.undraw()
+        p_lvl3.undraw()
+        p_name4.undraw()
+        p_lvl4.undraw()
+        p_name5.undraw()
+        p_lvl5.undraw()
+        p_name6.undraw()
+        p_lvl6.undraw()
+        
+        icon1.undraw()
+        icon2.undraw()
+        icon3.undraw()
+        icon4.undraw()
+        icon5.undraw()
+        icon6.undraw()
         p_win.undraw()
         return choice
     

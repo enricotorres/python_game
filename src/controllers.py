@@ -35,7 +35,7 @@ class BattleController:
 
         self.state: str = "START"
 
-        self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name, self.battle_scene.pokemon_player_level, self.battle_scene.pokemon_enemy_level = self.battle_scene.pokemon_infos()
+        self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name, self.battle_scene.pokemon_player_level, self.battle_scene.pokemon_enemy_level = self.battle_scene.pokemon_infos(custom_pos=None, specific_pokemon=None)
         self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
         self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
         self.battle_scene.pokemon_player_level.draw(self.battle_scene.janela)
