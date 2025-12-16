@@ -65,7 +65,7 @@ class BattleScene:
         self.enemy_index = 0
 
         self.sprite()
-        
+
 
         self.p_life_rect, self.e_life_rect = self.health_bar()
         self.p_life_rect.draw(self.janela)
@@ -80,22 +80,23 @@ class BattleScene:
 
     def bg(self):
         return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("battlefield_final.png"))
-    
+
     def hud(self):
         return gf.Image(gf.Point(704, 675), self.get_path("battle_hud_final.png"))
-    
+
     def sprite(self):
         # ------------------ PLAYER ---------------------
-        index_atual = self.player.active_slot 
+        index_atual = self.player.active_slot
         self.player_pokemon = self.player.team[index_atual]
-        
+
         pos_player = gf.Point(500, 500)
         sprite = self.player_pokemon.sprite
         if isinstance(sprite, dict):
-            filename = sprite["back"] 
+            filename = sprite["back"]
         else:
             filename = sprite
-        path = self.get_path(filename)
+
+        path = self.get_path(f"pokemon/{filename}")
 
         self.img_player = gf.Image(pos_player, path)
         self.img_player.draw(self.janela)
@@ -107,21 +108,22 @@ class BattleScene:
         pos_enemy = gf.Point(800, 380)
         sprite_enemy = self.enemy_pokemon.sprite
         if isinstance(sprite_enemy, dict):
-            filename = sprite_enemy["front"] 
+            filename = sprite_enemy["front"]
         else:
             filename = sprite_enemy
-        path = self.get_path(filename)
-        
+
+        path = self.get_path(f"pokemon/{filename}")
+
         self.img_enemy = gf.Image(pos_enemy, path)
         self.img_enemy.draw(self.janela)
 
     def update_sprites(self):
         if hasattr(self, 'img_player'):
             self.img_player.undraw()
-        
+
         if hasattr(self, 'img_enemy'):
             self.img_enemy.undraw()
-            
+
         self.sprite()
 
     def pokemon_infos(self):
@@ -145,21 +147,21 @@ class BattleScene:
         e_level = self.enemy_pokemon.level
         enemy_p_lvl = gf.Text(e_lvl_pos, f"LVL {e_level}")
         enemy_p_lvl.setSize(18)
-        
-        
+
+
         return player_p_name, enemy_p_name, player_p_lvl, enemy_p_lvl
-    
+
     def update_info(self):
-        if hasattr(self, 'pokemon_player_name') and self.pokemon_player_name: 
+        if hasattr(self, 'pokemon_player_name') and self.pokemon_player_name:
             self.pokemon_player_name.undraw()
-        if hasattr(self, 'pokemon_player_level') and self.pokemon_player_level: 
+        if hasattr(self, 'pokemon_player_level') and self.pokemon_player_level:
             self.pokemon_player_level.undraw()
-        if hasattr(self, 'pokemon_enemy_name') and self.pokemon_enemy_name: 
+        if hasattr(self, 'pokemon_enemy_name') and self.pokemon_enemy_name:
             self.pokemon_enemy_name.undraw()
-        if hasattr(self, 'pokemon_enemy_level') and self.pokemon_enemy_level: 
+        if hasattr(self, 'pokemon_enemy_level') and self.pokemon_enemy_level:
             self.pokemon_enemy_level.undraw()
 
-        (self.pokemon_player_name, self.pokemon_enemy_name, 
+        (self.pokemon_player_name, self.pokemon_enemy_name,
          self.pokemon_player_level, self.pokemon_enemy_level) = self.pokemon_infos()
 
         self.pokemon_player_name.draw(self.janela)
@@ -197,7 +199,7 @@ class BattleScene:
         hbar_enemy_rect.setFill("green")
 
         return hbar_player_rect, hbar_enemy_rect
-    
+
     def update_health_bar(self):
         if hasattr(self, 'p_life_rect') and self.p_life_rect:
             self.p_life_rect.undraw()
@@ -227,7 +229,7 @@ class BattleScene:
 
     def pokemon_btn(self):
         return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("pokemon_hud.png"))
-    
+
     def import_controller(self, BattleController):
         self.battle_controller = BattleController
         return self.battle_controller
