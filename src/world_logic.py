@@ -6,11 +6,13 @@ class WorldLogic:
         self,
         screen_width,
         screen_height,
+        map_name="pallet_town",
         map_width = 2752,
         map_height = 1536,
         velocity = 10,
         anim_speed = 2,
-        map_name="pallet_town"
+        start_x = None,
+        start_y = None
     ):
         self.root_dir = Path(__file__).resolve().parent.parent
 
@@ -18,22 +20,31 @@ class WorldLogic:
         with open(map_file, 'r') as f:
             data = json.load(f)
 
-        current_map = data["pallet_town"]
-        self.obstacles = current_map["obstacles"]
-        self.occluders = current_map["occluders"]
+        if map_name not in data:
+            raise ValueError(f"O mapa '{map_name}' não foi encontrado em map_data.json")
 
-        self.map_width = map_width
-        self.map_height = map_height
+        current_map = data[map_name]
+
+        self.obstacles = current_map.get("obstacles", [])
+        self.occluders = current_map.get("occluders", [])
+
+        self.map_width = current_map.get("width", map_width)
+        self.map_height = current_map.get("height", map_height)
+
         self.screen_width = screen_width
         self.screen_height = screen_height
 
         self.assets_dir = self.root_dir / "assets" / "images" / "characters" / "player"
 
-        self.player_world_x = self.map_width / 2
-        self.player_world_y = self.map_height / 2
+        if start_x is not None:
+            self.player_world_x = start_x
+        else:
+            self.player_world_x = self.map_width / 2
 
-        self.cam_x = self.player_world_x - (self.screen_width / 2)
-        self.cam_y = self.player_world_y - (self.screen_height / 2)
+        if start_y is not None:
+            self.player_world_y = start_y
+        else:
+            self.player_world_y = self.map_height / 2
 
         self.velocity = velocity
         self.current_sprite_name = "up"
@@ -42,9 +53,9 @@ class WorldLogic:
         self.anim_speed = anim_speed
 
         self.is_visible = True
-
         self.keys = {"w": False, "s": False, "a": False, "d": False}
 
+        self.cam_x, self.cam_y = self._calculate_camera(self.player_world_x, self.player_world_y)
 
     def set_key(self, key, pressed):
         k = key.lower()
@@ -77,6 +88,22 @@ class WorldLogic:
             if (occ[0] <= x <= occ[2] and occ[1] <= y <= occ[3]):
                 return True
         return False
+
+    def _calculate_camera(self, target_x, target_y):
+        desired_cam_x = target_x - (self.screen_width / 2)
+        desired_cam_y = target_y - (self.screen_height / 2)
+
+        if self.map_width < self.screen_width:
+            cam_x = (self.map_width - self.screen_width) / 2
+        else:
+            cam_x = max(0, min(desired_cam_x, self.map_width - self.screen_width))
+
+        if self.map_height < self.screen_height:
+            cam_y = (self.map_height - self.screen_height) / 2
+        else:
+            cam_y = max(0, min(desired_cam_y, self.map_height - self.screen_height))
+
+        return cam_x, cam_y
 
     def update(self):
         old_world_x = self.player_world_x
@@ -131,15 +158,10 @@ class WorldLogic:
 
         if dx != 0 and self._is_free(future_x, self.player_world_y):
             self.player_world_x = future_x
-
         if dy != 0 and self._is_free(self.player_world_x, future_y):
             self.player_world_y = future_y
 
-        target_cam_x = self.player_world_x - (self.screen_width / 2)
-        target_cam_y = self.player_world_y - (self.screen_height / 2)
-
-        self.cam_x = max(0, min(target_cam_x, self.map_width - self.screen_width))
-        self.cam_y = max(0, min(target_cam_y, self.map_height - self.screen_height))
+        self.cam_x, self.cam_y = self._calculate_camera(self.player_world_x, self.player_world_y)
 
         diff_cam_x = self.cam_x - old_cam_x
         diff_cam_y = self.cam_y - old_cam_y

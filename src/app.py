@@ -1,7 +1,7 @@
 import os
 import sys
 import logging
-from graphics import update
+from src.lib.graphics import update
 
 
 logging.basicConfig(
@@ -15,7 +15,7 @@ logger = logging.getLogger("Main")
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 
 from src.classes import Trainer, Pokemon
-from src.scenarios import BattleScene, WorldScene
+from src.scenarios import BattleScene, PokecenterScene, WorldScene
 from src.controllers import BattleController
 from src.world_manager import WorldManager
 
@@ -51,10 +51,10 @@ def main():
     rival.add_item("Super Potion", quantity=2)
 
     try:
-        game_manager = WorldManager()
-        world_scene = WorldScene(game_manager.window, player)
+        game_manager = WorldManager(player=player)
+        game_manager.change_scene(WorldScene, player=player)
         while True:
-            world_scene.update()
+            game_manager.current_scene.update()
 
             if game_manager.window.isClosed():
                 break
@@ -67,10 +67,6 @@ def main():
         logger.critical(f"Falha ao iniciar sistema gráfico: {e}")
         raise e
 
-    #controller = BattleController(battle_scene, rival, player)
-
-    #logger.info("Entrando no loop de batalha")
-    #controller.run_battle_loop()
 
     logger.info("Jogo finalizado normalmente.")
 

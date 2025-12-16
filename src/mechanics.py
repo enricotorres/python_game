@@ -161,11 +161,9 @@ class BattleAI:
             healing_items: list[str] = ["Full Restore", "Hyper Potion", "Super Potion", "Potion"]
 
             for item_name in healing_items:
-                temp_item = Item(item_name)
-
-                if enemy_trainer.has_item(item_name) and temp_item._handle_heal_hp(enemy_pokemon):
+                if enemy_trainer.has_item(item_name) and enemy_pokemon.current_hp < enemy_pokemon.max_hp:
                     logger.info(f"[AI] Decisão: Usar item {item_name}")
-                    return "bag", temp_item
+                    return "bag", Item(item_name)
 
         valid_moves: list[Move] = [m for m in enemy_pokemon.moves if m.current_pp > 0]
 
