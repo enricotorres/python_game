@@ -1,7 +1,10 @@
 {
   "Bulbasaur": {
     "id": 1,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 45,
       "attack": 49,
@@ -49,8 +52,8 @@
       }
     ],
     "sprite": {
-      "front" : "bulbasaur.png",
-      "back" : "bulbasaur-2.png"
+      "front": "bulbasaur_front.png",
+      "back": "bulbasaur_back.png"
     },
     "base_experience": 64,
     "evolution": {
@@ -99,7 +102,10 @@
   },
   "Ivysaur": {
     "id": 2,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 60,
       "attack": 62,
@@ -146,7 +152,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+    "sprite": {
+      "front": "ivysaur_front.png",
+      "back": "ivysaur_back.png"
+    },
     "base_experience": 142,
     "evolution": {
       "target": "Venusaur",
@@ -194,7 +203,10 @@
   },
   "Venusaur": {
     "id": 3,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 80,
       "attack": 82,
@@ -241,7 +253,10 @@
         "level": 65
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+    "sprite": {
+      "front": "venusaur_front.png",
+      "back": "venusaur_back.png"
+    },
     "base_experience": 236,
     "evolution": null,
     "tm_compatibility": [
@@ -289,7 +304,9 @@
   },
   "Charmander": {
     "id": 4,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 39,
       "attack": 52,
@@ -332,9 +349,9 @@
         "level": 46
       }
     ],
-    "sprite" : {
-      "front" : "charmander.png",
-      "back" : "charmander-2.png"
+    "sprite": {
+      "front": "charmander_front.png",
+      "back": "charmander_back.png"
     },
     "base_experience": 62,
     "evolution": {
@@ -399,7 +416,9 @@
   },
   "Charmeleon": {
     "id": 5,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 58,
       "attack": 64,
@@ -442,7 +461,10 @@
         "level": 56
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+    "sprite": {
+      "front": "charmeleon_front.png",
+      "back": "charmeleon_back.png"
+    },
     "base_experience": 142,
     "evolution": {
       "target": "Charizard",
@@ -506,7 +528,10 @@
   },
   "Charizard": {
     "id": 6,
-    "types": ["Fire", "Flying"],
+    "types": [
+      "Fire",
+      "Flying"
+    ],
     "stats": {
       "hp": 78,
       "attack": 84,
@@ -549,7 +574,10 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+    "sprite": {
+      "front": "charizard_front.png",
+      "back": "charizard_back.png"
+    },
     "base_experience": 240,
     "evolution": null,
     "tm_compatibility": [
@@ -616,7 +644,9 @@
   },
   "Squirtle": {
     "id": 7,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 44,
       "attack": 48,
@@ -660,10 +690,9 @@
       }
     ],
     "sprite": {
-      "front" : "squirtle.png",
-      "back" : "squirtle-2.png",
-      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"},
-    
+      "front": "squirtle_front.png",
+      "back": "squirtle_back.png"
+    },
     "base_experience": 63,
     "evolution": {
       "target": "Wartortle",
@@ -725,7 +754,9 @@
   },
   "Wartortle": {
     "id": 8,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 59,
       "attack": 63,
@@ -768,7 +799,10 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+    "sprite": {
+      "front": "wartortle_front.png",
+      "back": "wartortle_back.png"
+    },
     "base_experience": 142,
     "evolution": {
       "target": "Blastoise",
@@ -830,7 +864,9 @@
   },
   "Blastoise": {
     "id": 9,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 79,
       "attack": 83,
@@ -873,7 +909,10 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+    "sprite": {
+      "front": "blastoise_front.png",
+      "back": "blastoise_back.png"
+    },
     "base_experience": 239,
     "evolution": null,
     "tm_compatibility": [
@@ -936,7 +975,9 @@
   },
   "Caterpie": {
     "id": 10,
-    "types": ["Bug"],
+    "types": [
+      "Bug"
+    ],
     "stats": {
       "hp": 45,
       "attack": 30,
@@ -955,7 +996,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+    "sprite": {
+      "front": "caterpie_front.png",
+      "back": "caterpie_back.png"
+    },
     "base_experience": 39,
     "evolution": {
       "target": "Metapod",
@@ -967,7 +1011,9 @@
   },
   "Metapod": {
     "id": 11,
-    "types": ["Bug"],
+    "types": [
+      "Bug"
+    ],
     "stats": {
       "hp": 50,
       "attack": 20,
@@ -982,7 +1028,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+    "sprite": {
+      "front": "metapod_front.png",
+      "back": "metapod_back.png"
+    },
     "base_experience": 72,
     "evolution": {
       "target": "Butterfree",
@@ -994,7 +1043,10 @@
   },
   "Butterfree": {
     "id": 12,
-    "types": ["Bug", "Flying"],
+    "types": [
+      "Bug",
+      "Flying"
+    ],
     "stats": {
       "hp": 60,
       "attack": 45,
@@ -1033,7 +1085,10 @@
         "level": 32
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+    "sprite": {
+      "front": "butterfree_front.png",
+      "back": "butterfree_back.png"
+    },
     "base_experience": 178,
     "evolution": null,
     "tm_compatibility": [
@@ -1073,11 +1128,19 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Dream Eater", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Dream Eater",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Weedle": {
     "id": 13,
-    "types": ["Bug", "Poison"],
+    "types": [
+      "Bug",
+      "Poison"
+    ],
     "stats": {
       "hp": 40,
       "attack": 35,
@@ -1096,7 +1159,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+    "sprite": {
+      "front": "weedle_front.png",
+      "back": "weedle_back.png"
+    },
     "base_experience": 39,
     "evolution": {
       "target": "Kakuna",
@@ -1108,7 +1174,10 @@
   },
   "Kakuna": {
     "id": 14,
-    "types": ["Bug", "Poison"],
+    "types": [
+      "Bug",
+      "Poison"
+    ],
     "stats": {
       "hp": 45,
       "attack": 25,
@@ -1123,7 +1192,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+    "sprite": {
+      "front": "kakuna_front.png",
+      "back": "kakuna_back.png"
+    },
     "base_experience": 72,
     "evolution": {
       "target": "Beedrill",
@@ -1135,7 +1207,10 @@
   },
   "Beedrill": {
     "id": 15,
-    "types": ["Bug", "Poison"],
+    "types": [
+      "Bug",
+      "Poison"
+    ],
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -1170,7 +1245,10 @@
         "level": 35
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
+    "sprite": {
+      "front": "beedrill_front.png",
+      "back": "beedrill_back.png"
+    },
     "base_experience": 178,
     "evolution": null,
     "tm_compatibility": [
@@ -1206,11 +1284,19 @@
       "Thief",
       "Toxic"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Swords Dance"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Swords Dance"
+    ]
   },
   "Pidgey": {
     "id": 16,
-    "types": ["Normal", "Flying"],
+    "types": [
+      "Normal",
+      "Flying"
+    ],
     "stats": {
       "hp": 40,
       "attack": 45,
@@ -1250,9 +1336,9 @@
       }
     ],
     "sprite": {
-      "front" : "pidgey.png",
-      "back" : "pidgey-2.png",
-      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"},
+      "front": "pidgey_front.png",
+      "back": "pidgey_back.png"
+    },
     "base_experience": 50,
     "evolution": {
       "target": "Pidgeotto",
@@ -1288,11 +1374,18 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Pidgeotto": {
     "id": 17,
-    "types": ["Normal", "Flying"],
+    "types": [
+      "Normal",
+      "Flying"
+    ],
     "stats": {
       "hp": 63,
       "attack": 60,
@@ -1331,7 +1424,10 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+    "sprite": {
+      "front": "pidgeotto_front.png",
+      "back": "pidgeotto_back.png"
+    },
     "base_experience": 122,
     "evolution": {
       "target": "Pidgeot",
@@ -1367,11 +1463,18 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Pidgeot": {
     "id": 18,
-    "types": ["Normal", "Flying"],
+    "types": [
+      "Normal",
+      "Flying"
+    ],
     "stats": {
       "hp": 83,
       "attack": 80,
@@ -1410,7 +1513,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+    "sprite": {
+      "front": "pidgeot_front.png",
+      "back": "pidgeot_back.png"
+    },
     "base_experience": 216,
     "evolution": null,
     "tm_compatibility": [
@@ -1443,11 +1549,17 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Rattata": {
     "id": 19,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 30,
       "attack": 56,
@@ -1482,7 +1594,10 @@
         "level": 34
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+    "sprite": {
+      "front": "rattata_front.png",
+      "back": "rattata_back.png"
+    },
     "base_experience": 51,
     "evolution": {
       "target": "Raticate",
@@ -1537,7 +1652,9 @@
   },
   "Raticate": {
     "id": 20,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 55,
       "attack": 81,
@@ -1572,7 +1689,10 @@
         "level": 41
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+    "sprite": {
+      "front": "raticate_front.png",
+      "back": "raticate_back.png"
+    },
     "base_experience": 145,
     "evolution": null,
     "tm_compatibility": [
@@ -1626,7 +1746,10 @@
   },
   "Spearow": {
     "id": 21,
-    "types": ["Normal", "Flying"],
+    "types": [
+      "Normal",
+      "Flying"
+    ],
     "stats": {
       "hp": 40,
       "attack": 60,
@@ -1665,7 +1788,10 @@
         "level": 36
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
+    "sprite": {
+      "front": "spearow_front.png",
+      "back": "spearow_back.png"
+    },
     "base_experience": 52,
     "evolution": {
       "target": "Fearow",
@@ -1700,11 +1826,18 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Fearow": {
     "id": 22,
-    "types": ["Normal", "Flying"],
+    "types": [
+      "Normal",
+      "Flying"
+    ],
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -1743,7 +1876,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
+    "sprite": {
+      "front": "fearow_front.png",
+      "back": "fearow_back.png"
+    },
     "base_experience": 155,
     "evolution": null,
     "tm_compatibility": [
@@ -1775,11 +1911,17 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Ekans": {
     "id": 23,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 35,
       "attack": 60,
@@ -1818,7 +1960,10 @@
         "level": 38
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+    "sprite": {
+      "front": "ekans_front.png",
+      "back": "ekans_back.png"
+    },
     "base_experience": 58,
     "evolution": {
       "target": "Arbok",
@@ -1869,7 +2014,9 @@
   },
   "Arbok": {
     "id": 24,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 60,
       "attack": 95,
@@ -1908,7 +2055,10 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+    "sprite": {
+      "front": "arbok_front.png",
+      "back": "arbok_back.png"
+    },
     "base_experience": 157,
     "evolution": null,
     "tm_compatibility": [
@@ -1956,7 +2106,9 @@
   },
   "Pikachu": {
     "id": 25,
-    "types": ["Electric"],
+    "types": [
+      "Electric"
+    ],
     "stats": {
       "hp": 35,
       "attack": 55,
@@ -1996,9 +2148,9 @@
       }
     ],
     "sprite": {
-      "front" : "pikachu.png",
-      "back" : "pikachu-2.png",
-      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"},
+      "front": "pikachu_front.png",
+      "back": "pikachu_back.png"
+    },
     "base_experience": 112,
     "evolution": {
       "target": "Raichu",
@@ -2059,7 +2211,9 @@
   },
   "Raichu": {
     "id": 26,
-    "types": ["Electric"],
+    "types": [
+      "Electric"
+    ],
     "stats": {
       "hp": 60,
       "attack": 90,
@@ -2082,7 +2236,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+    "sprite": {
+      "front": "raichu_front.png",
+      "back": "raichu_back.png"
+    },
     "base_experience": 218,
     "evolution": null,
     "tm_compatibility": [
@@ -2141,7 +2298,9 @@
   },
   "Sandshrew": {
     "id": 27,
-    "types": ["Ground"],
+    "types": [
+      "Ground"
+    ],
     "stats": {
       "hp": 50,
       "attack": 75,
@@ -2176,7 +2335,10 @@
         "level": 38
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
+    "sprite": {
+      "front": "sandshrew_front.png",
+      "back": "sandshrew_back.png"
+    },
     "base_experience": 60,
     "evolution": {
       "target": "Sandslash",
@@ -2235,7 +2397,9 @@
   },
   "Sandslash": {
     "id": 28,
-    "types": ["Ground"],
+    "types": [
+      "Ground"
+    ],
     "stats": {
       "hp": 75,
       "attack": 100,
@@ -2270,7 +2434,10 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
+    "sprite": {
+      "front": "sandslash_front.png",
+      "back": "sandslash_back.png"
+    },
     "base_experience": 158,
     "evolution": null,
     "tm_compatibility": [
@@ -2326,7 +2493,9 @@
   },
   "Nidoran F": {
     "id": 29,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 55,
       "attack": 47,
@@ -2369,7 +2538,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
+    "sprite": {
+      "front": "nidoran_f_front.png",
+      "back": "nidoran_f_back.png"
+    },
     "base_experience": 55,
     "evolution": {
       "target": "Nidorina",
@@ -2423,7 +2595,9 @@
   },
   "Nidorina": {
     "id": 30,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 70,
       "attack": 62,
@@ -2466,7 +2640,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
+    "sprite": {
+      "front": "nidorina_front.png",
+      "back": "nidorina_back.png"
+    },
     "base_experience": 128,
     "evolution": {
       "target": "Nidoqueen",
@@ -2523,7 +2700,10 @@
   },
   "Nidoqueen": {
     "id": 31,
-    "types": ["Poison", "Ground"],
+    "types": [
+      "Poison",
+      "Ground"
+    ],
     "stats": {
       "hp": 90,
       "attack": 92,
@@ -2554,7 +2734,10 @@
         "level": 14
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+    "sprite": {
+      "front": "nidoqueen_front.png",
+      "back": "nidoqueen_back.png"
+    },
     "base_experience": 227,
     "evolution": null,
     "tm_compatibility": [
@@ -2632,7 +2815,9 @@
   },
   "Nidoran M": {
     "id": 32,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 46,
       "attack": 57,
@@ -2675,7 +2860,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png",
+    "sprite": {
+      "front": "nidoran_m_front.png",
+      "back": "nidoran_m_back.png"
+    },
     "base_experience": 55,
     "evolution": {
       "target": "Nidorino",
@@ -2729,7 +2917,9 @@
   },
   "Nidorino": {
     "id": 33,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 61,
       "attack": 72,
@@ -2772,7 +2962,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png",
+    "sprite": {
+      "front": "nidorino_front.png",
+      "back": "nidorino_back.png"
+    },
     "base_experience": 128,
     "evolution": {
       "target": "Nidoking",
@@ -2828,7 +3021,10 @@
   },
   "Nidoking": {
     "id": 34,
-    "types": ["Poison", "Ground"],
+    "types": [
+      "Poison",
+      "Ground"
+    ],
     "stats": {
       "hp": 81,
       "attack": 102,
@@ -2855,7 +3051,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+    "sprite": {
+      "front": "nidoking_front.png",
+      "back": "nidoking_back.png"
+    },
     "base_experience": 227,
     "evolution": null,
     "tm_compatibility": [
@@ -2932,7 +3131,9 @@
   },
   "Clefairy": {
     "id": 35,
-    "types": ["Fairy"],
+    "types": [
+      "Fairy"
+    ],
     "stats": {
       "hp": 70,
       "attack": 45,
@@ -2975,7 +3176,10 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+    "sprite": {
+      "front": "clefairy_front.png",
+      "back": "clefairy_back.png"
+    },
     "base_experience": 113,
     "evolution": {
       "target": "Clefable",
@@ -3055,7 +3259,9 @@
   },
   "Clefable": {
     "id": 36,
-    "types": ["Fairy"],
+    "types": [
+      "Fairy"
+    ],
     "stats": {
       "hp": 95,
       "attack": 70,
@@ -3082,7 +3288,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
+    "sprite": {
+      "front": "clefable_front.png",
+      "back": "clefable_back.png"
+    },
     "base_experience": 217,
     "evolution": null,
     "tm_compatibility": [
@@ -3159,7 +3368,9 @@
   },
   "Vulpix": {
     "id": 37,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 38,
       "attack": 41,
@@ -3198,7 +3409,10 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
+    "sprite": {
+      "front": "vulpix_front.png",
+      "back": "vulpix_back.png"
+    },
     "base_experience": 60,
     "evolution": {
       "target": "Ninetales",
@@ -3235,11 +3449,18 @@
       "Take Down",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Ninetales": {
     "id": 38,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 73,
       "attack": 76,
@@ -3266,7 +3487,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
+    "sprite": {
+      "front": "ninetales_front.png",
+      "back": "ninetales_back.png"
+    },
     "base_experience": 177,
     "evolution": null,
     "tm_compatibility": [
@@ -3300,11 +3524,19 @@
       "Take Down",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Jigglypuff": {
     "id": 39,
-    "types": ["Normal", "Fairy"],
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
     "stats": {
       "hp": 115,
       "attack": 45,
@@ -3347,7 +3579,10 @@
         "level": 39
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
+    "sprite": {
+      "front": "jigglypuff_front.png",
+      "back": "jigglypuff_back.png"
+    },
     "base_experience": 95,
     "evolution": {
       "target": "Wigglytuff",
@@ -3422,7 +3657,10 @@
   },
   "Wigglytuff": {
     "id": 40,
-    "types": ["Normal", "Fairy"],
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
     "stats": {
       "hp": 140,
       "attack": 70,
@@ -3449,7 +3687,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
+    "sprite": {
+      "front": "wigglytuff_front.png",
+      "back": "wigglytuff_back.png"
+    },
     "base_experience": 196,
     "evolution": null,
     "tm_compatibility": [
@@ -3521,7 +3762,10 @@
   },
   "Zubat": {
     "id": 41,
-    "types": ["Poison", "Flying"],
+    "types": [
+      "Poison",
+      "Flying"
+    ],
     "stats": {
       "hp": 40,
       "attack": 45,
@@ -3557,9 +3801,9 @@
       }
     ],
     "sprite": {
-      "front" : "zubat.png",
-      "back" : "zubat-2.png",
-      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png"},
+      "front": "zubat_front.png",
+      "back": "zubat_back.png"
+    },
     "base_experience": 49,
     "evolution": {
       "target": "Golbat",
@@ -3599,11 +3843,18 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Golbat": {
     "id": 42,
-    "types": ["Poison", "Flying"],
+    "types": [
+      "Poison",
+      "Flying"
+    ],
     "stats": {
       "hp": 75,
       "attack": 80,
@@ -3642,7 +3893,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
+    "sprite": {
+      "front": "golbat_front.png",
+      "back": "golbat_back.png"
+    },
     "base_experience": 159,
     "evolution": {
       "target": "Crobat",
@@ -3683,11 +3937,18 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Oddish": {
     "id": 43,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 45,
       "attack": 50,
@@ -3726,7 +3987,10 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+    "sprite": {
+      "front": "oddish_front.png",
+      "back": "oddish_back.png"
+    },
     "base_experience": 64,
     "evolution": {
       "target": "Gloom",
@@ -3761,11 +4025,19 @@
       "Take Down",
       "Toxic"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Swords Dance"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Swords Dance"
+    ]
   },
   "Gloom": {
     "id": 44,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 60,
       "attack": 65,
@@ -3804,7 +4076,10 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
+    "sprite": {
+      "front": "gloom_front.png",
+      "back": "gloom_back.png"
+    },
     "base_experience": 138,
     "evolution": {
       "target": "Vileplume",
@@ -3839,11 +4114,19 @@
       "Take Down",
       "Toxic"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Swords Dance"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Swords Dance"
+    ]
   },
   "Vileplume": {
     "id": 45,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 75,
       "attack": 80,
@@ -3874,7 +4157,10 @@
         "level": 15
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+    "sprite": {
+      "front": "vileplume_front.png",
+      "back": "vileplume_back.png"
+    },
     "base_experience": 221,
     "evolution": null,
     "tm_compatibility": [
@@ -3917,7 +4203,10 @@
   },
   "Paras": {
     "id": 46,
-    "types": ["Bug", "Grass"],
+    "types": [
+      "Bug",
+      "Grass"
+    ],
     "stats": {
       "hp": 35,
       "attack": 70,
@@ -3952,7 +4241,10 @@
         "level": 41
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
+    "sprite": {
+      "front": "paras_front.png",
+      "back": "paras_back.png"
+    },
     "base_experience": 57,
     "evolution": {
       "target": "Parasect",
@@ -4004,7 +4296,10 @@
   },
   "Parasect": {
     "id": 47,
-    "types": ["Bug", "Grass"],
+    "types": [
+      "Bug",
+      "Grass"
+    ],
     "stats": {
       "hp": 60,
       "attack": 95,
@@ -4039,7 +4334,10 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
+    "sprite": {
+      "front": "parasect_front.png",
+      "back": "parasect_back.png"
+    },
     "base_experience": 142,
     "evolution": null,
     "tm_compatibility": [
@@ -4088,7 +4386,10 @@
   },
   "Venonat": {
     "id": 48,
-    "types": ["Bug", "Poison"],
+    "types": [
+      "Bug",
+      "Poison"
+    ],
     "stats": {
       "hp": 60,
       "attack": 55,
@@ -4131,7 +4432,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
+    "sprite": {
+      "front": "venonat_front.png",
+      "back": "venonat_back.png"
+    },
     "base_experience": 61,
     "evolution": {
       "target": "Venomoth",
@@ -4167,11 +4471,18 @@
       "Thief",
       "Toxic"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Venomoth": {
     "id": 49,
-    "types": ["Bug", "Poison"],
+    "types": [
+      "Bug",
+      "Poison"
+    ],
     "stats": {
       "hp": 70,
       "attack": 65,
@@ -4214,7 +4525,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
+    "sprite": {
+      "front": "venomoth_front.png",
+      "back": "venomoth_back.png"
+    },
     "base_experience": 158,
     "evolution": null,
     "tm_compatibility": [
@@ -4252,11 +4566,17 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Diglett": {
     "id": 50,
-    "types": ["Ground"],
+    "types": [
+      "Ground"
+    ],
     "stats": {
       "hp": 10,
       "attack": 55,
@@ -4291,7 +4611,10 @@
         "level": 40
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+    "sprite": {
+      "front": "diglett_front.png",
+      "back": "diglett_back.png"
+    },
     "base_experience": 53,
     "evolution": {
       "target": "Dugtrio",
@@ -4338,7 +4661,9 @@
   },
   "Dugtrio": {
     "id": 51,
-    "types": ["Ground"],
+    "types": [
+      "Ground"
+    ],
     "stats": {
       "hp": 35,
       "attack": 100,
@@ -4373,7 +4698,10 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+    "sprite": {
+      "front": "dugtrio_front.png",
+      "back": "dugtrio_back.png"
+    },
     "base_experience": 149,
     "evolution": null,
     "tm_compatibility": [
@@ -4417,7 +4745,9 @@
   },
   "Meowth": {
     "id": 52,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 40,
       "attack": 45,
@@ -4456,7 +4786,10 @@
         "level": 44
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+    "sprite": {
+      "front": "meowth_front.png",
+      "back": "meowth_back.png"
+    },
     "base_experience": 58,
     "evolution": {
       "target": "Persian",
@@ -4513,7 +4846,9 @@
   },
   "Persian": {
     "id": 53,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 65,
       "attack": 70,
@@ -4552,7 +4887,10 @@
         "level": 51
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+    "sprite": {
+      "front": "persian_front.png",
+      "back": "persian_back.png"
+    },
     "base_experience": 154,
     "evolution": null,
     "tm_compatibility": [
@@ -4607,7 +4945,9 @@
   },
   "Psyduck": {
     "id": 54,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 50,
       "attack": 52,
@@ -4642,7 +4982,10 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+    "sprite": {
+      "front": "psyduck_front.png",
+      "back": "psyduck_back.png"
+    },
     "base_experience": 64,
     "evolution": {
       "target": "Golduck",
@@ -4708,7 +5051,9 @@
   },
   "Golduck": {
     "id": 55,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 80,
       "attack": 82,
@@ -4743,7 +5088,10 @@
         "level": 59
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
+    "sprite": {
+      "front": "golduck_front.png",
+      "back": "golduck_back.png"
+    },
     "base_experience": 175,
     "evolution": null,
     "tm_compatibility": [
@@ -4806,7 +5154,9 @@
   },
   "Mankey": {
     "id": 56,
-    "types": ["Fighting"],
+    "types": [
+      "Fighting"
+    ],
     "stats": {
       "hp": 40,
       "attack": 80,
@@ -4845,10 +5195,10 @@
         "level": 39
       }
     ],
-    "sprite" : {
-      "front" : "mankey.png",
-      "back" : "mankey-2.png",
-      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png"},
+    "sprite": {
+      "front": "mankey_front.png",
+      "back": "mankey_back.png"
+    },
     "base_experience": 61,
     "evolution": {
       "target": "Primeape",
@@ -4916,7 +5266,9 @@
   },
   "Primeape": {
     "id": 57,
-    "types": ["Fighting"],
+    "types": [
+      "Fighting"
+    ],
     "stats": {
       "hp": 65,
       "attack": 105,
@@ -4955,7 +5307,10 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
+    "sprite": {
+      "front": "primeape_front.png",
+      "back": "primeape_back.png"
+    },
     "base_experience": 159,
     "evolution": {
       "target": "Annihilape",
@@ -5023,7 +5378,9 @@
   },
   "Growlithe": {
     "id": 58,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 55,
       "attack": 70,
@@ -5062,7 +5419,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
+    "sprite": {
+      "front": "growlithe_front.png",
+      "back": "growlithe_back.png"
+    },
     "base_experience": 70,
     "evolution": {
       "target": "Arcanine",
@@ -5103,11 +5463,18 @@
       "Thief",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Arcanine": {
     "id": 59,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 90,
       "attack": 110,
@@ -5134,7 +5501,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+    "sprite": {
+      "front": "arcanine_front.png",
+      "back": "arcanine_back.png"
+    },
     "base_experience": 194,
     "evolution": null,
     "tm_compatibility": [
@@ -5173,11 +5543,18 @@
       "Thief",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Poliwag": {
     "id": 60,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 40,
       "attack": 50,
@@ -5216,7 +5593,10 @@
         "level": 45
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
+    "sprite": {
+      "front": "poliwag_front.png",
+      "back": "poliwag_back.png"
+    },
     "base_experience": 60,
     "evolution": {
       "target": "Poliwhirl",
@@ -5257,11 +5637,18 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Poliwhirl": {
     "id": 61,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 65,
       "attack": 65,
@@ -5300,7 +5687,10 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
+    "sprite": {
+      "front": "poliwhirl_front.png",
+      "back": "poliwhirl_back.png"
+    },
     "base_experience": 135,
     "evolution": {
       "target": "Poliwrath",
@@ -5367,7 +5757,10 @@
   },
   "Poliwrath": {
     "id": 62,
-    "types": ["Water", "Fighting"],
+    "types": [
+      "Water",
+      "Fighting"
+    ],
     "stats": {
       "hp": 90,
       "attack": 95,
@@ -5394,7 +5787,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
+    "sprite": {
+      "front": "poliwrath_front.png",
+      "back": "poliwrath_back.png"
+    },
     "base_experience": 230,
     "evolution": null,
     "tm_compatibility": [
@@ -5460,7 +5856,9 @@
   },
   "Abra": {
     "id": 63,
-    "types": ["Psychic"],
+    "types": [
+      "Psychic"
+    ],
     "stats": {
       "hp": 25,
       "attack": 20,
@@ -5475,7 +5873,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
+    "sprite": {
+      "front": "abra_front.png",
+      "back": "abra_back.png"
+    },
     "base_experience": 62,
     "evolution": {
       "target": "Kadabra",
@@ -5545,7 +5946,9 @@
   },
   "Kadabra": {
     "id": 64,
-    "types": ["Psychic"],
+    "types": [
+      "Psychic"
+    ],
     "stats": {
       "hp": 40,
       "attack": 35,
@@ -5584,7 +5987,10 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
+    "sprite": {
+      "front": "kadabra_front.png",
+      "back": "kadabra_back.png"
+    },
     "base_experience": 140,
     "evolution": {
       "target": "Alakazam",
@@ -5654,7 +6060,9 @@
   },
   "Alakazam": {
     "id": 65,
-    "types": ["Psychic"],
+    "types": [
+      "Psychic"
+    ],
     "stats": {
       "hp": 55,
       "attack": 50,
@@ -5693,7 +6101,10 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
+    "sprite": {
+      "front": "alakazam_front.png",
+      "back": "alakazam_back.png"
+    },
     "base_experience": 225,
     "evolution": null,
     "tm_compatibility": [
@@ -5761,7 +6172,9 @@
   },
   "Machop": {
     "id": 66,
-    "types": ["Fighting"],
+    "types": [
+      "Fighting"
+    ],
     "stats": {
       "hp": 70,
       "attack": 80,
@@ -5796,7 +6209,10 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
+    "sprite": {
+      "front": "machop_front.png",
+      "back": "machop_back.png"
+    },
     "base_experience": 61,
     "evolution": {
       "target": "Machoke",
@@ -5859,7 +6275,9 @@
   },
   "Machoke": {
     "id": 67,
-    "types": ["Fighting"],
+    "types": [
+      "Fighting"
+    ],
     "stats": {
       "hp": 80,
       "attack": 100,
@@ -5894,7 +6312,10 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png",
+    "sprite": {
+      "front": "machoke_front.png",
+      "back": "machoke_back.png"
+    },
     "base_experience": 142,
     "evolution": {
       "target": "Machamp",
@@ -5956,7 +6377,9 @@
   },
   "Machamp": {
     "id": 68,
-    "types": ["Fighting"],
+    "types": [
+      "Fighting"
+    ],
     "stats": {
       "hp": 90,
       "attack": 130,
@@ -5991,7 +6414,10 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+    "sprite": {
+      "front": "machamp_front.png",
+      "back": "machamp_back.png"
+    },
     "base_experience": 227,
     "evolution": null,
     "tm_compatibility": [
@@ -6051,7 +6477,10 @@
   },
   "Bellsprout": {
     "id": 69,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 50,
       "attack": 75,
@@ -6098,7 +6527,10 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
+    "sprite": {
+      "front": "bellsprout_front.png",
+      "back": "bellsprout_back.png"
+    },
     "base_experience": 60,
     "evolution": {
       "target": "Weepinbell",
@@ -6134,11 +6566,19 @@
       "Thief",
       "Toxic"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Swords Dance"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Swords Dance"
+    ]
   },
   "Weepinbell": {
     "id": 70,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -6185,7 +6625,10 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
+    "sprite": {
+      "front": "weepinbell_front.png",
+      "back": "weepinbell_back.png"
+    },
     "base_experience": 137,
     "evolution": {
       "target": "Victreebel",
@@ -6221,11 +6664,19 @@
       "Thief",
       "Toxic"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Swords Dance"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Swords Dance"
+    ]
   },
   "Victreebel": {
     "id": 71,
-    "types": ["Grass", "Poison"],
+    "types": [
+      "Grass",
+      "Poison"
+    ],
     "stats": {
       "hp": 80,
       "attack": 105,
@@ -6260,7 +6711,10 @@
         "level": 15
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
+    "sprite": {
+      "front": "victreebel_front.png",
+      "back": "victreebel_back.png"
+    },
     "base_experience": 221,
     "evolution": null,
     "tm_compatibility": [
@@ -6304,7 +6758,10 @@
   },
   "Tentacool": {
     "id": 72,
-    "types": ["Water", "Poison"],
+    "types": [
+      "Water",
+      "Poison"
+    ],
     "stats": {
       "hp": 40,
       "attack": 40,
@@ -6351,7 +6808,10 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png",
+    "sprite": {
+      "front": "tentacool_front.png",
+      "back": "tentacool_back.png"
+    },
     "base_experience": 67,
     "evolution": {
       "target": "Tentacruel",
@@ -6394,11 +6854,19 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Swords Dance"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Swords Dance"
+    ]
   },
   "Tentacruel": {
     "id": 73,
-    "types": ["Water", "Poison"],
+    "types": [
+      "Water",
+      "Poison"
+    ],
     "stats": {
       "hp": 80,
       "attack": 70,
@@ -6445,7 +6913,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
+    "sprite": {
+      "front": "tentacruel_front.png",
+      "back": "tentacruel_back.png"
+    },
     "base_experience": 180,
     "evolution": null,
     "tm_compatibility": [
@@ -6485,11 +6956,19 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Swords Dance"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Swords Dance"
+    ]
   },
   "Geodude": {
     "id": 74,
-    "types": ["Rock", "Ground"],
+    "types": [
+      "Rock",
+      "Ground"
+    ],
     "stats": {
       "hp": 40,
       "attack": 80,
@@ -6529,9 +7008,9 @@
       }
     ],
     "sprite": {
-      "front" : "geodude.png",
-      "back" : "geodude-2.png",
-      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png"},
+      "front": "geodude_front.png",
+      "back": "geodude_back.png"
+    },
     "base_experience": 60,
     "evolution": {
       "target": "Graveler",
@@ -6592,7 +7071,10 @@
   },
   "Graveler": {
     "id": 75,
-    "types": ["Rock", "Ground"],
+    "types": [
+      "Rock",
+      "Ground"
+    ],
     "stats": {
       "hp": 55,
       "attack": 95,
@@ -6631,7 +7113,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png",
+    "sprite": {
+      "front": "graveler_front.png",
+      "back": "graveler_back.png"
+    },
     "base_experience": 137,
     "evolution": {
       "target": "Golem",
@@ -6691,7 +7176,10 @@
   },
   "Golem": {
     "id": 76,
-    "types": ["Rock", "Ground"],
+    "types": [
+      "Rock",
+      "Ground"
+    ],
     "stats": {
       "hp": 80,
       "attack": 120,
@@ -6730,7 +7218,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
+    "sprite": {
+      "front": "golem_front.png",
+      "back": "golem_back.png"
+    },
     "base_experience": 223,
     "evolution": null,
     "tm_compatibility": [
@@ -6791,7 +7282,9 @@
   },
   "Ponyta": {
     "id": 77,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 50,
       "attack": 85,
@@ -6830,7 +7323,10 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+    "sprite": {
+      "front": "ponyta_front.png",
+      "back": "ponyta_back.png"
+    },
     "base_experience": 82,
     "evolution": {
       "target": "Rapidash",
@@ -6867,11 +7363,18 @@
       "Take Down",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Rapidash": {
     "id": 78,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 65,
       "attack": 100,
@@ -6910,7 +7413,10 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
+    "sprite": {
+      "front": "rapidash_front.png",
+      "back": "rapidash_back.png"
+    },
     "base_experience": 175,
     "evolution": null,
     "tm_compatibility": [
@@ -6944,11 +7450,19 @@
       "Take Down",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Slowpoke": {
     "id": 79,
-    "types": ["Water", "Psychic"],
+    "types": [
+      "Water",
+      "Psychic"
+    ],
     "stats": {
       "hp": 90,
       "attack": 65,
@@ -6987,7 +7501,10 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png",
+    "sprite": {
+      "front": "slowpoke_front.png",
+      "back": "slowpoke_back.png"
+    },
     "base_experience": 63,
     "evolution": {
       "target": "Slowbro",
@@ -7055,7 +7572,10 @@
   },
   "Slowbro": {
     "id": 80,
-    "types": ["Water", "Psychic"],
+    "types": [
+      "Water",
+      "Psychic"
+    ],
     "stats": {
       "hp": 95,
       "attack": 75,
@@ -7098,7 +7618,10 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
+    "sprite": {
+      "front": "slowbro_front.png",
+      "back": "slowbro_back.png"
+    },
     "base_experience": 172,
     "evolution": null,
     "tm_compatibility": [
@@ -7175,7 +7698,10 @@
   },
   "Magnemite": {
     "id": 81,
-    "types": ["Electric", "Steel"],
+    "types": [
+      "Electric",
+      "Steel"
+    ],
     "stats": {
       "hp": 25,
       "attack": 35,
@@ -7214,7 +7740,10 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
+    "sprite": {
+      "front": "magnemite_front.png",
+      "back": "magnemite_back.png"
+    },
     "base_experience": 65,
     "evolution": {
       "target": "Magneton",
@@ -7248,11 +7777,19 @@
       "Thunderbolt",
       "Toxic"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Thunder Wave"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Thunder Wave"
+    ]
   },
   "Magneton": {
     "id": 82,
-    "types": ["Electric", "Steel"],
+    "types": [
+      "Electric",
+      "Steel"
+    ],
     "stats": {
       "hp": 50,
       "attack": 60,
@@ -7291,7 +7828,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
+    "sprite": {
+      "front": "magneton_front.png",
+      "back": "magneton_back.png"
+    },
     "base_experience": 163,
     "evolution": {
       "target": "Magnezone",
@@ -7326,11 +7866,19 @@
       "Thunderbolt",
       "Toxic"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Thunder Wave"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Thunder Wave"
+    ]
   },
   "Farfetchd": {
     "id": 83,
-    "types": ["Normal", "Flying"],
+    "types": [
+      "Normal",
+      "Flying"
+    ],
     "stats": {
       "hp": 52,
       "attack": 90,
@@ -7369,7 +7917,10 @@
         "level": 39
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png",
+    "sprite": {
+      "front": "farfetchd_front.png",
+      "back": "farfetchd_back.png"
+    },
     "base_experience": 132,
     "evolution": {
       "target": "Sirfetchd",
@@ -7417,7 +7968,10 @@
   },
   "Doduo": {
     "id": 84,
-    "types": ["Normal", "Flying"],
+    "types": [
+      "Normal",
+      "Flying"
+    ],
     "stats": {
       "hp": 35,
       "attack": 85,
@@ -7456,7 +8010,10 @@
         "level": 44
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png",
+    "sprite": {
+      "front": "doduo_front.png",
+      "back": "doduo_back.png"
+    },
     "base_experience": 62,
     "evolution": {
       "target": "Dodrio",
@@ -7492,11 +8049,19 @@
       "Tri Attack",
       "Whirlwind"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Dodrio": {
     "id": 85,
-    "types": ["Normal", "Flying"],
+    "types": [
+      "Normal",
+      "Flying"
+    ],
     "stats": {
       "hp": 60,
       "attack": 110,
@@ -7535,7 +8100,10 @@
         "level": 51
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
+    "sprite": {
+      "front": "dodrio_front.png",
+      "back": "dodrio_back.png"
+    },
     "base_experience": 165,
     "evolution": null,
     "tm_compatibility": [
@@ -7570,11 +8138,18 @@
       "Tri Attack",
       "Whirlwind"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Seel": {
     "id": 86,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 65,
       "attack": 45,
@@ -7609,7 +8184,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
+    "sprite": {
+      "front": "seel_front.png",
+      "back": "seel_back.png"
+    },
     "base_experience": 65,
     "evolution": {
       "target": "Dewgong",
@@ -7651,11 +8229,19 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Dewgong": {
     "id": 87,
-    "types": ["Water", "Ice"],
+    "types": [
+      "Water",
+      "Ice"
+    ],
     "stats": {
       "hp": 90,
       "attack": 70,
@@ -7690,7 +8276,10 @@
         "level": 56
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
+    "sprite": {
+      "front": "dewgong_front.png",
+      "back": "dewgong_back.png"
+    },
     "base_experience": 166,
     "evolution": null,
     "tm_compatibility": [
@@ -7729,11 +8318,18 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Grimer": {
     "id": 88,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 80,
       "attack": 80,
@@ -7776,7 +8372,10 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
+    "sprite": {
+      "front": "grimer_front.png",
+      "back": "grimer_back.png"
+    },
     "base_experience": 65,
     "evolution": {
       "target": "Muk",
@@ -7817,11 +8416,18 @@
       "Torment",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Explosion", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Explosion",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Muk": {
     "id": 89,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 105,
       "attack": 105,
@@ -7864,7 +8470,10 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
+    "sprite": {
+      "front": "muk_front.png",
+      "back": "muk_back.png"
+    },
     "base_experience": 175,
     "evolution": null,
     "tm_compatibility": [
@@ -7906,11 +8515,18 @@
       "Torment",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Explosion", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Explosion",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Shellder": {
     "id": 90,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 30,
       "attack": 65,
@@ -7949,7 +8565,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
+    "sprite": {
+      "front": "shellder_front.png",
+      "back": "shellder_back.png"
+    },
     "base_experience": 61,
     "evolution": {
       "target": "Cloyster",
@@ -7989,11 +8608,19 @@
       "Water Gun",
       "Water Pulse"
     ],
-    "tutor_moves": ["Double Edge", "Explosion", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Explosion",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Cloyster": {
     "id": 91,
-    "types": ["Water", "Ice"],
+    "types": [
+      "Water",
+      "Ice"
+    ],
     "stats": {
       "hp": 50,
       "attack": 95,
@@ -8024,7 +8651,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png",
+    "sprite": {
+      "front": "cloyster_front.png",
+      "back": "cloyster_back.png"
+    },
     "base_experience": 184,
     "evolution": null,
     "tm_compatibility": [
@@ -8062,11 +8692,19 @@
       "Water Gun",
       "Water Pulse"
     ],
-    "tutor_moves": ["Double Edge", "Explosion", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Explosion",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Gastly": {
     "id": 92,
-    "types": ["Ghost", "Poison"],
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
     "stats": {
       "hp": 30,
       "attack": 35,
@@ -8098,9 +8736,9 @@
       }
     ],
     "sprite": {
-      "front" : "gastly.png",
-      "back" : "gastly-2.png",
-      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png"},
+      "front": "gastly_front.png",
+      "back": "gastly_back.png"
+    },
     "base_experience": 62,
     "evolution": {
       "target": "Haunter",
@@ -8141,11 +8779,19 @@
       "Torment",
       "Toxic"
     ],
-    "tutor_moves": ["Dream Eater", "Explosion", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Dream Eater",
+      "Explosion",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Haunter": {
     "id": 93,
-    "types": ["Ghost", "Poison"],
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
     "stats": {
       "hp": 45,
       "attack": 50,
@@ -8176,7 +8822,10 @@
         "level": 38
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+    "sprite": {
+      "front": "haunter_front.png",
+      "back": "haunter_back.png"
+    },
     "base_experience": 142,
     "evolution": {
       "target": "Gengar",
@@ -8216,11 +8865,19 @@
       "Torment",
       "Toxic"
     ],
-    "tutor_moves": ["Dream Eater", "Explosion", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Dream Eater",
+      "Explosion",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Gengar": {
     "id": 94,
-    "types": ["Ghost", "Poison"],
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
     "stats": {
       "hp": 60,
       "attack": 65,
@@ -8251,7 +8908,10 @@
         "level": 38
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+    "sprite": {
+      "front": "gengar_front.png",
+      "back": "gengar_back.png"
+    },
     "base_experience": 225,
     "evolution": null,
     "tm_compatibility": [
@@ -8319,7 +8979,10 @@
   },
   "Onix": {
     "id": 95,
-    "types": ["Rock", "Ground"],
+    "types": [
+      "Rock",
+      "Ground"
+    ],
     "stats": {
       "hp": 35,
       "attack": 45,
@@ -8358,10 +9021,10 @@
         "level": 43
       }
     ],
-    "sprite" : {
-      "front" : "onix.png",
-      "back" : "onix-2.png",
-      "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png"},
+    "sprite": {
+      "front": "onix_front.png",
+      "back": "onix_back.png"
+    },
     "base_experience": 77,
     "evolution": {
       "target": "Steelix",
@@ -8413,7 +9076,9 @@
   },
   "Drowzee": {
     "id": 96,
-    "types": ["Psychic"],
+    "types": [
+      "Psychic"
+    ],
     "stats": {
       "hp": 60,
       "attack": 48,
@@ -8456,7 +9121,10 @@
         "level": 37
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
+    "sprite": {
+      "front": "drowzee_front.png",
+      "back": "drowzee_back.png"
+    },
     "base_experience": 66,
     "evolution": {
       "target": "Hypno",
@@ -8526,7 +9194,9 @@
   },
   "Hypno": {
     "id": 97,
-    "types": ["Psychic"],
+    "types": [
+      "Psychic"
+    ],
     "stats": {
       "hp": 85,
       "attack": 73,
@@ -8569,7 +9239,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
+    "sprite": {
+      "front": "hypno_front.png",
+      "back": "hypno_back.png"
+    },
     "base_experience": 169,
     "evolution": null,
     "tm_compatibility": [
@@ -8636,7 +9309,9 @@
   },
   "Krabby": {
     "id": 98,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 30,
       "attack": 105,
@@ -8675,7 +9350,10 @@
         "level": 40
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png",
+    "sprite": {
+      "front": "krabby_front.png",
+      "back": "krabby_back.png"
+    },
     "base_experience": 65,
     "evolution": {
       "target": "Kingler",
@@ -8727,7 +9405,9 @@
   },
   "Kingler": {
     "id": 99,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 55,
       "attack": 130,
@@ -8766,7 +9446,10 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
+    "sprite": {
+      "front": "kingler_front.png",
+      "back": "kingler_back.png"
+    },
     "base_experience": 166,
     "evolution": null,
     "tm_compatibility": [
@@ -8815,7 +9498,9 @@
   },
   "Voltorb": {
     "id": 100,
-    "types": ["Electric"],
+    "types": [
+      "Electric"
+    ],
     "stats": {
       "hp": 40,
       "attack": 30,
@@ -8854,7 +9539,10 @@
         "level": 43
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
+    "sprite": {
+      "front": "voltorb_front.png",
+      "back": "voltorb_back.png"
+    },
     "base_experience": 66,
     "evolution": {
       "target": "Electrode",
@@ -8892,11 +9580,18 @@
       "Torment",
       "Toxic"
     ],
-    "tutor_moves": ["Explosion", "Mimic", "Substitute", "Thunder Wave"]
+    "tutor_moves": [
+      "Explosion",
+      "Mimic",
+      "Substitute",
+      "Thunder Wave"
+    ]
   },
   "Electrode": {
     "id": 101,
-    "types": ["Electric"],
+    "types": [
+      "Electric"
+    ],
     "stats": {
       "hp": 60,
       "attack": 50,
@@ -8935,7 +9630,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
+    "sprite": {
+      "front": "electrode_front.png",
+      "back": "electrode_back.png"
+    },
     "base_experience": 172,
     "evolution": null,
     "tm_compatibility": [
@@ -8971,11 +9669,19 @@
       "Torment",
       "Toxic"
     ],
-    "tutor_moves": ["Explosion", "Mimic", "Substitute", "Thunder Wave"]
+    "tutor_moves": [
+      "Explosion",
+      "Mimic",
+      "Substitute",
+      "Thunder Wave"
+    ]
   },
   "Exeggcute": {
     "id": 102,
-    "types": ["Grass", "Psychic"],
+    "types": [
+      "Grass",
+      "Psychic"
+    ],
     "stats": {
       "hp": 60,
       "attack": 40,
@@ -9018,7 +9724,10 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png",
+    "sprite": {
+      "front": "exeggcute_front.png",
+      "back": "exeggcute_back.png"
+    },
     "base_experience": 65,
     "evolution": {
       "target": "Exeggutor",
@@ -9070,7 +9779,10 @@
   },
   "Exeggutor": {
     "id": 103,
-    "types": ["Grass", "Psychic"],
+    "types": [
+      "Grass",
+      "Psychic"
+    ],
     "stats": {
       "hp": 95,
       "attack": 95,
@@ -9093,7 +9805,10 @@
         "level": 28
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
+    "sprite": {
+      "front": "exeggutor_front.png",
+      "back": "exeggutor_back.png"
+    },
     "base_experience": 186,
     "evolution": null,
     "tm_compatibility": [
@@ -9143,7 +9858,9 @@
   },
   "Cubone": {
     "id": 104,
-    "types": ["Ground"],
+    "types": [
+      "Ground"
+    ],
     "stats": {
       "hp": 50,
       "attack": 50,
@@ -9182,7 +9899,10 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
+    "sprite": {
+      "front": "cubone_front.png",
+      "back": "cubone_back.png"
+    },
     "base_experience": 64,
     "evolution": {
       "target": "Marowak",
@@ -9248,7 +9968,9 @@
   },
   "Marowak": {
     "id": 105,
-    "types": ["Ground"],
+    "types": [
+      "Ground"
+    ],
     "stats": {
       "hp": 60,
       "attack": 80,
@@ -9287,7 +10009,10 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
+    "sprite": {
+      "front": "marowak_front.png",
+      "back": "marowak_back.png"
+    },
     "base_experience": 149,
     "evolution": null,
     "tm_compatibility": [
@@ -9350,7 +10075,9 @@
   },
   "Hitmonlee": {
     "id": 106,
-    "types": ["Fighting"],
+    "types": [
+      "Fighting"
+    ],
     "stats": {
       "hp": 50,
       "attack": 120,
@@ -9389,7 +10116,10 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
+    "sprite": {
+      "front": "hitmonlee_front.png",
+      "back": "hitmonlee_back.png"
+    },
     "base_experience": 159,
     "evolution": null,
     "tm_compatibility": [
@@ -9444,7 +10174,9 @@
   },
   "Hitmonchan": {
     "id": 107,
-    "types": ["Fighting"],
+    "types": [
+      "Fighting"
+    ],
     "stats": {
       "hp": 50,
       "attack": 105,
@@ -9483,7 +10215,10 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
+    "sprite": {
+      "front": "hitmonchan_front.png",
+      "back": "hitmonchan_back.png"
+    },
     "base_experience": 159,
     "evolution": null,
     "tm_compatibility": [
@@ -9538,7 +10273,9 @@
   },
   "Lickitung": {
     "id": 108,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 90,
       "attack": 55,
@@ -9577,7 +10314,10 @@
         "level": 39
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
+    "sprite": {
+      "front": "lickitung_front.png",
+      "back": "lickitung_back.png"
+    },
     "base_experience": 77,
     "evolution": {
       "target": "Lickilicky",
@@ -9654,7 +10394,9 @@
   },
   "Koffing": {
     "id": 109,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 40,
       "attack": 65,
@@ -9693,7 +10435,10 @@
         "level": 48
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+    "sprite": {
+      "front": "koffing_front.png",
+      "back": "koffing_back.png"
+    },
     "base_experience": 68,
     "evolution": {
       "target": "Weezing",
@@ -9731,11 +10476,17 @@
       "Torment",
       "Toxic"
     ],
-    "tutor_moves": ["Explosion", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Explosion",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Weezing": {
     "id": 110,
-    "types": ["Poison"],
+    "types": [
+      "Poison"
+    ],
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -9774,7 +10525,10 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
+    "sprite": {
+      "front": "weezing_front.png",
+      "back": "weezing_back.png"
+    },
     "base_experience": 172,
     "evolution": null,
     "tm_compatibility": [
@@ -9809,11 +10563,18 @@
       "Torment",
       "Toxic"
     ],
-    "tutor_moves": ["Explosion", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Explosion",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Rhyhorn": {
     "id": 111,
-    "types": ["Ground", "Rock"],
+    "types": [
+      "Ground",
+      "Rock"
+    ],
     "stats": {
       "hp": 80,
       "attack": 85,
@@ -9852,7 +10613,10 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
+    "sprite": {
+      "front": "rhyhorn_front.png",
+      "back": "rhyhorn_back.png"
+    },
     "base_experience": 69,
     "evolution": {
       "target": "Rhydon",
@@ -9912,7 +10676,10 @@
   },
   "Rhydon": {
     "id": 112,
-    "types": ["Ground", "Rock"],
+    "types": [
+      "Ground",
+      "Rock"
+    ],
     "stats": {
       "hp": 105,
       "attack": 130,
@@ -9951,7 +10718,10 @@
         "level": 64
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+    "sprite": {
+      "front": "rhydon_front.png",
+      "back": "rhydon_back.png"
+    },
     "base_experience": 170,
     "evolution": {
       "target": "Rhyperior",
@@ -10026,7 +10796,9 @@
   },
   "Chansey": {
     "id": 113,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 250,
       "attack": 5,
@@ -10069,7 +10841,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
+    "sprite": {
+      "front": "chansey_front.png",
+      "back": "chansey_back.png"
+    },
     "base_experience": 395,
     "evolution": {
       "target": "Blissey",
@@ -10157,7 +10932,9 @@
   },
   "Tangela": {
     "id": 114,
-    "types": ["Grass"],
+    "types": [
+      "Grass"
+    ],
     "stats": {
       "hp": 65,
       "attack": 55,
@@ -10200,7 +10977,10 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
+    "sprite": {
+      "front": "tangela_front.png",
+      "back": "tangela_back.png"
+    },
     "base_experience": 87,
     "evolution": {
       "target": "Tangrowth",
@@ -10249,7 +11029,9 @@
   },
   "Kangaskhan": {
     "id": 115,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 105,
       "attack": 95,
@@ -10288,7 +11070,10 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
+    "sprite": {
+      "front": "kangaskhan_front.png",
+      "back": "kangaskhan_back.png"
+    },
     "base_experience": 172,
     "evolution": null,
     "tm_compatibility": [
@@ -10362,7 +11147,9 @@
   },
   "Horsea": {
     "id": 116,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 30,
       "attack": 40,
@@ -10397,7 +11184,10 @@
         "level": 45
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png",
+    "sprite": {
+      "front": "horsea_front.png",
+      "back": "horsea_back.png"
+    },
     "base_experience": 59,
     "evolution": {
       "target": "Seadra",
@@ -10434,11 +11224,17 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Seadra": {
     "id": 117,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 55,
       "attack": 65,
@@ -10473,7 +11269,10 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png",
+    "sprite": {
+      "front": "seadra_front.png",
+      "back": "seadra_back.png"
+    },
     "base_experience": 154,
     "evolution": {
       "target": "Kingdra",
@@ -10510,11 +11309,17 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Goldeen": {
     "id": 118,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 45,
       "attack": 67,
@@ -10557,7 +11362,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
+    "sprite": {
+      "front": "goldeen_front.png",
+      "back": "goldeen_back.png"
+    },
     "base_experience": 64,
     "evolution": {
       "target": "Seaking",
@@ -10595,11 +11403,17 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Seaking": {
     "id": 119,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 80,
       "attack": 92,
@@ -10642,7 +11456,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
+    "sprite": {
+      "front": "seaking_front.png",
+      "back": "seaking_back.png"
+    },
     "base_experience": 158,
     "evolution": null,
     "tm_compatibility": [
@@ -10677,11 +11494,17 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Staryu": {
     "id": 120,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 30,
       "attack": 45,
@@ -10724,7 +11547,10 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
+    "sprite": {
+      "front": "staryu_front.png",
+      "back": "staryu_back.png"
+    },
     "base_experience": 68,
     "evolution": {
       "target": "Starmie",
@@ -10770,11 +11596,19 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Thunder Wave"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Thunder Wave"
+    ]
   },
   "Starmie": {
     "id": 121,
-    "types": ["Water", "Psychic"],
+    "types": [
+      "Water",
+      "Psychic"
+    ],
     "stats": {
       "hp": 60,
       "attack": 75,
@@ -10797,7 +11631,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+    "sprite": {
+      "front": "starmie_front.png",
+      "back": "starmie_back.png"
+    },
     "base_experience": 182,
     "evolution": null,
     "tm_compatibility": [
@@ -10851,7 +11688,10 @@
   },
   "Mr Mime": {
     "id": 122,
-    "types": ["Psychic", "Fairy"],
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
     "stats": {
       "hp": 40,
       "attack": 45,
@@ -10886,7 +11726,10 @@
         "level": 47
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
+    "sprite": {
+      "front": "mr_mime_front.png",
+      "back": "mr_mime_back.png"
+    },
     "base_experience": 161,
     "evolution": {
       "target": "Mr-Rime",
@@ -10959,7 +11802,10 @@
   },
   "Scyther": {
     "id": 123,
-    "types": ["Bug", "Flying"],
+    "types": [
+      "Bug",
+      "Flying"
+    ],
     "stats": {
       "hp": 70,
       "attack": 110,
@@ -10998,7 +11844,10 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
+    "sprite": {
+      "front": "scyther_front.png",
+      "back": "scyther_back.png"
+    },
     "base_experience": 100,
     "evolution": {
       "target": "Scizor",
@@ -11043,7 +11892,10 @@
   },
   "Jynx": {
     "id": 124,
-    "types": ["Ice", "Psychic"],
+    "types": [
+      "Ice",
+      "Psychic"
+    ],
     "stats": {
       "hp": 65,
       "attack": 50,
@@ -11086,7 +11938,10 @@
         "level": 58
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
+    "sprite": {
+      "front": "jynx_front.png",
+      "back": "jynx_back.png"
+    },
     "base_experience": 159,
     "evolution": null,
     "tm_compatibility": [
@@ -11152,7 +12007,9 @@
   },
   "Electabuzz": {
     "id": 125,
-    "types": ["Electric"],
+    "types": [
+      "Electric"
+    ],
     "stats": {
       "hp": 65,
       "attack": 83,
@@ -11191,7 +12048,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png",
+    "sprite": {
+      "front": "electabuzz_front.png",
+      "back": "electabuzz_back.png"
+    },
     "base_experience": 172,
     "evolution": {
       "target": "Electivire",
@@ -11256,7 +12116,9 @@
   },
   "Magmar": {
     "id": 126,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 65,
       "attack": 95,
@@ -11295,7 +12157,10 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
+    "sprite": {
+      "front": "magmar_front.png",
+      "back": "magmar_back.png"
+    },
     "base_experience": 173,
     "evolution": {
       "target": "Magmortar",
@@ -11353,7 +12218,9 @@
   },
   "Pinsir": {
     "id": 127,
-    "types": ["Bug"],
+    "types": [
+      "Bug"
+    ],
     "stats": {
       "hp": 65,
       "attack": 125,
@@ -11392,7 +12259,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
+    "sprite": {
+      "front": "pinsir_front.png",
+      "back": "pinsir_back.png"
+    },
     "base_experience": 175,
     "evolution": null,
     "tm_compatibility": [
@@ -11442,7 +12312,9 @@
   },
   "Tauros": {
     "id": 128,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 75,
       "attack": 100,
@@ -11477,7 +12349,10 @@
         "level": 51
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+    "sprite": {
+      "front": "tauros_front.png",
+      "back": "tauros_back.png"
+    },
     "base_experience": 172,
     "evolution": null,
     "tm_compatibility": [
@@ -11521,11 +12396,18 @@
       "Toxic",
       "Water Pulse"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Magikarp": {
     "id": 129,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 20,
       "attack": 10,
@@ -11544,7 +12426,10 @@
         "level": 15
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+    "sprite": {
+      "front": "magikarp_front.png",
+      "back": "magikarp_back.png"
+    },
     "base_experience": 40,
     "evolution": {
       "target": "Gyarados",
@@ -11556,7 +12441,10 @@
   },
   "Gyarados": {
     "id": 130,
-    "types": ["Water", "Flying"],
+    "types": [
+      "Water",
+      "Flying"
+    ],
     "stats": {
       "hp": 95,
       "attack": 125,
@@ -11587,7 +12475,10 @@
         "level": 52
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
+    "sprite": {
+      "front": "gyarados_front.png",
+      "back": "gyarados_back.png"
+    },
     "base_experience": 189,
     "evolution": null,
     "tm_compatibility": [
@@ -11644,7 +12535,10 @@
   },
   "Lapras": {
     "id": 131,
-    "types": ["Water", "Ice"],
+    "types": [
+      "Water",
+      "Ice"
+    ],
     "stats": {
       "hp": 130,
       "attack": 85,
@@ -11687,7 +12581,10 @@
         "level": 46
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+    "sprite": {
+      "front": "lapras_front.png",
+      "back": "lapras_back.png"
+    },
     "base_experience": 187,
     "evolution": null,
     "tm_compatibility": [
@@ -11745,7 +12642,9 @@
   },
   "Ditto": {
     "id": 132,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 48,
       "attack": 48,
@@ -11760,7 +12659,10 @@
         "level": 1
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+    "sprite": {
+      "front": "ditto_front.png",
+      "back": "ditto_back.png"
+    },
     "base_experience": 101,
     "evolution": null,
     "tm_compatibility": [],
@@ -11768,7 +12670,9 @@
   },
   "Eevee": {
     "id": 133,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 55,
       "attack": 55,
@@ -11803,7 +12707,10 @@
         "level": 45
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
+    "sprite": {
+      "front": "eevee_front.png",
+      "back": "eevee_back.png"
+    },
     "base_experience": 65,
     "evolution": {
       "target": "Vaporeon",
@@ -11837,11 +12744,18 @@
       "Take Down",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Vaporeon": {
     "id": 134,
-    "types": ["Water"],
+    "types": [
+      "Water"
+    ],
     "stats": {
       "hp": 130,
       "attack": 65,
@@ -11892,7 +12806,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+    "sprite": {
+      "front": "vaporeon_front.png",
+      "back": "vaporeon_back.png"
+    },
     "base_experience": 184,
     "evolution": null,
     "tm_compatibility": [
@@ -11933,11 +12850,18 @@
       "Water Pulse",
       "Waterfall"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Jolteon": {
     "id": 135,
-    "types": ["Electric"],
+    "types": [
+      "Electric"
+    ],
     "stats": {
       "hp": 65,
       "attack": 65,
@@ -11988,7 +12912,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+    "sprite": {
+      "front": "jolteon_front.png",
+      "back": "jolteon_back.png"
+    },
     "base_experience": 184,
     "evolution": null,
     "tm_compatibility": [
@@ -12035,7 +12962,9 @@
   },
   "Flareon": {
     "id": 136,
-    "types": ["Fire"],
+    "types": [
+      "Fire"
+    ],
     "stats": {
       "hp": 65,
       "attack": 130,
@@ -12086,7 +13015,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
+    "sprite": {
+      "front": "flareon_front.png",
+      "back": "flareon_back.png"
+    },
     "base_experience": 184,
     "evolution": null,
     "tm_compatibility": [
@@ -12121,11 +13053,18 @@
       "Take Down",
       "Toxic"
     ],
-    "tutor_moves": ["Body Slam", "Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Body Slam",
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Porygon": {
     "id": 137,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 65,
       "attack": 60,
@@ -12164,7 +13103,10 @@
         "level": 42
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
+    "sprite": {
+      "front": "porygon_front.png",
+      "back": "porygon_back.png"
+    },
     "base_experience": 79,
     "evolution": {
       "target": "Porygon2",
@@ -12219,7 +13161,10 @@
   },
   "Omanyte": {
     "id": 138,
-    "types": ["Rock", "Water"],
+    "types": [
+      "Rock",
+      "Water"
+    ],
     "stats": {
       "hp": 35,
       "attack": 40,
@@ -12254,7 +13199,10 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
+    "sprite": {
+      "front": "omanyte_front.png",
+      "back": "omanyte_back.png"
+    },
     "base_experience": 71,
     "evolution": {
       "target": "Omastar",
@@ -12305,7 +13253,10 @@
   },
   "Omastar": {
     "id": 139,
-    "types": ["Rock", "Water"],
+    "types": [
+      "Rock",
+      "Water"
+    ],
     "stats": {
       "hp": 70,
       "attack": 60,
@@ -12340,7 +13291,10 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png",
+    "sprite": {
+      "front": "omastar_front.png",
+      "back": "omastar_back.png"
+    },
     "base_experience": 173,
     "evolution": null,
     "tm_compatibility": [
@@ -12393,7 +13347,10 @@
   },
   "Kabuto": {
     "id": 140,
-    "types": ["Rock", "Water"],
+    "types": [
+      "Rock",
+      "Water"
+    ],
     "stats": {
       "hp": 30,
       "attack": 80,
@@ -12428,7 +13385,10 @@
         "level": 49
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
+    "sprite": {
+      "front": "kabuto_front.png",
+      "back": "kabuto_back.png"
+    },
     "base_experience": 71,
     "evolution": {
       "target": "Kabutops",
@@ -12481,7 +13441,10 @@
   },
   "Kabutops": {
     "id": 141,
-    "types": ["Rock", "Water"],
+    "types": [
+      "Rock",
+      "Water"
+    ],
     "stats": {
       "hp": 60,
       "attack": 115,
@@ -12516,7 +13479,10 @@
         "level": 53
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
+    "sprite": {
+      "front": "kabutops_front.png",
+      "back": "kabutops_back.png"
+    },
     "base_experience": 173,
     "evolution": null,
     "tm_compatibility": [
@@ -12578,7 +13544,10 @@
   },
   "Aerodactyl": {
     "id": 142,
-    "types": ["Rock", "Flying"],
+    "types": [
+      "Rock",
+      "Flying"
+    ],
     "stats": {
       "hp": 80,
       "attack": 105,
@@ -12613,7 +13582,10 @@
         "level": 54
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
+    "sprite": {
+      "front": "aerodactyl_front.png",
+      "back": "aerodactyl_back.png"
+    },
     "base_experience": 180,
     "evolution": null,
     "tm_compatibility": [
@@ -12659,11 +13631,18 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Rock Slide", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Rock Slide",
+      "Substitute"
+    ]
   },
   "Snorlax": {
     "id": 143,
-    "types": ["Normal"],
+    "types": [
+      "Normal"
+    ],
     "stats": {
       "hp": 160,
       "attack": 110,
@@ -12702,7 +13681,10 @@
         "level": 56
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+    "sprite": {
+      "front": "snorlax_front.png",
+      "back": "snorlax_back.png"
+    },
     "base_experience": 189,
     "evolution": null,
     "tm_compatibility": [
@@ -12775,7 +13757,10 @@
   },
   "Articuno": {
     "id": 144,
-    "types": ["Ice", "Flying"],
+    "types": [
+      "Ice",
+      "Flying"
+    ],
     "stats": {
       "hp": 90,
       "attack": 85,
@@ -12806,7 +13791,10 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+    "sprite": {
+      "front": "articuno_front.png",
+      "back": "articuno_back.png"
+    },
     "base_experience": 261,
     "evolution": null,
     "tm_compatibility": [
@@ -12846,11 +13834,18 @@
       "Water Pulse",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Zapdos": {
     "id": 145,
-    "types": ["Electric", "Flying"],
+    "types": [
+      "Electric",
+      "Flying"
+    ],
     "stats": {
       "hp": 90,
       "attack": 90,
@@ -12881,7 +13876,10 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+    "sprite": {
+      "front": "zapdos_front.png",
+      "back": "zapdos_back.png"
+    },
     "base_experience": 261,
     "evolution": null,
     "tm_compatibility": [
@@ -12921,11 +13919,19 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute", "Thunder Wave"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute",
+      "Thunder Wave"
+    ]
   },
   "Moltres": {
     "id": 146,
-    "types": ["Fire", "Flying"],
+    "types": [
+      "Fire",
+      "Flying"
+    ],
     "stats": {
       "hp": 90,
       "attack": 100,
@@ -12956,7 +13962,10 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+    "sprite": {
+      "front": "moltres_front.png",
+      "back": "moltres_back.png"
+    },
     "base_experience": 261,
     "evolution": null,
     "tm_compatibility": [
@@ -12994,11 +14003,17 @@
       "Toxic",
       "Whirlwind"
     ],
-    "tutor_moves": ["Double Edge", "Mimic", "Substitute"]
+    "tutor_moves": [
+      "Double Edge",
+      "Mimic",
+      "Substitute"
+    ]
   },
   "Dratini": {
     "id": 147,
-    "types": ["Dragon"],
+    "types": [
+      "Dragon"
+    ],
     "stats": {
       "hp": 41,
       "attack": 64,
@@ -13037,7 +14052,10 @@
         "level": 50
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
+    "sprite": {
+      "front": "dratini_front.png",
+      "back": "dratini_back.png"
+    },
     "base_experience": 60,
     "evolution": {
       "target": "Dragonair",
@@ -13096,7 +14114,9 @@
   },
   "Dragonair": {
     "id": 148,
-    "types": ["Dragon"],
+    "types": [
+      "Dragon"
+    ],
     "stats": {
       "hp": 61,
       "attack": 84,
@@ -13135,7 +14155,10 @@
         "level": 55
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+    "sprite": {
+      "front": "dragonair_front.png",
+      "back": "dragonair_back.png"
+    },
     "base_experience": 147,
     "evolution": {
       "target": "Dragonite",
@@ -13195,7 +14218,10 @@
   },
   "Dragonite": {
     "id": 149,
-    "types": ["Dragon", "Flying"],
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
     "stats": {
       "hp": 91,
       "attack": 134,
@@ -13234,7 +14260,10 @@
         "level": 60
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+    "sprite": {
+      "front": "dragonite_front.png",
+      "back": "dragonite_back.png"
+    },
     "base_experience": 270,
     "evolution": null,
     "tm_compatibility": [
@@ -13305,7 +14334,9 @@
   },
   "Mewtwo": {
     "id": 150,
-    "types": ["Psychic"],
+    "types": [
+      "Psychic"
+    ],
     "stats": {
       "hp": 106,
       "attack": 110,
@@ -13348,7 +14379,10 @@
         "level": 81
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+    "sprite": {
+      "front": "mewtwo_front.png",
+      "back": "mewtwo_back.png"
+    },
     "base_experience": 306,
     "evolution": null,
     "tm_compatibility": [
@@ -13434,7 +14468,9 @@
   },
   "Mew": {
     "id": 151,
-    "types": ["Psychic"],
+    "types": [
+      "Psychic"
+    ],
     "stats": {
       "hp": 100,
       "attack": 100,
@@ -13465,7 +14501,10 @@
         "level": 40
       }
     ],
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
+    "sprite": {
+      "front": "mew_front.png",
+      "back": "mew_back.png"
+    },
     "base_experience": 270,
     "evolution": null,
     "tm_compatibility": [
