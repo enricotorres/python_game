@@ -10,7 +10,7 @@ class WorldManager:
 
     def change_scene(self, new_scene_class):
         if self.current_scene is not None:
-            # criar logica para limpar a janela atual
-            pass
+            if hasattr(self.current_scene, "unload"):
+                self.current_scene.unload()
 
         self.current_scene = new_scene_class(self.window)

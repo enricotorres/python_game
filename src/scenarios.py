@@ -174,6 +174,10 @@ class BattleScene:
     def run(self):
         self.janela.close()
 
+    def unload(self):
+        self.back.undraw()
+        self.battle_hud.undraw()
+
 
 class WorldScene:
     def __init__(self, window, player: Trainer):
@@ -233,3 +237,8 @@ class WorldScene:
             elif not result["sprite_visible"] and self.is_visible:
                 self.player_sprite.undraw()
             self.is_visible = result["sprite_visible"]
+
+    def unload(self):
+        self.background.undraw()
+        self.player_sprite.undraw()
+        self.is_visible = False
