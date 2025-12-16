@@ -53,7 +53,9 @@
     ],
     "sprite": {
       "front": "bulbasaur_front.png",
-      "back": "bulbasaur_back.png"
+      "back": "bulbasaur_back.png",
+      "icon": "bulbasaur_front.png",
+      "icon_dead": "bulbasaur_dead.png"
     },
     "base_experience": 64,
     "evolution": {
@@ -691,7 +693,9 @@
     ],
     "sprite": {
       "front": "squirtle_front.png",
-      "back": "squirtle_back.png"
+      "back": "squirtle_back.png",
+      "icon": "squirtle_front.png",
+      "icon_dead": "squirtle_dead.png"
     },
     "base_experience": 63,
     "evolution": {
@@ -1337,7 +1341,9 @@
     ],
     "sprite": {
       "front": "pidgey_front.png",
-      "back": "pidgey_back.png"
+      "back": "pidgey_back.png",
+      "icon": "pidgey_front.png",
+      "icon_dead": "pidgey_dead.png"
     },
     "base_experience": 50,
     "evolution": {
@@ -2149,7 +2155,9 @@
     ],
     "sprite": {
       "front": "pikachu_front.png",
-      "back": "pikachu_back.png"
+      "back": "pikachu_back.png",
+      "icon": "pikachu_front.png",
+      "icon_dead": "pikachu_dead.png"
     },
     "base_experience": 112,
     "evolution": {
@@ -7009,7 +7017,9 @@
     ],
     "sprite": {
       "front": "geodude_front.png",
-      "back": "geodude_back.png"
+      "back": "geodude_back.png",
+      "icon": "geodude_front.png",
+      "icon_dead": "geodude_dead.png"
     },
     "base_experience": 60,
     "evolution": {
@@ -8737,7 +8747,9 @@
     ],
     "sprite": {
       "front": "gastly_front.png",
-      "back": "gastly_back.png"
+      "back": "gastly_back.png",
+      "icon": "gastly_front.png",
+      "icon_dead": "gastly_dead.png"
     },
     "base_experience": 62,
     "evolution": {

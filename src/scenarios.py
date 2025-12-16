@@ -45,6 +45,15 @@ class BattleScene:
         self.atk_back_pos1 = gf.Point(1132, 653)
         self.atk_back_pos2 = gf.Point(1400, 753)
 
+        self.select_poke_pos1 = gf.Point(175, 315)
+        self.select_poke_pos2 = gf.Point(605, 315)
+        self.select_poke_pos3 = gf.Point(1035, 315)
+        self.select_poke_pos4 = gf.Point(175, 500)
+        self.select_poke_pos5 = gf.Point(605, 500)
+        self.select_poke_pos6 = gf.Point(1035, 500)
+
+
+
         self.p_life_rect = None
         self.e_life_rect = None
         self.pokemon_player_name = None
@@ -130,20 +139,24 @@ class BattleScene:
         self.player_pokemon = self.player.get_active_pokemon()
         self.enemy_pokemon = self.enemy.get_active_pokemon()
 
-        p_pos = gf.Point(60, 35)
-        name = self.player_pokemon.name
-        player_p_name = gf.Text(p_pos, name)
-        player_p_name.setSize(18)
+        p_pkname_pos = gf.Point(60, 35)
         p_lvl_pos = gf.Point(280, 35)
+
+        e_pkname_pos = gf.Point(60, 35)
+        e_lvl_pos = gf.Point(280, 35)
+
+        name = self.player_pokemon.name
+        player_p_name = gf.Text(p_pkname_pos, name)
+        player_p_name.setSize(18)
         p_level = self.player_pokemon.level
         player_p_lvl = gf.Text(p_lvl_pos, f"LVL {p_level}")
         player_p_lvl.setSize(18)
 
-        e_pos = gf.Point(1107, 35)
-        name = self.enemy_pokemon.name
-        enemy_p_name = gf.Text(e_pos, name)
-        enemy_p_name.setSize(18)
+        e_pkname_pos = gf.Point(1107, 35)
         e_lvl_pos = gf.Point(1318, 35)
+        name = self.enemy_pokemon.name
+        enemy_p_name = gf.Text(e_pkname_pos, name)
+        enemy_p_name.setSize(18)
         e_level = self.enemy_pokemon.level
         enemy_p_lvl = gf.Text(e_lvl_pos, f"LVL {e_level}")
         enemy_p_lvl.setSize(18)
@@ -300,34 +313,180 @@ class BattleScene:
         p_win = self.pokemon_btn()
         p_win.draw(self.janela)
 
+        icon1, icon2, icon3, icon4, icon5, icon6 = self.select_pk_sprites()
+        icon1.draw(self.janela)
+        icon2.draw(self.janela)
+        icon3.draw(self.janela)
+        icon4.draw(self.janela)
+        icon5.draw(self.janela)
+        icon6.draw(self.janela)
+
         choice = -1
         while True:
             click = self.janela.getMouse()
 
             if self.verificar_clique(click, self.pk_back_pos1, self.pk_back_pos2) and self.allow_cancel == True:
                 choice = -1
+                icon1.undraw()
+                icon2.undraw()
+                icon3.undraw()
+                icon4.undraw()
+                icon5.undraw()
+                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option1_pos1, self.pk_option1_pos2):
                 choice = 0
+                icon1.undraw()
+                icon2.undraw()
+                icon3.undraw()
+                icon4.undraw()
+                icon5.undraw()
+                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option2_pos1, self.pk_option2_pos2):
                 choice = 1
+                icon1.undraw()
+                icon2.undraw()
+                icon3.undraw()
+                icon4.undraw()
+                icon5.undraw()
+                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option3_pos1, self.pk_option3_pos2):
                 choice = 2
+                icon1.undraw()
+                icon2.undraw()
+                icon3.undraw()
+                icon4.undraw()
+                icon5.undraw()
+                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option4_pos1, self.pk_option4_pos2):
                 choice = 3
+                icon1.undraw()
+                icon2.undraw()
+                icon3.undraw()
+                icon4.undraw()
+                icon5.undraw()
+                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option5_pos1, self.pk_option5_pos2):
                 choice = 4
+                icon1.undraw()
+                icon2.undraw()
+                icon3.undraw()
+                icon4.undraw()
+                icon5.undraw()
+                icon6.undraw()
                 break
             elif self.verificar_clique(click, self.pk_option6_pos1, self.pk_option6_pos2):
                 choice = 5
+                icon1.undraw()
+                icon2.undraw()
+                icon3.undraw()
+                icon4.undraw()
+                icon5.undraw()
+                icon6.undraw()
                 break
 
         p_win.undraw()
         return choice
+    
+    def select_pk_sprites(self):
+        self.player_pokemon1 = self.player.team[0]
+        self.player_pokemon2 = self.player.team[1]
+        self.player_pokemon3 = self.player.team[2]
+        self.player_pokemon4 = self.player.team[3]
+        self.player_pokemon5 = self.player.team[4]
+        self.player_pokemon6 = self.player.team[5]
+        
+        sprite1 = self.player_pokemon1.sprite
+        sprite2 = self.player_pokemon2.sprite
+        sprite3 = self.player_pokemon3.sprite
+        sprite4 = self.player_pokemon4.sprite
+        sprite5 = self.player_pokemon5.sprite
+        sprite6 = self.player_pokemon6.sprite
+
+        #PK1---------------------------------
+        if isinstance(sprite1, dict):
+            if self.player_pokemon1.is_alive():
+                filename = sprite1["icon"]
+            else:
+                filename = sprite1["icon_dead"]
+        else:
+            filename = sprite1
+
+        path = self.get_path(f"pokemon/{filename}")
+
+        self.pk_select_icon1 = gf.Image(self.select_poke_pos1, path)
+
+        #PK2---------------------------------
+        if isinstance(sprite2, dict):
+            if self.player_pokemon2.is_alive():
+                filename = sprite2["icon"]
+            else:
+                filename = sprite2["icon_dead"]
+        else:
+            filename = sprite2
+
+        path = self.get_path(f"pokemon/{filename}")
+
+        self.pk_select_icon2 = gf.Image(self.select_poke_pos2, path)
+
+        #PK3---------------------------------
+        if isinstance(sprite3, dict):
+            if self.player_pokemon3.is_alive():
+                filename = sprite3["icon"]
+            else:
+                filename = sprite3["icon_dead"]
+        else:
+            filename = sprite3
+
+        path = self.get_path(f"pokemon/{filename}")
+
+        self.pk_select_icon3 = gf.Image(self.select_poke_pos3, path)
+
+        #PK4---------------------------------
+        if isinstance(sprite4, dict):
+            if self.player_pokemon4.is_alive():
+                filename = sprite4["icon"]
+            else:
+                filename = sprite4["icon_dead"]
+        else:
+            filename = sprite4
+
+        path = self.get_path(f"pokemon/{filename}")
+
+        self.pk_select_icon4 = gf.Image(self.select_poke_pos4, path)
+
+        #PK5---------------------------------
+        if isinstance(sprite5, dict):
+            if self.player_pokemon5.is_alive():
+                filename = sprite5["icon"]
+            else:
+                filename = sprite5["icon_dead"]
+        else:
+            filename = sprite5
+
+        path = self.get_path(f"pokemon/{filename}")
+
+        self.pk_select_icon5 = gf.Image(self.select_poke_pos5, path)
+
+        #PK6---------------------------------
+        if isinstance(sprite6, dict):
+            if self.player_pokemon6.is_alive():
+                filename = sprite6["icon"]
+            else:
+                filename = sprite6["icon_dead"]
+        else:
+            filename = sprite6
+
+        path = self.get_path(f"pokemon/{filename}")
+
+        self.pk_select_icon6 = gf.Image(self.select_poke_pos6, path)
+        
+
+        return self.pk_select_icon1, self.pk_select_icon2, self.pk_select_icon3, self.pk_select_icon4, self.pk_select_icon5, self.pk_select_icon6
 
     def run(self):
         self.battle_hud.undraw()
