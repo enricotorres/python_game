@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 
 class WorldLogic:
     def __init__(
@@ -9,13 +10,23 @@ class WorldLogic:
         map_height = 1536,
         velocity = 10,
         anim_speed = 2,
+        map_name="pallet_town"
     ):
+        self.root_dir = Path(__file__).resolve().parent.parent
+
+        map_file = self.root_dir / "data" / "map_data.json"
+        with open(map_file, 'r') as f:
+            data = json.load(f)
+
+        current_map = data["pallet_town"]
+        self.obstacles = current_map["obstacles"]
+        self.occluders = current_map["occluders"]
+
         self.map_width = map_width
         self.map_height = map_height
         self.screen_width = screen_width
         self.screen_height = screen_height
 
-        self.root_dir = Path(__file__).resolve().parent.parent
         self.assets_dir = self.root_dir / "assets" / "images" / "characters" / "player"
 
         self.player_world_x = self.map_width / 2
@@ -34,42 +45,6 @@ class WorldLogic:
 
         self.keys = {"w": False, "s": False, "a": False, "d": False}
 
-        self.obstacles = [
-            (0, 0, 2752, 20),      # Borda Superior
-            (0, 0, 20, 1536),      # Borda Esquerda
-            (2732, 0, 2752, 1536), # Borda Direita
-            (0, 1516, 2752, 1536), # Borda Inferior
-            (959, 514, 1275, 690), # Casa do Ash
-            (1543, 518, 1862, 690), # Casa marrom
-            (895, 648, 944, 690), # Caixa correio Ash
-            (1483, 648, 1526, 690), # caixa correio marrom
-            (941, 949, 1270, 1102), # Pokemarket
-            (954, 1122, 1009, 1139), # placa pokemarket
-            (1224, 1108, 1279, 1153), # placa pokemarket
-            (1273, 1005, 1335, 1101), # barril pokemarket
-            (857, 977, 935, 1030), # caixa grande pokemarket
-            (877, 1030, 943, 1091), # caixa pequena pokemarket
-            (1481, 900, 1925, 1072), # Lab. carvalho
-            (711, 328, 1300, 328), # limite superior
-            (1439, 328, 2085, 328), # limite superior
-            (710, 328, 710, 1324), # Limite esquerda
-            (2087, 328, 2087, 1412), # Limite direita
-            (1343, 1410, 2080, 1410), # Limite inferir direita
-            (710, 1306, 1311, 1306), # Limite inferior esquerda
-            (1330, 1317, 1330, 1416), # limite inferior agua
-            (1300, 0, 1300, 328), # saida superior
-            (1439, 0, 1439, 328), # saida superior
-            (1473, 1256, 1876, 1276), # cerca
-            (820, 1179, 867, 1233), # npc mulher
-            (1523, 1309, 1573, 1348) # npc homem
-        ]
-
-        self.occluders = [
-            (959, 420, 1275, 690),   # Casa do Ash (Topo e Telhado)
-            (1543, 420, 1862, 690),  # Casa Marrom (Topo e Telhado)
-            (941, 820, 1270, 949),   # Pokemarket (Topo e Telhado)
-            (1481, 820, 1925, 900)   # Lab. carvalho (Topo e Telhado)
-        ]
 
     def set_key(self, key, pressed):
         k = key.lower()

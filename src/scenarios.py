@@ -210,7 +210,7 @@ class WorldScene:
         self.logic.set_key(key, False)
 
     def _get_background(self):
-        map_path = self.root_dir / "assets" / "images" / "environment" / "maps" / "worldscene.png"
+        map_path = self.root_dir / "assets" / "images" / "environment" / "maps" / "worldscene2.png"
         return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), str(map_path))
 
 
