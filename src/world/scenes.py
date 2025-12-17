@@ -127,7 +127,7 @@ class BaseWalkingScene:
         if hasattr(self.player, "save_position"):
             self.player.save_position()
         from src.battle.scene import BattleScene
-        self.manager.change_scene(BattleScene, enemy=enemy_trainer)
+        self.manager.change_scene(BattleScene, player=self.player, enemy=enemy_trainer)
 
     def update(self):
         result = self.logic.update()
