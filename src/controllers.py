@@ -127,22 +127,50 @@ class BattleController:
                 self.state = "PLAYER_TURN"
 
         elif self.state == "BAG_MENU":
-            if self.player.bag.get("Potion", 0) > 0 and self.player_pokemon.current_hp < self.player_pokemon.max_hp:
-                logger.info("Jogador decidiu usar uma Poção.")
-                self.player_chosen_item = Item("Potion")
+            item_index: int = self.battle_scene.chose_item()
+            
+            if item_index == self.cancel_action:
+                self.state = "PLAYER_TURN"
+                return
 
-                if self.player_chosen_item.use(self.player_pokemon):
-                    self.player.consume_item("Potion")
-                    logger.info(f"Jogador usou Potion em {self.player_pokemon.name}!")
+            bag_keys = list(self.player.bag.keys())
+            
+            if item_index < len(bag_keys):
+                item_name = bag_keys[item_index]
+                current_qty = self.player.bag.get(item_name, 0)
+                
+                if current_qty > 0:
+                    logger.info(f"Jogador decidiu usar {item_name}.")
+                    self.player_chosen_item = Item(item_name)
+                    used_success = False
 
-                    self.player_action_type = "bag"
-                    self._decide_enemy_move()
-                    self.state = "RESOLVE_TURN"
+                    if item_name in ["Potion", "Super Potion", "Hyper Potion"]:
+                         if self.player_pokemon.current_hp < self.player_pokemon.max_hp:
+                             if self.player_chosen_item.use(self.player_pokemon):
+                                 used_success = True
+                         else:
+                             logger.info("HP já está cheio.")
+                    
+                    elif item_name == "Revive":
+                         logger.info("Revive não pode ser usado no Pokémon ativo (ele está vivo).")
+                    
+                    elif "Ball" in item_name:
+                        logger.info("Lógica de captura ainda não implementada neste controller.")
+
+                    
+                    if used_success:
+                        self.player.consume_item(item_name)
+                        logger.info(f"Jogador usou {item_name} em {self.player_pokemon.name}!")
+                        self.player_action_type = "bag"
+                        self._decide_enemy_move()
+                        self.state = "RESOLVE_TURN"
+                    else:
+                        self.state = "PLAYER_TURN"
                 else:
-                    logger.warning("Falha ao usar a Poção.")
+                    logger.warning("Item sem quantidade.")
                     self.state = "PLAYER_TURN"
             else:
-                logger.info("Jogador não tem 'Potion' ou o Pokémon está com HP cheio. Retornando.")
+                logger.warning("Slot vazio selecionado.")
                 self.state = "PLAYER_TURN"
 
         elif self.state == "FORCE_SWITCH":

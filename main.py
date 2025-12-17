@@ -43,8 +43,10 @@ def main():
     logger.info(f"Times criados com sucesso. Player: {len(ash_team)} | Rival: {len(gary_team)}")
 
     player = Trainer(name="Ash", initial_team=ash_team)
-    player.add_item("Potion", quantity=3)
-    player.add_item("Revive", quantity=1)
+    player.add_item("Potion", quantity=5)
+    player.add_item("Revive", quantity=3)
+    player.add_item("Poke Ball", quantity=15)
+    player.add_item("Hyper Potion", quantity=2)
 
     rival = Trainer(name="Gary", initial_team=gary_team)
     rival.add_item("Super Potion", quantity=2)

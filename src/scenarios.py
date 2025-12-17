@@ -272,6 +272,34 @@ class BattleScene:
             t.setTextColor("black")
             texts.append(t)
         return texts
+     
+    def bag_txt(self):
+        bag_texts = []
+        raw_bag = getattr(self.player, 'bag', {})
+        if isinstance(raw_bag, dict):
+            items_list = list(raw_bag.keys())
+        else:
+            items_list = raw_bag
+
+        for i in range(4):
+            p = gf.Point(286.1 + (i * 286.1), 640)
+            
+            if i < len(items_list):
+                item_name = items_list[i]
+                if isinstance(raw_bag, dict):
+                    qty = raw_bag[item_name]
+                    label = f"{item_name} x{qty}"
+                else:
+                    label = str(item_name)
+            else:
+                label = "-" 
+            
+            t = gf.Text(p, label)
+            t.setSize(18)
+            t.setTextColor("black")
+            bag_texts.append(t)
+            
+        return bag_texts
 
     def chose_action(self):
         while True:
@@ -506,6 +534,38 @@ class BattleScene:
         
 
         return self.pk_select_icon1, self.pk_select_icon2, self.pk_select_icon3, self.pk_select_icon4, self.pk_select_icon5, self.pk_select_icon6
+
+    def chose_item(self):
+        b_win = self.bag_btn()
+        b_win.draw(self.janela)
+        b_txt = self.bag_txt()
+        for item in b_txt:
+            item.draw(self.janela)
+        
+        choice = -1
+        while True:
+            click = self.janela.getMouse()
+            if self.verificar_clique(click, self.atk_option1_pos1, self.atk_option1_pos2):
+                choice = 0
+                break
+            elif self.verificar_clique(click, self.atk_option2_pos1, self.atk_option2_pos2):
+                choice = 1
+                break
+            elif self.verificar_clique(click, self.atk_option3_pos1, self.atk_option3_pos2):
+                choice = 2
+                break
+            elif self.verificar_clique(click, self.atk_option4_pos1, self.atk_option4_pos2):
+                choice = 3
+                break
+            elif self.verificar_clique(click, self.atk_back_pos1, self.atk_back_pos2):
+                choice = -1
+                break
+        
+        for item in b_txt:
+            item.undraw()
+        b_win.undraw()
+
+        return choice
 
     def run(self):
         self.battle_hud.undraw()
