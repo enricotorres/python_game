@@ -10,6 +10,8 @@ class BaseWalkingScene:
         self.manager = getattr(self, "manager", None)
         self.npcs = []
         self.show_npc_markers = True
+        if hasattr(self.window, "resize"):
+            self.window.resize(SCREEN_WIDTH, SCREEN_HEIGHT)
         self.screen_width = self.window.getWidth()
         self.screen_height = self.window.getHeight()
 
@@ -52,7 +54,9 @@ class BaseWalkingScene:
     def _load_background(self, relative_path):
 
         full_path = IMAGES_DIR / relative_path
-        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), str(full_path))
+        center_x = (self.logic.map_width / 2) - self.logic.cam_x
+        center_y = (self.logic.map_height / 2) - self.logic.cam_y
+        return gf.Image(gf.Point(center_x, center_y), str(full_path))
 
     def _on_key_press(self, event):
         key = event.keysym.lower()
