@@ -25,3 +25,7 @@ class SceneManager:
                 self.current_scene = new_scene_class(self.window, self.player)
             except TypeError:
                 self.current_scene = new_scene_class(self.window)
+        try:
+            self.current_scene.manager = self
+        except Exception:
+            pass

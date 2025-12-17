@@ -1,7 +1,7 @@
 from src.lib import graphics as gf
-from pathlib import Path
 import time
 from src import IMAGES_DIR
+
 
 
 
@@ -465,9 +465,9 @@ class BattleScene:
         #PK1---------------------------------
         if isinstance(sprite1, dict):
             if self.player_pokemon1.is_alive():
-                filename = sprite1["icon"]
+                filename = sprite1.get("icon") or sprite1.get("front") or sprite1.get("back")
             else:
-                filename = sprite1["icon_dead"]
+                filename = sprite1.get("icon_dead") or sprite1.get("front") or sprite1.get("back")
         else:
             filename = sprite1
 
@@ -478,9 +478,9 @@ class BattleScene:
         #PK2---------------------------------
         if isinstance(sprite2, dict):
             if self.player_pokemon2.is_alive():
-                filename = sprite2["icon"]
+                filename = sprite2.get("icon") or sprite2.get("front") or sprite2.get("back")
             else:
-                filename = sprite2["icon_dead"]
+                filename = sprite2.get("icon_dead") or sprite2.get("front") or sprite2.get("back")
         else:
             filename = sprite2
 
@@ -491,9 +491,9 @@ class BattleScene:
         #PK3---------------------------------
         if isinstance(sprite3, dict):
             if self.player_pokemon3.is_alive():
-                filename = sprite3["icon"]
+                filename = sprite3.get("icon") or sprite3.get("front") or sprite3.get("back")
             else:
-                filename = sprite3["icon_dead"]
+                filename = sprite3.get("icon_dead") or sprite3.get("front") or sprite3.get("back")
         else:
             filename = sprite3
 
@@ -504,9 +504,9 @@ class BattleScene:
         #PK4---------------------------------
         if isinstance(sprite4, dict):
             if self.player_pokemon4.is_alive():
-                filename = sprite4["icon"]
+                filename = sprite4.get("icon") or sprite4.get("front") or sprite4.get("back")
             else:
-                filename = sprite4["icon_dead"]
+                filename = sprite4.get("icon_dead") or sprite4.get("front") or sprite4.get("back")
         else:
             filename = sprite4
 
@@ -517,9 +517,9 @@ class BattleScene:
         #PK5---------------------------------
         if isinstance(sprite5, dict):
             if self.player_pokemon5.is_alive():
-                filename = sprite5["icon"]
+                filename = sprite5.get("icon") or sprite5.get("front") or sprite5.get("back")
             else:
-                filename = sprite5["icon_dead"]
+                filename = sprite5.get("icon_dead") or sprite5.get("front") or sprite5.get("back")
         else:
             filename = sprite5
 
@@ -530,9 +530,9 @@ class BattleScene:
         #PK6---------------------------------
         if isinstance(sprite6, dict):
             if self.player_pokemon6.is_alive():
-                filename = sprite6["icon"]
+                filename = sprite6.get("icon") or sprite6.get("front") or sprite6.get("back")
             else:
-                filename = sprite6["icon_dead"]
+                filename = sprite6.get("icon_dead") or sprite6.get("front") or sprite6.get("back")
         else:
             filename = sprite6
 
@@ -582,7 +582,7 @@ class BattleScene:
         msg.draw(self.janela)
         gf.update()
         time.sleep(1)
-        self.janela.close()
+        msg.undraw()
 
     def update(self):
         if not hasattr(self, "_battle_started"):
@@ -590,7 +590,25 @@ class BattleScene:
             self._battle_started = True
             self.controller = BattleController(self, self.enemy, self.player)
             self.controller.run_battle_loop()
+            self._exit_to_world()
+
+    def _exit_to_world(self):
+        if hasattr(self.player, "restore_position"):
+            self.player.restore_position()
+        if hasattr(self, "manager") and self.manager is not None:
+            from src.world.scenes import WorldScene
+            self.manager.change_scene(WorldScene, player=self.player)
 
     def unload(self):
-        self.back.undraw()
-        self.battle_hud.undraw()
+        for attr in [
+            "img_player", "img_enemy", "battle_hud", "back",
+            "p_life_rect", "e_life_rect",
+            "pokemon_player_name", "pokemon_enemy_name",
+            "pokemon_player_level", "pokemon_enemy_level",
+        ]:
+            obj = getattr(self, attr, None)
+            if obj is not None:
+                try:
+                    obj.undraw()
+                except Exception:
+                    pass

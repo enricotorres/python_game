@@ -362,6 +362,16 @@ class Trainer:
     def __repr__(self) -> str:
         return f"<Trainer {self.name} | Money: ${self.money} | Team: {len(self.team)}>"
 
+    def save_position(self) -> None:
+        self.prev_x = self.x
+        self.prev_y = self.y
+
+    def restore_position(self) -> None:
+        if hasattr(self, "prev_x"):
+            self.x = self.prev_x
+        if hasattr(self, "prev_y"):
+            self.y = self.prev_y
+
 
 class Move:
     def __init__(self, name: str, data: dict[str, object] = None):
