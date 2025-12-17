@@ -209,7 +209,7 @@ class WorldScene(BaseWalkingScene):
             x=1122, 
             y=1106, 
             target_scene_class=PokecenterScene, 
-            target_x=400, 
+            target_x=800, 
             target_y=750
         )
 
@@ -228,7 +228,7 @@ class PokecenterScene(BaseWalkingScene):
             **kwargs
         )
         self.add_warp(
-            x=400, 
+            x=800, 
             y=800, 
             target_scene_class=WorldScene, 
             target_x=1122, 
