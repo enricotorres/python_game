@@ -1,7 +1,5 @@
 import logging
 
-
-
 from src.lib.graphics import update
 from src import Trainer, Pokemon, SceneManager
 from src.world.scenes import WorldScene
@@ -18,21 +16,21 @@ def main():
     logger.info("--- Inicializando Pokémon Python ---")
 
     ash_team = [
-        Pokemon("Bulbasaur", level=1),
-        Pokemon("Pikachu", level=100),
-        Pokemon("Pidgey", level=5),
-        Pokemon("Geodude", level=5),
-        Pokemon("Gastly", level=5),
-        Pokemon("Squirtle", level=5),
+        Pokemon("Pikachu", level=50, moves=["Thunderbolt", "Quick Attack", "Iron Tail", "Thunder Wave"]),
+        Pokemon("Bulbasaur", level=50, moves=["Solar Beam", "Sludge Bomb", "Leech Seed", "Razor Leaf"]),
+        Pokemon("Charmander", level=50, moves=["Flamethrower", "Slash", "Dragon Rage", "Fire Spin"]),
+        Pokemon("Squirtle", level=50, moves=["Hydro Pump", "Ice Beam", "Surf", "Bite"]),
+        Pokemon("Pidgey", level=50, moves=["Aerial Ace", "Steel Wing", "Wing Attack", "Quick Attack"]),
+        Pokemon("Mankey", level=50, moves=["Brick Break", "Karate Chop", "Submission", "Seismic Toss"])
     ]
 
     gary_team = [
-        Pokemon("Charmander", level=1, moves=["Fire Blast"]),
-        Pokemon("Bulbasaur", level=1),
-        Pokemon("Bulbasaur", level=1),
-        Pokemon("Onix", level=5),
-        Pokemon("Zubat", level=5),
-        Pokemon("Mankey", level=5),
+        Pokemon("Onix", level=50, moves=["Iron Tail", "Earthquake", "Rock Slide", "Double Edge"]),
+        Pokemon("Geodude", level=50, moves=["Earthquake", "Rock Throw", "Self Destruct", "Double Edge"]),
+        Pokemon("Gastly", level=50, moves=["Shadow Ball", "Hypnosis", "Dream Eater", "Confuse Ray"]),
+        Pokemon("Zubat", level=50, moves=["Sludge Bomb", "Aerial Ace", "Confuse Ray", "Bite"]),
+        Pokemon("Charmander", level=50, moves=["Fire Blast", "Dragon Claw", "Brick Break", "Smokescreen"]),
+        Pokemon("Squirtle", level=50, moves=["Hydro Cannon", "Ice Beam", "Water Pulse", "Skull Bash"])
     ]
 
     logger.info(f"Times criados com sucesso. Player: {len(ash_team)} | Rival: {len(gary_team)}")
