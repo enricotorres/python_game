@@ -122,22 +122,25 @@ class MoveEffectResolver:
             logger.warning(f"Handler não encontrado para o efeito: {effect_type}")
 
     def _handle_stat_change(self, effect_data: dict, attacker: Pokemon, defender: Pokemon) -> None:
-        target = attacker if effect_data.get("target") == "self" else defender
+        target_key = effect_data.get("target", "enemy")
+        target = attacker if target_key == "self" else defender
         stat: str | None = effect_data.get("stat")
-        stages: int = effect_data.get("stages", 0)
+        stages: int = effect_data.get("amount", effect_data.get("stages", 0))
+        chance: int = effect_data.get("chance", 100)
 
-        if stat and stages != 0:
+        if stat and stages != 0 and random.randint(1, 100) <= chance:
             target.apply_stat_change(stat, stages)
             logger.info(f"{target.name} teve o {stat} alterado em {stages} estágio(s)!")
 
     def _handle_status_condition(self, effect_data: dict, attacker: Pokemon, defender: Pokemon) -> None:
-        target = defender
-        status: str | None = effect_data.get("status")
+        target_key = effect_data.get("target", "enemy")
+        target = attacker if target_key == "self" else defender
+        condition: str | None = effect_data.get("condition", effect_data.get("status"))
         chance: int = effect_data.get("chance", 100)
 
-        if random.randint(1, 100) <= chance and target.status is None:
-            target.status = status
-            logger.info(f"{target.name} foi afetado por {status}!")
+        if condition and random.randint(1, 100) <= chance and target.status is None:
+            target.status = condition
+            logger.info(f"{target.name} foi afetado por {condition}!")
 
     def _handle_weather_change(self, effect_data: dict, attacker: Pokemon, defender: Pokemon) -> None:
         weather: str | None = effect_data.get("weather")
