@@ -16,3 +16,5 @@ env/
 *.log
 
 alteracoes.diff
+mapeador.py
+redimensionar.py
