@@ -2,6 +2,8 @@ from src.lib import graphics as gf
 from src import Trainer
 from src.world.logic import WorldLogic
 from src import IMAGES_DIR, SCREEN_WIDTH, SCREEN_HEIGHT
+from src.config import POKECENTER_HEAL_ZONE
+import time
 
 class BaseWalkingScene:
     def __init__(self, window, player: Trainer, map_name: str, bg_image_rel_path: str, start_x=None, start_y=None, **kwargs):
@@ -68,6 +70,8 @@ class BaseWalkingScene:
         self.logic.set_key(key, False)
 
     def add_npc(self, trainer: Trainer, x: int, y: int):
+        trainer.x = x
+        trainer.y = y
         npc = {"trainer": trainer, "x": x, "y": y}
         self.npcs.append(npc)
 
@@ -234,3 +238,34 @@ class PokecenterScene(BaseWalkingScene):
             target_x=1122,
             target_y=1140
         )
+        self.heal_zone = POKECENTER_HEAL_ZONE
+
+    def _is_in_heal_zone(self, x: float, y: float) -> bool:
+        x1, y1, x2, y2 = self.heal_zone
+        return (x1 <= x <= x2) and (y1 <= y <= y2)
+
+    def _show_heal_message(self, text: str = "Seus Pokémon foram curados!"):
+        cx = self.screen_width / 2
+        cy = self.screen_height / 2
+        bg = gf.Rectangle(gf.Point(cx - 240, cy - 50), gf.Point(cx + 240, cy + 50))
+        bg.setFill("white")
+        bg.setOutline("black")
+        msg = gf.Text(gf.Point(cx, cy), text)
+        msg.setSize(20)
+        msg.setTextColor("black")
+
+        bg.draw(self.window)
+        msg.draw(self.window)
+        gf.update()
+        time.sleep(1.0)
+        msg.undraw()
+        bg.undraw()
+
+    def _on_interact(self, event):
+        px = self.logic.player_world_x
+        py = self.logic.player_world_y
+
+        if self._is_in_heal_zone(px, py):
+            self.player.heal_team()
+            self._show_heal_message()
+            return

@@ -616,6 +616,23 @@ class BattleScene:
         if hasattr(self, "manager") and self.manager is not None:
             from src.world.scenes import WorldScene
             self.manager.change_scene(WorldScene, player=self.player)
+            try:
+                if hasattr(self.enemy, "heal_team"):
+                    self.enemy.heal_team()
+            except Exception:
+                pass
+            try:
+                scene = getattr(self.manager, "current_scene", None)
+                if scene and hasattr(scene, "add_npc"):
+                    ex = getattr(self.enemy, "x", None)
+                    ey = getattr(self.enemy, "y", None)
+                    if ex is None:
+                        ex = getattr(self.player, "x", 0)
+                    if ey is None:
+                        ey = getattr(self.player, "y", 0)
+                    scene.add_npc(self.enemy, x=ex, y=ey)
+            except Exception:
+                pass
 
     def unload(self):
         for attr in [
