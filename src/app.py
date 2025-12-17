@@ -46,7 +46,7 @@ def main():
 
     try:
         game_manager = SceneManager(player=player)
-        game_manager.change_scene(PokecenterScene)
+        game_manager.change_scene(WorldScene)
         world_scene = game_manager.current_scene
         world_scene.add_npc(rival, x=1550, y=1360)
 

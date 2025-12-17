@@ -269,3 +269,4 @@ class PokecenterScene(BaseWalkingScene):
             self.player.heal_team()
             self._show_heal_message()
             return
+        super()._on_interact(event)
