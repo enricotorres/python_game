@@ -7,16 +7,28 @@ class BaseWalkingScene:
     def __init__(self, window, player: Trainer, map_name: str, bg_image_rel_path: str, start_x=None, start_y=None):
         self.window = window
         self.player = player
+        self.manager = getattr(self, "manager", None)
+        self.npcs = []
+        self.show_npc_markers = True
+        if hasattr(self.window, "resize"):
+            self.window.resize(SCREEN_WIDTH, SCREEN_HEIGHT)
         self.screen_width = self.window.getWidth()
         self.screen_height = self.window.getHeight()
 
+        px = getattr(self.player, "x", None)
+        py = getattr(self.player, "y", None)
+        if px == 0 and py == 0:
+            px = None
+            py = None
+        sx = start_x if start_x is not None else px
+        sy = start_y if start_y is not None else py
 
         self.logic = WorldLogic(
             self.screen_width,
             self.screen_height,
             map_name=map_name,
-            start_x=start_x,
-            start_y=start_y
+            start_x=sx,
+            start_y=sy
         )
 
         self.background = self._load_background(bg_image_rel_path)
@@ -36,12 +48,15 @@ class BaseWalkingScene:
         self.window.master.bind("<KeyPress>", self._on_key_press)
         self.window.master.bind("<KeyRelease>", self._on_key_release)
         self.window.master.focus_set()
+        self.window.master.bind("<Return>", self._on_interact)
         self.window.master.bind("p", lambda event: self.toggle_debug())
 
     def _load_background(self, relative_path):
 
         full_path = IMAGES_DIR / relative_path
-        return gf.Image(gf.Point(self.screen_width / 2, self.screen_height / 2), str(full_path))
+        center_x = (self.logic.map_width / 2) - self.logic.cam_x
+        center_y = (self.logic.map_height / 2) - self.logic.cam_y
+        return gf.Image(gf.Point(center_x, center_y), str(full_path))
 
     def _on_key_press(self, event):
         key = event.keysym.lower()
@@ -50,6 +65,37 @@ class BaseWalkingScene:
     def _on_key_release(self, event):
         key = event.keysym.lower()
         self.logic.set_key(key, False)
+
+    def add_npc(self, trainer: Trainer, x: int, y: int):
+        npc = {"trainer": trainer, "x": x, "y": y}
+        self.npcs.append(npc)
+
+
+    def _find_nearby_npc(self, max_dist: int = 80):
+        px = self.logic.player_world_x
+        py = self.logic.player_world_y
+        for npc in self.npcs:
+            dx = npc["x"] - px
+            dy = npc["y"] - py
+            if (dx * dx + dy * dy) ** 0.5 <= max_dist:
+                return npc
+        return None
+
+    def _on_interact(self, event):
+        npc = self._find_nearby_npc()
+        if npc is None:
+            return
+        if getattr(self, "manager", None) is None:
+            return
+        enemy_trainer = npc.get("trainer")
+        if enemy_trainer is None:
+            return
+        self.player.x = self.logic.player_world_x
+        self.player.y = self.logic.player_world_y
+        if hasattr(self.player, "save_position"):
+            self.player.save_position()
+        from src.battle.scene import BattleScene
+        self.manager.change_scene(BattleScene, enemy=enemy_trainer)
 
     def update(self):
         result = self.logic.update()
@@ -81,6 +127,7 @@ class BaseWalkingScene:
         self.is_visible = False
         self.window.master.unbind("<KeyPress>")
         self.window.master.unbind("<KeyRelease>")
+        self.window.master.unbind("<Return>")
 
     def toggle_debug(self):
 
