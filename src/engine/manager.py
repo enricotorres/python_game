@@ -10,7 +10,7 @@ class SceneManager:
         self.player = player
 
 
-    def change_scene(self, new_scene_class, player=None):
+    def change_scene(self, new_scene_class, player=None, enemy=None):
         if self.current_scene is not None:
             if hasattr(self.current_scene, "unload"):
                 self.current_scene.unload()
@@ -18,7 +18,10 @@ class SceneManager:
         if player is not None:
             self.player = player
 
-        try:
-            self.current_scene = new_scene_class(self.window, self.player)
-        except TypeError:
-            self.current_scene = new_scene_class(self.window)
+        if enemy is not None:
+            self.current_scene = new_scene_class(self.window, self.player, enemy)
+        else:
+            try:
+                self.current_scene = new_scene_class(self.window, self.player)
+            except TypeError:
+                self.current_scene = new_scene_class(self.window)

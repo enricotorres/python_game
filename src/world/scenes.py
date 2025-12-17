@@ -1,7 +1,7 @@
 from src.lib import graphics as gf
 from src import Trainer
 from src.world.logic import WorldLogic
-from src import IMAGES_DIR
+from src import IMAGES_DIR, SCREEN_WIDTH, SCREEN_HEIGHT
 
 class BaseWalkingScene:
     def __init__(self, window, player: Trainer, map_name: str, bg_image_rel_path: str, start_x=None, start_y=None):

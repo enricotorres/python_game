@@ -1,11 +1,10 @@
 import logging
-import sys
-from pathlib import Path
 
 
 from src.battle.scene import BattleScene
 from src.lib.graphics import update
-from src import Trainer, Pokemon, SceneManager, WorldScene, PokecenterScene
+from src import Trainer, Pokemon, SceneManager
+from src.world.scenes import PokecenterScene, WorldScene
 
 logging.basicConfig(
     level=logging.INFO,
@@ -47,7 +46,8 @@ def main():
 
     try:
         game_manager = SceneManager(player=player)
-        game_manager.change_scene(WorldScene, player=player)
+        battle_scene = BattleScene(game_manager.window, player, rival)
+        game_manager.current_scene = battle_scene
 
         while True:
             game_manager.current_scene.update()

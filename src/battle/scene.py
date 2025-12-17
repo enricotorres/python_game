@@ -1,5 +1,7 @@
 from src.lib import graphics as gf
 from pathlib import Path
+import time
+from src import IMAGES_DIR
 
 
 
@@ -8,8 +10,7 @@ class BattleScene:
         self.width = 1408
         self.height = 768
 
-        self.root_dir = Path(__file__).resolve().parent.parent
-        self.assets_dir = self.root_dir / "assets" / "images"
+        self.assets_dir = IMAGES_DIR
 
         self.p1 = gf.Point(826, 612)
         self.p2 = gf.Point(1000, 647)
@@ -63,13 +64,15 @@ class BattleScene:
         self.pokemon_enemy_level = None
 
         self.janela = window
+        if hasattr(self.janela, "resize"):
+            self.janela.resize(self.width, self.height)
 
         self.player = player
         self.enemy = enemy
         self.allow_cancel = True
 
-        back = self.bg()
-        back.draw(self.janela)
+        self.back = self.bg()
+        self.back.draw(self.janela)
 
         self.player_index = 0
         self.enemy_index = 0
@@ -82,20 +85,18 @@ class BattleScene:
         self.e_life_rect.draw(self.janela)
 
         self.battle_hud = self.hud()
-        self.back = self.bg()
-        self.battle_hud = self.hud()
-        self.back.draw(self.janela)
         self.battle_hud.draw(self.janela)
+        gf.update()
 
     def get_path(self, filename):
         full_path = self.assets_dir / filename
         return str(full_path)
 
     def bg(self):
-        return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("battlefield_final.png"))
+        return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("environment/maps/battlefield_final.png"))
 
     def hud(self):
-        return gf.Image(gf.Point(704, 675), self.get_path("battle_hud_final.png"))
+        return gf.Image(gf.Point(704, 675), self.get_path("ui/battle/battle_hud_final.png"))
 
     def sprite(self):
         # ------------------ PLAYER ---------------------
@@ -244,17 +245,17 @@ class BattleScene:
         return (x_min <= x <= x_max) and (y_min <= y <= y_max)
 
     def fight_btn(self):
-        img = gf.Image(gf.Point(704, 675), self.get_path("atk_hud.png"))
+        img = gf.Image(gf.Point(704, 675), self.get_path("ui/battle/atk_hud.png"))
         txt = gf.Text(gf.Point(286.1, 675), "ATAQUE 1")
         txt.setSize(18)
 
         return img
 
     def bag_btn(self):
-        return gf.Image(gf.Point(704, 675), self.get_path("white_hud.png"))
+        return gf.Image(gf.Point(704, 675), self.get_path("ui/battle/white_hud.png"))
 
     def pokemon_btn(self):
-        return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("pokemon_hud.png"))
+        return gf.Image(gf.Point(self.width / 2, self.height / 2), self.get_path("ui/battle/pokemon_hud.png"))
 
     def import_controller(self, BattleController):
         self.battle_controller = BattleController
@@ -306,6 +307,7 @@ class BattleScene:
         return bag_texts
 
     def chose_action(self):
+        gf.update()
         while True:
             click = self.janela.getMouse()
 
@@ -325,6 +327,8 @@ class BattleScene:
         f_txt = self.fight_txt()
         for item in f_txt:
             item.draw(self.janela)
+
+        gf.update()
 
         choice = -1
         while True:
@@ -543,6 +547,7 @@ class BattleScene:
         b_win = self.bag_btn()
         b_win.draw(self.janela)
         b_txt = self.bag_txt()
+        gf.update()
         for item in b_txt:
             item.draw(self.janela)
 
@@ -573,10 +578,18 @@ class BattleScene:
 
     def run(self):
         self.battle_hud.undraw()
-        msg = gf.Image(gf.Point(self.width/2, self.height/2), self.get_path("run_msg.png"))
+        msg = gf.Image(gf.Point(self.width/2, self.height/2), self.get_path("ui/battle/run_msg.png"))
         msg.draw(self.janela)
+        gf.update()
         time.sleep(1)
         self.janela.close()
+
+    def update(self):
+        if not hasattr(self, "_battle_started"):
+            from src.battle.controller import BattleController
+            self._battle_started = True
+            self.controller = BattleController(self, self.enemy, self.player)
+            self.controller.run_battle_loop()
 
     def unload(self):
         self.back.undraw()
