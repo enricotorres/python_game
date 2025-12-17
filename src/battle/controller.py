@@ -33,6 +33,13 @@ class BattleController:
         self.weather_turns: int = 0
 
         self.state: str = "START"
+
+        self.battle_scene.pokemon_player_name, self.battle_scene.pokemon_enemy_name, self.battle_scene.pokemon_player_level, self.battle_scene.pokemon_enemy_level = self.battle_scene.pokemon_infos(custom_pos=None, specific_pokemon=None)
+        self.battle_scene.pokemon_player_name.draw(self.battle_scene.janela)
+        self.battle_scene.pokemon_enemy_name.draw(self.battle_scene.janela)
+        self.battle_scene.pokemon_player_level.draw(self.battle_scene.janela)
+        self.battle_scene.pokemon_enemy_level.draw(self.battle_scene.janela)
+
         logger.info(f"Controlador de Batalha iniciado: {self.player.name} vs {self.enemy.name}")
 
     def run_battle_loop(self) -> None:
@@ -119,22 +126,50 @@ class BattleController:
                 self.state = "PLAYER_TURN"
 
         elif self.state == "BAG_MENU":
-            if self.player.bag.get("Potion", 0) > 0 and self.player_pokemon.current_hp < self.player_pokemon.max_hp:
-                logger.info("Jogador decidiu usar uma Poção.")
-                self.player_chosen_item = Item("Potion")
+            item_index: int = self.battle_scene.chose_item()
+            
+            if item_index == self.cancel_action:
+                self.state = "PLAYER_TURN"
+                return
 
-                if self.player_chosen_item.use(self.player_pokemon):
-                    self.player.consume_item("Potion")
-                    logger.info(f"Jogador usou Potion em {self.player_pokemon.name}!")
+            bag_keys = list(self.player.bag.keys())
+            
+            if item_index < len(bag_keys):
+                item_name = bag_keys[item_index]
+                current_qty = self.player.bag.get(item_name, 0)
+                
+                if current_qty > 0:
+                    logger.info(f"Jogador decidiu usar {item_name}.")
+                    self.player_chosen_item = Item(item_name)
+                    used_success = False
 
-                    self.player_action_type = "bag"
-                    self._decide_enemy_move()
-                    self.state = "RESOLVE_TURN"
+                    if item_name in ["Potion", "Super Potion", "Hyper Potion"]:
+                         if self.player_pokemon.current_hp < self.player_pokemon.max_hp:
+                             if self.player_chosen_item.use(self.player_pokemon):
+                                 used_success = True
+                         else:
+                             logger.info("HP já está cheio.")
+                    
+                    elif item_name == "Revive":
+                         logger.info("Revive não pode ser usado no Pokémon ativo (ele está vivo).")
+                    
+                    elif "Ball" in item_name:
+                        logger.info("Lógica de captura ainda não implementada neste controller.")
+
+                    
+                    if used_success:
+                        self.player.consume_item(item_name)
+                        logger.info(f"Jogador usou {item_name} em {self.player_pokemon.name}!")
+                        self.player_action_type = "bag"
+                        self._decide_enemy_move()
+                        self.state = "RESOLVE_TURN"
+                    else:
+                        self.state = "PLAYER_TURN"
                 else:
-                    logger.warning("Falha ao usar a Poção.")
+                    logger.warning("Item sem quantidade.")
                     self.state = "PLAYER_TURN"
             else:
-                logger.info("Jogador não tem 'Potion' ou o Pokémon está com HP cheio. Retornando.")
+                logger.warning("Slot vazio selecionado.")
                 self.state = "PLAYER_TURN"
 
         elif self.state == "FORCE_SWITCH":
@@ -147,6 +182,11 @@ class BattleController:
             if self.player.set_active_pokemon_index(selected_index):
                 self.player_pokemon = self.player.get_active_pokemon()
                 logger.info(f"Novo Pokémon ativo: {self.player_pokemon.name}")
+                
+                self.battle_scene.update_health_bar()
+                self.battle_scene.update_info()
+                self.battle_scene.update_sprites()
+
                 self.state = "PLAYER_TURN"
             else:
                 logger.warning("Não pode trocar para um Pokémon desmaiado.")
@@ -178,6 +218,9 @@ class BattleController:
         if self.player_action_type == "switch":
             self.player_pokemon = self.player.get_active_pokemon()
             logger.info(f"Troca realizada. Vai! {self.player_pokemon.name}!")
+            self.battle_scene.update_health_bar()
+            self.battle_scene.update_info()
+            self.battle_scene.update_sprites()
             if self._check_battle_status():
                  self._perform_attack(self.enemy_pokemon, self.player_pokemon, self.enemy_chosen_move)
 
@@ -269,6 +312,9 @@ class BattleController:
             logger.info(f"Causou {damage} de dano em {defender.name}!")
             if hits_count > 1:
                 logger.info(f"Atingiu {hits_count} vezes!")
+            
+            self.battle_scene.update_health_bar()
+            
 
         if hasattr(move, "mechanics") and move.mechanics:
             if "drain_percent" in move.mechanics:
@@ -308,6 +354,9 @@ class BattleController:
             logger.info(f"Ganhou {xp_gained} de experiência!")
             if self._swap_enemy_pokemon():
                 logger.info(f"Inimigo enviou {self.enemy_pokemon.name}!")
+                self.battle_scene.update_health_bar()
+                self.battle_scene.update_info()
+                self.battle_scene.update_sprites()
             return False
 
         return True
