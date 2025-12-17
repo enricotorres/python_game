@@ -2,7 +2,7 @@ import logging
 
 from src.lib.graphics import update
 from src import Trainer, Pokemon, SceneManager
-from src.world.scenes import WorldScene
+from src.world.scenes import PokecenterScene, WorldScene
 
 logging.basicConfig(
     level=logging.INFO,
@@ -44,7 +44,7 @@ def main():
 
     try:
         game_manager = SceneManager(player=player)
-        game_manager.change_scene(WorldScene)
+        game_manager.change_scene(PokecenterScene)
         world_scene = game_manager.current_scene
         world_scene.add_npc(rival, x=1550, y=1360)
 

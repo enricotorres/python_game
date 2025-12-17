@@ -372,6 +372,25 @@ class Trainer:
         if hasattr(self, "prev_y"):
             self.y = self.prev_y
 
+    def heal_team(self) -> None:
+        for pkm in self.team:
+            if hasattr(pkm, "max_hp"):
+                pkm.current_hp = pkm.max_hp
+            pkm.status = None
+
+            if hasattr(pkm, "volatile_status"):
+                pkm.volatile_status = {}
+            if hasattr(pkm, "stat_mods"):
+                for k in list(pkm.stat_mods.keys()):
+                    pkm.stat_mods[k] = 0
+
+            if hasattr(pkm, "moves"):
+                for mv in pkm.moves:
+                    try:
+                        mv.restore_pp()
+                    except Exception:
+                        pass
+
 
 class Move:
     def __init__(self, name: str, data: dict[str, object] = None):
