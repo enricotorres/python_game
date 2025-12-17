@@ -24,7 +24,7 @@ _EXPORTS: Dict[str, Tuple[str, str]] = {
     "Item": ("core.models.classes", "Item"),
 
     # world management
-    "SceneManager": ("world.manager", "SceneManager"),
+    "SceneManager": ("engine.manager", "SceneManager"),
     "WorldScene": ("world.scenes", "WorldScene"),
     "PokecenterScene": ("world.scenes", "PokecenterScene"),
 
