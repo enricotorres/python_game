@@ -1,4 +1,6 @@
 import logging
+import sys
+import os
 
 from src.lib.graphics import update
 from src import Trainer, Pokemon, SceneManager

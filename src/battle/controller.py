@@ -255,9 +255,11 @@ class BattleController:
 
     def _handle_end_game_states(self) -> None:
         if self.state == "VICTORY":
+            self.battle_scene.victory()
             logger.info("VITÓRIA! O treinador inimigo foi derrotado.")
             self.state = "EXIT"
         elif self.state == "DEFEAT":
+            self.battle_scene.defeat()
             logger.info("DERROTA... Você não tem mais Pokémons.")
             self.state = "EXIT"
 

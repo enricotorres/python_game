@@ -9,23 +9,31 @@ class SceneManager:
         self.current_scene = None
         self.player = player
 
-
-    def change_scene(self, new_scene_class, player=None, enemy=None):
+    def change_scene(self, new_scene_class, *args, **kwargs):
         if self.current_scene is not None:
             if hasattr(self.current_scene, "unload"):
                 self.current_scene.unload()
 
-        if player is not None:
-            self.player = player
+        # 1. Se quem chamou passou um novo player, atualizamos o nosso
+        if "player" in kwargs:
+            self.player = kwargs["player"]
 
-        if enemy is not None:
-            self.current_scene = new_scene_class(self.window, self.player, enemy)
-        else:
-            try:
-                self.current_scene = new_scene_class(self.window, self.player)
-            except TypeError:
-                self.current_scene = new_scene_class(self.window)
+        # 2. AUTO-CORREÇÃO: Se quem chamou ESQUECEU de passar o player
+        if "player" not in kwargs and self.player is not None:
+            kwargs["player"] = self.player
+
+        # --- O ERRO ESTÁ AQUI: FALTOU ESTA LINHA ---
+        # O Manager precisa se passar para a próxima cena, senão a próxima cena
+        # não consegue chamar o change_scene depois.
+        kwargs["manager"] = self 
+        # -------------------------------------------
+
+        # 3. Cria a nova cena
         try:
-            self.current_scene.manager = self
-        except Exception:
-            pass
+            self.current_scene = new_scene_class(self.window, *args, **kwargs)
+        except Exception as e:
+            print(f"ERRO CRÍTICO ao criar a cena {new_scene_class.__name__}: {e}")
+            raise e
+
+    def close(self):
+        self.window.close()

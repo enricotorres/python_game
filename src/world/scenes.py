@@ -6,10 +6,11 @@ from src.config import POKECENTER_HEAL_ZONE
 import time
 
 class BaseWalkingScene:
-    def __init__(self, window, player: Trainer, map_name: str, bg_image_rel_path: str, start_x=None, start_y=None):
+    def __init__(self, window, player: Trainer, map_name: str, bg_image_rel_path: str, start_x=None, start_y=None, **kwargs):
         self.window = window
         self.player = player
-        self.manager = getattr(self, "manager", None)
+        self.manager = kwargs.get("manager", getattr(self, "manager", None))
+        self.warps = []
         self.npcs = []
         self.show_npc_markers = True
         if hasattr(self.window, "resize"):
@@ -74,6 +75,23 @@ class BaseWalkingScene:
         npc = {"trainer": trainer, "x": x, "y": y}
         self.npcs.append(npc)
 
+    def add_warp(self, x: int, y: int, target_scene_class, target_x=None, target_y=None):
+        warp = {
+            "x": x, "y": y,
+            "target_scene": target_scene_class,
+            "tx": target_x, "ty": target_y
+        }
+        self.warps.append(warp)
+
+    def _find_nearby_warp(self, max_dist: int = 120):
+        px = self.logic.player_world_x
+        py = self.logic.player_world_y
+        for warp in self.warps:
+            dx = warp["x"] - px
+            dy = warp["y"] - py
+            if (dx * dx + dy * dy) ** 0.5 <= max_dist:
+                return warp
+        return None
 
     def _find_nearby_npc(self, max_dist: int = 80):
         px = self.logic.player_world_x
@@ -86,6 +104,20 @@ class BaseWalkingScene:
         return None
 
     def _on_interact(self, event):
+        warp = self._find_nearby_warp()
+        if warp:
+            self.player.x = self.logic.player_world_x
+            self.player.y = self.logic.player_world_y
+
+            self.manager.change_scene(
+                warp["target_scene"],
+                manager=self.manager,
+                player=self.player,
+                start_x=warp["tx"],
+                start_y=warp["ty"]
+            )
+            return
+
         npc = self._find_nearby_npc()
         if npc is None:
             return
@@ -99,7 +131,7 @@ class BaseWalkingScene:
         if hasattr(self.player, "save_position"):
             self.player.save_position()
         from src.battle.scene import BattleScene
-        self.manager.change_scene(BattleScene, enemy=enemy_trainer)
+        self.manager.change_scene(BattleScene, player=self.player, enemy=enemy_trainer)
 
     def update(self):
         result = self.logic.update()
@@ -159,25 +191,52 @@ class BaseWalkingScene:
             rect.draw(self.window)
             self.debug_shapes.append(rect)
 
+        for warp in self.warps:
+            wx, wy = warp["x"]-cam_x, warp["y"]-cam_y
+            circ = gf.Circle(gf.Point(wx, wy), 30)
+            circ.setOutline("blue")
+            circ.setWidth(3)
+            circ.draw(self.window)
+            self.debug_shapes.append(circ)
+
 
 class WorldScene(BaseWalkingScene):
-    def __init__(self, window, player: Trainer):
+    def __init__(self, window, player: Trainer, **kwargs):
         super().__init__(
             window,
             player,
             map_name="pallet_town",
-            bg_image_rel_path="environment/maps/worldscene2.png"
+            bg_image_rel_path="environment/maps/worldscene2.png",
+            **kwargs
+        )
+        self.add_warp(
+            x=1122,
+            y=1106,
+            target_scene_class=PokecenterScene,
+            target_x=800,
+            target_y=750
         )
 
 
 class PokecenterScene(BaseWalkingScene):
-    def __init__(self, window, player: Trainer):
+    def __init__(self, window, player: Trainer, **kwargs):
+        sy = kwargs.pop("start_y", 800)
+        sx = kwargs.pop("start_x", None)
         super().__init__(
             window,
             player,
             map_name="pokecenter",
             bg_image_rel_path="environment/maps/pokecenter.png",
-            start_y=800
+            start_x=sx,
+            start_y=sy,
+            **kwargs
+        )
+        self.add_warp(
+            x=800,
+            y=800,
+            target_scene_class=WorldScene,
+            target_x=1122,
+            target_y=1140
         )
         self.heal_zone = POKECENTER_HEAL_ZONE
 

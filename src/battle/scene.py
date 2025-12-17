@@ -6,9 +6,11 @@ from src import IMAGES_DIR
 
 
 class BattleScene:
-    def __init__(self, window, player, enemy):
+    def __init__(self, window, player, enemy, **kwargs):
         self.width = 1408
         self.height = 768
+        
+        self.manager = kwargs.get("manager") 
 
         self.assets_dir = IMAGES_DIR
 
@@ -582,6 +584,22 @@ class BattleScene:
         msg.draw(self.janela)
         gf.update()
         time.sleep(1)
+        msg.undraw()
+
+    def victory(self):
+        self.battle_hud.undraw()
+        msg = gf.Image(gf.Point(self.width/2, self.height/2), self.get_path("ui/battle/victory_msg.png"))
+        msg.draw(self.janela)
+        gf.update()
+        time.sleep(2)
+        msg.undraw()
+
+    def defeat(self):
+        self.battle_hud.undraw()
+        msg = gf.Image(gf.Point(self.width/2, self.height/2), self.get_path("ui/battle/defeat_msg.png"))
+        msg.draw(self.janela)
+        gf.update()
+        time.sleep(2)
         msg.undraw()
 
     def update(self):
