@@ -104,16 +104,16 @@ class BaseWalkingScene:
         if warp:
             self.player.x = self.logic.player_world_x
             self.player.y = self.logic.player_world_y
-            
+
             self.manager.change_scene(
-                warp["target_scene"], 
+                warp["target_scene"],
                 manager=self.manager,
                 player=self.player,
-                start_x=warp["tx"], 
+                start_x=warp["tx"],
                 start_y=warp["ty"]
             )
             return
-        
+
         npc = self._find_nearby_npc()
         if npc is None:
             return
@@ -206,11 +206,11 @@ class WorldScene(BaseWalkingScene):
             **kwargs
         )
         self.add_warp(
-            x=1122, 
-            y=1106, 
-            target_scene_class=PokecenterScene, 
-            target_x=400, 
-            target_y=750
+            x=1122,
+            y=1106,
+            target_scene_class=PokecenterScene,
+            target_x=780,
+            target_y=800
         )
 
 
@@ -228,9 +228,9 @@ class PokecenterScene(BaseWalkingScene):
             **kwargs
         )
         self.add_warp(
-            x=400, 
-            y=800, 
-            target_scene_class=WorldScene, 
-            target_x=1122, 
+            x=750,
+            y=810,
+            target_scene_class=WorldScene,
+            target_x=1122,
             target_y=1140
         )
