@@ -1,4 +1,4 @@
-from pathlib import Path
+from src.config import DATA_DIR, IMAGES_DIR
 import json
 
 class WorldLogic:
@@ -14,9 +14,7 @@ class WorldLogic:
         start_x = None,
         start_y = None
     ):
-        self.root_dir = Path(__file__).resolve().parent.parent
-
-        map_file = self.root_dir / "data" / "map_data.json"
+        map_file = DATA_DIR / "map_data.json"
         with open(map_file, 'r') as f:
             data = json.load(f)
 
@@ -34,7 +32,7 @@ class WorldLogic:
         self.screen_width = screen_width
         self.screen_height = screen_height
 
-        self.assets_dir = self.root_dir / "assets" / "images" / "characters" / "player"
+        self.assets_dir = IMAGES_DIR / "characters" / "player"
 
         if start_x is not None:
             self.player_world_x = start_x

@@ -1,9 +1,8 @@
 import random
 import logging
 
-from src.classes import Item, Pokemon, Move
-from src.database import TYPES_DB
-from src.mechanics import DamageCalculator, MoveEffectResolver, BattleAI, AccuracyCalculator
+from src import Item, Pokemon, Move, TYPES_DB
+from src.battle.mechanics import DamageCalculator, MoveEffectResolver, BattleAI, AccuracyCalculator
 
 logger = logging.getLogger(__name__)
 

@@ -1,12 +1,10 @@
 import json
-from pathlib import Path
+from src.config import DATA_DIR
 import logging
 
 logger = logging.getLogger(__name__)
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
-
-DATA_DIR = ROOT_DIR / "data"
+# Using DATA_DIR from central config
 MOVES_FILE = DATA_DIR / "moves.json"
 POKEDEX_FILE = DATA_DIR / "pokedex.json"
 ITEMS_FILE = DATA_DIR / "items.json"

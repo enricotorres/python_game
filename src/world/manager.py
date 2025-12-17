@@ -1,9 +1,10 @@
-import graphics as gf
+from src.lib import graphics as gf
+from src import SCREEN_WIDTH, SCREEN_HEIGHT
 
-class WorldManager:
+class SceneManager:
     def __init__(self, player=None):
-        self.width = 1600
-        self.height = 900
+        self.width = SCREEN_WIDTH
+        self.height = SCREEN_HEIGHT
         self.window = gf.GraphWin("PokePy", self.width, self.height, autoflush=False)
         self.current_scene = None
         self.player = player

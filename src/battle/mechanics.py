@@ -2,7 +2,7 @@ import math
 import random
 import logging
 
-from src.classes import Item, Move, Pokemon, Trainer
+from src import Item, Move, Pokemon, Trainer
 
 logger = logging.getLogger(__name__)
 
